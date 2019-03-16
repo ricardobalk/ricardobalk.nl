@@ -1,0 +1,31 @@
+//
+// FONTS
+//
+
+@import url('http://overpass-30e2.kxcdn.com/overpass.css');
+
+body,
+p,
+a,
+i,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ font-family: $overpass;
+ transition: font 0.3s ease;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.35em; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1.15em; }
+h6 { font-size: 1.10em; }
+
+h1, h2 { font-weight: 400; }
+h3, h4, h5, h6 { font-weight: 200; }
+
+p { font-size: 1.15em; font-weight: 100; }

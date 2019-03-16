@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/post.css">
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/post-dark.css">
+
+<main class="post">
+    <div class="grid-x page-container entry">
+        <div class="small-offset-1 small-10 cell">
+
+            {% include breadcrumbs.html %}
+
+            <article>
+                <h1 class="title">{{ page.title }}</h1>
+
+                <div class="date">
+                    This article was written on
+                    <time datetime="{{ page.date }}">{{ page.date | date: "%B %e, %Y" }}</time>
+                </div>
+                <section class="article-content">
+                    {{ content }}
+                </section>
+            </article>
+        </div>
+    </div>
+</main>
+
+{% include disqus.html %}

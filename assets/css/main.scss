@@ -1,0 +1,145 @@
+---
+---
+
+@import "variables";
+@import "fonts";
+@import "highlights";
+
+body { background-color: transparent; }
+
+code {
+  padding: 0;
+  border: unset;
+  background-color: unset;
+  font-family: Consolas,"Liberation Mono",Courier,monospace;
+  font-weight: 400;
+  color: #333;
+}
+
+.grid-container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.page-container {
+  margin: 2em 0;
+}
+
+.valign-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+.button {
+  border-radius: 15px;
+  font-weight: 400;
+  -webkit-transition: background 0.1s;
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+
+  i {
+    margin-left: 0.5em;
+    line-height: 1em;
+    vertical-align: middle;
+    color: #666;
+  }
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: #f8f8f8;
+        color: #111;
+    }
+}
+
+.navigation {
+  min-height: 100px;
+  border-bottom: 1px solid #eee;
+  .logo {
+    height: 100px;
+    background: url("https://placehold.it/100x80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  a {
+    color: #666;
+    font-weight: 600;
+    &:hover {
+      color: #333;
+    }
+  }
+  .link {
+    display: block;
+  }
+
+  .icons {
+    line-height: calc(100px - 10px);
+
+    /* I do this because the navbar is 100px in height */
+    i {
+      color: #666;
+      line-height: inherit;
+    }
+
+      .sw-darkmode:before { font-family: "Font Awesome 5 Free", sans-serif; font-size: 1.25em; }
+      .sw-darkmode[data-state="off"]:before { content: "\f204"; }
+      .sw-darkmode[data-state="on"]:before { content: "\f205"; color: #00d500; }
+  }
+
+}
+.navigation > .grid-x {
+  height: auto;
+}
+
+
+.breadcrumbs
+{
+  list-style: none;
+}
+
+.footer {
+  color: #222;
+  padding: 1.5em 0;
+
+  p {
+    color: #222;
+    font-size: 0.9em;
+  }
+
+/* TODO: Refactor below, it is difficult to understand. */
+/*       ,icons -> .container -> .icon ?!               */
+/*       it should be:                                  */
+/*       .icons -> .container-outside -> .container-inside -> .icon */
+/*       or something alike.                            */
+
+  .icons {
+    margin: 2em 0;
+    .container .icon {
+      background-color: transparent;
+      border-radius: 50px;
+      border: 1px solid #333;
+      color: #222;
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      height: 50px;
+      line-height: 50px;
+      margin: 0 auto;
+      text-align: center;
+      transition: 0.1s ease-out;
+      width: 50px;
+
+      &:hover {
+        background-color: #333;
+        color: #fff;
+      }
+    }
+  }
+}

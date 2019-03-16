@@ -1,0 +1,34 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr" data-theme="light">
+    <head>
+        {% include meta.html %}
+
+        <title>{{ site.name }} - {% if page.title %}{{ page.title }} – {% endif %}</title>
+
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/css/foundation.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/overpass/3.0.3/overpass-webfont/overpass.min.css">
+
+        <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/main-dark.css"/>
+
+        <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}"
+              href="{{ site.baseurl }}/feed.xml"/>
+    </head>
+
+    <body>
+        {% include comment.html %}
+        {% include navigation.html %}
+
+        <div id="main" role="main" class="grid-container container">
+            {{ content }}
+        </div>
+
+        {% include footer.html %}
+        {% include scripts.html %}
+    </body>
+</html>

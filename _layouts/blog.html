@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/blog-basic.css">
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/blog-basic-dark.css">
+
+<div class="blog">
+    <div class="grid-x page-container">
+        <div class="small-offset-1 small-10 medium-offset-1 medium-10 large-offset-1 large-10 cell articles">
+            {% include breadcrumbs.html %}
+            {{ content }}
+        </div>
+    </div>
+</div>

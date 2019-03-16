@@ -1,0 +1,39 @@
+---
+layout: default
+permalink: /photos/
+---
+
+<!-- CSS -->
+
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/photography.css">
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/photography-dark.css">
+
+<!-- HTML -->
+<div class="photography">
+    <div class="grid-x page-container">
+        <div class="small-offset-1 small-10 medium-offset-1 medium-10 large-offset-1 large-10 cell">
+            {% include breadcrumbs.html %}
+            <div class="grid-x photos">
+                <div class="small-4 cell grid-sizer"></div>
+                {% for photo in site.photography %}
+                <div class="small-4 cell">
+                    <img src="{{ photo.image }}" />
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script type="application/javascript">
+    imagesLoaded( document.querySelector('.photos'), function() {
+        let msnry = new Masonry( document.querySelector('.photos'), {
+            itemSelector: '.small-4.cell',
+            columnWidth: '.grid-sizer',
+            percentPosition: true
+        });
+    });
+</script>
