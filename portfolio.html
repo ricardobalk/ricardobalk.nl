@@ -1,0 +1,65 @@
+---
+layout: default
+permalink: /portfolio/
+title: Portfolio
+---
+
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/portfolio.css">
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/portfolio-dark.css">
+
+<div class="grid-x">
+    <div class="small-offset-1 small-10 medium-offset-1 medium-10 large-offset-2 large-8 cell">
+        <div class="grid-x">
+        <div class="small-12 medium-6 large-4 cell">
+            <div class="grid-x">
+                <div class="small-offset-1 small-10">
+                    {% include breadcrumbs.html %}
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio">
+    <div class="grid-x page-container">
+        <div class="small-offset-1 small-10 medium-offset-1 medium-10 large-offset-2 large-8 cell">
+            <div class="grid-x items">
+                <div class="small-12 medium-6 large-4 cell masonry-grid-sizer"></div>
+
+                {% assign sorted = site.portfolio | sort: 'date' | reverse %}
+                {% for item in sorted %}
+                {% capture image %}{% if item.image %}{{site.baseurl}}{{ item.image }}{% else %}https://placehold.it/500x500?text=Missing%20an%20image{% endif %}{% endcapture %}
+                <div class="small-12 medium-6 large-4 cell item-container-outside">
+                    <div class="grid-x">
+                        <div class="small-offset-1 small-10 item-container-inside">
+                            <article>
+                            <img class="featured-image" src="{{ image }}"/>
+                            <header class="info">
+                                <p class="client">{{ item.client }}</p>
+                                <a href="{{site.baseurl}}{{item.url}}"><h2 class="title text-center">{{ item.title }}</h2></a>
+                                <p class="summary">{{ item.excerpt }}</p>
+                            </header>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script type="application/javascript">
+    imagesLoaded(document.querySelector('.items'), function () {
+        let msnry = new Masonry(document.querySelector('.items'), {
+            itemSelector: '.item-container-outside',
+            columnWidth: '.masonry-grid-sizer',
+            percentPosition: true
+        });
+    });
+</script>

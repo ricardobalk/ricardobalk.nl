@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/post.css">
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/post-dark.css">
+
+<main class="post limited-width">
+    <div class="grid-x page-container entry">
+        <div class="small-offset-1 small-10 large-offset-2 large-8 cell">
+
+            {% include breadcrumbs.html %}
+
+            {% if page.image %}
+            <div class="featured-image">
+                <img src="{{site.baseurl}}/assets/img/blog/{{ page.image }}" alt="">
+            </div>
+            {% endif %}
+
+                    <article>
+                        <div class="metadata">
+                            <h1 class="title">{{ page.title }}</h1>
+                            <time datetime="{{ page.date }}" class="date">{{ page.date | date: "%B %e, %Y" }}</time>
+                            <div class="tags">{% for tag in page.tags %}<span class="tag">{{tag}}</span>{% endfor %}</div>
+                        </div>
+
+                        <section class="content" role="main">
+                            {{ content }}
+                        </section>
+                    </article>
+
+            {% include disqus.html %}
+
+        </div>
+    </div>
+</main>
+

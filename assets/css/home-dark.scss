@@ -1,0 +1,107 @@
+---
+---
+
+@import "variables";
+
+html[data-theme='dark'] {
+
+  .hero {
+    filter: grayscale(100%) contrast(110%) brightness(90%);
+    background-blend-mode: multiply;
+
+    h1 {
+      color: $color-text-empathize;
+      text-shadow: 1px 0 1px rgba(255, 255, 255, .4);
+    }
+
+    h2 {
+      color: $color-text-empathize;
+    }
+  }
+
+  .main,
+  .main .button {
+    color: #777;
+  }
+
+  .main {
+    border-bottom: 1px solid #333;
+
+    .button:hover {
+      background-color: #222;
+      color: #79b;
+    }
+  }
+
+  .portfolio {
+    border-bottom: 1px solid #333;
+  }
+
+  .portfolio .item .client {
+    border: 2px solid #333;
+    background-color: unset;
+  }
+
+  .portfolio .item img {
+    opacity: .75;
+    transition: opacity .25s ease-in-out;
+    filter: grayscale(100%) contrast(120%) brightness(20%);
+  }
+
+  .portfolio .item img:hover {
+    opacity: 1;
+    filter: brightness(40%);
+  }
+
+  .portfolio h2 {
+    color: #959595;
+  }
+
+  .portfolio p {
+    color: #777;
+  }
+
+  .quote {
+    border-bottom: 1px solid #333;
+
+    .container:before {
+      color: #333;
+    }
+
+    .text {
+      color: #ad9662;
+    }
+
+    .author {
+
+    }
+
+  }
+
+  .blogposts {
+    border-bottom: 1px solid #333;
+
+    .entry {
+      border-bottom: 1px dotted darken($color-text-primary, 20%);
+    }
+  }
+
+  .map {
+    .shout {
+      color: lighten($color-text-primary, 20%);
+      background-color: $color-background-secondary;
+    }
+
+    .actualmap {
+      filter: invert(100%) brightness(50%);
+
+      &:after {
+        background: #000;
+      }
+    }
+  }
+
+  .footer {
+    background-color: $color-background-secondary;
+  }
+}
