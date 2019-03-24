@@ -7,13 +7,19 @@
 {
   .articles
   {
-    .article {
-      margin-bottom: .5em;
-      margin-top: 1em;
+    article {
+      margin-top: 2.5em;
+      margin-bottom: 2.5em;
+      box-shadow: 0 0 12px rgba(0,0,0,0.065);
 
-      &:not(:last-of-type) {
-        padding-bottom: 2em;
-        border-bottom: 1px solid #eee;
+      .featured-image {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .meta {
+        padding: 5em 2em;
       }
     }
   }

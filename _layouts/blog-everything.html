@@ -3,9 +3,28 @@ layout: blog
 ---
 
 {% for post in site.posts %}
+
+{% capture featured-image-location %}{% if post.image %}{{site.baseurl}}{{ post.image }}{% else %}https://placehold.it/500x500{% endif %}{% endcapture %}
+{% capture featured-image-div %}<div class="small-6 cell featured-image" style="background-image: url('{{ featured-image-location }}')"></div>{% endcapture %}
+{% assign loopindex = forloop.index | modulo: 2 %}
+
+<article>
     <div class="grid-x article">
-        <h2 class="small-12 cell title">{{ post.title }}</h2>
-        <p class="small-12 cell">{{ post.excerpt }} <a href="{{site.baseurl}}{{post.url}}">Read more&hellip;</a>
-        </p>
+
+        {% if loopindex == 1 %}
+         {{ featured-image-div }}
+        {% endif %}
+
+        <section class="small-6 cell meta">
+            <h2 class="title">{{ post.title }}</h2>
+            <p class="excerpt">{{ post.excerpt }}</p>
+                <a href="{{site.baseurl}}{{post.url}}">Read more&hellip;</a>
+        </section>
+
+        {% if loopindex != 1 %}
+         {{ featured-image-div }}
+        {% endif %}
+
     </div>
+</article>
 {% endfor %}
