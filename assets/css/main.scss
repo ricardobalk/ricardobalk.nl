@@ -11,7 +11,7 @@ code {
   padding: 0;
   border: unset;
   background-color: unset;
-  font-family: Consolas,"Liberation Mono",Courier,monospace;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-weight: 400;
   color: #333;
 }
@@ -21,8 +21,8 @@ code {
   padding: 0;
 }
 
-.page-container {
-  margin: 2em 0;
+.breadcrumbs {
+  margin-top: 1rem;
 }
 
 .valign-center {
@@ -63,7 +63,8 @@ code {
   border-bottom: 1px solid #eee;
   .logo {
     height: 100px;
-    background: url("https://placehold.it/100x80");
+    border-radius: 100px;
+    background: url("../img/avatar.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -80,9 +81,8 @@ code {
   }
 
   .icons {
-    line-height: calc(100px - 10px);
+    line-height: calc(100px - 10px); // I do this because the navbar is 100px in height
 
-    /* I do this because the navbar is 100px in height */
     i {
       color: #666;
       line-height: inherit;
@@ -97,7 +97,6 @@ code {
 .navigation > .grid-x {
   height: auto;
 }
-
 
 .breadcrumbs
 {
