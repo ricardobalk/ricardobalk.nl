@@ -1,27 +1,34 @@
 # TODO
 
-## HTML
+## Site template &amp; structure
 
-- [ ] Check usage of `.page-container`, remove all unnecessary occurrences.
+### Header
 
-## (S)CSS
-
-- [ ] Make dark mode available for each `page` and `layout`.
-
-## Javascript
-
-- [ ] Create filtering functionality for blog and portfolio 
-
-## Other
-
-### Content
-
-- [ ] Fill portfolio
-- [ ] Enhance existing blog articles
+- [ ] Add avatar and name
+- [ ] Hide 'dark mode switch'
+- [ ] Add link to resume
 
 
-### Considerations on design and behaviour
+## Site content
+
+### Home page content
+
+- [ ] Change hero photo
+- [ ] Reposition Google Maps location
+
+### Site content
+
+- [ ] Portfolio Content &amp; Graphics
+- [ ] Blog Posts Content &amp; Graphics
+
+### Page contant
+
+- [ ] Add resume
+
+## Technical Enhancements
 
 - [x] Decide what happens when a blog post does not have a featured image
-- [ ] Add logo / own name to header
-- [ ] Hide dark mode temporarily
+- [ ] Make dark mode available for each `page` and `layout`.
+- [ ] Create filtering functionality for blog and portfolio
+- [ ] Check usage of `.page-container`, remove all unnecessary occurrences.
+- [ ] Enhance blog category overviews

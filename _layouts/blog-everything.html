@@ -9,7 +9,7 @@ layout: blog
 {% assign loopindex = forloop.index | modulo: 2 %}
 
 <article>
-    <div class="grid-x article">
+    <div class="grid-x">
 
         {% if loopindex == 1 %}
          {{ featured-image-div }}
@@ -17,6 +17,7 @@ layout: blog
 
         <section class="small-6 cell meta">
             <h2 class="title">{{ post.title }}</h2>
+            <p class="date"><time datetime="{{ page.date }}">{{ post.date | date: "%B %-d, %Y" }}</time></p>
             <p class="excerpt">{{ post.excerpt }}</p>
                 <a href="{{site.baseurl}}{{post.url}}">Read more&hellip;</a>
         </section>

@@ -8,9 +8,8 @@
   .articles
   {
     article {
-      margin-top: 2.5em;
-      margin-bottom: 2.5em;
       box-shadow: 0 0 12px rgba(0,0,0,0.065);
+      &:not(last-of-type) { margin-bottom: 2.5em; }
 
       .featured-image {
         background-position: center;
@@ -20,6 +19,13 @@
 
       .meta {
         padding: 5em 2em;
+
+        .date {
+          font-size: .85em;
+          font-weight: 600;
+          color: #666;
+          &:before { font-family: "Font Awesome 5 Free", sans-serif; content: '\f073'; margin-right: .5rem; }
+        }
       }
     }
   }
