@@ -3,34 +3,39 @@
         <div class="navigation">
             <div class="grid-x grid-padding-x">
                 <div class="large-4 medium-2 small-12 cell">
-                    <div class="grid-x grid-padding-x">
-                        <div class="large-6 large-offset-0 medium-12 medium-offset-0 small-4 small-offset-4 cell">
-                            <div class="logo"><p class="valign-center">Ricardo Balk</p></div>
+                    <div class="valign-center">
+                        <div class="site-identity">
+                            <img src="{{site.baseurl}}/assets/img/avatar.png" width="250" height="252" alt="">
                         </div>
                     </div>
+
                 </div>
                 <div class="large-4 medium-8 small-12 cell">
                     <div class="grid-x grid-padding-x valign-center">
                         <div class="large-12 medium-12 small-12 cell">
-                            <div class="grid-x grid-padding-x">
-                                <div class="large-4 medium-4 small-4 cell">
-                                    <a href="{{site.baseurl}}/" class="link text-center">Home</a>
+                            <nav type="main">
+                                <div class="grid-x grid-padding-x">
+                                    <div class="large-4 medium-4 small-4 cell">
+                                        <a href="{{site.baseurl}}/" class="link text-center">Home</a>
+                                    </div>
+                                    <div class="large-4 medium-4 small-4 cell">
+                                        <a href="{{site.baseurl}}/portfolio" class="link text-center">Portfolio</a>
+                                    </div>
+                                    <div class="large-4 medium-4 small-4 cell">
+                                        <a href="{{site.baseurl}}/blog" class="link text-center">Blog</a>
+                                    </div>
                                 </div>
-                                <div class="large-4 medium-4 small-4 cell">
-                                    <a href="{{site.baseurl}}/portfolio" class="link text-center">Portfolio</a>
-                                </div>
-                                <div class="large-4 medium-4 small-4 cell">
-                                    <a href="{{site.baseurl}}/blog" class="link text-center">Blog</a>
-                                </div>
-                            </div>
+                            </nav>
                         </div>
                     </div>
                 </div>
                 <div class="large-offset-3 large-1 medium-2 show-for-medium cell">
-                    <div class="grid-x icons">
-                        <i class="small-4 medium-4 large-4 cell text-center fas fa-moon"></i>
-                        <a href="#" class="small-4 medium-4 large-4 cell text-center sw-darkmode" data-state="on"></a>
-                        <i class="small-4 medium-4 large-4 cell text-center fas fa-sun"></i>
+                    <div class="toggle-darkmode">
+                        <div class="grid-x">
+                            <i class="small-4 cell text-center fas fa-moon"></i>
+                            <a href="#" class="small-4 cell text-center switch" data-state="on"></a>
+                            <i class="small-4 cell text-center fas fa-sun"></i>
+                        </div>
                     </div>
                 </div>
             </div>

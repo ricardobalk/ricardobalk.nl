@@ -3,14 +3,15 @@
 
 .home {
   .hero {
-    height: calc(100vh - 100px);
-    background-color: #3b3b3b;
-    background-image: url("../img/ocean-waves-at-sunset-2048x1152.jpg");
+    height: calc(100vh - 100px); // Nav bar height is 100px
+    background-color: #121212;
+    background-image: url("../img/hero.jpg");
+    background-blend-mode: screen;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: right;
+    background-size: contain;
     color: #fff;
-    text-shadow: 1px 1px 5px rgba(150, 150, 150, 0.33);
+    text-shadow: 1px 1px 5px rgba(150,150,150,0.33);
 
     .text {
       margin-top: 33vh;
@@ -121,8 +122,9 @@
 
     .container:before {
       content: "\f10d";
-      font-family: "FontAwesome", sans-serif;
+      font-family: "Font Awesome 5 Free", sans-serif;
       font-size: 2em;
+      font-weight: 900; // I discovered that this is mandatory in the new release. Try to do it without this prop. ;-)
       margin-left: 0.25em;
       bottom: 0.75em;
       position: relative;
