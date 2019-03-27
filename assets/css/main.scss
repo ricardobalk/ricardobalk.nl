@@ -156,3 +156,11 @@ code {
     }
   }
 }
+
+@media screen and (max-width: 639px) {
+  .site-identity img
+  {
+    display: block;
+    margin: 1em auto 1.5em;
+  }
+}

@@ -7,21 +7,26 @@ layout: default
 
 <main class="post">
     <div class="grid-x page-container entry">
-        <div class="small-offset-1 small-10 cell">
+        <div class="small-offset-1 small-10 large-offset-2 large-8 cell">
 
             {% include breadcrumbs.html %}
 
-            <article>
-                <h1 class="title">{{ page.title }}</h1>
+            {% if page.image %}
+            <div class="featured-image">
+                <img src="{{ page.image }}" alt="">
+            </div>
+            {% endif %}
+                    <article>
+                        <div class="metadata">
+                            <h1 class="title">{{ page.title }}</h1>
+                            <time datetime="{{ page.date }}" class="date">{{ page.date | date: "%B %e, %Y" }}</time>
+                            <div class="tags">{% for tag in page.tags %}<span class="tag">{{tag}}</span>{% endfor %}</div>
+                        </div>
 
-                <div class="date">
-                    This article was written on
-                    <time datetime="{{ page.date }}">{{ page.date | date: "%B %e, %Y" }}</time>
-                </div>
-                <section class="article-content">
-                    {{ content }}
-                </section>
-            </article>
+                        <section class="content" role="main">
+                            {{ content }}
+                        </section>
+                    </article>
         </div>
     </div>
 </main>
