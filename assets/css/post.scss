@@ -29,19 +29,7 @@
       }
     }
   }
-  .featured-image {margin-bottom: 1em;}
-  p {
-    font-size: .95em;
-    font-weight: 300;
-
-    & > code {
-      color: hsl(220, 40%, 50%);
-      font-weight: 600;
-      font-size: .9em;
-      border: 1px solid rgba(0, 0, 0, .15);
-      padding: .1em .25em;
-    }
-  }
+  .featured-image { margin-bottom: 1em; }
 }
 
 @media screen and (min-width: 700px) {
