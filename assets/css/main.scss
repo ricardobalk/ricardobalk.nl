@@ -66,13 +66,18 @@ code {
   line-height: 100px; // I do this because the navbar is 100px in height
   border-bottom: 1px solid #eee;
 
-  &> .grid-x {
+  & > .grid-x {
     height: 100%;
   }
 
   .site-identity {
     height: 100%;
-    img { max-height: 70px; max-width: 70px; border-radius: 100px; }
+
+    img {
+      max-height: 70px;
+      max-width: 70px;
+      border-radius: 100px;
+    }
   }
 
   a {
@@ -155,11 +160,22 @@ code {
       }
     }
   }
+
+  .footer-message {
+    i {
+      margin: 0 .15em;
+      color: #525455
+    }
+  }
+
+  .source-code-notice {
+    font-size: .75em;
+  }
+
 }
 
 @media screen and (max-width: 639px) {
-  .site-identity img
-  {
+  .site-identity img {
     display: block;
     margin: 1em auto 1.5em;
   }
