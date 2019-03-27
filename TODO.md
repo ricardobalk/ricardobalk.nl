@@ -4,8 +4,8 @@
 
 ### Header
 
-- [ ] Add avatar and name
-- [ ] Hide 'dark mode switch'
+- [x] Add avatar and name
+- [x] Hide 'dark mode switch'
 - [ ] Add link to resume
 
 
@@ -13,7 +13,7 @@
 
 ### Home page content
 
-- [ ] Change hero photo
+- [x] Change hero photo
 - [ ] Reposition Google Maps location
 
 ### Site content
@@ -31,4 +31,4 @@
 - [ ] Make dark mode available for each `page` and `layout`.
 - [ ] Create filtering functionality for blog and portfolio
 - [ ] Check usage of `.page-container`, remove all unnecessary occurrences.
-- [ ] Enhance blog category overviews
+- [x] Enhance blog category overviews
