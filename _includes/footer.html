@@ -1,9 +1,11 @@
 <footer class="footer">
     <div class="grid-x">
         <div class="large-offset-4 large-4 cell">
+
             <div class="grid-x icons">
                 <div class="small-4 cell container">
-                    <a href="https://linkedin.com/in/{{site.footer-links.linkedin}}" class="icon fab fa-linkedin-in"></a>
+                    <a href="https://linkedin.com/in/{{site.footer-links.linkedin}}"
+                       class="icon fab fa-linkedin-in"></a>
                 </div>
 
                 <div class="small-4 cell container">
@@ -16,8 +18,12 @@
                 </div>
             </div>
 
-            <p class="text-center">&copy; {{ site.time | date: '%Y' }} Ricardo Balk &mdash; Published under the GNU GPLv3
-                License. <a href="{{ site.footer-links.source }}">View source code.</a></p>
+            <p class="text-center"><span class="footer-message">Made with <i class="fas fa-heart"></i>, a lot of <i
+                    class="fas fa-mug-hot"></i> and some <i class="fas fa-code"></i> by Ricardo Balk.
+            </span></p>
+
+            <p class="text-center"><span class="source-code-notice">Source code <a
+                    href="{{ site.footer-links.source }}">available</a> under the GNU GPLv3 License.</span></p>
         </div>
     </div>
 </footer>

@@ -5,7 +5,9 @@
 @import "fonts";
 @import "highlights";
 
-body { background-color: transparent; }
+body {
+  background-color: transparent;
+}
 
 code {
   padding: 0;
@@ -22,7 +24,8 @@ code {
 }
 
 .breadcrumbs {
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .valign-center {
@@ -50,56 +53,71 @@ code {
     color: #666;
   }
 
-    &:hover,
-    &:active,
-    &:focus {
-        background-color: #f8f8f8;
-        color: #111;
-    }
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: #f8f8f8;
+    color: #111;
+  }
 }
 
 .navigation {
   min-height: 100px;
+  line-height: 100px; // I do this because the navbar is 100px in height
   border-bottom: 1px solid #eee;
-  .logo {
-    height: 100px;
-    border-radius: 100px;
-    background: url("../img/avatar.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+  & > .grid-x {
+    height: 100%;
   }
+
+  .site-identity {
+    height: 100%;
+
+    img {
+      max-height: 70px;
+      max-width: 70px;
+      border-radius: 100px;
+    }
+  }
+
   a {
     color: #666;
     font-weight: 600;
+
     &:hover {
       color: #333;
     }
   }
+
   .link {
     display: block;
   }
 
-  .icons {
-    line-height: calc(100px - 10px); // I do this because the navbar is 100px in height
-
+  .toggle-darkmode {
+    display: none; // TODO: Remove this line when dark mode support is complete
     i {
       color: #666;
       line-height: inherit;
     }
 
-      .sw-darkmode:before { font-family: "Font Awesome 5 Free", sans-serif; font-size: 1.25em; }
-      .sw-darkmode[data-state="off"]:before { content: "\f204"; }
-      .sw-darkmode[data-state="on"]:before { content: "\f205"; color: #00d500; }
+    .switch:before {
+      font-family: "Font Awesome 5 Free", sans-serif;
+      font-size: 1.75em;
+    }
+
+    .switch[data-state="off"]:before {
+      content: "\f204";
+    }
+
+    .switch[data-state="on"]:before {
+      content: "\f205";
+      color: #00d500;
+    }
   }
 
 }
-.navigation > .grid-x {
-  height: auto;
-}
 
-.breadcrumbs
-{
+.breadcrumbs {
   list-style: none;
 }
 
@@ -112,14 +130,15 @@ code {
     font-size: 0.9em;
   }
 
-/* TODO: Refactor below, it is difficult to understand. */
-/*       ,icons -> .container -> .icon ?!               */
-/*       it should be:                                  */
-/*       .icons -> .container-outside -> .container-inside -> .icon */
-/*       or something alike.                            */
+  /* TODO: Refactor below, it is difficult to understand. */
+  /*       ,icons -> .container -> .icon ?!               */
+  /*       it should be:                                  */
+  /*       .icons -> .container-outside -> .container-inside -> .icon */
+  /*       or something alike.                            */
 
   .icons {
     margin: 2em 0;
+
     .container .icon {
       background-color: transparent;
       border-radius: 50px;
@@ -140,5 +159,24 @@ code {
         color: #fff;
       }
     }
+  }
+
+  .footer-message {
+    i {
+      margin: 0 .15em;
+      color: #525455
+    }
+  }
+
+  .source-code-notice {
+    font-size: .75em;
+  }
+
+}
+
+@media screen and (max-width: 639px) {
+  .site-identity img {
+    display: block;
+    margin: 1em auto 1.5em;
   }
 }

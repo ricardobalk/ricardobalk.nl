@@ -3,12 +3,6 @@
 
 @import "variables";
 
-.bc {
-  margin-top: 1rem;
-  .breadcrumbs {
-  }
-}
-
 .portfolio
 {
   .page-container {
@@ -17,7 +11,7 @@
   .items
   {
     .item-container-outside {
-      margin: 2em 0;
+      margin-bottom: 2em;
       .item-container-inside {
         box-shadow: 3px 4px 14px rgba(0,0,0,.06);
         border: 1px solid rgba(0,0,0,.05);

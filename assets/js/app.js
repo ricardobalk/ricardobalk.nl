@@ -9,6 +9,7 @@
 function autorun() {
     "use strict";
     document.getElementsByClassName("sw-darkmode")[0].addEventListener("click", darkmodeToggleEventHandler, false);
+    return true;
 }
 
 function darkmodeToggleEventHandler() {

@@ -25,6 +25,21 @@ code {
   font-family: $overpass-mono;
 }
 
+p, li {
+    font-size: .95em;
+    font-weight: 300;
+
+    & > code {
+        color: hsl(220, 40%, 50%);
+        font-weight: 600;
+        font-size: .9em;
+        border: 1px solid rgba(0, 0, 0, .15);
+        border-radius: 5px;
+        padding: .1em .25em;
+        margin: 0 .1em;
+    }
+}
+
 .highlight .c { color: #586E75 } /* Comment */
 .highlight .err { color: #93A1A1 } /* Error */
 .highlight .g { color: #93A1A1 } /* Generic */
