@@ -33,13 +33,6 @@ html[data-theme='dark'] {
     }
   }
 
-  .photos {
-    .photo {
-      border-color: #333
-    }
-    border-bottom: 1px solid #333;
-  }
-
   .portfolio {
     border-bottom: 1px solid #333;
   }
@@ -49,15 +42,13 @@ html[data-theme='dark'] {
     background-color: unset;
   }
 
-  .portfolio .item img,
-  .photos .featured-image .image-container {
+  .portfolio .item img {
     opacity: .75;
     transition: opacity .25s ease-in-out;
     filter: grayscale(100%) contrast(120%) brightness(20%);
   }
 
-  .portfolio .item img:hover,
-  .photos .featured-image .image-container:hover {
+  .portfolio .item img:hover {
     opacity: 1;
     filter: brightness(40%);
   }
