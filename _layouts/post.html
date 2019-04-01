@@ -5,7 +5,7 @@ layout: default
 <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/post.css">
 <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/post-dark.css">
 
-<main class="post">
+<main class="post limited-width">
     <div class="grid-x page-container entry">
         <div class="small-offset-1 small-10 large-offset-2 large-8 cell">
 
@@ -13,9 +13,10 @@ layout: default
 
             {% if page.image %}
             <div class="featured-image">
-                <img src="{{ page.image }}" alt="">
+                <img src="{{site.baseurl}}/assets/img/blog/{{ page.image }}" alt="">
             </div>
             {% endif %}
+
                     <article>
                         <div class="metadata">
                             <h1 class="title">{{ page.title }}</h1>
@@ -27,8 +28,10 @@ layout: default
                             {{ content }}
                         </section>
                     </article>
+
+            {% include disqus.html %}
+
         </div>
     </div>
 </main>
 
-{% include disqus.html %}

@@ -2,9 +2,10 @@
 layout: post
 title: "Generating Enterprise-grade PGP Keys"
 excerpt: "In this article, I will guide through the generation of Enterprise-grade PGP keys."
-category: "gpg"
-tags: ["draft", "example"]
+category: "cryptography"
+tags: ["pgp", "gpg", "encryption"]
 date: 2018-10-02 08:00:00 +00:00
+image: "terminal-lockpad.png"
 ---
 
 

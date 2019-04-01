@@ -23,6 +23,11 @@ code {
   padding: 0;
 }
 
+.limited-width {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 .breadcrumbs {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -115,6 +120,17 @@ code {
     }
   }
 
+}
+
+.portfolio {
+
+  .show-for-small-only {
+    .item {
+      .featured-image {
+        width: 100%
+      }
+    }
+  }
 }
 
 .breadcrumbs {

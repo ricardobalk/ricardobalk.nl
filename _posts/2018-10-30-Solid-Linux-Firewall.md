@@ -3,6 +3,7 @@ layout: post
 title: Solid Firewall Configuration with iptables
 excerpt: By default, Linux passes all network traffic (with some exceptions). Learn how to set-up a secure firewall with iptables.
 category: linux
+image: "fire.png"
 ---
 
 By default, Linux uses an empty firewall which means that all traffic will pass (with some exceptions). As long as you don't have server applications running and are using a router with a firewall, that would not be an issue.

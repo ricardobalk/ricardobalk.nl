@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/blog-basic.css">
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/blog-basic-dark.css">
+
+<section class="blog limited-width">
+    <div class="grid-x">
+        <div class="small-offset-1 small-10 large-offset-2 large-8 cell">
+            {% include breadcrumbs.html %}
+            <section class="articles">
+                {% if site.categories[page.category] %}
+                {% assign posts = site.categories[page.category] %}
+                {% else %}
+                {% assign posts = site.posts %}
+                {% endif %}
+
+                {% for post in posts %}
+
+                {% capture featured-image-location %}{% if post.image %}{{ site.baseurl }}/assets/img/blog/{{ post.image }}{% else %}https://placehold.it/500x500{% endif %}{% endcapture %}
+                {% capture featured-image-div %}<div class="show-for-medium medium-6 cell featured-image" style="background-image: url('{{ featured-image-location }}')"></div>{% endcapture %}
+                {% assign loopindex = forloop.index | modulo: 2 %}
+
+                <article>
+                    <div class="grid-x">
+
+                        {% if loopindex == 1 %}
+                            {{ featured-image-div }}
+                        {% endif %}
+
+                        <section class="small-12 medium-6 cell meta">
+                            <h2 class="title">{{ post.title }}</h2>
+                            <p class="date"><time datetime="{{ page.date }}">{{ post.date | date: "%B %-d, %Y" }}</time></p>
+                            <p class="excerpt">{{ post.excerpt }}</p>
+                            <a href="{{site.baseurl}}{{post.url}}">Read this article&hellip;</a>
+                        </section>
+
+                        {% if loopindex != 1 %}
+                            {{ featured-image-div }}
+                        {% endif %}
+
+                    </div>
+                </article>
+                {% endfor %}
+            </section>
+        </div>
+    </div>
+</section>

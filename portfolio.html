@@ -29,12 +29,12 @@ title: Portfolio
 
                 {% assign sorted = site.portfolio | sort: 'date' | reverse %}
                 {% for item in sorted %}
-                {% capture image %}{% if item.image %}{{site.baseurl}}{{ item.image }}{% else %}https://placehold.it/500x500{% endif %}{% endcapture %}
+                {% capture image %}{% if item.image %}{{site.baseurl}}{{ item.image }}{% else %}https://placehold.it/500x500?text=Missing%20an%20image{% endif %}{% endcapture %}
                 <div class="small-12 medium-6 large-4 cell item-container-outside">
                     <div class="grid-x">
                         <div class="small-offset-1 small-10 item-container-inside">
                             <article>
-                            <div class="featured-image" style="background-image: url('{{image}}');"></div>
+                            <img class="featured-image" src="{{ image }}"/>
                             <header class="info">
                                 <p class="client">{{ item.client }}</p>
                                 <a href="{{site.baseurl}}{{item.url}}"><h2 class="title text-center">{{ item.title }}</h2></a>

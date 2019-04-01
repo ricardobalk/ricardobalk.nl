@@ -5,6 +5,7 @@ excerpt: OpenProject is a freeware project management tool that comes with a Doc
 category: linux
 tags: [linux, docker, openproject, freeware]
 date: 2018-11-03 09:00:00 +00:00
+image: "gantt-chart.png"
 ---
 
 

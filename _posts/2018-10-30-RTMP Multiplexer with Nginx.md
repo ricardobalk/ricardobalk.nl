@@ -3,16 +3,22 @@ layout: post
 title: Setting up an RTMP Multiplexer with Nginx
 excerpt: Learn how to to create an RTMP Multiplexer with nginx so that you're able to stream video content to different servers simultaneously...
 category: linux
-tags: [linux, nginx, rtmp]
+tags: ["linux", "nginx", "rtmp", "livestreaming", "multiplexer"]
 date: 2018-10-20 09:00:00 +00:00
 references:
  - https://www.vultr.com/docs/setup-nginx-rtmp-on-ubuntu-14-04 
  - https://obsproject.com/forum/resources/how-to-set-up-your-own-private-rtmp-server-using-nginx.50/
+image: "live.png"
 ---
 
+Live streaming your video content is well-known among gamers, journalists, education entities and the entertainment industry.
 
+You might already even been streaming to a particular platform (e.g. YouTube, Twitch, IBM Video). Did you know that you could stream your content to multiple platforms simultaneously? This is called multiplexing.
 
-<!-- TODO: Update nginx version, describe the firewall part -->
+With multiplexing, you send your stream to one device, which, in turn, will send the stream to multiple destinations (live streaming platforms) simultaneously. It only takes an online device with Linux, e.g. a VPS at DigitalOcean or a Raspberry Pi.
+
+Install some stuff, configure some stuff, go live. Here's how to do it.
+
 
 ## Step 1: Create a working directory
 
@@ -88,7 +94,7 @@ sudo update-rc.d nginx defaults
 sudo service nginx start
 ```
 
-Use `hostname -I`  to figure out the server's IP address. Check if the server is available by navigating to http://<server ip>/
+Use `hostname -I`  to figure out the server's IP address. Check if the server is available by navigating to `http://<server ip>/`
 
 ```sh
 sudo service nginx stop
