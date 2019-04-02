@@ -2,7 +2,7 @@
 layout: post
 title: Setting up an RTMP Multiplexer with Nginx
 excerpt: Learn how to to create an RTMP Multiplexer with nginx so that you're able to stream video content to different servers simultaneously...
-category: linux
+category: devops
 tags: ["linux", "nginx", "rtmp", "livestreaming", "multiplexer"]
 date: 2018-10-20 09:00:00 +00:00
 references:
