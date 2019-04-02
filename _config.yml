@@ -49,6 +49,6 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - _posts/TEMPLATE.md
   - _portfolio/TEMPLATE.md
-  - .idea/
-  - node_modules/
+  - _posts/IDEAS.md
