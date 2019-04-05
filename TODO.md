@@ -34,3 +34,4 @@
 - [x] Enhance blog category overviews
 - [ ] Don't use CDN, but serve myself (for better privacy among site visitors)
 - [ ] Fix posts layout
+- [ ] Write README, so people know how to run this site locally.
