@@ -6,7 +6,7 @@ client: ELDA
 category: Camerawork
 tags: ["elda", "business movie", "dutch"]
 image: "goat.jpg"
-excerpt: I made a business movie for ELDA
+excerpt: I made a business movie for ELDA.
 permalink: /portfolio/ELDA-business-movie
 ---
 
