@@ -9,7 +9,7 @@ title: Portfolio
 
 <section class="portfolio">
     <div class="grid-x">
-        <div class="small-offset-1 small-10 medium-offset-1 medium-10 large-offset-2 large-8 cell">
+        <div class="small-offset-1 small-10 medium-offset-1 medium-10 cell">
             <div class="grid-x">
                 <div class="small-12 medium-6 large-4 cell">
                     <div class="grid-x">
@@ -23,7 +23,7 @@ title: Portfolio
     </div>
 
     <div class="grid-x page-container">
-        <div class="small-offset-1 small-10 medium-offset-1 medium-10 large-offset-2 large-8 cell">
+        <div class="small-offset-1 small-10 medium-offset-1 medium-10 cell">
             <div class="grid-x items">
                 <div class="small-12 medium-6 large-4 cell masonry-grid-sizer"></div>
 
@@ -39,9 +39,9 @@ title: Portfolio
                 {% assign image = image | strip %}
                 <div class="small-12 medium-6 large-4 cell item-container-outside">
                     <div class="grid-x">
-                        <div class="small-offset-1 small-10 item-container-inside">
+                        <div class="small-12 medium-offset-1 medium-10 item-container-inside">
                             <article>
-                                <img class="featured-image" src="{{ image }}"/>
+                                {% if item.image %}<img class="featured-image" src="{{ image }}"/>{% endif %}
                                 <div class="info">
                                     <p class="client">{{ item.client }}</p>
                                     <a href="{{site.baseurl}}{{item.url}}"><h2 class="title text-center">{{ item.title }}</h2></a>
