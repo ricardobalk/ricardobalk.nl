@@ -2,7 +2,7 @@
     <div class="show-for-medium">
         {% assign projects = site.portfolio | sort: 'date' | reverse %}
         {% for project in projects | limit: 3 %}
-        {% capture image %}{% if item.image %}{{site.baseurl}}{{ item.image }}{% else %}https://placehold.it/500x500?text=Missing%20an%20image{% endif %}{% endcapture %}
+        {% capture image %}{% if project.image %}{{site.baseurl}}/assets/img/portfolio/{{ project.image }}{% else %}https://placehold.it/500x500?text=Missing%20an%20image{% endif %}{% endcapture %}
         {% assign loopindex = forloop.index | modulo: 2 %}
         {% if loopindex == 1 %}
         <div class="item">
@@ -40,6 +40,7 @@
 
     <div class="show-for-small-only">
         {% for project in projects | limit: 3 %}
+        {% capture image %}{% if project.image %}{{site.baseurl}}/assets/img/portfolio/{{ project.image }}{% else %}https://placehold.it/500x500?text=Missing%20an%20image{% endif %}{% endcapture %}
         <div class="item">
             <div class="grid-x">
                 <div class="small-offset-1 small-10 medium-offset-2 medium-8 large-6 cell">

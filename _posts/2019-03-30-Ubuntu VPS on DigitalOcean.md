@@ -3,7 +3,7 @@ layout: post
 date: 2019-03-30 10:00:00 +0100
 title: Setting up an Ubuntu VPS on DigitalOcean from scratch
 excerpt: How to create a modern and secure Ubuntu server on DigitalOcean with Apache, MariaDB, PHP 7.2, SSL, ModSecurity and HTTP/2.
-category: linux
+category: devops
 tags: [devops, linux, server, servers, digitalocean]
 image: "ubuntu-on-digitalocean.png"
 ---

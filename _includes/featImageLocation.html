@@ -1,0 +1,9 @@
+{% capture featuredImageLocation %}
+    {% if page.collection == 'posts' %}
+        {{site.baseurl}}/assets/img/blog
+    {% else if page.collection == 'portfolio' %}
+        {{site.baseurl}}/assets/img/portfolio
+    {% endif %}
+{% endcapture %}
+
+{% assign featuredImageLocation = featuredImageLocation | strip %}

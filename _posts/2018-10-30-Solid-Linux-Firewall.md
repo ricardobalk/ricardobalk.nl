@@ -2,7 +2,7 @@
 layout: post
 title: Solid Firewall Configuration with iptables
 excerpt: By default, Linux passes all network traffic (with some exceptions). Learn how to set-up a secure firewall with iptables.
-category: linux
+category: devops
 image: "fire.png"
 ---
 
