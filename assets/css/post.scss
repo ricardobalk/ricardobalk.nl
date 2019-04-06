@@ -3,7 +3,6 @@
 .post {
   .featured-image {
     margin-bottom: 1em;
-
     img {
       width: 100%;
     }
@@ -51,15 +50,25 @@
 }
 
 @media screen and (min-width: 700px) {
-  .featured-image + article {
-    width: 90%;
-    padding: 5.5em;
-    border-radius: 8px;
-    background: #fff;
-    position: relative;
-    margin: -5% auto 0; /* I know negative values are not neat */
-    .content {
-      margin: 1em 0;
+  .post {
+    .featured-image {
+      img {
+        border-radius: 5px;
+      }
+
+      & + article {
+        width: 90%;
+        padding: 5.5em;
+        border-radius: 8px;
+        /* border: 1px solid rgba(0, 0, 0, .05); */
+        background: #fff;
+        position: relative;
+        margin: -5% auto 0; /* I know negative values are not neat */
+        .content {
+          margin: 1em 0;
+        }
+      }
+
     }
   }
 }
