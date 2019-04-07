@@ -81,10 +81,12 @@
     .item {
       border-bottom: 1px solid #eee;
     }
+    .featured-image {
+      height: 100%;
+    }
 
     .item .information {
-      padding-top: 25%;
-      padding-bottom: 15%;
+      padding: 5em 0;
     }
 
     .item .client {
