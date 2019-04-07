@@ -41,7 +41,7 @@ title: Portfolio
                     <div class="grid-x">
                         <div class="small-12 medium-offset-1 medium-10 item-container-inside">
                             <article>
-                                {% if item.image %}<img class="featured-image" src="{{ image }}"/>{% endif %}
+                                {% if item.image %}<img class="featured-image" src="{{ image }}" alt="Picture of portfolio item"/>{% endif %}
                                 <div class="info">
                                     <p class="client">{{ item.client }}</p>
                                     <a href="{{site.baseurl}}{{item.url}}"><h2 class="title text-center">{{ item.title }}</h2></a>
