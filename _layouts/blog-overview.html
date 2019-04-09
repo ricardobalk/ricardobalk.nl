@@ -45,7 +45,7 @@ layout: default
                             <div class="meta">
                                 <h2 class="title">{{ post.title }}</h2>
                                 <p class="date">
-                                    <time datetime="{{ page.date }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+                                    <time datetime="{{ post.date }}">{{ post.date | date: "%B %-d, %Y" }}</time>
                                 </p>
                                 <p class="excerpt">{{ post.excerpt }}</p>
                                 <a href="{{site.baseurl}}{{post.url}}">Read this article&hellip;</a>
