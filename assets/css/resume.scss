@@ -88,8 +88,49 @@
       .subject { font-size: .75em; font-weight: 400; }
     }
   }
+
+  .notice-bottom { font-size: .85em; font-weight: 600; margin-top: 2.5em; display: none; }
 }
 
+
 @media print {
-  .navigation, .bc, .footer { display:none; }
+  .navigation, .bc, .footer {
+    display: none;
+  }
+  .top-information {
+    background: #222 !important; /* Thanks, Foundation. */
+
+    * {
+      color: #eee !important; /* Thanks, Foundation. */
+    }
+
+    .photo {
+      background-color: #fff !important; /* Thanks, Foundation. */
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a[href]:after {
+      content: none;
+    }
+  }
+  .skills {
+    .indicator {
+      .progressbar {
+        &.filled {
+          background-color: #333333 !important; /* Thanks, Foundation. */
+        }
+
+        &.empty {
+          background-color: #d6d6d6 !important; /* Thanks, Foundation. */
+        }
+      }
+    }
+  }
+  .notice-bottom {
+    color: #ccc !important; /* Thanks, Foundation. */
+    display: inline !important;
+  }
 }
