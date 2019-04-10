@@ -21,7 +21,7 @@ layout: default
             <article>
                 <div class="metadata">
                     <h1 class="title">{{ page.title }}</h1>
-                    <time datetime="{{ post.date }}" class="date">{{ page.date | date: "%B %e, %Y" }}</time>
+                    <time datetime="{{ page.date }}" class="date">{{ page.date | date: "%B %e, %Y" }}</time>
                     <div class="tags">{% for tag in page.tags %}<span class="tag">{{tag}}</span>{% endfor %}</div>
                 </div>
                 <section class="content" role="main">
