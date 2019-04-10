@@ -1,0 +1,95 @@
+---
+---
+
+@import "variables";
+
+.resume
+{
+  font-size: .85em;
+  ul { list-style: none; margin-left: 0; }
+  .printable-page { width: 210mm; height: 297mm; margin: 0 auto; }
+  .hl { border: 1px solid #eee; box-sizing: border-box; }
+
+  .top-information {
+    padding: 12mm 0;
+    margin-bottom: 2em;
+    background-color: #222;
+    color: #eee;
+    .name { font-size: 2em; font-weight: 600; }
+    .function { font-size: .95em; font-weight: 300; color: #ccc; }
+    .photo { background-color: #fff; border-radius: 50%; vertical-align: middle; }
+    .contact {
+      font-size: .85em;
+      line-height: 2em;
+      a { color: unset; }
+      span:not(:last-of-type) { margin-right: .75em; }
+      span:before { display: inline-block; font-family: "Font Awesome 5 Free", sans-serif; font-size: .85em; font-weight: 700; margin-right: .75em; }
+      .telephone:before { content: "\f095"; transform: scaleX(-1); }
+      .location:before { content: "\f3c5"; }
+      .email:before { content: "\f0e0"; }
+      .web:before { content: "\f0ac"; }
+      .linkedin:before { font-family: "Font Awesome 5 Brands"; content: "\f08c"; }
+    }
+  }
+
+  .section-division {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #444;
+    &:before, &:after {
+      position: relative;
+      top: .75em;
+      width: 5em;
+      height: 1px;
+      content: '\a0';
+      display: inline-block;
+      margin: 0 .5em;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+
+  .summary {
+    .oneline { font-size: .8em; font-weight: 500; margin-bottom: 2em; }
+  }
+
+  .skills {
+    .box:nth-of-type(2n+1) {
+      padding-left: 2em;
+    }
+    .indicator {
+      .progressbar {
+        height: 1em;
+        margin: .5em 0 1.5em;
+        &.filled { background-color: #333333; }
+        &.empty { background-color: #d6d6d6; padding-right: 1em; }
+      }
+    }
+  }
+
+  .interests {
+    .subjects {
+      text-align: center;
+      .icon { background-color: transparent;
+        border-radius: 50px;
+        border: 1px solid #d8d8d8;
+        color: #222;
+        display: block;
+        font-size: 1.25em;
+        font-weight: 700;
+        height: 40px;
+        line-height: 2.5em;
+        margin: .5em auto .75em;
+        text-align: center;
+        transition: 0.1s ease-out;
+        width: 40px;}
+      .subject { font-size: .75em; font-weight: 400; }
+    }
+  }
+}
+
+@media print {
+  .navigation, .bc, .footer { display:none; }
+}
