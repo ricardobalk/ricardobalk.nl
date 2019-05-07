@@ -1,4 +1,4 @@
-<div class="portfolio">
+<section class="portfolio">
     <div class="show-for-medium">
         {% assign projects = site.portfolio | sort: 'date' | reverse %}
         {% for project in projects | limit: 3 %}
@@ -58,4 +58,4 @@
         {% endfor %}
         <p class="text-center">Head over to my <a href="/portfolio">portfolio</a> for more...</p>
     </div>
-</div>
+</section>
