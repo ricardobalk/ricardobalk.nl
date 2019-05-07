@@ -1,5 +1,10 @@
 name: Ricardo Balk
+author: Ricardo Balk
+author_first_name: Ricardo
+author_last_name: Balk
 description: Blog
+
+# The following data is important for the JSON Linked Data (JSON-LD)
 
 collections:
   portfolio:
@@ -12,7 +17,7 @@ footer-links:
   facebook: ellipticcurv3
   github: ellipticcurv3
   instagram: ellipticcurv3
-  linkedin: ellipticcurv3
+  linkedin: ricardobalk
   twitter: ellipticcurv3
   stackoverflow: ellipticcurv3
   youtube: # channel/<your_long_string> or user/<user-name>
@@ -38,6 +43,8 @@ kramdown:
 
 sass:
   style: :compressed # :compressed or non-minified using :expanded
+
+darkmode: false
 
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
