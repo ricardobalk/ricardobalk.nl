@@ -1,4 +1,12 @@
 {% if page.collection %}
+
+{% include featImageLocation.html %}
+{% if page.image %}
+{% capture json-image %}{{ featuredImageLocation }}/{{ page.image }}{% endcapture %}
+{% else %}
+{% capture json-image-avatar %}{{ site.baseurl }}/{{ site.avatar }}{% endcapture %}
+{% endif %}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -35,9 +43,7 @@
 },
 "image": {
 "@type": "ImageObject",
-"width": {{ page.img_width | default: site.img_width }},
-"height": {{ page.img_height | default: site.img_height }},
-"url": "{{ site.url }}{{ page.img_url | default: site.img_url }}"
+"url": "{{ site.url }}{{ json-image | default: json-image-avatar }}"
 }
 }
 </script>
