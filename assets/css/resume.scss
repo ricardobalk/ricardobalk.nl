@@ -2,6 +2,7 @@
 ---
 
 @import "variables";
+@import "BebasNeuewebfont.css";
 
 .resume {
   font-size: .85em;
@@ -54,7 +55,7 @@
 
   .section-title {
     h2 {
-      font-family: 'Bebas Neue', 'Overpass ExtraBold', sans-serif;
+      font-family: 'BebasNeuewebfont', 'Bebas Neue', 'Overpass ExtraBold', sans-serif;
       font-size: 1.75em;
       font-weight: 300;
       text-align: right;
