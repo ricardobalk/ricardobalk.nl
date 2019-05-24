@@ -283,8 +283,15 @@
     display: none;
   }
 
-  a {
+  .printable-page { border: unset; }
+
+  .profile .information a, .education a, .references a {
+      color: unset !important;
+  }
+
+  a, a:visited {
     text-decoration: none;
+    color: #1779ba !important;
   }
 
   a[href]:after {
