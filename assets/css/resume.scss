@@ -281,7 +281,17 @@
   .navigation, .bc, .footer {
     display: none;
   }
-  .top-information {
+
+  a {
+    text-decoration: none;
+  }
+
+  a[href]:after {
+    content: none;
+  }
+
+
+  .left, .section-title {
     background: #222 !important; /* Thanks, Foundation. */
 
     * {
@@ -290,14 +300,6 @@
 
     .photo {
       background-color: #fff !important; /* Thanks, Foundation. */
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    a[href]:after {
-      content: none;
     }
   }
   .skills {
