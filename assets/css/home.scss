@@ -43,7 +43,7 @@
 
   }
 
-  .main {
+  .about {
     padding: 20vh 0;
     /* background-color: #eee; */
     border-bottom: 1px solid #eee;
@@ -156,6 +156,7 @@
     }
   }
 
+
   .blog {
     border-bottom: 1px solid #eee;
     padding: 5vh 0 15vh;
@@ -164,35 +165,46 @@
       border-bottom: 1px solid #eee;
       margin-bottom: 1.25em;
 
+      .title {
+        font-size: 1.35em;
+        font-weight: 400;
+        color: #333;
+      }
+
+      .excerpt {
+        color: #000;
+      }
+
+      &:hover {
+        .title { color: #1779ba; }
+      }
+
       &:last-of-type {
         border-bottom: none;
       }
+
     }
-    .title {
-     font-size: 1.35em;
-     font-weight: 400;
-     color: #333;
-    }
+
     .call-to-action {
       margin: 1em 0;
+    }
+
+  }
+
+  .shout {
+    color: #222;
+    padding: 10vh 0;
+
+    h1 {
+      font-weight: 400;
+    }
+
+    h2 {
+      font-family: "Overpass Light", "Arial", "Helvetica", sans-serif;
     }
   }
 
   .map {
-    .shout {
-	/* TODO: Refactor */
-      height: 240px;
-      color: #222;
-
-      h1 {
-        font-weight: 400;
-      }
-
-      h2 {
-        font-family: "Overpass Light", "Arial", "Helvetica", sans-serif;
-      }
-    }
-
     .actualmap {
       height: 500px;
       overflow: hidden;

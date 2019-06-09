@@ -3,11 +3,15 @@
         <div class="navigation">
             <div class="grid-x grid-padding-x">
                 <div class="show-for-medium medium-2 large-4 cell">
+
                     <div class="valign-center">
                         <div class="site-identity">
-                            <img src="{{site.baseurl}}/assets/img/avatar.png" width="250" height="252" alt="Avatar">
+                            <a href="{{site.baseurl}}/" title="Return to main page" tabindex="0">
+                            <img src="{{site.baseurl}}/assets/img/avatar.png" width="250" height="252" alt="Avatar" aria-hidden="true">
+                            </a>
                         </div>
                     </div>
+
 
                 </div>
                 <div class="small-12 medium-8 large-4 cell"> <!-- TODO: Work from Mobile to Desktop! -->
@@ -15,14 +19,18 @@
                         <div class="small-12 medium-12 large-12 cell">
                             <nav type="main">
                                 <div class="grid-x grid-padding-x">
+
+
                                     <div class="small-4 medium-4 large-4 cell">
-                                        <a href="{{site.baseurl}}/" class="link text-center">Home</a>
+                                        <a href="{{site.baseurl}}/blog" class="link text-center" title="Ricardo's Blog" tabindex="0">Blog</a>
                                     </div>
+
                                     <div class="small-4 medium-4 large-4 cell">
-                                        <a href="{{site.baseurl}}/portfolio" class="link text-center">Portfolio</a>
+                                        <a href="{{site.baseurl}}/portfolio" class="link text-center" title="Projects Ricardo worked on" tabindex="0">Portfolio</a>
                                     </div>
+
                                     <div class="small-4 medium-4 large-4 cell">
-                                        <a href="{{site.baseurl}}/blog" class="link text-center">Blog</a>
+                                        <a href="{{site.baseurl}}/about/contact" class="link text-center" title="Ricardo's Contact Information" tabindex="0">Contact</a>
                                     </div>
                                 </div>
                             </nav>

@@ -139,12 +139,16 @@ code {
 
 .footer {
   color: #222;
-  padding: 1.5em 0;
+  padding: 2.5em 0;
 
-  p {
-    color: #222;
-    font-size: 0.9em;
+  .footer-message {
+    font-size: .9em;
+    i {
+      margin: 0 .15em;
+      color: #525455
+    }
   }
+
 
   /* TODO: Refactor below, it is difficult to understand. */
   /*       ,icons -> .container -> .icon ?!               */
@@ -178,15 +182,16 @@ code {
     }
   }
 
-  .footer-message {
-    i {
-      margin: 0 .15em;
-      color: #525455
-    }
-  }
 
-  .auxiliary-links {
+  .links {
+    display: block;
     font-size: .75em;
+    text-align: center;
+    a {
+      text-align: center;
+      font-size: 0.9em;
+      &:not(:last-of-type):after { content: " \2022"; margin: 0 .25em;}
+    }
   }
 
 }

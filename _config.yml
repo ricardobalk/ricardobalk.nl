@@ -22,6 +22,7 @@ footer-links:
   twitter: ellipticcurv3
   stackoverflow: ellipticcurv3
   youtube: # channel/<your_long_string> or user/<user-name>
+  onion: tj5amvcbpzcodr63.onion
 
 disqus: ricardobalk # Disqus shortname (not the username)
 google_analytics: UA-16034023-12

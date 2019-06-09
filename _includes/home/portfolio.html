@@ -1,4 +1,4 @@
-<section class="portfolio">
+<section class="portfolio" id="portfolio-overview">
     <div class="show-for-medium">
         {% assign projects = site.portfolio | sort: 'date' | reverse %}
         {% for project in projects | limit: 3 %}
@@ -9,23 +9,23 @@
             <div class="grid-x">
                 <div class="medium-6 large-6 cell">
                     <div class="grid-x valign-center">
-                        <div class="small-offset-1 small-10 medium-12 large-10 cell information">
+                        <div class="small-offset-1 small-10 medium-12 large-10 cell information" tabindex="0">
                             <h1 class="client">{{ project.client }}</h1>
                             <h2 class="title">{{ project.title }}</h2>
                             <p class="story">{{ project.excerpt }}</p>
                         </div>
                     </div>
                 </div>
-                <img class="small-12 medium-6 large-6 cell featured-image" src="{{ image }}" alt="">
+                <img class="small-12 medium-6 large-6 cell featured-image" src="{{ image }}" alt="" aria-hidden="true">
             </div>
         </div>
         {% else %}
         <div class="item">
             <div class="grid-x">
-                <img class="small-12 medium-6 large-6 cell featured-image" src="{{ image }}" alt="">
+                <img class="small-12 medium-6 large-6 cell featured-image" src="{{ image }}" alt="" aria-hidden="true">
                 <div class="medium-6 large-6 cell">
                     <div class="grid-x valign-center">
-                        <div class="small-offset-1 small-10 medium-12 large-10 cell information">
+                        <div class="small-offset-1 small-10 medium-12 large-10 cell information" tabindex="0">
                             <h1 class="client">{{ project.client }}</h1>
                             <h2 class="title">{{ project.title }}</h2>
                             <p class="story">{{ project.excerpt }}</p>
@@ -45,17 +45,16 @@
             <div class="grid-x">
                 <div class="small-offset-1 small-10 medium-offset-2 medium-8 large-6 cell">
                     <div class="grid-x">
-                        <div class="large-offset-1 small-12 medium-12 large-10 cell information">
+                        <div class="large-offset-1 small-12 medium-12 large-10 cell information" tabindex="0">
                             <h1 class="client">{{ project.client }}</h1>
                             <h2 class="title">{{ project.title }}</h2>
                             <p class="story">{{ project.excerpt }}</p>
                         </div>
                     </div>
                 </div>
-                <img src="{{ image }}" alt="" class="small-12 cell featured-image">
+                <img src="{{ image }}" alt="" class="small-12 cell featured-image" aria-hidden="true">
             </div>
         </div>
         {% endfor %}
-        <p class="text-center">Head over to my <a href="/portfolio">portfolio</a> for more...</p>
     </div>
 </section>
