@@ -1,4 +1,4 @@
-<section class="portfolio" id="portfolio-overview">
+<section class="portfolio" id="portfolio-overview" tabindex="0">
     <div class="show-for-medium">
         {% assign projects = site.portfolio | sort: 'date' | reverse %}
         {% for project in projects | limit: 3 %}
@@ -9,7 +9,7 @@
             <div class="grid-x">
                 <div class="medium-6 large-6 cell">
                     <div class="grid-x valign-center">
-                        <div class="small-offset-1 small-10 medium-12 large-10 cell information" tabindex="0">
+                        <div class="small-offset-1 small-10 medium-12 large-10 cell information">
                             <h1 class="client">{{ project.client }}</h1>
                             <h2 class="title">{{ project.title }}</h2>
                             <p class="story">{{ project.excerpt }}</p>
@@ -25,7 +25,7 @@
                 <img class="small-12 medium-6 large-6 cell featured-image" src="{{ image }}" alt="" aria-hidden="true">
                 <div class="medium-6 large-6 cell">
                     <div class="grid-x valign-center">
-                        <div class="small-offset-1 small-10 medium-12 large-10 cell information" tabindex="0">
+                        <div class="small-offset-1 small-10 medium-12 large-10 cell information">
                             <h1 class="client">{{ project.client }}</h1>
                             <h2 class="title">{{ project.title }}</h2>
                             <p class="story">{{ project.excerpt }}</p>
@@ -45,7 +45,7 @@
             <div class="grid-x">
                 <div class="small-offset-1 small-10 medium-offset-2 medium-8 large-6 cell">
                     <div class="grid-x">
-                        <div class="large-offset-1 small-12 medium-12 large-10 cell information" tabindex="0">
+                        <div class="large-offset-1 small-12 medium-12 large-10 cell information">
                             <h1 class="client">{{ project.client }}</h1>
                             <h2 class="title">{{ project.title }}</h2>
                             <p class="story">{{ project.excerpt }}</p>

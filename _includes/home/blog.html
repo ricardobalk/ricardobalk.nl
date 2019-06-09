@@ -3,20 +3,20 @@
         <h1 class="small-12 cell text-center section-title">Latest blog articles...</h1>
         <div class="small-offset-1 small-10 large-offset-2 large-8 medium-offset-1 medium-10 cell">
             <div class="grid-x">
-                {% for post in site.posts | limit: 5 %}
-                <div class="small-12 cell entry">
-                    <article title="{{ post.title }}" tabindex="0">
-                        <a href="{{site.baseurl}}{{post.url}}">
-                            <div class="grid-x">
-                                <h2 class="small-12 cell title">{{ post.title
-                                    }}</h2>
-                                <p class="small-12 cell excerpt">{{ post.excerpt }}</p>
 
-                            </div>
-                        </a>
-                    </article>
-                </div>
+                {% for post in site.posts | limit: 5 %}
+                <article class="small-12 cell entry" title="{{ post.title }}">
+                    <a href="{{site.baseurl}}{{post.url}}" tabindex="0">
+                        <div class="grid-x">
+                            <h2 class="small-12 cell title">{{ post.title
+                                }}</h2>
+                            <p class="small-12 cell excerpt">{{ post.excerpt }}</p>
+
+                        </div>
+                    </a>
+                </article>
                 {% endfor %}
+
 
                 <div class="small-12 call-to-action">
                     <p><small>Only the 5 latest articles are shown here.</small></p>
