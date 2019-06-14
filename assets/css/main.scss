@@ -7,6 +7,9 @@
 
 body {
   background-color: transparent;
+  height: 100vh;
+  overflow: hidden scroll;
+  scroll-behavior: smooth;
 }
 
 code {
