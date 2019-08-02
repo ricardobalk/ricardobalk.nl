@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr" data-theme="light">
+    <head>
+        {% include meta.html %}
+
+        <title>{{ site.name }}{% if page.title %} - {{ page.title }}{% endif %}</title>
+
+        <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}"
+              href="{{ site.baseurl }}/feed.xml"/>
+
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/overpass/3.0.3/overpass-webfont/overpass.min.css">
+
+        <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/webpack/foundation/bundle.css"/>
+        <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/main.css"/>
+        {% if site.darkmode %}
+            <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/main-dark.css"/>
+        {% endif %}
+        <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/webpack/vue/bundle.css"/>
+
+        {% if page.stylesheet %}
+         <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/{{ page.stylesheet }}.css"/>
+            {% if site.darkmode %}
+             <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/{{ page.stylesheet }}-dark.css"/>
+            {% endif %}
+        {% endif %}
+
+        {% if page.collection %}
+        <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/posts.css"/>
+        {% if site.darkmode %}
+        <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/posts-dark.css"/>
+        {% endif %}
+        {% include post-ld.html %}
+        {% endif %}
+    </head>
+
+    <body>
+        {% include comment.html %}
+        {% include navigation.html %}
+
+        <div class="grid-container container">
+            {{ content }}
+        </div>
+
+        {% include footer.html %}
+	<script src="{{site.baseurl}}/assets/foundation/bundle.js"></script>
+        <script src="{{site.baseurl}}/assets/webpack/vue/bundle.js"></script>
+	{% include analytics.html %}
+    </body>
+</html>

@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/home.css">
+{% if site.darkmode %}
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/home-dark.css">
+{% endif %}
+
+<div class="home">
+    {% include home/hero.html %}
+    {% include home/about.html %}
+    {% include home/portfolio.html %}
+    {% include home/quote.html %}
+    {% include home/blog.html %}
+    {% include home/shout.html %}
+    {% include home/map.html %}
+</div>

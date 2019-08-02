@@ -1,23 +1,39 @@
-# Personal Website
+## Jekyll, Webpack, Vue
 
-This repository contains the source code of my personal website.
+**INSTALL**
 
-# Challenge
+```sh
+npm install
+sudo gem install jekyll bundler
+sudo gem update --system
+bundle install --path vendor/bundle
+```
 
-The challenge is to build a website that... 
+**DEV**
 
-- Looks clean and professional
-- Is open source
-- Is easy to maintain
-- Is built with nice, easy to understand frameworks (Zurb Foundation, Jekyll)
-- Is light enough to host on GitHub Pages
+```
+npm run dev
+```
 
-# Improvements
+**BUILD**
 
-I am human. I make mistakes.  I learn from them. Seeing something that could be improved? Send me a pull request!
+```
+npm run build
+```
+(Site build is in ```/dist``` folder)
 
-I am looking forward to seeing your input.
+**SERVE**
+```
+npm run serve
+```
 
-# License
+**BUILD & SERVE**
+```
+npm run build:serve
+```
 
-This website is licensed under GNU GPLv3. This means that you could make your own copy, but should release it with the same license and disclose the source code as well.
+
+### Special thanks to:
+
+- http://stackoverflow.com/questions/31933359/using-react-in-a-multi-page-app
+- https://www.jonathan-petitcolas.com/2016/08/12/plugging-webpack-to-jekyll-powered-pages.html

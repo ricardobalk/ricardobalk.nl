@@ -23,18 +23,13 @@ footer-links:
   stackoverflow: ellipticcurv3
   youtube: # channel/<your_long_string> or user/<user-name>
   onion: tj5amvcbpzcodr63.onion
-
 disqus: ricardobalk # Disqus shortname (not the username)
 google_analytics: UA-16034023-12
 
 url: https://www.ricardobalk.nl # Used for Sitemap.xml and your RSS feed
-
-# If you're hosting your site at a Project repository on GitHub pages
-# (http://yourusername.github.io/repository-name)
-# and NOT your User repository (http://yourusername.github.io)
-# then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
-
+source: src
+destination: dist
 permalink: /blog/:categories/:title/
 
 kramdown:
@@ -43,10 +38,12 @@ kramdown:
   syntax_highlighter_opts:
     css_class: 'highlight' # Use existing pygments syntax highlighting css
 
-sass:
-  style: :compressed # :compressed or non-minified using :expanded
-
 darkmode: false
+
+sass:
+    style: compressed
+    sass_dir: _sass
+
 
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
@@ -61,3 +58,7 @@ exclude:
   - _posts/TEMPLATE.md
   - _portfolio/TEMPLATE.md
   - _posts/IDEAS.md
+  - node_modules/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

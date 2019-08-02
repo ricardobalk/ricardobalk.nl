@@ -1,0 +1,41 @@
+---
+---
+
+.portfolio
+{
+  .page-container {
+    margin: 0;
+  }
+  .items
+  {
+    .item-container-outside {
+      margin-bottom: 2em;
+      .item-container-inside {
+        box-shadow: 3px 4px 14px rgba(0,0,0,.06);
+        border: 1px solid rgba(0,0,0,.05);
+
+        .featured-image {
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          text-align: center;
+          width: 100%;
+          height: auto;
+        }
+
+        .info {
+          background-color: #fff;
+          padding: 1em;
+          text-align: center;
+          .title { }
+          .client {
+            font-size: .9em;
+            font-weight: 700;
+            color: #004e83;
+          }
+          .summary { font-weight: 300; }
+        }
+      }
+    }
+    }
+  }

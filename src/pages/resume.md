@@ -1,0 +1,4 @@
+---
+layout: resume
+permalink: /resume/
+---

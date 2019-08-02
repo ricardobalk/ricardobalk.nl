@@ -1,0 +1,41 @@
+//
+// VARIABLES
+//
+
+// Fonts
+
+$helvetica: Helvetica, Arial, sans-serif;
+$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$georgia: Georgia, serif;
+$overpass: "Overpass", Helvetica, Arial, sans-serif;
+$overpass-mono: "Overpass Mono", Courier New, Courier, monospace;
+
+// Colors
+$color-text-primary: rgb(119, 119, 119);
+$color-text-secondary: lighten($color-text-primary, 20%);
+$color-text-empathize: #fff;
+$color-text-link: rgb(25, 137, 192);
+$color-text-highlight-1: rgb(114, 142, 153);
+$color-text-highlight-2: #ad9662;
+$color-bg-primary: #111;
+$color-bg-secondary: darken($color-bg-primary, 2%);
+$color-background-primary: $color-bg-primary;
+$color-background-secondary: $color-bg-secondary;
+$color-text-highlight: $color-text-highlight-2;
+
+// Default Colors
+$black: #000;
+$blue: #4183C4;
+$darkerGray: #222;
+$darkGray: #333;
+$gray: #666;
+$lightGray: #eee;
+$white: #fff;
+
+
+// Mobile breakpoints
+@mixin mobile {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}

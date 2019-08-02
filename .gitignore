@@ -1,5 +1,18 @@
-_drafts/
+# Filesystem
 .DS_Store
+
+
+# Development
+
+# IDE
 .idea/
+
+# Jekyll
+_drafts/
 .sass-cache/
 _site/
+
+# Build files
+dist/
+node_modules/
+src/assets/webpack/
