@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  website:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: ecv-www/latest
+    ports:
+      - "4000:4000" # Change this to 80:4000 if you want to just use 'localhost'
+    volumes:
+    - ./:/home/node/www
