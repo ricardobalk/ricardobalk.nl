@@ -5,6 +5,8 @@
 @import "fonts";
 @import "highlights";
 
+html { width: 100vw; }
+
 body {
   background-color: transparent;
   height: 100vh;
@@ -69,57 +71,49 @@ code {
   }
 }
 
-.navigation {
-  min-height: 100px;
-  line-height: 100px; // I do this because the navbar is 100px in height
-  border-bottom: 1px solid #eee;
+.site-header {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+  & ~ *  { position: relative; top: $site-header-height; }
 
-  & > .grid-x {
-    height: 100%;
+  .fr { float: right; a { padding: 0 .25em } }
+  .contact {
+    color: #fff;
+    background: #000;
+    font-size: .7em;
+    padding: .25em 0;
+    vertical-align: middle;
+    a { color: inherit; font-weight: 500; }
+    i.fa, i.fab { font-size: .95em; margin-right: .25em; }
   }
+  .navigation {
+    min-height: $navigation-bar-height;
+    line-height: $navigation-bar-height;
+    border-bottom: 1px solid #eee;
 
-  .site-identity {
-    height: 100%;
-
-    img {
-      max-height: 70px;
-      max-width: 70px;
-      border-radius: 100px;
+    & > .grid-x {
+      height: 100%;
     }
-  }
 
-  a {
-    color: #666;
-    font-weight: 600;
-
-    &:hover {
-      color: #333;
+    .site-identity {
+      height: 100%;
+      img {
+        max-height: 50px;
+        max-width: 50px;
+        border-radius: 100px;
+      }
     }
-  }
 
-  .link {
-    display: block;
-  }
-
-  .toggle-darkmode {
-    display: none; // TODO: Remove this line when dark mode support is complete
-    i {
+    a {
       color: #666;
-      line-height: inherit;
-    }
+      font-size: .9em;
+      text-transform: lowercase;
 
-    .switch:before {
-      font-family: "Font Awesome 5 Free", sans-serif;
-      font-size: 1.75em;
-    }
-
-    .switch[data-state="off"]:before {
-      content: "\f204";
-    }
-
-    .switch[data-state="on"]:before {
-      content: "\f205";
-      color: #00d500;
+      &:hover {
+        color: #333;
+      }
     }
   }
 
@@ -197,11 +191,4 @@ code {
     }
   }
 
-}
-
-@media screen and (max-width: 639px) {
-  .site-identity img {
-    display: block;
-    margin: 1em auto 1.5em;
-  }
 }

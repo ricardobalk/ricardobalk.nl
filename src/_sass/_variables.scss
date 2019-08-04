@@ -2,6 +2,11 @@
 // VARIABLES
 //
 
+// Sizes
+$contact-bar-height: 25px;
+$navigation-bar-height: 75px;
+$site-header-height: $contact-bar-height + $navigation-bar-height;
+
 // Fonts
 
 $helvetica: Helvetica, Arial, sans-serif;

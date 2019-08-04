@@ -1,14 +1,18 @@
 @import url('http://overpass-30e2.kxcdn.com/overpass.css');
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 body,
-p, a, i,
-h1, h2, h3,
-h4, h5, h6 {
- font-family: "Overpass", Helvetica, Arial, sans-serif;
+p, a, i {
+ font-family: "Muli", Helvetica, Arial, sans-serif;
  transition: font 0.3s ease;
 }
 
-p, a, i         { font-size: 1.15em; font-weight: 100; }
+h1, h2, h3,
+h4, h5, h6 {
+ font-family: "Bebas Neue", "Overpass", Helvetica, Arial, sans-serif;
+}
+
+p, a, i         { font-size: 1.15em; font-weight: 500; }
 h1              { font-size: 2em; }
 h2              { font-size: 1.5em; }
 h3              { font-size: 1.35em; }

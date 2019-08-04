@@ -5,24 +5,23 @@ author_last_name: Balk
 description: Blog
 avatar: img/avatar.png
 
-# The following data is important for the JSON Linked Data (JSON-LD)
+social:
+  behance: ricardobalk
+  disqus: ricardobalk
+  facebook: ellipticcurv3
+  github: ellipticcurv3
+  instagram: ellipticcurv3
+  keybase: ellipticcurv3
+  linkedin: ricardobalk
+  stackoverflow: ellipticcurv3
+  twitter: ellipticcurv3
+  youtube: # channel/<your_long_string> or user/<user-name>
 
 collections:
   portfolio:
     output: true
     permalink: /:collection/:name
 
-footer-links:
-  source: "https://github.com/ellipticcurv3/personal-website"
-  keybase: ellipticcurv3
-  facebook: ellipticcurv3
-  github: ellipticcurv3
-  instagram: ellipticcurv3
-  linkedin: ricardobalk
-  twitter: ellipticcurv3
-  stackoverflow: ellipticcurv3
-  youtube: # channel/<your_long_string> or user/<user-name>
-  onion: tj5amvcbpzcodr63.onion
 disqus: ricardobalk # Disqus shortname (not the username)
 google_analytics: UA-16034023-12
 
@@ -43,7 +42,6 @@ darkmode: false
 sass:
     style: compressed
     sass_dir: _sass
-
 
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
