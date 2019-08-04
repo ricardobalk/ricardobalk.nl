@@ -16,3 +16,4 @@ _site/
 dist/
 node_modules/
 src/assets/webpack/
+src/.jekyll-metadata
