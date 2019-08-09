@@ -135,60 +135,40 @@ code {
 }
 
 .footer {
-  color: #222;
-  padding: 2.5em 0;
+  color: #eee;
+  background-color: #1e1e1e;
+  /* text-align: center; */
 
-  .footer-message {
-    font-size: .9em;
-    i {
-      margin: 0 .15em;
-      color: #525455
-    }
-  }
-
-
-  /* TODO: Refactor below, it is difficult to understand. */
-  /*       ,icons -> .container -> .icon ?!               */
-  /*       it should be:                                  */
-  /*       .icons -> .container-outside -> .container-inside -> .icon */
-  /*       or something alike.                            */
-
-  .icons {
-    margin: 2em 0;
-
-    .container .icon {
-      background-color: transparent;
-      border-radius: 50px;
-      border: 1px solid #333;
-      color: #222;
-      display: block;
-      font-size: 20px;
-      font-weight: 700;
-      height: 50px;
-      line-height: 50px;
-      margin: 0 auto;
-      text-align: center;
-      transition: 0.1s ease-out;
-      width: 50px;
-
-      &:hover {
-        background-color: #333;
-        color: #fff;
-        cursor: pointer;
-      }
-    }
-  }
-
+  .links, .footer-message { padding-left: 1em; padding-right: 1em; }
 
   .links {
     display: block;
-    font-size: .75em;
-    text-align: center;
+    font-size: .9em;
+    background-color: #222;
+    padding-top: 1em;
+    padding-bottom: 1em;
     a {
+      color: inherit;
       text-align: center;
       font-size: 0.9em;
-      &:not(:last-of-type):after { content: " \2022"; margin: 0 .25em;}
+      &:not(:last-of-type) { margin-right: .5em;}
     }
   }
 
+  .footer-message {
+    font-size: .85em;
+    padding-top: .75em;
+    padding-bottom: .75em;
+    a { color: inherit; font-size: inherit }
+    i {
+      font-size: .8em;
+      margin: 0 .15em;
+    }
+    span:not(:last-of-type):after {
+      font-size: .75em;
+      line-height: .95em;
+      content: "\2022";
+      margin: 0 .25em;
+    }
+  }
 }

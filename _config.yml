@@ -25,8 +25,10 @@ collections:
 disqus: ricardobalk # Disqus shortname (not the username)
 google_analytics: UA-16034023-12
 
-url: https://www.ricardobalk.nl # Used for Sitemap.xml and your RSS feed
+url: "https://www.ricardobalk.nl" # Used for Sitemap.xml and your RSS feed
 baseurl: ""
+onion: "http://tj5amvcbpzcodr63.onion" # If available via Tor
+
 source: src
 destination: dist
 permalink: /blog/:categories/:title/

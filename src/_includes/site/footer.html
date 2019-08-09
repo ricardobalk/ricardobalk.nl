@@ -1,9 +1,16 @@
 <footer class="footer" tabindex="0">
     <div class="grid-x">
-        <div class="large-offset-4 large-4 cell">
 
-            <p class="text-center">
-                <span class="footer-message">
+        <div class="small-12 cell links">
+                <a href="{{site.baseurl}}/privacy">Privacy</a>
+                <a href="{{site.baseurl}}/about">About</a>
+                <a href="{{site.baseurl}}/contact">Contact</a>
+                {% if site.onion %}<a href="{{site.onion}}">Tor</a>{% endif %}
+        </div>
+
+        <div class="small-12 cell">
+            <div class="footer-message">
+                <span>
                     <i class="show-for-sr">This website was </i>
                     Made with
                        <i class="fas fa-heart" aria-hidden="true"></i>
@@ -14,43 +21,11 @@
                         and some
                        <i class="fas fa-code" aria-hidden="true"></i>
                        <i class="show-for-sr">code</i>
-                        by Ricardo Balk.
+                        by Ricardo Balk
                 </span>
-            </p>
-
-            <div class="grid-x icons">
-                <div class="small-4 cell container">
-                    <a href="https://mastodon.social/@ellipticcurv3"
-                       data-tooltip aria-haspopup="true"
-                       class="has-tip icon fab fa-mastodon"
-                       title="Ricardo's profile on Mastodon, a free and open source social media platform."
-                       rel="me"></a>
-                </div>
-
-                <div class="small-4 cell container">
-                    <a href="https://github.com/{{site.footer-links.github}}"
-                       data-tooltip aria-haspopup="true"
-                       class="has-tip icon fab fa-github"
-                       title="Ricardo's profile on GitHub, a platform for software developers."
-                       rel="me"></a>
-                </div>
-
-                <div class="small-4 cell container">
-                    <a href="https://keybase.io/{{site.footer-links.keybase}}"
-                       data-tooltip aria-haspopup="true"
-                       class="has-tip icon fab fa-keybase"
-                       title="Ricardo's profile on Keybase, an end-to-end encrypted chat platform and more."
-                       rel="me"></a>
-                </div>
+                <span>Design available on <a href="https://behance.net/{{site.social.behance}}" target="_blank"><i class="fab fa-behance"></i></a></span>
+                <span>Source code available on <a href="https://github.com/{{site.social.github}}/www" target="_blank"><i class="fab fa-github"></i></a> under the GPLv3 License</span>
             </div>
-
-
-
-            <span class="links">
-                <a href="{{site.baseurl}}/sitemap.xml">Sitemap</a>
-                <a href="{{ site.footer-links.source }}">Source</a>
-                <a href="http://{{ site.footer-links.onion }}">Tor</a>
-            </span>
         </div>
     </div>
 </footer>
