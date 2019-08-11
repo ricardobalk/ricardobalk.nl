@@ -3,12 +3,12 @@
 
 @import "variables";
 
-$hero-height: calc(60vh - #{$site-header-height});
+$hero-height: calc(66vh - #{$site-header-height});
 
 .home {
   .hero {
     font-family: "Muli", "Overpass", Helvetica, Arial, sans-serif;
-    height: calc(80vh - #{$site-header-height});
+    height: $hero-height;
 
     background-color:      #004293;
     background-image:      linear-gradient(to right, #979797, #171717),
@@ -30,7 +30,7 @@ $hero-height: calc(60vh - #{$site-header-height});
     outline: 0;
 
     @media screen and (max-width: 640px) {
-      height: calc(60vh - #{$site-header-height})
+      height: calc(50vh - #{$site-header-height})
     }
 
     .text-container {
@@ -58,11 +58,28 @@ $hero-height: calc(60vh - #{$site-header-height});
   }
 
   .about {
+    margin: 3em 0;
     outline: 0;
-    padding: 20vh 0;
-    /* background-color: #eee; */
-    border-bottom: 1px solid #eee;
     color: #333;
+    position: relative;
+    bottom: 8em;
+
+    .maxed {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .picture {
+      padding: 0 2em;
+    }
+
+    .text-container {
+      margin-top: 2em;
+      padding: 0 2em;
+      @media screen and (min-width: 640px) {
+        margin-top: 6em;
+      }
+    }
 
     h1 {
       font-size: 3.25em;
