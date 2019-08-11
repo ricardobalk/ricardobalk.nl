@@ -6,6 +6,9 @@
 $hero-height: calc(66vh - #{$site-header-height});
 
 .home {
+
+  .content-padding { padding-left: 1em; padding-right: 1em; }
+
   .hero {
     font-family: "Muli", "Overpass", Helvetica, Arial, sans-serif;
     height: $hero-height;
@@ -56,13 +59,11 @@ $hero-height: calc(66vh - #{$site-header-height});
       }
     }
   }
-
   .about {
-    margin: 3em 0;
+    margin: -4em 0 3em;
     outline: 0;
     color: #333;
     position: relative;
-    bottom: 8em;
 
     .maxed {
       max-width: 920px;
@@ -94,6 +95,34 @@ $hero-height: calc(66vh - #{$site-header-height});
 
     .grid-x:not(:first-of-type) {
       margin-top: 2em;
+    }
+  }
+
+  .services {
+    max-width: 1600px;
+    margin: 2em auto;
+    .section-title { font-size: 2em; padding: 0 1em; }
+    .card {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      .service {
+        display: flex;
+        text-align: center;
+        justify-self: stretch;
+        .icon-container {
+          color: #eee;
+          background: #001037 linear-gradient(-30deg, #001037, #1e3d95);
+          .icon {
+            &.fa-mouse-pointer::before { padding-left: .15em; }
+            &.fa-code::before { padding-right: .05em; }
+          }
+        }
+      }
+      @media screen and (max-width: 640px) { padding: 0 1em; }
     }
   }
 
