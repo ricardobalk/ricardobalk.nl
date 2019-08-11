@@ -6,7 +6,7 @@
 $hero-height: calc(66vh - #{$site-header-height});
 
 .home {
-
+  .maxed { max-width: 1600px; margin: 0 auto; }
   .content-padding { padding-left: 1em; padding-right: 1em; }
 
   .hero {
@@ -124,6 +124,32 @@ $hero-height: calc(66vh - #{$site-header-height});
       }
       @media screen and (max-width: 640px) { padding: 0 1em; }
     }
+  }
+
+  .splitter {
+    background-color:      #004293;
+    background-image:      linear-gradient(to right, #979797, #171717),
+                           url("/assets/img/winder-bl.svg");
+    background-blend-mode: soft-light,
+                           normal;
+    background-repeat:     no-repeat;
+    background-size:       cover,
+                           contain;
+    background-position:   left top,
+                           left bottom -5px;
+
+    margin: 6em 0 8em;
+    padding: 4em 0;
+
+    .picture { position: relative; top: 1em; }
+
+    .text-container {
+      color: #eee;
+      padding: 0 2em;
+      .section-title { font-size: 3.25em; }
+      .design-process { display: block; font-size: .85em; font-weight: 700; margin: 1em 0;}
+    }
+
   }
 
   .portfolio {
