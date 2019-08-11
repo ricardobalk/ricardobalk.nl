@@ -10,13 +10,15 @@ import MyFooter from './vue-components/Footer.vue';
 import Greet from './vue-components/Greet.vue';
 import Polaroid from './vue-components/Polaroid.vue';
 import Service from './vue-components/Service.vue';
+import SuccessStory from './vue-components/SuccessStory.vue';
 
 const APPS = {
     Hello,
     MyFooter,
     Greet,
     Polaroid,
-    Service
+    Service,
+    SuccessStory
 };
 
 // Vue.config.devtools = true
