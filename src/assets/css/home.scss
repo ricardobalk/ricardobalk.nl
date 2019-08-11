@@ -203,6 +203,18 @@ $hero-height: calc(66vh - #{$site-header-height});
         font-size: 4em;
       }
     }
+
+    .fancy-button {
+      .button {
+        color: #fff;
+        background: linear-gradient(60deg, #377fea69, #377fead6);
+        font-weight: 900;
+        font-size: .9em;
+        padding: 1em 2.75em;
+      }
+    }
+
+
   }
 
 
