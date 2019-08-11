@@ -173,5 +173,38 @@ $hero-height: calc(66vh - #{$site-header-height});
     }
   }
 
+  .conclusion {
+    color: #eee;
+    background-color:      #004293;
+    background-image:      linear-gradient(to right, #979797, #171717),
+    url("/assets/img/winder-top-left.svg");
+    background-blend-mode: soft-light,
+                           normal;
+    background-repeat:     no-repeat;
+    background-size:       cover,
+                           contain;
+    background-position:   left top,
+                           left top -5px;
+
+    margin: 5em 0 0;
+    padding: 4em 0;
+
+    .text-container {
+      text-align: center;
+      .next-move {
+        text-transform: uppercase;
+        font-size: 1.3em;
+        font-weight: 900;
+        margin-bottom: 0;
+        line-height: 1em;
+        margin-top: 1em;
+      }
+      .section-title {
+        font-size: 4em;
+      }
+    }
+  }
+
+
 
 }
