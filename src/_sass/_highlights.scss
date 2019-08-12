@@ -27,9 +27,6 @@ code {
 }
 
 p, li {
-    font-size: .95em;
-    font-weight: 300;
-
     & > code {
         color: hsl(220, 40%, 50%);
         font-weight: 600;

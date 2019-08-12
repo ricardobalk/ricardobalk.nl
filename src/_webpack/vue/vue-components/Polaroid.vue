@@ -20,10 +20,35 @@ export default {
 }
 </script>
 
-<style scoped>
-    .polaroid-container { background-color: #fff; border: 1px solid #eee; box-shadow: 2px 2px 11px 0 rgba(50, 50, 50, 0.08); margin: .5em 0; }
-    .polaroid-container .photo-container.outside { padding: 1.5em 1.5em 0; }
-    .polaroid-container .photo-container .inside { width: 100%; height: auto; background-size: cover; background-position: center; background-repeat: no-repeat; box-shadow: inset 2px 2px 2px 0 rgba(50, 50, 50, 0.11);}
-    .polaroid-container .photo-container .photo { width: 100%; height: auto; position: relative; z-index: -1; visibility: hidden; }
-    .polaroid-container .caption { text-align: center; margin: .75em 0 1em; }
+<style lang="scss" scoped>
+    .polaroid-container {
+        background-color: #fff;
+        border: 1px solid #eee;
+        box-shadow: 2px 2px 11px 0 rgba(50, 50, 50, 0.08);
+        margin: .5em 0;
+        .photo-container {
+            &.outside {
+                padding: 1.5em 1.5em 0;
+                .inside {
+                    width: 100%;
+                    height: auto;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    box-shadow: inset 2px 2px 2px 0 rgba(50, 50, 50, 0.11);
+                    .photo {
+                        width: 100%;
+                        height: auto;
+                        position: relative;
+                        z-index: -1;
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+        .caption {
+            text-align: center;
+            margin: .75em 0 1em;
+        }
+    }
 </style>

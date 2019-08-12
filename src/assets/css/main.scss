@@ -36,8 +36,6 @@ code {
 
 
 .breadcrumbs {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
   list-style: none;
   li {
     font-size: .8em;
@@ -89,11 +87,21 @@ code {
   .contact {
     color: #fff;
     background: #000;
-    font-size: .7em;
+    font-family: "Muli", "Overpass", Helvetica, Arial, sans-serif;
+    font-size: .95em;
     padding: .25em 0;
     vertical-align: middle;
-    a { color: inherit; font-weight: 500; }
-    i.fa, i.fab { font-size: .95em; margin-right: .25em; }
+    .em {
+      font-weight: 500;
+      font-size: .85em;
+
+      .fas {
+        margin-right: .25em;
+        font-size: .95em;
+      }
+    }
+    .fa, .fab { font-size: .95em; }
+    a { color: inherit; }
   }
   .navigation {
     min-height: $navigation-bar-height;
@@ -122,17 +130,6 @@ code {
     }
   }
 
-}
-
-.portfolio {
-
-  .show-for-small-only {
-    .item {
-      .featured-image {
-        width: 100%
-      }
-    }
-  }
 }
 
 .footer {

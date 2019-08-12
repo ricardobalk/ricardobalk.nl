@@ -8,6 +8,8 @@ import Vue from 'vue';
 import Hello from './vue-components/Hello.vue';
 import MyFooter from './vue-components/Footer.vue';
 import Greet from './vue-components/Greet.vue';
+import Hero from './vue-components/Hero.vue';
+import FancyHero from './vue-components/FancyHero.vue';
 import FancyButton from './vue-components/FancyButton.vue';
 import Polaroid from './vue-components/Polaroid.vue';
 import Service from './vue-components/Service.vue';
@@ -17,6 +19,8 @@ const APPS = {
     Hello,
     MyFooter,
     Greet,
+    Hero,
+    FancyHero,
     FancyButton,
     Polaroid,
     Service,

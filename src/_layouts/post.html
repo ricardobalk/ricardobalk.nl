@@ -2,18 +2,11 @@
 layout: default
 ---
 
+<div class="__vue-root" id="FancyHero" data-title="{{ page.title }}" {% if page.image %}{% include featImageLocation.html %}data-image="{{ featuredImageLocation }}/{{ page.image }}"{% endif %}></div>
+
 <main id="main" role="main" class="post limited-width">
     <div class="grid-x page-container entry">
         <div class="small-offset-1 small-10 large-offset-2 large-8 cell">
-
-            {% include breadcrumbs.html %}
-
-            {% if page.image %}
-            {% include featImageLocation.html %}
-            <div class="featured-image">
-                <img src="{{ featuredImageLocation }}/{{ page.image }}" alt="">
-            </div>
-            {% endif %}
 
             <article>
                 <div class="metadata">
