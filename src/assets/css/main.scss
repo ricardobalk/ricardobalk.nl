@@ -12,6 +12,7 @@ body {
   height: 100vh;
   overflow: hidden scroll;
   scroll-behavior: smooth;
+  & * { outline: 0; }
 }
 
 code {
@@ -100,9 +101,7 @@ code {
     .site-identity {
       height: 100%;
       img {
-        max-height: 50px;
-        max-width: 50px;
-        border-radius: 100px;
+        max-width: 30px;
       }
     }
 

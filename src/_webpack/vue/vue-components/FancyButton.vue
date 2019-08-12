@@ -17,9 +17,7 @@ export default {
 
 <style scoped>
   .fancy-button {
-    text-align: center;
-    font-size: .95em;
-    font-weight: 700;
+    margin: .25em 0;
   }
 
   .fancy-button .button {
@@ -27,9 +25,11 @@ export default {
     display: inline-block;
     width: auto;
     height: auto;
-    padding: .75em 1.5em;
     color: #000;
     background: #fff;
     border-radius: 5px;
+    font-size: .9em;
+    font-weight: 900;
+    padding: 1em 2.75em;
   }
 </style>
