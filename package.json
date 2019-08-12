@@ -40,7 +40,7 @@
     "serve": "^11.0.2",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "url-loader": "^2.0.0",
+    "url-loader": "^2.1.0",
     "vue": "^2.6.10",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.10",
@@ -51,6 +51,9 @@
   "dependencies": {
     "foundation": "^4.2.1",
     "foundation-sites": "^6.5.3",
+    "masonry-layout": "^4.2.2",
+    "typeface-muli": "0.0.71",
+    "typeface-overpass": "0.0.72",
     "what-input": "^5.2.3"
   }
 }

@@ -8,16 +8,16 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     entry: {
-    'foundation': "./src/_webpack/foundation/foundation.js", 
-    'vue': "./src/_webpack/vue/app.js"
+        'foundation': "./src/_webpack/foundation/foundation.js",
+        'vue': "./src/_webpack/vue/app.js",
+        'fonts': "./src/_webpack/fonts/fonts.js",
+        'masonry': "./src/_webpack/masonry/masonry.js"
     },
     output: {
         path: path.join(__dirname, './src/assets/webpack/'),
         filename: "[name]/bundle.js"
     },
-    resolve: {
-
-    },
+    resolve: {},
     devtool: 'source-map',
     // performance: {
     //     hints: false
@@ -53,10 +53,14 @@ module.exports = {
                 test: /\.css$/,
                 loader: "style-loader!css-loader"
             },
-
             {
-                test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?.*$|$)/,
+                test: /\.(png|jpg|jpeg|gif)(\?.*$|$)/,
                 loader: 'file-loader'
+            },
+            {
+                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                // loader: 'file-loader'
+                loader: 'url-loader?limit=100000'
             },
             {
                 test: /\.js$/,
@@ -78,12 +82,12 @@ module.exports = {
         new ExtractTextPlugin("[name]/bundle.css"),
 
         new OptimizeCssAssetsPlugin({
-          assetNameRegExp: /\.css$/g,
-          cssProcessor: require('cssnano'),
-          cssProcessorPluginOptions: {
-            preset: ['default', { discardComments: { removeAll: true } }],
+            assetNameRegExp: /\.css$/g,
+            cssProcessor: require('cssnano'),
+            cssProcessorPluginOptions: {
+                preset: ['default', {discardComments: {removeAll: true}}],
             },
-          canPrint: true
+            canPrint: true
         }),
 
         new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
@@ -93,28 +97,29 @@ module.exports = {
             jQuery: "jquery",
             "window.jQuery": "jquery",
         })
-        
+
     ],
     optimization: {
-    minimizer: [
-      // we specify a custom UglifyJsPlugin here to get source maps in production
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        uglifyOptions: {
-          compress: true,
-          ecma: 6,
-          mangle: true
-        },
-        sourceMap: true
-      })
-    ]}
+        minimizer: [
+            // we specify a custom UglifyJsPlugin here to get source maps in production
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
+                uglifyOptions: {
+                    compress: true,
+                    ecma: 6,
+                    mangle: true
+                },
+                sourceMap: true
+            })
+        ]
+    }
 };
 
 if (process.env.NODE_ENV === 'production') {
     module.exports.devtool = 'source-map';
-        // http://vue-loader.vuejs.org/en/workflow/production.html
-     module.exports.plugins = (module.exports.plugins || []).concat([
+    // http://vue-loader.vuejs.org/en/workflow/production.html
+    module.exports.plugins = (module.exports.plugins || []).concat([
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.DefinePlugin({
             'process.env': {

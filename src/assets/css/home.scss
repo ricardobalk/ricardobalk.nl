@@ -3,8 +3,6 @@
 
 @import "variables";
 
-$hero-height: calc(66vh - #{$site-header-height});
-
 .home {
   .maxed { max-width: 1600px; margin: 0 auto; }
   .content-padding { padding-left: 1em; padding-right: 1em; }
@@ -59,6 +57,7 @@ $hero-height: calc(66vh - #{$site-header-height});
       }
     }
   }
+
   .about {
     margin: -4em 0 3em;
     outline: 0;

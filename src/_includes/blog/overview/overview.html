@@ -1,0 +1,57 @@
+<div class="grid-x limited-width">
+    <div class="small-offset-1 small-10 large-offset-2 large-8 cell">
+        {% include breadcrumbs.html %}
+
+        <header class="page-header">
+            <h1>My Writings</h1>
+        </header>
+
+        {% if site.categories[page.category] %}
+        {% assign posts = site.categories[page.category] %}
+        {% else %}
+        {% assign posts = site.posts %}
+        {% endif %}
+
+        <section class="grid-x articles">
+            <div class="small-12 medium-6 large-4 cell masonry-grid-sizer"></div>
+            {% for post in posts %}
+            {% if post.image %}
+            {% capture featured-image %}
+            {{ site.baseurl }}/assets/img/blog/{{ post.image }}
+            {% endcapture %}
+            {% assign featured-image = featured-image | strip %}
+            {% endif %}
+            <a href="{{site.baseurl}}{{post.url}}" class="clickable">
+                <div class="small-12 medium-6 large-4 cell article-container">
+                        <article class="article" data-category="{{post.category}}">
+                            {% if post.image %}
+                            <div class="show-for-medium image">
+                                <img src="{{ featured-image }}" alt="">
+                            </div>
+                            {% endif %}
+                            <div class="meta">
+                                <p class="date">
+                                    <time datetime="{{ post.date }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+                                </p>
+                                <h2 class="title">{{ post.title }}</h2>
+                                <p class="excerpt">{{ post.excerpt }}</p>
+                                <a href="{{site.baseurl}}{{post.url}}" class="continue-reading">Continue reading</a>
+                            </div>
+                        </article>
+                </div>
+            </a>
+            {% endfor %}
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script type="application/javascript">
+        imagesLoaded(document.querySelector('.articles'), function () {
+            let msnry = new Masonry(document.querySelector('.articles'), {
+                itemSelector: '.article-container',
+                columnWidth: '.masonry-grid-sizer',
+                percentPosition: true
+            });
+        });
+    </script>

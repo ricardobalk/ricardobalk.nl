@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: blog/overview
 permalink: /blog/
-stylesheet: blog
+stylesheet: blog/overview
 ---

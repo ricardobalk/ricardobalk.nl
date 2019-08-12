@@ -34,9 +34,15 @@ code {
   margin: 0 auto;
 }
 
+
 .breadcrumbs {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  list-style: none;
+  li {
+    font-size: .8em;
+    a { font-size: inherit; }
+  }
 }
 
 .valign-center {
@@ -127,10 +133,6 @@ code {
       }
     }
   }
-}
-
-.breadcrumbs {
-  list-style: none;
 }
 
 .footer {
