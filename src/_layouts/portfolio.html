@@ -5,52 +5,50 @@ title: Portfolio
 stylesheet: portfolio
 ---
 
-<section class="portfolio">
-    <div class="grid-x">
-        <div class="small-offset-1 small-10 medium-offset-1 medium-10 cell">
-            <div class="grid-x">
-                <div class="small-12 medium-6 large-4 cell">
-                    <div class="grid-x">
-                        <div class="small-12 medium-offset-1 medium-10 cell">
-                            {% include breadcrumbs.html %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="__vue-root" id="FancyHero" data-title="Portfolio"></div>
 
+<section class="portfolio">
     <div class="grid-x page-container">
-        <div class="small-offset-1 small-10 medium-offset-1 medium-10 cell">
-            <div class="grid-x items">
-                <div class="small-12 medium-6 large-4 cell masonry-grid-sizer"></div>
+        <div class="small-offset-1 small-10 cell">
+            {% include breadcrumbs.html %}
+            <header class="page-header">
+                <h1>My Works</h1>
+            </header>
+
+            <div class="grid-x portfolio-items">
+                <div class="small-12 medium-6 large-4 cell brick-size"></div>
 
                 {% assign sorted = site.portfolio | sort: 'date' | reverse %}
                 {% for item in sorted %}
-                {% capture image %}
-                    {% if item.image %}
-                     {{site.baseurl}}/assets/img/portfolio/{{ item.image }}
-                    {% else %}
-                     https://placehold.it/500x300?text=Missing%20an%20image
-                    {% endif %}
+                {% capture featured-image %}
+                {% if item.image %}
+                {{site.baseurl}}/assets/img/portfolio/{{ item.image }}
+                {% endif %}
                 {% endcapture %}
-                {% assign image = image | strip %}
-                <div class="small-12 medium-6 large-4 cell item-container-outside">
-                    <div class="grid-x">
-                        <div class="small-12 medium-offset-1 medium-10 item-container-inside">
-                            <article>
-                                {% if item.image %}<img class="featured-image" src="{{ image }}" alt="Picture of portfolio item"/>{% endif %}
-                                <div class="info">
-                                    <p class="client">{{ item.client }}</p>
-                                    <a href="{{site.baseurl}}{{item.url}}"><h2 class="title text-center">{{ item.title }}</h2></a>
-                                    <p class="summary">{{ item.excerpt }}</p>
+                {% assign featured-image = featured-image | strip %}
+
+                <div class="small-12 medium-6 large-4 cell article-container">
+                    <article class="item" data-category="{{item.category}}">
+                        <a href="{{site.baseurl}}{{item.url}}" class="clickable">
+                            <img src="{{ featured-image }}" alt="">
+                            <div class="meta overlay">
+                                <div class="valign-center">
+                                    <p>
+                                    <span class="date">
+                                        <time datetime="{{ item.date }}">{{ item.date | date: "%B %-d, %Y" }}</time>
+                                    </span>
+                                        <span class="client">
+                                        {{ item.client }}
+                                    </span></p>
+
+                                    <h2 class="title btn ">{{ item.title }}</h2>
+                                    <p class="excerpt">{{ item.excerpt }}</p>
                                 </div>
-                            </article>
-                        </div>
-                    </div>
+                            </div>
+                        </a>
+                    </article>
                 </div>
                 {% endfor %}
-
             </div>
         </div>
     </div>
@@ -59,10 +57,10 @@ stylesheet: portfolio
 <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script type="application/javascript">
-    imagesLoaded(document.querySelector('.items'), function () {
-        let msnry = new Masonry(document.querySelector('.items'), {
-            itemSelector: '.item-container-outside',
-            columnWidth: '.masonry-grid-sizer',
+    imagesLoaded(document.querySelector('.portfolio-items'), function () {
+        let msnry = new Masonry(document.querySelector('.portfolio-items'), {
+            itemSelector: '.article-container',
+            columnWidth: '.brick-size',
             percentPosition: true
         });
     });

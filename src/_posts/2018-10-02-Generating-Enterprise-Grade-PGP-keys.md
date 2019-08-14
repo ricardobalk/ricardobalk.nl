@@ -6,6 +6,7 @@ category: "devops"
 tags: ["pgp", "gpg", "encryption"]
 date: 2018-10-02 08:00:00 +00:00
 image: "terminal-lockpad.png"
+hero-image: "terminal-lockpad.png"
 ---
 
 

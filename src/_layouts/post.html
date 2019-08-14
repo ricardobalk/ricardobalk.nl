@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="__vue-root" id="FancyHero" data-title="{{ page.title }}" {% if page.image %}{% include featImageLocation.html %}data-image="{{ featuredImageLocation }}/{{ page.image }}"{% endif %}></div>
+<div class="__vue-root" id="FancyHero" data-title="{{ page.title }}" {% if page.hero-image %}{% include imagePath.html %}data-image="{{ imagePath }}/{{ page.hero-image }}"{% endif %}></div>
 
 <main id="main" role="main" class="post limited-width">
     <div class="grid-x page-container entry">
@@ -14,9 +14,9 @@ layout: default
                     <time datetime="{{ page.date }}" class="date">{{ page.date | date: "%B %e, %Y" }}</time>
                     <div class="tags">{% for tag in page.tags %}<span class="tag">{{tag}}</span>{% endfor %}</div>
                 </div>
-                <section class="content" role="main">
+                <div class="content" role="main">
                     {{ content }}
-                </section>
+                </div>
             </article>
 
             {% include disqus.html %}

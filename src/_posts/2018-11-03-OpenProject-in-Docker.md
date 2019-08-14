@@ -6,6 +6,7 @@ category: devops
 tags: [linux, docker, openproject, freeware]
 date: 2018-11-03 09:00:00 +00:00
 image: "gantt-chart.png"
+hero-image: "gantt-chart.png"
 ---
 
 

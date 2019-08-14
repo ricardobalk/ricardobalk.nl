@@ -1,5 +1,5 @@
 <template>
-  <section class="hero" tabindex="0" :style="style">
+  <section class="hero" tabindex="0" :class="{ hasimage: hasImage }" :style="style">
     <div class="grid-x valign-center">
       <img :src="image" style="visibility: hidden;" v-if="image" />
       <div class="small-12 cell text-container text-center">
@@ -15,6 +15,7 @@ export default {
   name: 'FancyHero',
   props: ['title', 'subtitle', 'image'],
   computed: {
+    hasImage () { return ( this.image ? true : false ); },
     style () {
       return  'background-color: #004293; ' +
               'background-image: linear-gradient(to right, #979797, #171717), ' +
@@ -92,7 +93,7 @@ export default {
         }
       }
     }
-
-    &, & img { max-height: 66vh; }
+    &, & img { max-height: 30vh; }
+    &.hasimage, &.hasimage img { max-height: 66vh; }
   }
 </style>

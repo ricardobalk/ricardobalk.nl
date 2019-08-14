@@ -9,6 +9,7 @@ references:
  - https://www.vultr.com/docs/setup-nginx-rtmp-on-ubuntu-14-04 
  - https://obsproject.com/forum/resources/how-to-set-up-your-own-private-rtmp-server-using-nginx.50/
 image: "live.png"
+hero-image: "live.png"
 ---
 
 Live streaming your video content is well-known among gamers, journalists, education entities and the entertainment industry.

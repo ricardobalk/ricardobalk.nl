@@ -6,6 +6,7 @@ excerpt: How to create a modern and secure Ubuntu server on DigitalOcean with Ap
 category: devops
 tags: [devops, linux, server, servers, digitalocean]
 image: "ubuntu-on-digitalocean.png"
+hero-image: "ubuntu-on-digitalocean.png"
 ---
 
 In this guide, you'll learn how to set up a VPS server from scratch on DigitalOcean's platform, which is equipped with Apache, HTTP/2 support, PHP 7.2, MariaDB, SSL certificates and ModSecurity (OWASP rules).

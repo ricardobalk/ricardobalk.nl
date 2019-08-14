@@ -6,6 +6,7 @@ category: "front-end-development"
 tags: ["html", "css", "spoiler"]
 date: 2019-03-29 08:00:00 +00:00
 image: "spoiler-alert.png"
+hero-image: "spoiler-alert.png"
 ---
 
 Did you know that it is possible to create a 'Spoiler Alert' using only HTML and CSS?
