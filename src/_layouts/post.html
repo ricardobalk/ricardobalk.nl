@@ -7,14 +7,17 @@ layout: default
 <main id="main" role="main" class="post limited-width">
     <div class="grid-x page-container entry">
         <div class="small-offset-1 small-10 large-offset-2 large-8 cell">
+        {% include breadcrumbs.html %}
 
             <article>
                 <div class="metadata">
-                    <h1 class="title">{{ page.title }}</h1>
                     <time datetime="{{ page.date }}" class="date">{{ page.date | date: "%B %e, %Y" }}</time>
                     <div class="tags">{% for tag in page.tags %}<span class="tag">{{tag}}</span>{% endfor %}</div>
+                    <a href="https://github.com/ellipticcurv3/www/edit/develop/src/{{ page.path }}" title="Edit this article on GitHub" class="edit" aria-hidden="true">Edit</a>
                 </div>
+
                 <div class="content" role="main">
+                    <h1 class="title">{{ page.title }}</h1>
                     {{ content }}
                 </div>
             </article>

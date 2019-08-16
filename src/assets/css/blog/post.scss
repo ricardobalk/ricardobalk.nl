@@ -1,10 +1,13 @@
 ---
 ---
-
 .post {
-  h1, h2, h3, h4, h5, h6 { font-family: "Muli", "Overpass", Helvetica, Arial, sans-serif; }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Muli", "Overpass", Helvetica, Arial, sans-serif;
+  }
+
   .featured-image {
     margin-bottom: 1em;
+
     img {
       width: 100%;
     }
@@ -12,26 +15,23 @@
 
   article {
     .metadata {
-      margin-bottom: 1em;
+      margin: 2em 0;
+      font-size: .8em;
+      font-weight: 600;
+      color: #666;
 
       time {
-        font-size: .85em;
-        font-weight: 600;
-        color: #666;
+        margin-right: .5em;
 
         &:before {
           font-family: "Font Awesome 5 Free", sans-serif;
           content: '\f073';
-          margin-right: .5rem;
+          margin-right: .5em;
         }
       }
 
       .tags {
         display: inline;
-        color: #666;
-        font-size: .75em;
-        font-weight: 700;
-        margin-left: .75em;
 
         .tag {
           margin-right: .5em;
@@ -40,6 +40,24 @@
           &:before {
             content: '#';
           }
+        }
+
+        &:before {
+          font-family: "Font Awesome 5 Free", sans-serif;
+          margin-right: .5em;
+          content: '\f02c';
+        }
+      }
+
+      .edit {
+        float: right;
+        color: inherit;
+        font-weight: inherit;
+
+        &:before {
+          font-family: 'Font Awesome 5 Free', sans-serif;
+          content: '\f044';
+          margin-right: .25em
         }
       }
     }
