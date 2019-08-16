@@ -160,14 +160,13 @@ code {
     padding-bottom: .75em;
     a { color: inherit; font-size: inherit }
     i {
-      font-size: .8em;
-      margin: 0 .15em;
+      margin: 0 .25em 0 .5em;
     }
     span:not(:last-of-type):after {
       font-size: .75em;
       line-height: .95em;
       content: "\2022";
-      margin: 0 .25em;
+      margin: 0 .25em 0 .5em;
     }
   }
 }
