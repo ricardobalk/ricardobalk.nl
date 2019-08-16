@@ -28,7 +28,7 @@ export default {
         margin: .5em 0;
         .photo-container {
             &.outside {
-                padding: 1.5em 1.5em 0;
+                padding: 8% 8% 0;
                 .inside {
                     width: 100%;
                     height: auto;
