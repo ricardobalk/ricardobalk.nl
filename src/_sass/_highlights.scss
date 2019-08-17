@@ -23,7 +23,12 @@ pre.highlight {
 }
 
 code {
-  font-family: $overpass-mono;
+    padding: 0;
+    border: unset;
+    background-color: unset;
+    font-family: var(--font-family-primary-monospace);
+    font-weight: 400;
+    color: #333;
 }
 
 p, li {

@@ -8,10 +8,10 @@
   .content-padding { padding-left: 1em; padding-right: 1em; }
 
   .hero {
-    font-family: "Muli", "Overpass", Helvetica, Arial, sans-serif;
-    height: $hero-height;
+    font-family: var(--font-family-primary);
+    height: var(--height-hero);
 
-    background-color:      #004293;
+    background-color:      var(--primary-text-color);
     background-image:      linear-gradient(to right, #979797, #171717),
                            url("/assets/img/hero.svg"),
                            url("/assets/img/winder.svg");
@@ -31,7 +31,7 @@
     outline: 0;
 
     @media screen and (max-width: 640px) {
-      height: calc(50vh - #{$site-header-height})
+      height: calc(50vh - var(--height-site-header))
     }
 
     .text-container {
@@ -126,7 +126,7 @@
   }
 
   .splitter {
-    background-color:      #004293;
+    background-color:      var(--primary-text-color);
     background-image:      linear-gradient(to right, #979797, #171717),
                            url("/assets/img/winder-bl.svg");
     background-blend-mode: soft-light,
@@ -194,7 +194,7 @@
 
   .conclusion {
     color: #eee;
-    background-color:      #004293;
+    background-color:      var(--primary-text-color);
     background-image:      linear-gradient(to right, #979797, #171717),
                            url("/assets/img/winder-top-left.svg");
     background-blend-mode: soft-light,

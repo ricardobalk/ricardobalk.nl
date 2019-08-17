@@ -55,7 +55,7 @@
 
         .title {
           color: #333;
-          font-family: "Muli", "Overpass", Helvetica, Arial, sans-serif;
+          font-family: var(--font-family-primary);
           font-size: 1em;
           font-weight: 700;
           margin-bottom: 1em;

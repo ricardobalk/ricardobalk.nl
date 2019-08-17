@@ -1,11 +1,15 @@
 @import url('/assets/webpack/fonts/bundle.css');
 @import url('/assets/fonts/BebasNeue/BebasNeue.css');
 
-p, a, i   { font-family: "Muli", "Overpass", Helvetica, Arial, sans-serif; font-size: .95em; font-weight: 500; }
+p, a, i {
+ font-family: var(--font-family-primary);
+ font-size: .95em;
+ font-weight: 500;
+}
 
 h1, h2, h3,
 h4, h5, h6 {
- font-family: "Bebas Neue", "Overpass", Helvetica, Arial, sans-serif;
+ font-family: var(--font-family-primary-headings);
 }
 
 h1              { font-size: 2em; }

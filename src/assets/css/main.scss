@@ -8,20 +8,11 @@
 html { width: 100vw; }
 
 body {
-  background-color: transparent;
+  background-color: var(--primary-background-color);
   height: 100vh;
   overflow: hidden scroll;
   scroll-behavior: smooth;
   & * { outline: 0; }
-}
-
-code {
-  padding: 0;
-  border: unset;
-  background-color: unset;
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
-  font-weight: 400;
-  color: #333;
 }
 
 .grid-container {
@@ -82,15 +73,15 @@ code {
   width: 100%;
   background-color: white;
   z-index: 1;
-  & ~ *  { position: relative; top: $site-header-height; }
+  & ~ *  { position: relative; top: var(--height-site-header); }
 
   .fr { float: right; a { padding: 0 .25em } }
   .contact {
     color: #fff;
     background: #000;
-    font-family: "Muli", "Overpass", Helvetica, Arial, sans-serif;
+    height: var(--height-contact-bar);
+    font-family: var(--font-family-primary);
     font-size: .95em;
-    padding: .25em 0;
     vertical-align: middle;
     .em {
       font-weight: 500;
@@ -105,8 +96,8 @@ code {
     a { color: inherit; }
   }
   .navigation {
-    min-height: $navigation-bar-height;
-    line-height: $navigation-bar-height;
+    min-height: var(--height-navigation-bar);
+    line-height: var(--height-navigation-bar);
     border-bottom: 1px solid #eee;
 
     & > .grid-x {
