@@ -16,8 +16,9 @@
       position: relative;
 
       .meta {
-        p { font-size: .9em; margin: 0;}
-        .date { &:after { content: '\2022'; } }
+        p { margin: 0; }
+        span { font-size: .9em; margin: 0; }
+        .date { &:after { content: '\2022'; margin: 0 .25em; } }
         .btn {
           font-size: 1.75em;
           border: 1px solid #eee;
@@ -28,8 +29,7 @@
           &:hover { background-color: #fff; color: #333; }
           &:after { font-family: 'Font Awesome 5 Free'; font-weight: 700; content: '\f054'; margin-left: .5em; }
         }
-        .excerpt { font-size: .8em; }
-
+        .excerpt { font-size: .8em; color: #ccc; text-shadow: 0 0 1px rgba(255, 255, 255, .5); }
 
         &.overlay {
           position: absolute;
