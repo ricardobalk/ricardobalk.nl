@@ -1,15 +1,17 @@
 @import url('/assets/webpack/fonts/bundle.css');
 @import url('/assets/fonts/BebasNeue/BebasNeue.css');
 
-p, a, i {
+p {
  font-family: var(--font-family-primary);
  font-size: .95em;
  font-weight: 500;
+ color: var(--color-almost-black);
 }
 
 h1, h2, h3,
 h4, h5, h6 {
  font-family: var(--font-family-primary-headings);
+ color: var(--color-almost-black);
 }
 
 h1              { font-size: 2em; }

@@ -4,10 +4,19 @@
 
 // CSS3 vars
 :root {
+  --color-body-background: none;
+  --color-regular-text: #000;
+  --color-royal-blue: #004293;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-almost-black: #222;
+  --color-dark-grey: #333;
+  --color-light-grey: #eee;
+
   --primary-text-color: #004293;
   --primary-background-color: none;
   --secondary-text-color: #eee;
-  --secondary-bg-color: var(--primary-text-color);
+  --secondary-background-color: var(--primary-text-color);
 
   /* Fonts */
   $font-family-fallback: '"Helvetica Neue", Helvetica, Arial, "Roboto", "Ubuntu", sans-serif';

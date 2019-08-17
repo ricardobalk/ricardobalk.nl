@@ -12,7 +12,7 @@ layout: default
             <article>
                 <div class="metadata">
                     <time datetime="{{ page.date }}" class="date">{{ page.date | date: "%B %e, %Y" }}</time>
-                    <div class="tags">{% for tag in page.tags %}<span class="tag">{{tag}}</span>{% endfor %}</div>
+                    {% if page.tags %}<div class="tags">{% for tag in page.tags %}<span class="tag">{{tag}}</span>{% endfor %}</div>{% endif %}
                     <a href="https://github.com/ellipticcurv3/www/edit/develop/src/{{ page.path }}" title="Edit this article on GitHub" class="edit" aria-hidden="true">Edit</a>
                 </div>
 

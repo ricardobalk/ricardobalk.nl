@@ -11,7 +11,7 @@
     font-family: var(--font-family-primary);
     height: var(--height-hero);
 
-    background-color:      var(--primary-text-color);
+    background-color:      var(--color-royal-blue);
     background-image:      linear-gradient(to right, #979797, #171717),
                            url("/assets/img/hero.svg"),
                            url("/assets/img/winder.svg");
@@ -36,7 +36,7 @@
 
     .text-container {
       padding: 0 1em;
-      h1, h2, h3 { font-family: inherit; text-transform: uppercase; }
+      h1, h2, h3 { font-family: inherit; color: var(--color-white); text-transform: uppercase; }
       h1 {
         font-size: 2.25em;
         font-weight: 100;
@@ -100,6 +100,7 @@
   .services {
     max-width: 1600px;
     margin: 2em auto;
+    color: var(--color-regular-text);
     .section-title { font-size: 2em; padding: 0 1em; }
     .card {
       display: -webkit-box;
@@ -113,7 +114,7 @@
         text-align: center;
         justify-self: stretch;
         .icon-container {
-          color: #eee;
+          color: var(--color-white);
           background: #001037 linear-gradient(-30deg, #001037, #1e3d95);
           .icon {
             &.fa-mouse-pointer::before { padding-left: .15em; }
@@ -147,7 +148,7 @@
     }
 
     .text-container {
-      color: #eee;
+      color: var(--color-light-grey);
       padding: 0 2em;
       .section-title {
         font-size: 3.25em;
@@ -156,6 +157,8 @@
         }
       }
       .design-process { display: block; font-size: .85em; font-weight: 700; margin: 1em 0;}
+
+      h1, h2, h3, p { color: inherit; }
     }
 
   }
@@ -193,7 +196,7 @@
   }
 
   .conclusion {
-    color: #eee;
+    color: var(--color-light-grey);
     background-color:      var(--primary-text-color);
     background-image:      linear-gradient(to right, #979797, #171717),
                            url("/assets/img/winder-top-left.svg");
@@ -210,6 +213,7 @@
 
     .text-container {
       text-align: center;
+
       .next-move {
         text-transform: uppercase;
         font-size: 1.3em;
@@ -218,16 +222,23 @@
         line-height: 1em;
         margin-top: 1em;
       }
+
       .section-title {
         font-size: 4em;
       }
     }
+
     .fancy-button {
       text-align: center;
+
       .button {
         color: #fff;
         background: linear-gradient(60deg, #377fea69, #377fead6);
       }
+    }
+
+    h1, h2, h3, p {
+      color: inherit;
     }
   }
 }

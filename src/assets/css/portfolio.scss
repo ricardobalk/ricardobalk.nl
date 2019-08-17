@@ -1,5 +1,6 @@
 ---
 ---
+
 .portfolio {
   .page-container {
     margin-bottom: 5em;
@@ -16,6 +17,7 @@
       position: relative;
 
       .meta {
+        h1, h2, h3, p { color: var(--color-light-grey);}
         p { margin: 0; }
         span { font-size: .9em; margin: 0; }
         .date { &:after { content: '\2022'; margin: 0 .25em; } }
@@ -26,7 +28,7 @@
           padding: .25em 1em;
           margin: 1.25em 0;
           transition: color .25s ease-in-out;
-          &:hover { background-color: #fff; color: #333; }
+          &:hover { background-color: #fff; color: var(--color-dark-grey); }
           &:after { font-family: 'Font Awesome 5 Free'; font-weight: 700; content: '\f054'; margin-left: .5em; }
         }
         .excerpt { font-size: .8em; color: #ccc; text-shadow: 0 0 1px rgba(255, 255, 255, .5); }

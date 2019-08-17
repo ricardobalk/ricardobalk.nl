@@ -44,30 +44,6 @@ body {
   -ms-transform: translateY(-50%);
 }
 
-.button {
-  border-radius: 15px;
-  font-weight: 400;
-  -webkit-transition: background 0.1s;
-  background-color: transparent;
-  color: #333;
-  border: 1px solid #ccc;
-  padding: 10px 20px;
-
-  i {
-    margin-left: 0.5em;
-    line-height: 1em;
-    vertical-align: middle;
-    color: #666;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: #f8f8f8;
-    color: #111;
-  }
-}
-
 .site-header {
   position: fixed;
   width: 100%;
@@ -124,6 +100,12 @@ body {
 
 }
 
+.hero {
+  h1, h2, h3, p {
+    color: var(--color-light-grey);
+  }
+}
+
 .footer {
   color: #eee;
   background-color: #1e1e1e;
@@ -134,7 +116,7 @@ body {
   .links {
     display: block;
     font-size: .9em;
-    background-color: #222;
+    background-color: var(--color-almost-black);
     padding-top: 1em;
     padding-bottom: 1em;
     a {

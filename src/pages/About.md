@@ -5,7 +5,7 @@ excerpt: "Information"
 category: "information"
 date: 2019-01-01 08:00:00 +00:00
 permalink: /about/
-stylesheet: posts
+stylesheet: blog/post
 ---
 
 - [Contact information](/about/contact)

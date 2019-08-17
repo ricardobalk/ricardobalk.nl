@@ -6,7 +6,7 @@ category: "information"
 tags: ["pgp", "email"]
 date: 2019-01-01 08:00:00 +00:00
 permalink: /about/pgp/
-stylesheet: posts
+stylesheet: blog/post
 ---
 
 I sign all my e-mail messages and code commits on GitHub with PGP.
