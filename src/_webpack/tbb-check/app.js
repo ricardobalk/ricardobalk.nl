@@ -18,7 +18,7 @@ function isTorBrowser() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    if (isTorBrowser()) {
+    if (window.location.hostname !== 'tj5amvcbpzcodr63.onion' && isTorBrowser()) {
         console.info("Detected Tor Browser Bundle! Redirecting to Tor site.");
         window.location = 'http://tj5amvcbpzcodr63.onion/';
     } else {
