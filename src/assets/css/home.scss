@@ -11,7 +11,7 @@
     font-family: var(--font-family-primary);
     height: var(--height-hero);
 
-    background-color:      var(--color-royal-blue);
+    background-color:      var(--hero-background-color);
     background-image:      linear-gradient(to right, #979797, #171717),
                            url("/assets/img/hero.svg"),
                            url("/assets/img/winder.svg");
@@ -127,7 +127,7 @@
   }
 
   .splitter {
-    background-color:      var(--primary-text-color);
+    background-color:      var(--splitter-background-color);
     background-image:      linear-gradient(to right, #979797, #171717),
                            url("/assets/img/winder-bl.svg");
     background-blend-mode: soft-light,
@@ -197,7 +197,7 @@
 
   .conclusion {
     color: var(--color-light-grey);
-    background-color:      var(--primary-text-color);
+    background-color:      var(--conclusion-background-color);
     background-image:      linear-gradient(to right, #979797, #171717),
                            url("/assets/img/winder-top-left.svg");
     background-blend-mode: soft-light,

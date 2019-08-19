@@ -4,6 +4,7 @@
 
 // CSS3 vars
 :root {
+  /* Colors - General */
   --color-body-background: none;
   --color-regular-text: #000;
   --color-royal-blue: #004293;
@@ -13,10 +14,10 @@
   --color-dark-grey: #333;
   --color-light-grey: #eee;
 
-  --primary-text-color: #004293;
-  --primary-background-color: none;
-  --secondary-text-color: #eee;
-  --secondary-background-color: var(--primary-text-color);
+  /* Colors - Used */
+  --hero-background-color: var(--color-royal-blue);
+  --splitter-background-color: var(--color-royal-blue);
+  --conclusion-background-color: var(--color-royal-blue);
 
   /* Fonts */
   $font-family-fallback: '"Helvetica Neue", Helvetica, Arial, "Roboto", "Ubuntu", sans-serif';
