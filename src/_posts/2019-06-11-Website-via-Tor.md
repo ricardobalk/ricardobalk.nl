@@ -9,11 +9,13 @@ date: 2019-06-11 06:00:00 +00:00
 
 I am running my site on a Tor Hidden Service, commonly called the 'dark web'. Most people know Tor as software for illegal online activities. But instead of using Tor for illegal activities &mdash; it also has legitimate purposes. I am running this website on it, for those people who prefer a high level of privacy.
 
-**My Tor address: <a href="http://{{site.footer-links.onion}}/" title="My website on Tor">{{site.footer-links.onion}}</a>.** You might want to add this address to your bookmarks.
+**My Tor address: <a href="http://tj5amvcbpzcodr63.onion/" title="My website on Tor">tj5amvcbpzcodr63.onion</a>.** You might want to add this address to your bookmarks.
 
 Although I **never** keep access logs on my webserver, I can't prove it. Hosting a Tor Hidden Service guarantees that incoming and outgoing traffic is encrypted and anonymized. The IP addresses of both ends (server and visitor) stay unknown to each other. This guarantees that I won't keep access logs, as the information is not even available to me.
 
 >  Note: I keep error logs on my server for non 4xx-status codes &mdash; e.g. when something went wrong internally.
+
+---
 
 # How to run your own Tor Hidden Service
 

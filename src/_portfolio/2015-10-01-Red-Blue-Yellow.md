@@ -5,12 +5,31 @@ date: 2015-10-01 09:00:00 +02:00
 client: HAN University of Applied Sciences
 category: Game Development
 tags: ["unity", "game development", "programming", "c-sharp"]
-image: "unity-logo.png"
+image: "featured-images/red-blue-yellow.jpg"
 excerpt: An arcade-like game made in Unity, with C#.
 permalink: /portfolio/red-blue-yellow
 ---
 
 Red Blue Yellow is an Unity (C#) game made by me and fellow students from my university during the minor 'Scripting for Designers' in 2015.
+
+
+
+<style type="text/css">.iframe-container {
+  overflow: hidden;
+  // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625)
+  padding-top: 56.25%;
+  position: relative;
+} .iframe-container iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;}</style>
+
+<div class="iframe-container">
+<iframe width="100%" height="640" src="https://ellipticcurv3.keybase.pub/RedBlueYellow-WebGL/">
+</iframe></div>
 
 # Project Responsibilities
 
