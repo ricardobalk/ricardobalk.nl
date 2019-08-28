@@ -10,7 +10,8 @@ html { width: 100vw; }
 body {
   background-color: var(--color-body-background);
   height: 100vh;
-  overflow: hidden scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   scroll-behavior: smooth;
   & * { outline: 0; }
 }
