@@ -1,4 +1,6 @@
 <head>
+{% if page.date %}<!-- Page date: {{ page.date }} -->{% endif %}
+<!-- Site built: {{ site.time }} -->
 {% include meta.html %}
 
 <title>{{ site.name }}{% if page.title %} - {{ page.title }}{% endif %}</title>
