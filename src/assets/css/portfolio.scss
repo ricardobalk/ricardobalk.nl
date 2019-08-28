@@ -29,7 +29,7 @@
           margin: 1.25em 0;
           transition: color .25s ease-in-out;
           &:hover { background-color: #fff; color: var(--color-dark-grey); }
-          &:after { font-family: 'Font Awesome 5 Free'; font-weight: 700; content: '\f054'; margin-left: .5em; }
+          &:after { font-family: 'Font Awesome 5 Free', sans-serif; font-weight: 700; content: '\f054'; margin-left: .5em; }
         }
         .excerpt { font-size: .8em; color: #ccc; text-shadow: 0 0 1px rgba(255, 255, 255, .5); }
 
