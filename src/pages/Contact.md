@@ -4,7 +4,7 @@ title: "Contact"
 excerpt: "Contact information"
 category: "information"
 date: 2019-01-01 08:00:00 +00:00
-permalink: /about/contact/
+permalink: /contact/
 stylesheet: blog/post
 ---
 
