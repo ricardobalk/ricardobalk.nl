@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "PGP Signatures"
+title: "PGP Keys I use"
 excerpt: "Information about my PGP signatures"
 category: "information"
 tags: ["pgp", "email"]
 date: 2019-01-01 08:00:00 +00:00
-permalink: /about/pgp/
+permalink: /about/me/pgp/
 stylesheet: blog/post
 ---
 
@@ -20,6 +20,7 @@ I use different key pairs depending on usage. I am using the following keys:
   - `4ACF 7879` for those supporting modern Curve 25519.
   - `29E8 C4FD`, the 4096 bit RSA equivalent for those who don't support Curve 25519.
 - Code Signing &mdash; `2E85 E909`. This key is used for my Git commits. (`git log --show-signatures` will show it)
+- Smart card &mdash; `B9A9 DA69`. Use this key to send me confidential information. I use a dedicated air-gapped machine, so decrypting your message could take a while.
 
 # How to import my keys
 
@@ -40,7 +41,8 @@ On Linux, you could use the following commands:
 ```sh
 gpg --keyserver 'hkps://hkps.pool.sks-keyservers.net' --recv-keys \
 'BE7C4481E0566291B494D2A16FB4A124C63718C6' '0B470785C770F61620D80482049F02554ACF7879' \
-'743032F24DF7783172CB469628A74F0729E8C4FD' 'D494FBB8A982455D4D04A38BE1B805352E85E909'
+'743032F24DF7783172CB469628A74F0729E8C4FD' 'D494FBB8A982455D4D04A38BE1B805352E85E909' \
+'9C1A56792176B5680FECBED031DAC1B1B9A9DA69'
 gpg --list-sigs 'Ricardo Balk'
 ```
 
