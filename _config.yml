@@ -57,7 +57,6 @@ exclude:
   - CNAME
   - _posts/TEMPLATE.md
   - _portfolio/TEMPLATE.md
-  - _posts/IDEAS.md
   - node_modules/
   - vendor/cache/
   - vendor/gems/
