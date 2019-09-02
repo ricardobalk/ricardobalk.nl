@@ -23,7 +23,7 @@ collections:
     permalink: /:collection/:name
 
 disqus: ricardobalk # Disqus shortname (not the username)
-google_analytics: UA-16034023-12
+google_analytics:   # UA-16034023-12
 
 url: "https://www.ricardobalk.nl" # Used for Sitemap.xml and your RSS feed
 baseurl: ""
