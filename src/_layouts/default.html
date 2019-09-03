@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en" dir="ltr" data-theme="light">
+<html class="no-js" lang="{% if page.lang %}{{ page.lang }}{% else %}en{% endif %}" dir="ltr" data-theme="light">
     {% include site/head.html %}
     <body>
         {% include site/html-comment.html %}
