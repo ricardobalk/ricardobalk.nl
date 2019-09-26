@@ -10,8 +10,7 @@ module.exports = {
     entry: {
         'foundation': "./src/_webpack/foundation/foundation.js",
         'vue': "./src/_webpack/vue/app.js",
-        'fonts': "./src/_webpack/fonts/fonts.js",
-        'tbb-check': "./src/_webpack/tbb-check/app.js"
+        'fonts': "./src/_webpack/fonts/fonts.js"
     },
     output: {
         path: path.join(__dirname, './src/assets/webpack/'),
