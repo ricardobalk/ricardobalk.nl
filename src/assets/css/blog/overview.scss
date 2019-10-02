@@ -2,10 +2,10 @@
 ---
 
 @import "variables";
+@import "masonry";
 
-.blog-overview
-{
-  margin-bottom: 2em;
+.blog-overview {
+  margin-bottom: 5em;
 
   .page-header {
     h1 {
@@ -16,22 +16,22 @@
   }
 
   .articles {
-    .clickable { font: initial; color: initial; }
-    .article-container {
-      padding: 1em;
-      @media screen and (min-width: 1024px) {
-      &:nth-of-type(3n-1) {
-        padding-left: 0
+    .clickable {
+      font: initial;
+      color: initial;
+    }
+
+    .masonry-columns {
+      @include vendor-prefix('column-gap', '1em');
+    }
+
+    .masonry-brick {
+      margin: 1em 0;
+
+      &:first-of-type {
+        margin-top: 0;
       }
 
-      &:nth-of-type(3n-2) {
-        padding-right: 0;
-      }
-      }
-
-      @media screen and (max-width: 639px) {
-        padding: 1em 0;
-      }
     }
 
     .article {
@@ -59,6 +59,7 @@
           font-size: 1em;
           font-weight: 700;
           margin-bottom: 1em;
+
           &:after {
             content: ' ';
             display: block;
@@ -72,6 +73,7 @@
         .continue-reading {
           font-size: .95em;
           padding-left: .5em;
+          color: #1779ba;
 
           &:after {
             font-family: "Font Awesome 5 Free", sans-serif;
