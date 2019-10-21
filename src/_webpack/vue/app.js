@@ -48,5 +48,3 @@ function renderAppInElement(el) {
 }
 
 document.querySelectorAll('.__vue-root').forEach(renderAppInElement)
-
-/* Testing Prettier 2nd time */
