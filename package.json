@@ -22,44 +22,52 @@
   "repository": "https://github.com/ellipticcurv3/www/",
   "license": "GPL-3.0+",
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
     "babel-loader": "^8.0.6",
     "babel-preset-react": "^6.24.1",
-    "concurrently": "^4.1.1",
-    "cross-env": "^5.2.0",
-    "css-loader": "^3.0.0",
+    "concurrently": "^4.1.2",
+    "cross-env": "^5.2.1",
+    "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
     "expose-loader": "^0.7.5",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^4.0.0",
+    "file-loader": "^4.2.0",
     "htmlclean-cli": "^1.0.9",
+    "husky": "^3.0.9",
     "jquery": "^3.4.1",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "puppeteer": "^1.19.0",
-    "sass-loader": "^7.1.0",
-    "serve": "^11.0.2",
+    "prettier": "1.18.2",
+    "pretty-quick": "^2.0.0",
+    "puppeteer": "^1.18.1-next.1562564221866",
+    "sass-loader": "^7.3.1",
+    "serve": "^11.2.0",
     "serve-handler": "^6.1.1",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "url-loader": "^2.1.0",
+    "url-loader": "^2.2.0",
     "vue": "^2.6.10",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.10",
-    "webpack": "^4.35.0",
-    "webpack-cli": "^3.3.4",
-    "webpack-dev-server": "^3.7.2"
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.10.1",
+    "@fortawesome/fontawesome-free": "^5.11.2",
     "foundation": "^4.2.1",
     "foundation-sites": "^6.5.3",
     "masonry-layout": "^4.2.2",
     "typeface-muli": "0.0.71",
     "typeface-overpass": "0.0.72",
-    "what-input": "^5.2.3"
+    "what-input": "^5.2.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
