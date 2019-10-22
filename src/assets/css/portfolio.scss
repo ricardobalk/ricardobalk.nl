@@ -1,57 +1,102 @@
 ---
 ---
 
-@import "masonry";
+@import 'masonry';
 
-.portfolio {
-  .page-container {
-    margin-bottom: 5em;
+.portfolio-overview {
+  .hero {
+    &.hasimage {
+      max-height: 33vh;
+      img {
+        max-height: 33vh;
+      }
+    }
   }
 
-  .page-header {
-    font-size: 1.5em;
-    text-transform: uppercase;
-    margin: 1em 0;
-  }
+  .portfolio {
+    .page-container {
+      margin-bottom: 5em;
+    }
 
-  .items {
-    .item {
-      position: relative;
-      .meta {
-        h1, h2, h3, p { color: var(--color-light-grey);}
-        p { margin: 0; }
-        span { font-size: .9em; margin: 0; }
-        .date { &:after { content: '\2022'; margin: 0 .25em; } }
-        .btn {
-          font-size: 1.75em;
-          border: 1px solid #eee;
-          display: inline-block;
-          padding: .25em 1em;
-          margin: 1.25em 0;
-          transition: color .25s ease-in-out;
-          &:hover { background-color: #fff; color: var(--color-dark-grey); }
-          &:after { font-family: 'Font Awesome 5 Free', sans-serif; font-weight: 700; content: '\f054'; margin-left: .5em; }
-        }
-        .excerpt { font-size: .8em; color: #ccc; text-shadow: 0 0 1px rgba(255, 255, 255, .5); }
+    .page-header {
+      font-size: 1.5em;
+      text-transform: uppercase;
+      margin: 1em 0;
+    }
 
-        &.overlay {
-          position: absolute;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          padding: 2em;
-          text-align: center;
-          background-color: #000;
-          color: #eee;
-          opacity: 0;
-          transition: opacity .25s ease-in-out;
+    .items {
+      .item {
+        position: relative;
 
-          &:hover {
-            opacity: 0.95;
+        .meta {
+          h1,
+          h2,
+          h3,
+          p {
+            color: var(--color-light-grey);
+          }
+
+          p {
+            margin: 0;
+          }
+
+          span {
+            font-size: 0.9em;
+            margin: 0;
+          }
+
+          .date {
+            &:after {
+              content: '\2022';
+              margin: 0 0.25em;
+            }
+          }
+
+          .btn {
+            font-size: 1.75em;
+            border: 1px solid #eee;
+            display: inline-block;
+            padding: 0.25em 1em;
+            margin: 1.25em 0;
+            transition: color 0.25s ease-in-out;
+
+            &:hover {
+              background-color: #fff;
+              color: var(--color-dark-grey);
+            }
+
+            &:after {
+              font-family: 'Font Awesome 5 Free', sans-serif;
+              font-weight: 700;
+              content: '\f054';
+              margin-left: 0.5em;
+            }
+          }
+
+          .excerpt {
+            font-size: 0.8em;
+            color: #ccc;
+            text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+          }
+
+          &.overlay {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: 2em;
+            text-align: center;
+            background-color: #000;
+            color: #eee;
+            opacity: 0;
+            transition: opacity 0.25s ease-in-out;
+
+            &:hover {
+              opacity: 0.95;
+            }
           }
         }
       }
     }
   }
-
 }

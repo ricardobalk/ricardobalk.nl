@@ -23,11 +23,11 @@ collections:
     permalink: /:collection/:name
 
 disqus: ricardobalk # Disqus shortname (not the username)
-google_analytics:   # UA-16034023-12
+google_analytics: # UA-16034023-12
 
-url: "https://www.ricardobalk.nl" # Used for Sitemap.xml and your RSS feed
-baseurl: ""
-onion: "http://3rfoq3ia75hnxgpmtwyeyvbjbhym354tcy4ox2jaqjqhtcmd4i2mt2id.onion" # If available via Tor
+url: 'https://www.ricardobalk.nl' # Used for Sitemap.xml and your RSS feed
+baseurl: ''
+onion: 'http://3rfoq3ia75hnxgpmtwyeyvbjbhym354tcy4ox2jaqjqhtcmd4i2mt2id.onion' # If available via Tor
 
 source: src
 destination: dist
@@ -39,11 +39,11 @@ kramdown:
   syntax_highlighter_opts:
     css_class: 'highlight' # Use existing pygments syntax highlighting css
 
-darkmode: false
+darkmode: true
 
 sass:
-    style: compressed
-    sass_dir: _sass
+  style: compressed
+  sass_dir: _sass
 
 plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem

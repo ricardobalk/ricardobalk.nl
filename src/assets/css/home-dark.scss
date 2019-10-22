@@ -1,8 +1,108 @@
 ---
 ---
 
-@import "variables";
+@import 'variables';
 
+@media screen and (prefers-color-scheme: dark) {
+  .home {
+    .hero {
+      background-color: #112;
+      background-image: url('/assets/img/hero.svg'),
+        url('/assets/img/winder.svg'), linear-gradient(to bottom, #0000, #000) !important;
+      background-blend-mode: soft-light, soft-light, luminosity;
+      background-size: contain, contain, cover;
+      background-position: -100px -100px, right bottom -5px, left top;
+
+      .text-container {
+        h1,
+        h3 {
+          color: #ccc;
+        }
+
+        h2 {
+          color: #ccc;
+        }
+      }
+    }
+
+    .about {
+      .polaroid-container {
+        background-color: unset;
+        box-shadow: none;
+        border: 2px solid #112;
+      }
+    }
+
+    .services {
+      .cards {
+        .card {
+          color: #707070;
+          .service {
+            .inner {
+              background-color: #000 !important;
+              color: #707070;
+              border: none;
+
+              .icon-container {
+                background: #363636 linear-gradient(-30deg, #000, #2f366938);
+                color: #525252;
+              }
+            }
+          }
+          &:not(:last-child) {
+            border-right: 1px solid #111;
+          }
+        }
+      }
+    }
+
+    .splitter {
+      background-image: none !important;
+      background-color: unset !important;
+
+      .picture {
+        filter: brightness(60%) contrast(110%);
+      }
+
+      .section-title {
+        color: #bcbcbc;
+      }
+
+      .text-container {
+        color: #bcbcbc;
+      }
+    }
+
+    .success-stories {
+      .card:not(:last-child) {
+        border-right: 1px solid #111;
+      }
+
+      .success-story {
+        .inner {
+          .avatar-container .avatar {
+            opacity: 0.85;
+          }
+
+          color: #8a8a8a;
+          border: none;
+          background-color: unset;
+          box-shadow: none;
+        }
+      }
+    }
+
+    .conclusion {
+      color: #bdbdbd;
+      background-color: #000;
+      background-image: linear-gradient(to bottom, #000, #112);
+      background-blend-mode: unset;
+    }
+  }
+  .footer,
+  .footer .links {
+    background-color: #112;
+  }
+}
 html[data-theme='dark'] {
-
 }
