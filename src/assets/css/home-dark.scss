@@ -6,12 +6,11 @@
 @media screen and (prefers-color-scheme: dark) {
   .home {
     .hero {
-      background-color: #112;
       background-image: url('/assets/img/hero.svg'),
-        url('/assets/img/winder.svg'), linear-gradient(to bottom, #0000, #000) !important;
-      background-blend-mode: soft-light, soft-light, luminosity;
+        linear-gradient(to bottom, #00000073, #000) !important;
+      background-blend-mode: soft-light, luminosity;
       background-size: contain, contain, cover;
-      background-position: -100px -100px, right bottom -5px, left top;
+      background-position: -100px -100px, top;
 
       .text-container {
         h1,
@@ -37,6 +36,7 @@
       .cards {
         .card {
           color: #707070;
+
           .service {
             .inner {
               background-color: #000 !important;
@@ -44,11 +44,17 @@
               border: none;
 
               .icon-container {
-                background: #363636 linear-gradient(-30deg, #000, #2f366938);
-                color: #525252;
+                background: none;
+                color: #cacaca;
+                border: 1px solid rgba(248, 248, 248, 0.21);
+                box-sizing: content-box;
+                align-items: center;
+                border-radius: 25%;
+                margin-bottom: 1.5em;
               }
             }
           }
+
           &:not(:last-child) {
             border-right: 1px solid #111;
           }
@@ -95,14 +101,17 @@
     .conclusion {
       color: #bdbdbd;
       background-color: #000;
-      background-image: linear-gradient(to bottom, #000, #112);
+      background-image: linear-gradient(to bottom, #000, #002451);
       background-blend-mode: unset;
+      padding: 0 0 6em;
+      margin: 0;
     }
   }
   .footer,
   .footer .links {
-    background-color: #112;
+    background-color: #002451;
   }
 }
+
 html[data-theme='dark'] {
 }
