@@ -1,0 +1,49 @@
+//
+// VARIABLES
+//
+
+// CSS3 vars
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-almost-black: #222;
+  --color-dark-grey: #333;
+  --color-light-grey: #eee;
+
+  --color-royal-blue: #004293;
+  --color-prussian-blue: #003153;
+
+  --color-regular-text: var(--color-black);
+  --color-body-background: none;
+
+  --hero-background-color: var(--color-royal-blue);
+  --splitter-background-color: var(--color-royal-blue);
+  --conclusion-background-color: var(--color-royal-blue);
+
+  /* Fonts */
+  $font-family-fallback: '"Helvetica Neue", Helvetica, Arial, "Roboto", "Ubuntu", sans-serif';
+  $font-family-fallback-monospace: 'Consolas, Courier, "Courier New", "Liberation Mono", monospace';
+  --font-family-primary: "Source Sans Pro", "Muli", "Overpass", #{$font-family-fallback};
+  --font-family-primary-headings: "Oswald", "Muli", #{$font-family-fallback};
+  --font-family-primary-monospace: "Overpass Mono", #{$font-family-fallback-monospace};
+  --font-family-secondary: #{$font-family-fallback};
+
+  /* Sizes */
+  $contact-bar-height: 25px;
+  $navigation-bar-height: 75px;
+  $site-header-height: $contact-bar-height + $navigation-bar-height;
+  $hero-height: calc(66vh - #{$site-header-height});
+  $hero-height-on-overview-pages: calc(30vh - #{$site-header-height});
+  --height-contact-bar: #{$contact-bar-height};
+  --height-navigation-bar: #{$navigation-bar-height};
+  --height-site-header: #{$site-header-height};
+  --height-hero: #{$hero-height};
+  --height-hero-on-overview-page: #{$hero-height-on-overview-pages};
+}
+
+// Sizes
+$contact-bar-height: 25px;
+$navigation-bar-height: 75px;
+$site-header-height: $contact-bar-height + $navigation-bar-height;
+$hero-height: calc(66vh - #{$site-header-height});
+$hero-height-on-overview-pages: calc(30vh - #{$site-header-height});

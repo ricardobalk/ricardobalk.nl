@@ -5,8 +5,8 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    image: ecv-www/latest
+    image: www-ricardo/latest
     ports:
-      - "4000:4000" # Change this to 80:4000 if you want to just use 'localhost'
+      - "8080:8080"
     volumes:
     - ./src/:/home/node/www/src/

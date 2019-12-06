@@ -1,0 +1,49 @@
+@import "variables";
+@import "fonts";
+
+html { width: 100vw; }
+
+body {
+  background-color: var(--color-body-background);
+  & * { outline: 0; }
+}
+
+.grid-container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.limited-width {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.breadcrumbs {
+  margin: 0;
+  list-style: none;
+  li {
+    font-size: .8em;
+    a { font-size: inherit; }
+  }
+}
+
+// Alignment of items
+
+.text-center {
+  text-align: center;
+}
+
+.valign-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+.hero {
+  h1, h2, h3, p {
+    color: var(--color-light-grey);
+  }
+}
