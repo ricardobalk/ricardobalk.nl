@@ -5,7 +5,7 @@
 
         </header>-->
 
-        <BigHero title="Blog" image="/assets/img/site/typewriter.jpg" class="blog-hero"/>
+        <BigHero title="Blog" image="/assets/img/site/typewriter.svg" image-dark="/assets/img/site/typewriter-dark.svg" class="blog-hero"/>
 
         <section class="blog-overview">
             <div class="grid-x limited-width">
