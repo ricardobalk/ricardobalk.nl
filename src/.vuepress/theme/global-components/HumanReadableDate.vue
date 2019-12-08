@@ -8,10 +8,7 @@
     import Vue from "vue";
     import moment from "moment";
 
-    Vue.prototype.moment = moment;
-
     export default {
-        name: "HumanReadableDate",
         data() {
             return {
                 language: {
@@ -67,14 +64,15 @@
                 default: "en"
             }
         },
-        created() {
-          this.getSeconds(this.date);
+        beforeMount() {
+            this.updateDifference();
         },
-
         mounted() {
-            setInterval(() => {
-                this.getSeconds(this.date);
+            const interval = setInterval(() => {
+                this.updateDifference();
             }, 1000);
+
+            this.$once('hook:destroyed', () => clearInterval(interval));
         },
 
         computed: {
@@ -100,8 +98,8 @@
         },
 
         methods: {
-            getSeconds(time) {
-                let seconds = moment().diff(moment(time), "seconds");
+            updateDifference() {
+                let seconds = moment().diff(moment(this.date), "seconds");
                 this.humanReadable = this.getDuration(seconds);
                 if (this.humanReadable) {
                     this.humanDifference = this.humanReadable.interval;
@@ -125,7 +123,5 @@
 </script>
 
 <style scoped>
-    .vue-moments-ago {
-        font-size: 12px;
-    }
+
 </style>
