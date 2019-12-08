@@ -70,15 +70,7 @@
     .portfolio-overview {
         .big-hero {
             margin-bottom: 0;
-            clip-path: unset;
-
-            &.hasimage {
-                max-height: 25vh;
-
-                img {
-                    max-height: 25vh;
-                }
-            }
+            background-position: center;
         }
 
         .portfolio {

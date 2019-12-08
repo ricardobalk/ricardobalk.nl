@@ -1,7 +1,6 @@
 <template>
     <section tabindex="0" :style="style" class="big-hero" :class="{ hasimage: hasImage }">
         <div class="grid-x valign-center">
-            <img :src="image" style="visibility: hidden;" v-if="image"/>
             <div class="small-12 cell text-container text-center">
                 <h1 class="title" v-if="title">{{title}}</h1>
                 <h2 class="subtitle" v-if="subtitle">{{subtitle}}</h2>
@@ -13,24 +12,15 @@
 <script>
     export default {
         name: 'Hero',
-        props: ['title', 'subtitle', 'image'],
+        props: ['title', 'subtitle', 'image', 'imageDark'],
         computed: {
             hasImage() {
                 return (!!this.image);
             },
             style() {
-                return 'background-color: #004293; ' +
-                    'background-image: linear-gradient(to right, #979797, #171717), ' +
-                    (this.image ? 'url("' + this.image + '");' : 'url("/assets/img/hero.svg"); ') +
-                    'background-blend-mode: soft-light, ' + (this.image ? 'normal;' : 'soft-light; ') +
-                    'background-repeat: no-repeat; ' +
-                    'background-size: contain, ' + (this.image ? 'cover' : 'contain') + '; ' +
-                    'background-position: left top, ' + (this.image ? 'center;' : '-100px -100px; ') +
-                    (this.image ? 'height: auto;' : '');
+                return `${this.image ? ' --image: url("' + this.image + ";" : "/assets/img/hero.svg" + '");'} ${this.imageDark ? ' --image-dark: url("' + this.imageDark + '");' : ' --image-dark: url("' + this.image + '");'}`;
+                // TODO: Refactor this.
             },
-        },
-        data() {
-            return {}
         }
     }
 </script>
@@ -44,13 +34,18 @@
 
     .big-hero {
         font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-        height: $hero-height-on-overview-pages;
-        clip-path: ellipse(120% 66% at 50% 33%);
+        height: 25vh;
         margin-bottom: 5em;
 
         color: #fff;
         text-shadow: 1px 1px 5px rgba(150, 150, 150, 0.33);
         outline: 0;
+
+        background-image: var(--image);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+
 
         .text-container {
             padding: 0 1em;
@@ -95,10 +90,6 @@
             }
         }
 
-        &, & img {
-            max-height: 30vh;
-        }
-
         &.hasimage, &.hasimage img {
             max-height: 33vh;
         }
@@ -111,7 +102,9 @@
 
     @media screen and (prefers-color-scheme: dark) {
         .big-hero {
-            background-color: rgb(11, 11, 11) !important;
+            background-color: #393939 !important;
+            background-image: var(--image-dark);
+            background-blend-mode: overlay;
 
             .text-container {
                 .title, .subtitle {
