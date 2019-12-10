@@ -17,7 +17,6 @@
 </template>
 
 <script>
-    import 'foundation-sites';
     import BigHero from "@theme/components/BigHero";
     import PageEdit from '@theme/components/PageEdit.vue'
     import PageNav from '@theme/components/PageNav.vue'
