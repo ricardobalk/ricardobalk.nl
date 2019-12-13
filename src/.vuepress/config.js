@@ -29,6 +29,11 @@ module.exports = {
         selectText: 'Taalkeuze',
         lang: 'nl-NL',
         label: 'Nederlands',
+        nav: [
+          { text: 'Home', link: '/nl/' },
+          { text: 'Blog', link: '/nl/blog/' },
+          { text: 'Portfolio', link: '/nl/portfolio/' }
+        ],
       }
     },
     logo: '/assets/img/logo.svg',
