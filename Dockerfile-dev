@@ -14,4 +14,4 @@ COPY package*.json ./
 RUN npm -g config set user $USER && npm i
 
 ENTRYPOINT ["npm", "run"]
-CMD ["build"]
+CMD ["dev"]

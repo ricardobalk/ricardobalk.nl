@@ -7,28 +7,34 @@ This repository contains my personal website. It's made with VuePress, ZURB Foun
 
 Under the hood, VuePress uses things like Webpack and the Vue Router, which made it possible to split my website into several Vue components working with each other.
 
-
 ## Running inside Docker
-
-**BUILD &amp; SERVE**
 
 To build and serve my website, I recommend using Docker and Docker Compose - as this prevents you from having to install and configure a lot of things.
 
+**BUILD**
+
 ```sh
-docker compose up
+docker-compose up
 ```
 
-This will launch a dev server which you could use to tinker and try things.
+This will initiate a full build of my website and place the output in `dist/`. Serve this directory with your server of choice.
 
-After a while, visit http://localhost:8080/. You're good to go.
+**DEV SERVER**
+
+```sh
+docker-compose -f docker-compose-dev.yml up
+```
+
+This will launch a dev server which you could use to tinker and try things. After a while, visit http://localhost:8080/. You're good to go.
 
 **REMOVAL**
 
 ```sh
-docker compose down
+docker-compose down
+docker-compose -f docker-compose-dev.yml down    # If you used the dev server
 ```
 
-
+---
 
 ## Running without Docker
 

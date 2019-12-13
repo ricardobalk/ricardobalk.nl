@@ -4,8 +4,9 @@ services:
   website:
     build:
       context: ./
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-dev
     image: www-ricardo/latest
+    ports:
+      - "8080:8080"
     volumes:
     - ./src/:/home/node/www/src/
-    - ./dist/:/home/node/www/dist/
