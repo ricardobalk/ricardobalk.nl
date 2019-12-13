@@ -14,7 +14,7 @@ To build and serve my website, I recommend using Docker and Docker Compose - as 
 **BUILD**
 
 ```sh
-docker-compose up
+docker-compose up --build
 ```
 
 This will initiate a full build of my website and place the output in `dist/`. Serve this directory with your server of choice.
@@ -22,7 +22,7 @@ This will initiate a full build of my website and place the output in `dist/`. S
 **DEV SERVER**
 
 ```sh
-docker-compose -f docker-compose-dev.yml up
+docker-compose -f docker-compose-dev.yml up --build
 ```
 
 This will launch a dev server which you could use to tinker and try things. After a while, visit http://localhost:8080/. You're good to go.
