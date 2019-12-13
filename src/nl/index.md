@@ -38,7 +38,7 @@ process:
 
 successStories:
   title: Succesverhalen
-  subtitle: Wat anderen vinden van mijn werk
+  subtitle: Wat anderen van mijn werk vinden
   stories:
   - name: Dirk Goossens
     title: Voormalig werkgever bij Sollicity
