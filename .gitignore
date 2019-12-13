@@ -1,3 +1,4 @@
 .idea/
-dist/
+dist/*
+!dist/.placeholder
 node_modules/
