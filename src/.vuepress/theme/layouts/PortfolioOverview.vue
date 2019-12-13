@@ -3,11 +3,10 @@
 
         <BigHero title="Portfolio" image="/assets/img/site/workbench.jpg" class="blog-hero"/>
 
-
         <div class="portfolio">
             <div class="masonry-container">
                 <div class="masonry-columns items">
-                    <article v-for="(item, index) in items" v-if="item.frontmatter.portfolio === true"
+                    <article v-for="(item, index) in items" v-if="item.frontmatter.portfolio === true && (item.frontmatter.lang || 'en-GB') === $lang"
                              class="masonry-brick item" :data-category="item.frontmatter.category">
                         <a :href="item.path" class="clickable">
                             <img v-if="item.frontmatter.images"
