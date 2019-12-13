@@ -1,13 +1,11 @@
 <template>
-    <section class="success-stories" tabindex="0">
-        <div class="maxed">
-            <div class="grid-x">
-                <div class="small-12 cell text-container text-center">
-                    <h1 class="section-title">Success Stories</h1>
-                    <h2 class="text-uppercase">What others say about my work</h2>
-                    <div class="grid-x">
-                        <SuccessStory v-for="(story, index) in stories" :key="index" :story="story"/>
-                    </div>
+    <section class="success-stories" :title="title" tabindex="0">
+        <div class="grid-x">
+            <div class="small-12 cell text-container text-center">
+                <h1 class="title">{{title}}</h1>
+                <h2 class="subtitle">{{subtitle}}</h2>
+                <div class="grid-x">
+                    <SuccessStory v-for="(story, index) in stories" :key="index" :story="story"/>
                 </div>
             </div>
         </div>
@@ -21,6 +19,16 @@
         name: "SuccessStories",
         components: {SuccessStory},
         props: {
+            "title": {
+                type: String, required: false, default() {
+                    return "Success Stories";
+                }
+            },
+            "subtitle": {
+                type: String, required: false, default() {
+                    return "What others say about my work";
+                }
+            },
             "stories": {
                 type: Array, required: true, default() {
                     return [
@@ -52,8 +60,9 @@
 <style lang="scss">
     // Standard
     .success-stories {
-        margin: 12em 0;
+        margin: 12em auto;
         padding: 0 2em;
+        max-width: 1600px;
 
         .card {
             display: -webkit-box;
@@ -64,7 +73,7 @@
             -webkit-flex-flow: row wrap;
         }
 
-        .section-title {
+        .title {
             text-transform: uppercase;
             font-weight: 500;
             font-size: 2em;
@@ -81,7 +90,9 @@
             text-align: center;
             justify-self: stretch;
 
-            p { margin: 0; }
+            p {
+                margin: 0;
+            }
 
             .client {
                 font-size: 1.15em;

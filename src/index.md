@@ -48,28 +48,16 @@ successStories:
   story: Ricardo and I made an impressive business movie during the summer of 2016. Ricardo works in a structured and considerate way, which made us able to reach our goals in a short time. It was a pleasure working with him.
   avatar: /assets/img/home/success-stories/niels.png
 
-footer:
- links:
-  navigation:
-   - text: Privacy
-     location: /privacy
-   - text: About
-     location: /about
-   - text: Contact
-     location: /contact
-   - text: Tor
-     location: http://3rfoq3ia75hnxgpmtwyeyvbjbhym354tcy4ox2jaqjqhtcmd4i2mt2id.onion/
-  social:
-   behance: https://behance.net/ricardobalk
-   github: https://github.com/ellipticcurv3/www
+nextMove:
+  text:
+    - It's time for the next move
+    - Ready? Let's go!
+  button:
+    title: "Contact me today"
+    link: /contact
 ---
 
 <h1>About me&hellip;</h1>
-        <p>I'm a digital designer, front-end developer and blogger. I've studied Communcation &amp;
-          Multimedia Design at HAN University of Applied Sciences and obtained my Bachelor of
-          Science in February, 2019.</p>
-        <p>I have an intense love for UX/UI design, front-end web development and photography.
-          Knowing that I both love graphic design and technology, I chose to combine those
-          passions.</p>
-        <p>On my blog, you could learn more about the things I'm doing. There's also a portfolio
-          available showing an overview of projects I worked on in the past.</p>
+<p>I'm a digital designer, front-end developer and blogger. I've studied Communcation &amp; Multimedia Design at HAN University of Applied Sciences and obtained my Bachelor of Science in February, 2019.</p>
+<p>I have an intense love for UX/UI design, front-end web development and photography. Knowing that I both love graphic design and technology, I chose to combine those passions.</p>
+<p>On my blog, you could learn more about the things I'm doing. There's also a portfolio available showing an overview of projects I worked on in the past.</p>

@@ -1,16 +1,14 @@
 <template>
-    <div class="services">
-        <section class="services" title="Services Ricardo could offer you" tabindex="0">
-            <div class="grid-x">
-                <div class="small-12 large-offset-1 large-10 cell">
-                    <h2 class="section-title text-center">Things I could help you with</h2>
-                    <div class="grid-x cards">
-                        <Service v-for="(service, index) in services" :key="index" :service="service"/>
-                    </div>
+    <section class="services" :title="title" tabindex="0">
+        <div class="grid-x">
+            <div class="small-12 large-offset-1 large-10 cell">
+                <h2 class="title text-center">{{title}}</h2>
+                <div class="grid-x cards">
+                    <Service v-for="(service, index) in services" :key="index" :service="service"/>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 </template>
 
 <script>
@@ -20,6 +18,11 @@
         name: "Services",
         components: {Service},
         props: {
+            "title": {
+                type: String, required: false, default() {
+                    return "Things I could help you with";
+                }
+            },
             "services": {
                 type: Array, required: true, default() {
                     return [
@@ -57,7 +60,7 @@
         margin: 2em auto;
         color: var(--color-regular-text);
 
-        .section-title {
+        .title {
             text-transform: uppercase;
             padding: 0 1em;
             font-size: 1.33em;
