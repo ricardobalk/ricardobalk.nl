@@ -147,6 +147,13 @@
             &:first-child
                 margin-left 0
 
+            .dropdown-wrapper
+              .dropdown-title
+               color $color-navigation-text
+               @media screen and (prefers-color-scheme: dark) {
+                 color $color-navigation-text-darkmode
+               }
+
         .repo-link
             margin-left 1.5rem
 
