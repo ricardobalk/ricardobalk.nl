@@ -4,7 +4,7 @@
             <div class="grid-x">
                 <div class="show-for-large large-6 cell picture">
                     <img :src="image.path"
-                         alt="image.description">
+                         :alt="image.description">
                 </div>
                 <div class="small-12 medium-12 large-6 cell">
                     <div class="text-container">

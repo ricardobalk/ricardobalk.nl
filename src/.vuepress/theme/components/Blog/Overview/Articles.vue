@@ -3,7 +3,7 @@
         <div class="masonry-container">
             <div class="masonry-columns">
                 <article class="masonry-brick post" v-for="(page, index) in posts"
-                         v-if="!page.frontmatter.layout && !page.frontmatter.home && !page.frontmatter.portfolio === true"
+                         v-if="!page.frontmatter.layout && !page.frontmatter.home && !page.frontmatter.portfolio === true && (page.frontmatter.lang || 'en-GB') === $lang"
                          :data-category="page.frontmatter.category" :class="'post-' + index">
                     <a :href="page.path" class="clickable">
                         <div v-if="page.frontmatter.images" class="show-for-medium image">

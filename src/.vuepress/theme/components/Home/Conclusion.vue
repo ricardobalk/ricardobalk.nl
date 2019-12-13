@@ -4,10 +4,10 @@
             <div class="grid-x">
                 <div class="small-12 cell">
                     <div class="text-container">
-                        <p class="next-move">It's time for the next move</p>
-                        <h2 class="section-title">Ready? Let's go!</h2>
+                        <p class="title">{{title}}</p>
+                        <p class="subtitle">{{subtitle}}</p>
                     </div>
-                    <FancyButton :title="'Contact me today'" :link="'/contact'"/>
+                    <FancyButton :title="button.title" :link="button.link"/>
                 </div>
             </div>
         </div>
@@ -19,7 +19,27 @@
 
     export default {
         name: "Conclusion",
-        components: {FancyButton}
+        components: {FancyButton},
+        props: {
+            "title": {
+                type: String, required: false, default() {
+                    return "It's time for the next move";
+                }
+            },
+            "subtitle": {
+                type: String, required: false, default() {
+                    return "Ready? Let's go!";
+                }
+            },
+            "button": {
+                type: Object, required: false, default() {
+                    return {
+                        "title": "Contact me today",
+                        "link": "/contact"
+                    }
+                }
+            }
+        }
     }
 </script>
 
@@ -41,7 +61,7 @@
         .text-container {
             text-align: center;
 
-            .next-move {
+            .title {
                 text-transform: uppercase;
                 font-size: 1.45em;
                 font-weight: 900;
@@ -50,7 +70,8 @@
                 margin-top: 1em;
             }
 
-            .section-title {
+            .subtitle {
+                font-family: var(--font-family-primary-headings);
                 text-transform: uppercase;
                 font-size: 3em;
                 margin: .1em 0 .5em;
