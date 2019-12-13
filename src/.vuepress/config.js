@@ -2,7 +2,35 @@ module.exports = {
   title: 'Ricardo Balk',
   description: 'Personal Website',
   dest: 'dist',
+  locales: {
+    '/': {
+      selectText: 'Languages',
+      lang: 'en-GB',
+      label: 'English',
+      title: 'Ricardo Balk',
+      description: 'Personal Website'
+    },
+    '/nl/': {
+      selectText: 'Taalkeuze',
+      lang: 'nl-NL',
+      label: 'Nederlands',
+      title: 'Ricardo Balk',
+      description: 'Persoonlijke Website'
+    }
+  },
   themeConfig: {
+    locales: {
+      '/': {
+        selectText: 'Languages',
+        lang: 'en-GB',
+        label: 'English',
+      },
+      '/nl/': {
+        selectText: 'Taalkeuze',
+        lang: 'nl-NL',
+        label: 'Nederlands',
+      }
+    },
     logo: '/assets/img/logo.svg',
     nav: [
       { text: 'Home', link: '/' },
