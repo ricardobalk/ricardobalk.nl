@@ -4,7 +4,7 @@ title: "Prerenderen van websites"
 excerpt: "Dankzij Prerendering laadt mijn website iets sneller."
 category: "front-end-development"
 tags: ["prerendering", "puppeteer"]
-lang: nl
+lang: nl-NL
 ---
 
 Ik doe mijn website sinds vandaag prerenderen. Dit prerenderen zorgt ervoor dat de website beter is te vinden en dat delen van de website een stuk sneller laden. Dat is zowel fijn voor de vindbaarheid van mijn site als de bezoekers.
