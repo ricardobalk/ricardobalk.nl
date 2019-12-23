@@ -171,10 +171,10 @@ $navbar-horizontal-padding = 1rem
     @media screen and (prefers-color-scheme: dark) {
      color: #eee;
     }
-    .nav-links a
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: .9em;
+    .nav-links a, .nav-links .dropdown-title
+      text-transform: uppercase
+      font-weight 700
+      font-size .9em
     .search-box
       flex: 0 0 auto
       vertical-align top
