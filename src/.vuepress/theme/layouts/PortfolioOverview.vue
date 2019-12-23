@@ -83,10 +83,6 @@
                 margin: 1em 0;
             }
 
-            .masonry-container {
-                --column-gap: 0;
-            }
-
             .items {
                 .item {
                     position: relative;
