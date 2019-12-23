@@ -55,16 +55,8 @@
     @import '@theme/styles/global/masonry';
 
     .posts {
-        .masonry-columns {
-            @include vendor-prefix('column-gap', '1em');
-        }
-
-        .masonry-brick {
-            margin: 1em 0;
-
-            &:first-of-type {
-                margin-top: 0;
-            }
+        .masonry-container {
+            --column-gap: 1em;
         }
 
         .post {

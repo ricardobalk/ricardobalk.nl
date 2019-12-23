@@ -1,0 +1,41 @@
+.masonry-container {
+  .masonry-columns {
+    $column-count-xxlarge: 5; // For huge monitors
+    $column-count-xlarge: 4; // For large monitors
+    $column-count-large: 3;
+    $column-count-medium: 2;
+    $column-count-small: 1;
+
+    @include vendor-prefix('column-gap', '0');
+
+    @media only screen and (min-width: 2400px) {
+      @include vendor-prefix('column-count', $column-count-xxlarge);
+      @include vendor-prefix('column-width', percentage(1/$column-count-xxlarge));
+    }
+
+    @media only screen and (min-width: 1920px) and (max-width: 2400px) {
+      @include vendor-prefix('column-count', $column-count-xlarge);
+      @include vendor-prefix('column-width', percentage(1/$column-count-xlarge));
+    }
+
+    @media only screen and (min-width: 728px) and (max-width: 1920px) {
+      @include vendor-prefix('column-count', $column-count-large);
+      @include vendor-prefix('column-width', percentage(1/$column-count-large));
+    }
+
+    @media only screen and (min-width: 480px) and (max-width: 727px) {
+      @include vendor-prefix('column-count', $column-count-medium);
+      @include vendor-prefix('column-width', percentage(1/$column-count-medium));
+    }
+
+    @media only screen and (max-width: 479px) {
+      @include vendor-prefix('column-count', $column-count-small);
+      @include vendor-prefix('column-width', percentage(1/$column-count-small));
+    }
+
+    .masonry-brick {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
