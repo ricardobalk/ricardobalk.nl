@@ -59,7 +59,7 @@
 </script>
 
 <style lang="scss">
-    @import '@theme/styles/global/masonry';
+    @import '@theme/styles/global/mixins'; // Contains the Masonry-layout
 
     // Standard
     .navbar .site-logo {
@@ -82,6 +82,8 @@
                 text-transform: uppercase;
                 margin: 1em 0;
             }
+
+            @include masonry-layout(0);
 
             .items {
                 .item {

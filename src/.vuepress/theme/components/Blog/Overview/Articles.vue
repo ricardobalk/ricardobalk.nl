@@ -52,20 +52,10 @@
 </script>
 
 <style lang="scss">
-    @import '@theme/styles/global/masonry';
+    @import '@theme/styles/global/mixins'; // Contains the Masonry-layout
 
     .posts {
-        .masonry-columns {
-            @include vendor-prefix('column-gap', '1em');
-        }
-
-        .masonry-brick {
-            margin: 1em 0;
-
-            &:first-of-type {
-                margin-top: 0;
-            }
-        }
+        @include masonry-layout(1em);
 
         .post {
             text-align: center;
