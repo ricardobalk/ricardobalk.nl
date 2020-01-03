@@ -55,11 +55,21 @@ successStories:
 
 nextMove:
   text:
-    - Tijd voor de volgende stap...
-    - Klaar? Let's go!
-  button:
-    title: "Contact opnemen"
-    link: /contact
+    - Toe aan een volgende stap?
+    - Laten we kennis maken!
+  connect:
+      - serviceName: "Email"
+        icon: ['fas', 'envelope']
+        title: "Neem contact op met mij via een e-mail"
+        url: "mailto:ricardo@ricardobalk.nl"
+      - serviceName: "GitHub"
+        icon: ['fab', 'github']
+        title: "Bekijk mijn online profiel op GitHub, een platform voor open source softwareontwikkeling"
+        url: "https://github.com/ellipticcurv3"
+      - serviceName: "Telephone"
+        icon: ['fas', 'phone']
+        title: "Bel me op"
+        url: "tel:+31653773206"
 ---
 
 <h1>Over mij&hellip;</h1>

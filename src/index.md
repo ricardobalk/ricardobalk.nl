@@ -51,7 +51,7 @@ successStories:
 nextMove:
   text:
     - It's time for the next move
-    - Ready? Let's go!
+    - Let's get in touch!
   connect:
     - serviceName: "Email"
       icon: ['fas', 'envelope']
@@ -64,7 +64,7 @@ nextMove:
     - serviceName: "Telephone"
       icon: ['fas', 'phone']
       title: "Contact me by phone"
-      url: "tel:+3161234"
+      url: "tel:+31653773206"
 
 ---
 
