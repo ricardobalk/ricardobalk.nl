@@ -7,7 +7,9 @@
                         <p class="title">{{title}}</p>
                         <p class="subtitle">{{subtitle}}</p>
                     </div>
-                    <FancyButton :title="button.title" :link="button.link"/>
+                    <section class="connect-on-social" title="Ways to contact me">
+                        <a v-for="contactingMethod in connect" :href="contactingMethod.url" :title="contactingMethod.title"><font-awesome-icon :icon="contactingMethod.icon"/></a>
+                    </section>
                 </div>
             </div>
         </div>
@@ -16,10 +18,14 @@
 
 <script>
     import FancyButton from "../FancyButton";
+    import {library} from "@fortawesome/fontawesome-svg-core";
+    import {fas} from "@fortawesome/free-solid-svg-icons";
+    import {fab} from "@fortawesome/free-brands-svg-icons";
+    import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
     export default {
         name: "Conclusion",
-        components: {FancyButton},
+        components: {FancyButton, library, fas, fab, FontAwesomeIcon},
         props: {
             "title": {
                 type: String, required: false, default() {
@@ -28,17 +34,22 @@
             },
             "subtitle": {
                 type: String, required: false, default() {
-                    return "Ready? Let's go!";
+                    return "Let's have a talk!";
                 }
             },
-            "button": {
-                type: Object, required: false, default() {
-                    return {
-                        "title": "Contact me today",
-                        "link": "/contact"
-                    }
+            "connect": {
+                type: Array, required: false, default() {
+                    return [
+                        { "serviceName": "Email", "title": "Contact me by sending an email", "icon": ['fas', 'envelope'], "url": "mailto:someone@example.com" },
+                        { "serviceName": "GitHub", "title": "My profile on GitHub, a platform for open source software development", "icon": ['fab', 'github'], "url": "https://github.com/" },
+                        { "serviceName": "Telephone", "title": "Contact my by phone", "icon": ['fas', 'phone'], "url": "tel:+1234" }
+                    ]
                 }
             }
+        },
+        created() {
+            library.add(fab);
+            library.add(fas);
         }
     }
 </script>
@@ -74,16 +85,23 @@
                 font-family: var(--font-family-primary-headings);
                 text-transform: uppercase;
                 font-size: 3em;
-                margin: .1em 0 .5em;
+                margin: .1em 0 .25em;
             }
         }
 
-        .fancy-button {
+        .connect-on-social {
             text-align: center;
-
-            .button {
-                color: #fff;
-                background: linear-gradient(60deg, #377fea69, #377fead6);
+            font-size: 2em;
+            a {
+                padding: 0 .5em;
+                color: rgba(255,255,255,.6);
+                &:hover {
+                    color: #fff;
+                    cursor: pointer;
+                    @media screen and (prefers-color-scheme: dark) {
+                        color: #d9d677;
+                    }
+                }
             }
         }
 

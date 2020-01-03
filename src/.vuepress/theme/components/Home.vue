@@ -8,7 +8,7 @@
         <ProductAndProcess :image="data.process.image" :title="data.process.title" :subtitle="data.process.subtitle"
                            :text="data.process.text"/>
         <SuccessStories :stories="(data.successStories.stories || data.successStories)" :title="data.successStories.title" :subtitle="data.successStories.subtitle"/>
-        <Conclusion :title="data.nextMove.text[0]" :subtitle="data.nextMove.text[1]" :button="data.nextMove.button" />
+        <Conclusion :title="data.nextMove.text[0]" :subtitle="data.nextMove.text[1]" :connect="data.nextMove.connect" />
     </main>
 </template>
 

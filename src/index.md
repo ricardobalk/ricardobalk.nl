@@ -52,9 +52,20 @@ nextMove:
   text:
     - It's time for the next move
     - Ready? Let's go!
-  button:
-    title: "Contact me today"
-    link: /contact
+  connect:
+    - serviceName: "Email"
+      icon: ['fas', 'envelope']
+      title: "Contact me by sending an email"
+      url: "mailto:ricardo@ricardobalk.nl"
+    - serviceName: "GitHub"
+      icon: ['fab', 'github']
+      title: "My profile on GitHub, a platform for open source software development"
+      url: "https://github.com/ellipticcurv3"
+    - serviceName: "Telephone"
+      icon: ['fas', 'phone']
+      title: "Contact me by phone"
+      url: "tel:+3161234"
+
 ---
 
 <h1>About me&hellip;</h1>
