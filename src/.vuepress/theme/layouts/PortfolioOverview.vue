@@ -27,7 +27,7 @@
                     ><span class="client">{{ item.frontmatter.client }}</span>
                   </p>
                   <h2 class="title btn">
-                    {{ item.title }}
+                    {{ item.frontmatter.shortTitle || item.title }}
                     <font-awesome-icon class="icon" :icon="['fas', 'chevron-right']" />
                   </h2>
                   <p class="excerpt">

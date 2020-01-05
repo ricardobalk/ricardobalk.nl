@@ -1,5 +1,6 @@
 ---
 date: 2019-01-01 09:00:00 +00:00
+shortTitle: UX Research
 portfolio: true
 client: Vormkracht10
 category: User Experience Design

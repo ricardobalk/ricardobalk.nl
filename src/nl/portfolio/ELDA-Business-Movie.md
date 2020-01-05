@@ -1,6 +1,7 @@
 ---
 portfolio: true
 date: 2018-06-01 09:00:00 +02:00
+shortTitle: Bedrijfsvideo
 client: ELDA
 category: Fotografie & Film
 tags: ["elda", "bedrijfsvideo", "dutch"]
