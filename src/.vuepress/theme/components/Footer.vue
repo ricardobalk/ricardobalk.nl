@@ -1,10 +1,6 @@
 <template>
   <footer class="footer" tabindex="0">
     <div class="grid-x">
-      <div class="small-12 cell links">
-        <a v-for="(link, index) in links.navigation" :key="index" :href="link.location">{{ link.text }}</a>
-      </div>
-
       <div class="small-12 cell">
         <div class="footer-message">
           <p>
@@ -23,6 +19,9 @@
             <a :href="links.social.github" target="_blank"
               ><font-awesome-icon :icon="['fab', 'github']" class="icon" title="GitHub" />.</a
             >
+            <span class="site-links show-for-large">
+              <a v-for="(link, index) in links.navigation" :key="index" :href="link.location">{{ link.text }}</a>
+            </span>
           </p>
         </div>
       </div>
@@ -70,45 +69,34 @@
   .footer {
     color: #eee;
     background-color: #1e1e1e;
-    /* text-align: center; */
     width: 100%;
-
-    .links,
-    .footer-message {
-      padding-left: 1em;
-      padding-right: 1em;
-    }
-
-    .links {
-      display: block;
-      font-size: 0.9em;
-      background-color: var(--color-almost-black);
-      padding-top: 1em;
-      padding-bottom: 1em;
-
-      a {
-        color: inherit;
-        text-align: center;
-        font-size: 0.9em;
-
-        &:not(:last-of-type) {
-          margin-right: 0.75em;
-        }
-      }
-    }
 
     .footer-message {
       font-size: 0.85em;
-      padding-top: 0.75em;
-      padding-bottom: 0.75em;
+      padding-left: 1em;
+      padding-right: 1em;
 
       p {
         color: #eee;
+        margin: 1em 0;
       }
 
       a {
         color: inherit;
         font-size: inherit;
+      }
+
+      .site-links {
+        display: block;
+        float: right;
+        a {
+          color: inherit;
+          text-align: center;
+
+          &:not(:last-of-type) {
+            margin-right: 0.75em;
+          }
+        }
       }
 
       svg {
@@ -126,8 +114,7 @@
 
   // Dark
   @media screen and (prefers-color-scheme: dark) {
-    .footer.home,
-    .footer.home .links {
+    .footer.home {
       background-color: #002451;
     }
   }
