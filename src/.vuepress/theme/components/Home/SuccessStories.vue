@@ -66,7 +66,7 @@
 <style lang="scss">
   // Standard
   .success-stories {
-    margin: 12em auto;
+    margin: 8em auto;
     padding: 0 2em;
     max-width: 1600px;
 
