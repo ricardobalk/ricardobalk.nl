@@ -26,41 +26,26 @@
       @include vendor-prefix("column-gap", $column-gap);
 
       @include vendor-prefix("column-count", $column-count-small);
-      @include vendor-prefix(
-        "column-width",
-        percentage(1 / $column-count-small)
-      );
+      @include vendor-prefix("column-width", percentage(1 / $column-count-small));
 
       @media only screen and (min-width: 480px) {
         @include vendor-prefix("column-count", $column-count-medium);
-        @include vendor-prefix(
-          "column-width",
-          percentage(1 / $column-count-medium)
-        );
+        @include vendor-prefix("column-width", percentage(1 / $column-count-medium));
       }
 
       @media only screen and (min-width: 640px) {
         @include vendor-prefix("column-count", $column-count-large);
-        @include vendor-prefix(
-          "column-width",
-          percentage(1 / $column-count-large)
-        );
+        @include vendor-prefix("column-width", percentage(1 / $column-count-large));
       }
 
       @media only screen and (min-width: 1920px) {
         @include vendor-prefix("column-count", $column-count-xlarge);
-        @include vendor-prefix(
-          "column-width",
-          percentage(1 / $column-count-xlarge)
-        );
+        @include vendor-prefix("column-width", percentage(1 / $column-count-xlarge));
       }
 
       @media only screen and (min-width: 2400px) {
         @include vendor-prefix("column-count", $column-count-xxlarge);
-        @include vendor-prefix(
-          "column-width",
-          percentage(1 / $column-count-xxlarge)
-        );
+        @include vendor-prefix("column-width", percentage(1 / $column-count-xxlarge));
       }
 
       .masonry-brick {

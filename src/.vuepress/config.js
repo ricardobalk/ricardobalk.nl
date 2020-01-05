@@ -8,22 +8,22 @@ module.exports = {
       lang: "en-GB",
       label: "English",
       title: "Ricardo Balk",
-      description: "Personal Website"
+      description: "Personal Website",
     },
     "/nl/": {
       selectText: "Taalkeuze",
       lang: "nl-NL",
       label: "Nederlands",
       title: "Ricardo Balk",
-      description: "Persoonlijke Website"
-    }
+      description: "Persoonlijke Website",
+    },
   },
   themeConfig: {
     locales: {
       "/": {
         selectText: "Languages",
         lang: "en-GB",
-        label: "English"
+        label: "English",
       },
       "/nl/": {
         selectText: "Taalkeuze",
@@ -32,20 +32,20 @@ module.exports = {
         nav: [
           { text: "Home", link: "/nl/" },
           { text: "Blog", link: "/nl/blog/" },
-          { text: "Portfolio", link: "/nl/portfolio/" }
-        ]
-      }
+          { text: "Portfolio", link: "/nl/portfolio/" },
+        ],
+      },
     },
     logo: "/assets/img/logo.svg",
     nav: [
       { text: "Home", link: "/" },
       { text: "Blog", link: "/blog/" },
-      { text: "Portfolio", link: "/portfolio/" }
+      { text: "Portfolio", link: "/portfolio/" },
     ],
     // sidebar: 'auto',
     sidebarDepth: 3,
     defaultAssetPaths: {
-      images: "/assets/img"
+      images: "/assets/img",
     },
     footer: {
       links: {
@@ -54,15 +54,14 @@ module.exports = {
           { text: "About", location: "/about" },
           {
             text: "Tor",
-            location:
-              "http://3rfoq3ia75hnxgpmtwyeyvbjbhym354tcy4ox2jaqjqhtcmd4i2mt2id.onion/"
-          }
+            location: "http://3rfoq3ia75hnxgpmtwyeyvbjbhym354tcy4ox2jaqjqhtcmd4i2mt2id.onion/",
+          },
         ],
         social: {
           behance: "https://behance.net/ricardobalk",
-          github: "https://github.com/ellipticcurv3/www"
-        }
-      }
-    }
-  }
+          github: "https://github.com/ellipticcurv3/www",
+        },
+      },
+    },
+  },
 };

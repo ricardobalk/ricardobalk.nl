@@ -14,45 +14,45 @@
 </template>
 
 <script>
-export default {
-  name: "SuccessStory",
-  props: {
-    story: {
-      type: Object,
-      required: true,
-      default() {
-        return {
-          name: "Story missing",
-          title: "Did you set up your binds correctly?",
-          story:
-            "A bind ensures that data is transferred between components, in this case from 'SuccessStories' to 'SuccessStory'. There might be going something wrong there.",
-          avatar: "/assets/img/home/success-stories/empty.png"
-        };
-      }
-    }
-  }
-};
+  export default {
+    name: "SuccessStory",
+    props: {
+      story: {
+        type: Object,
+        required: true,
+        default() {
+          return {
+            name: "Story missing",
+            title: "Did you set up your binds correctly?",
+            story:
+              "A bind ensures that data is transferred between components, in this case from 'SuccessStories' to 'SuccessStory'. There might be going something wrong there.",
+            avatar: "/assets/img/home/success-stories/empty.png",
+          };
+        },
+      },
+    },
+  };
 </script>
 
 <style lang="scss">
-.success-story {
-  text-align: center;
-  .inner {
-    margin: 1em;
-    padding: 2em;
-    border: 1px solid #eee;
-    background-color: #fff;
-    box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.05);
+  .success-story {
+    text-align: center;
+    .inner {
+      margin: 1em;
+      padding: 2em;
+      border: 1px solid #eee;
+      background-color: #fff;
+      box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.05);
 
-    .avatar-container {
-      width: 100px;
-      height: 100px;
-      margin: 0 auto 1em;
+      .avatar-container {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 1em;
 
-      .avatar {
-        border-radius: 50px;
+        .avatar {
+          border-radius: 50px;
+        }
       }
     }
   }
-}
 </style>

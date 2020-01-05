@@ -7,9 +7,7 @@ module.exports = (options, ctx) => {
   // resolve algolia
   const isAlgoliaSearch =
     themeConfig.algolia ||
-    Object.keys((siteConfig.locales && themeConfig.locales) || {}).some(
-      base => themeConfig.locales[base].algolia
-    );
+    Object.keys((siteConfig.locales && themeConfig.locales) || {}).some(base => themeConfig.locales[base].algolia);
 
   const enableSmoothScroll = themeConfig.smoothScroll === true;
 
@@ -18,7 +16,7 @@ module.exports = (options, ctx) => {
       return {
         "@AlgoliaSearchBox": isAlgoliaSearch
           ? path.resolve(__dirname, "components/AlgoliaSearchBox.vue")
-          : path.resolve(__dirname, "noopModule.js")
+          : path.resolve(__dirname, "noopModule.js"),
       };
     },
 
@@ -32,9 +30,9 @@ module.exports = (options, ctx) => {
           type: "tip",
           defaultTitle: {
             "/": "TIP",
-            "/zh/": "提示"
-          }
-        }
+            "/zh/": "提示",
+          },
+        },
       ],
       [
         "container",
@@ -42,9 +40,9 @@ module.exports = (options, ctx) => {
           type: "warning",
           defaultTitle: {
             "/": "WARNING",
-            "/zh/": "注意"
-          }
-        }
+            "/zh/": "注意",
+          },
+        },
       ],
       [
         "container",
@@ -52,11 +50,11 @@ module.exports = (options, ctx) => {
           type: "danger",
           defaultTitle: {
             "/": "WARNING",
-            "/zh/": "警告"
-          }
-        }
+            "/zh/": "警告",
+          },
+        },
       ],
-      ["smooth-scroll", enableSmoothScroll]
-    ]
+      ["smooth-scroll", enableSmoothScroll],
+    ],
   };
 };

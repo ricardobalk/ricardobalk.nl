@@ -57,7 +57,7 @@ export function resolvePage(pages, rawPath, base) {
   if (isExternal(rawPath)) {
     return {
       type: "external",
-      path: rawPath
+      path: rawPath,
     };
   }
   if (base) {
@@ -68,13 +68,11 @@ export function resolvePage(pages, rawPath, base) {
     if (normalize(pages[i].regularPath) === path) {
       return Object.assign({}, pages[i], {
         type: "page",
-        path: ensureExt(pages[i].path)
+        path: ensureExt(pages[i].path),
       });
     }
   }
-  console.error(
-    `[vuepress] No matching page found for sidebar item "${rawPath}"`
-  );
+  console.error(`[vuepress] No matching page found for sidebar item "${rawPath}"`);
   return {};
 }
 
@@ -126,13 +124,9 @@ function resolvePath(relative, base, append) {
 export function resolveSidebarItems(page, regularPath, site, localePath) {
   const { pages, themeConfig } = site;
 
-  const localeConfig =
-    localePath && themeConfig.locales
-      ? themeConfig.locales[localePath] || themeConfig
-      : themeConfig;
+  const localeConfig = localePath && themeConfig.locales ? themeConfig.locales[localePath] || themeConfig : themeConfig;
 
-  const pageSidebarConfig =
-    page.frontmatter.sidebar || localeConfig.sidebar || themeConfig.sidebar;
+  const pageSidebarConfig = page.frontmatter.sidebar || localeConfig.sidebar || themeConfig.sidebar;
   if (pageSidebarConfig === "auto") {
     return resolveHeaders(page);
   }
@@ -163,9 +157,9 @@ function resolveHeaders(page) {
         title: h.title,
         basePath: page.path,
         path: page.path + "#" + h.slug,
-        children: h.children || []
-      }))
-    }
+        children: h.children || [],
+      })),
+    },
   ];
 }
 
@@ -185,7 +179,7 @@ export function groupHeaders(headers) {
 
 export function resolveNavLinkItem(linkItem) {
   return Object.assign(linkItem, {
-    type: linkItem.items && linkItem.items.length ? "links" : "link"
+    type: linkItem.items && linkItem.items.length ? "links" : "link",
   });
 }
 
@@ -198,14 +192,14 @@ export function resolveMatchingConfig(regularPath, config) {
   if (Array.isArray(config)) {
     return {
       base: "/",
-      config: config
+      config: config,
     };
   }
   for (const base in config) {
     if (ensureEndingSlash(regularPath).indexOf(encodeURI(base)) === 0) {
       return {
         base,
-        config: config[base]
+        config: config[base],
       };
     }
   }
@@ -221,7 +215,7 @@ function resolveItem(item, pages, base, groupDepth = 1) {
     return resolvePage(pages, item, base);
   } else if (Array.isArray(item)) {
     return Object.assign(resolvePage(pages, item[0], base), {
-      title: item[1]
+      title: item[1],
     });
   } else {
     if (groupDepth > 3) {
@@ -230,7 +224,7 @@ function resolveItem(item, pages, base, groupDepth = 1) {
     const children = item.children || [];
     if (children.length === 0 && item.path) {
       return Object.assign(resolvePage(pages, item.path, base), {
-        title: item.title
+        title: item.title,
       });
     }
     return {
@@ -238,10 +232,8 @@ function resolveItem(item, pages, base, groupDepth = 1) {
       path: item.path,
       title: item.title,
       sidebarDepth: item.sidebarDepth,
-      children: children.map(child =>
-        resolveItem(child, pages, base, groupDepth + 1)
-      ),
-      collapsable: item.collapsable !== false
+      children: children.map(child => resolveItem(child, pages, base, groupDepth + 1)),
+      collapsable: item.collapsable !== false,
     };
   }
 }
