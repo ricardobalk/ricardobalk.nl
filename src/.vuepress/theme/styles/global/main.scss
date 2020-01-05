@@ -3,7 +3,9 @@
 
 body {
   background-color: var(--color-body-background);
-  & * { outline: 0; }
+  & * {
+    outline: 0;
+  }
 }
 
 .grid-container {
@@ -20,8 +22,10 @@ body {
   margin: 0;
   list-style: none;
   li {
-    font-size: .8em;
-    a { font-size: inherit; }
+    font-size: 0.8em;
+    a {
+      font-size: inherit;
+    }
   }
 }
 
@@ -41,7 +45,10 @@ body {
 }
 
 .hero {
-  h1, h2, h3, p {
+  h1,
+  h2,
+  h3,
+  p {
     color: var(--color-light-grey);
   }
 }
