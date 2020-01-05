@@ -1,7 +1,6 @@
 ---
 date: 2015-10-01 09:00:00 +02:00
 portfolio: true
-title: "Red Blue Yellow"
 client: HAN University of Applied Sciences
 category: Game Development
 tags: ["unity", "game development", "programming", "c-sharp"]
@@ -9,12 +8,13 @@ images:
   featured:
      filename: "portfolio/red-blue-yellow.jpg"
      description: ""
-excerpt: An arcade-like game made in Unity, with C#.
+excerpt: An arcade-like game made in Unity, with C##.
 permalink: /portfolio/red-blue-yellow
 ---
 
-Red Blue Yellow is an Unity (C#) game made by me and fellow students from my university during the minor 'Scripting for Designers' in 2015.
+# Red Blue Yellow
 
+Red Blue Yellow is an Unity (C#) game made by me and fellow students from my university during the minor 'Scripting for Designers' in 2015.
 
 
 <ClientOnly>
@@ -37,29 +37,29 @@ Red Blue Yellow is an Unity (C#) game made by me and fellow students from my uni
 </iframe></div>
 </ClientOnly>
 
-# Project Responsibilities
+## Project Responsibilities
 
 - Random Generation
 - User Interaction
 - Game Controller
 
-# More information
+## More information
 
 - Are you looking to play the game online? [Head over to this place](https://ellipticcurv3.keybase.pub/RedBlueYellow-WebGL/)
 - Are you looking to download and play the game on Windows? [Head over to the releases on GitHub](https://github.com/ellipticcurv3/RedBlueYellow/releases/latest)
 - Are you looking for the source code? [Head over to the GitHub Repository](https://github.com/ellipticcurv3/RedBlueYellow)
 
 
-## People involved in this project
+### People involved in this project
 
-### Students
+#### Students
 
 - [Ricardo Balk](https://www.linkedin.com/in/ellipticcurv3)
 - [Niels de Bont](https://www.linkedin.com/in/niels-de-bont-3169a185/)
 - [Max Douven](https://www.linkedin.com/in/max-douven-5b3365144/)
 - [Job Poels](https://www.linkedin.com/in/job-poels-581125b9/)
 
-### Lecturers
+#### Lecturers
 
 - [Arthur Bennis](https://www.linkedin.com/in/arthurbennis/)
 - [Theo Theunissen](https://www.linkedin.com/in/theo-theunissen-83246a/)

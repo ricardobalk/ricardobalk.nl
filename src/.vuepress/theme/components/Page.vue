@@ -7,12 +7,6 @@
       :image="`${assets.images}/${this.$page.frontmatter.images.hero.filename}`"
     />
 
-    <h1 v-if="this.$page.title" class="page-title">
-      <template v-if="this.$page.frontmatter.client">{{ this.$page.frontmatter.client }} &mdash; </template
-      >{{ this.$page.title }}
-    </h1>
-    <!-- TODO: Make built-in title component for this -->
-
     <Content class="theme-default-content" />
 
     <PageEdit />

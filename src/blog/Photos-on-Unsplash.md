@@ -1,10 +1,11 @@
 ---
 date: 2019-08-20 06:00:00 +00:00
-title: "Photography on Unsplash"
 excerpt: "My personal photographs are now available on Unsplash, check it out!"
 category: "personal"
 tags: ["unsplash", "instagram", "photography"]
 ---
+
+# Photography on Unsplash
 
 I now share my personal (non-paid) photographs on Unsplash, to do something in return for this awesome community.
 

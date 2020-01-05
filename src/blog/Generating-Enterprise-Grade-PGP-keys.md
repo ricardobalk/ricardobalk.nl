@@ -1,6 +1,5 @@
 ---
 date: 2018-10-02 08:00:00 +00:00
-title: "Generating Enterprise-grade PGP Keys"
 excerpt: "In this article, I will guide through the generation of Enterprise-grade PGP keys."
 category: "devops"
 tags: ["pgp", "gpg", "encryption"]
@@ -13,7 +12,7 @@ images:
      description: "A lockpad shown on a terminal-style computer background"
 ---
 
-
+# Generating Enterprise-grade PGP Keys
 
 In this article, I will guide through the generation of Enterprise-grade PGP keys.
 
