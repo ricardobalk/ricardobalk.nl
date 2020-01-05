@@ -1,6 +1,5 @@
 ---
 date: 2019-12-27 06:00:00 +00:00
-title: "Nieuwe website (opnieuw)"
 category: "front-end-development"
 tags: ["personal", "website"]
 lang: nl-NL
@@ -13,29 +12,31 @@ images:
      description: "Computerscherm dat de layout van een website en de bijbehorende code visualiseert"
 ---
 
+# Nieuwe website (opnieuw)
+
 Ik heb een nieuwe website. Niet zozeer niet qua uiterlijk maar wel op het gebied van de gebruikte techniek. Mijn website is nu namelijk gebaseerd op VuePress, waardoor het geheel veel beter te onderhouden is.
 
 <!-- more -->
 
-# Belangrijke verbeteringen
+## Belangrijke verbeteringen
 
-## VuePress
+### VuePress
 
 Voorheen maakte ik gebruik van een combinatie tussen Jekyll, Webpack, Vue, een prerenderer en wat andere 'tools' om mijn website te bouwen. Jekyll is gebaseerd op Ruby, terwijl Webpack een Node-applicatie is. Een erg onhandige combinatie, want het geheel werkte erg stroef en was bovendien erg moeilijk te onderhouden.
 
 Dankzij VuePress is het niet meer nodig om allerlei losse applicaties aan te roepen. VuePress is dé oplossing voor een Vue-gebaseerd systeem binnen Node, het is makkelijk te onderhouden en komt standaard al met leuke extra's. Hierbij kun je denken aan ondersteuning voor meerdere talen, een ingebouwde prerendererer en de mogelijkheid om Vue-componenten te tonen in je blogposts. VuePress is erg gaaf, werkt goed en is goed gedocumenteerd.
 
-## CSS-gebaseerde Masonry-layout
+### CSS-gebaseerde Masonry-layout
 
 Op het overzicht van mijn blog en portfolio maak ik gebruik van een Masonry-layout die volledig gebaseerd is op CSS. Hierdoor is het niet afhankelijk van langzame scripts en het geheel dus een stuk sneller.
 
-## Meerdere talen
+### Meerdere talen
 
 Misschien was het je al opgevallen, het is nu mogelijk om mijn website zowel in Nederlands als Engels te bekijken. De content moet ik nog schrijven / aanvullen maar het begin is er.
 
 
 
-# Toekomstige verbeteringen
+## Toekomstige verbeteringen
 
 Er zijn een aantal toekomstige verbeteringen die op mijn to-do-lijstje staan.
 

@@ -1,6 +1,5 @@
 ---
 date: 2018-11-03 09:00:00 +00:00
-title: Running OpenProject Community Edition in Docker
 excerpt: OpenProject is a freeware project management tool that comes with a Docker image. Learn how to set it up...
 category: devops
 tags: [linux, docker, openproject, freeware]
@@ -9,6 +8,8 @@ images:
      filename: "blog/gantt-chart.png"
      description: "A global project planning shown as a GANTT chart"
 ---
+
+# Running OpenProject Community Edition in Docker
 
 OpenProject is an open source web-based project administration tool and Docker is a tool for downloading software *images* for running them inside *containers*. Those containers could be set up very quickly without the hassle that comes with the installation of regular, native applications (e.g. setting the right permissions, bloat the file system with lots of files everywhere, messing up your configuration).
 

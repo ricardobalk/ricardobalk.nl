@@ -1,10 +1,11 @@
 ---
 date: 2019-06-11 06:00:00 +00:00
-title: "Tor address for my website"
 excerpt: "Are you a Tor user? My website is available via Tor!"
 category: "personal"
 tags: ["website", "development", "geeky"]
 ---
+
+# Tor address for my website
 
 I am running my site on a Tor Hidden Service, commonly called the 'dark web'. Most people know Tor as software for illegal online activities. But instead of using Tor for illegal activities &mdash; it also has legitimate purposes. I am running this website on it, for those people who prefer a high level of privacy.
 
@@ -16,13 +17,13 @@ Although I **never** keep access logs on my webserver, I can't prove it. Hosting
 
 ---
 
-# How to run your own Tor Hidden Service
+## How to run your own Tor Hidden Service
 
 You might want to provide access to your website via Tor too.
 
 If you're familiar with administring servers &mdash; it's quite easy to create a Tor Hidden Service.
 
-## Step 1: Run a local server
+### Step 1: Run a local server
 
 You should run a local server that...
 
@@ -31,13 +32,13 @@ You should run a local server that...
 
 > Note: Instead of an HTTP server, you could also use other types of servers, as long as they use TCP connections (e.g. SSH) &mdash; and you could also choose between creating one .onion address per server application or providing multiple local server applications from a single .onion address. It's quite flexible.
 
-## Step 2: Install Tor
+### Step 2: Install Tor
 
 ```sh
 sudo apt install tor
 ```
 
-## Step 3: Edit configuration
+### Step 3: Edit configuration
 
 ```sh
 sudo nano /etc/torrc
@@ -48,7 +49,7 @@ Add the following lines:
 ```
 SOCKSPort 0
 
-# Website
+## Website
 HiddenServiceDir /var/lib/tor/website_hidden_service/
 HiddenServicePort 80 127.0.0.1:8081
 ```
@@ -57,19 +58,19 @@ HiddenServicePort 80 127.0.0.1:8081
 
 Save with Control-X, and Y.
 
-## Step 4: Enable service
+### Step 4: Enable service
 
 ```sh
 sudo systemctl enable tor@
 ```
 
-## Step 5: Run hidden service
+### Step 5: Run hidden service
 
 ```sh
 sudo service tor start
 ```
 
-## Step 6: Retrieve .onion address
+### Step 6: Retrieve .onion address
 
 To retrieve your `.onion`-address, read it from the file `hostname` in `/var/lib/tor/website_hidden_service/`.
 
