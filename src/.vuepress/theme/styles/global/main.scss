@@ -1,8 +1,6 @@
 @import "variables";
 @import "fonts";
 
-html { width: 100vw; }
-
 body {
   background-color: var(--color-body-background);
   & * { outline: 0; }
