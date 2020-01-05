@@ -1,7 +1,6 @@
 ---
 date: 2019-04-05 09:00:00 +02:00
 portfolio: true
-title: My own website
 excerpt: "I made this website entirely myself."
 client: Ricardo Balk
 category: Front-end Development
@@ -13,7 +12,7 @@ images:
 permalink: "/portfolio/my-website"
 ---
 
-
+# My own website
 
 > Big update! (August 2019) &mdash; I redesigned my website again and I now use Webpack, Vue components, npm, Docker, Netlify etc. [Learn more about this update...](#august-2019)
 
