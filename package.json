@@ -32,7 +32,10 @@
   },
   "homepage": "https://github.com/ellipticcurv3/www#readme",
   "devDependencies": {
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
     "node-sass": "^4.13.0",
+    "prettier": "1.19.1",
     "sass-loader": "^8.0.0",
     "vue-inline-svg": "^1.2.0",
     "vuepress": "^1.2.0"
@@ -45,5 +48,16 @@
     "foundation-sites": "^6.6.0",
     "jquery": "^3.4.1",
     "moment": "^2.24.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,json,md,vue}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
