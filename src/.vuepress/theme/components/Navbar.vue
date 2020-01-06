@@ -79,8 +79,14 @@
             ((this.$refs.siteName && this.$refs.siteName.offsetWidth) || 0);
         }
       };
+      const navBarOpacity = () => {
+        window.scrollY > 100 ? this.$el.classList.add("page-scrolled") : this.$el.classList.remove("page-scrolled");
+      };
+
       handleLinksWrapWidth();
+      navBarOpacity();
       window.addEventListener("resize", handleLinksWrapWidth, false);
+      window.addEventListener("scroll", navBarOpacity, false);
     },
 
     computed: {
@@ -116,8 +122,12 @@
     height $navbarHeight
     background-color #fff
     box-sizing border-box
+    transition background-color .5s ease-in
 
-    @media screen and (prefers-color-scheme: dark) {background-color: transparent;}
+    @media screen and (prefers-color-scheme: dark) {background-color transparent}
+
+    &.page-scrolled
+      @media screen and (prefers-color-scheme: dark){background-color #000}
 
     .search-box
       display inline-block
