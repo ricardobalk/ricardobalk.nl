@@ -1,1 +1,0 @@
-This is just a placeholder to make sure that the directory `/dist` exists before running Docker (`docker-compose up`).
