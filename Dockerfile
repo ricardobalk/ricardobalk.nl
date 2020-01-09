@@ -1,17 +1,16 @@
-FROM node:latest
-RUN apt update
-RUN mkdir -p /home/node/.npm-global \
-             /home/node/www \
-             /home/node/www/src \
-             && chown -R node:node /home/node/
-RUN npm install n -g && n stable
+FROM node:12
 
 USER node
+RUN mkdir -p /home/node/.npm-global \
+             /home/node/www
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH=$NPM_CONFIG_PREFIX/bin:$PATH
+RUN npm -g config set user "$USER"
+
 WORKDIR /home/node/www
 COPY package*.json ./
-RUN npm -g config set user $USER && npm i
+RUN npm i
 
+EXPOSE 8080
 ENTRYPOINT ["npm", "run"]
 CMD ["build"]
