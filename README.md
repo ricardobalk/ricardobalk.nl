@@ -1,3 +1,5 @@
+[![Codacy Code Quality Badge](https://api.codacy.com/project/badge/Grade/b10397298a3d443783985c67631ec597)](https://www.codacy.com/manual/ellipticcurv3/www?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ellipticcurv3/www&amp;utm_campaign=Badge_Grade) [![Travis CI Build Status](https://travis-ci.com/ellipticcurv3/www.svg?branch=develop)](https://travis-ci.com/ellipticcurv3/www)
+
 # Ricardo's Personal Website
 
 This repository contains my personal website. It's made with VuePress, ZURB Foundation and Docker.
