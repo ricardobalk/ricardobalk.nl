@@ -7,80 +7,49 @@ This repository contains my personal website. It's made with VuePress, ZURB Foun
 - VuePress provides a way to transform Markdown files to HTML.
 - Zurb Foundation is used for its 12 column grid layout.
 
-Under the hood, VuePress uses things like Webpack and the Vue Router, which made it possible to split my website into several Vue components working with each other.
+Under the hood, VuePress uses things like Webpack and the Vue Router, which makes it possible to split the website into several components, enhancing overall maintainability.
 
-## Running inside Docker
+---
 
-To build and serve my website, I recommend using Docker and Docker Compose - as this prevents you from having to install and configure a lot of things.
+## Building / Developing
 
-**BUILD**
-
-```sh
-docker-compose up --build
-```
-
-This will initiate a full build of my website and place the output in `dist/`. Serve this directory with your server of choice.
+To build or develop my website, I recommend using Docker, as this prevents you from installing and configuring many things.
 
 **DEV SERVER**
 
 ```sh
-docker-compose -f docker-compose-dev.yml up --build
+docker build -t ellipticcurv3/www .
+docker run --rm \
+--mount type=bind,source="$(pwd)"/src/,target=/home/node/www/src/,readonly \
+-p 8080:8080 ellipticcurv3/www \
+"dev"
 ```
 
 This will launch a dev server which you could use to tinker and try things. After a while, visit http://localhost:8080/. You're good to go.
 
+**BUILD**
+
+```sh
+mkdir -p ./dist/
+docker build -t ellipticcurv3/www .
+docker run --rm \
+--mount type=bind,source="$(pwd)"/src/,target=/home/node/www/src/,readonly \
+--mount type=bind,source="$(pwd)"/dist/,target=/home/node/www/dist/ \
+ellipticcurv3/www
+```
+
+This will build the website and place the result in `dist/`. You can use your own server to serve this directory.
+
 **REMOVAL**
 
 ```sh
-docker-compose down
-docker-compose -f docker-compose-dev.yml down    # If you used the dev server
+docker image rm ellipticcurv3/www
 ```
+
+This will remove the image. Removal of the containers is not necessary because the `--rm` flag was used.
 
 ---
 
 ## Running without Docker
 
-Don't want to use Docker and prefer to use local installation? Here are the instructions.
-
-**INSTALL**
-
-Make sure that you cloned this repository to a directory of choice and you have already installed npm. Then, open a console and start it.
-
-```sh
-npm install
-```
-
-Then, you could either start the development server or build the complete site.
-
-**DEV**
-
-- Builds the website and spins up a web server at `localhost:8080`
-
-```sh
-npm run dev
-```
-
-**BUILD**
-
-- Builds the website and outputs it to `dist/`, where you can point an own server.
-
-```sh
-npm run build
-```
-
-
-**BUILD &amp; CLEAN**
-
-- Builds the website and cleans up `node_modules/`, so that you can focus on serving `dist/`.
-
-```sh
-npm run cleanbuild
-```
-
-**RESET**
-
-- Use this when everything breaks, it deletes `node_modules/`, deletes `dist/` and runs `npm install`.
-
-```sh
-npm run reset
-```
+Don't want to use Docker and prefer to use local installation? Read the [Slowstart Guide](./SLOWSTART.md).
