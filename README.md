@@ -21,8 +21,8 @@ To build or develop my website, I recommend using Docker, as this prevents you f
 docker build -t ellipticcurv3/www .
 docker run --rm \
 --mount type=bind,source="$(pwd)"/src/,target=/home/node/www/src/,readonly \
--p 8080:8080 ellipticcurv3/www \
-"dev"
+-p 8080:8080 \
+ellipticcurv3/www "dev"
 ```
 
 This will launch a dev server which you could use to tinker and try things. After a while, visit http://localhost:8080/. You're good to go.
