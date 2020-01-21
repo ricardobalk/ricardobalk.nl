@@ -1,4 +1,5 @@
 [![Codacy Code Quality Badge](https://api.codacy.com/project/badge/Grade/b10397298a3d443783985c67631ec597)](https://www.codacy.com/manual/ellipticcurv3/www?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ellipticcurv3/www&amp;utm_campaign=Badge_Grade) [![Travis CI Build Status](https://travis-ci.com/ellipticcurv3/www.svg?branch=develop)](https://travis-ci.com/ellipticcurv3/www)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fellipticcurv3%2Fwww.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fellipticcurv3%2Fwww?ref=badge_shield)
 
 # Ricardo's Personal Website
 
@@ -53,3 +54,7 @@ This will remove the image. Removal of the containers is not necessary because t
 ## Running without Docker
 
 Don't want to use Docker and prefer to use local installation? Read the [Slowstart Guide](./SLOWSTART.md).
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fellipticcurv3%2Fwww.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fellipticcurv3%2Fwww?ref=badge_large)
