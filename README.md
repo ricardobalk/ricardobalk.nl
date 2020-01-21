@@ -49,12 +49,16 @@ docker image rm ellipticcurv3/www
 
 This will remove the image. Removal of the containers is not necessary because the `--rm` flag was used.
 
----
-
-## Running without Docker
+**WITHOUT DOCKER**
 
 Don't want to use Docker and prefer to use local installation? Read the [Slowstart Guide](./SLOWSTART.md).
 
+---
 
-## License
+# License
+
+This website including all blog articles are licenced under the GPL 3.0+ license.
+
+Please note that this product includes software and libraries from 3rd parties which could have a different license. See the below image for more information.
+
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fellipticcurv3%2Fwww.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fellipticcurv3%2Fwww?ref=badge_large)
