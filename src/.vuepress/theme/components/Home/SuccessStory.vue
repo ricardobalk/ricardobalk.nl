@@ -1,5 +1,5 @@
 <template>
-  <div class="small-12 large-4 cell card">
+  <div class="small-12 large-6 cell card">
     <div class="success-story">
       <div class="inner">
         <div class="avatar-container">

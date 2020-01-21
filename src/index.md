@@ -39,10 +39,6 @@ successStories:
   title: Former employer at Sollicity
   story: Ricardo takes pride in his profession. He knows a lot of it and has a great ambition to always learn more. He is upbeat and sociale and I very much appreciated his time with Sollicity.
   avatar: /assets/img/home/success-stories/dirk.jpg
-- name: Mark van Eijk
-  title: Former employer at Vormkracht10
-  story: I haven't received a recommendation from Mark yet, but I'm working on it and I'm sure to ask for one when I talk to him.
-  avatar: /assets/img/home/success-stories/empty.png
 - name: Niels de Bont
   title: Assistant during freelance assignment
   story: Ricardo and I made an impressive business movie during the summer of 2016. Ricardo works in a structured and considerate way, which made us able to reach our goals in a short time. It was a pleasure working with him.

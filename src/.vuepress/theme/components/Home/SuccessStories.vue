@@ -68,7 +68,7 @@
   .success-stories {
     margin: 8em auto;
     padding: 0 2em;
-    max-width: 1600px;
+    max-width: 1024px;
 
     .card {
       display: -webkit-box;
