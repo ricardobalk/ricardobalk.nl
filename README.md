@@ -36,15 +36,23 @@ docker build -t ellipticcurv3/www .
 docker run --rm \
 --mount type=bind,source="$(pwd)"/src/,target=/home/node/www/src/,readonly \
 --mount type=bind,source="$(pwd)"/dist/,target=/home/node/www/dist/ \
-ellipticcurv3/www
+ellipticcurv3/www "build"
 ```
 
 This will build the website and place the result in `dist/`. You can use your own server to serve this directory.
 
+**DEPLOY**
+
+Build the website using the instructions above. After that, use `rsync` to push the contents of `dist/` to your server.
+
+```sh
+rsync -ru dist/. ricardobalk.nl:/var/www/ricardobalk.nl --delete
+```
+
 **REMOVAL**
 
 ```sh
-docker image rm ellipticcurv3/www
+docker image rm ellipticcurv3/www && docker image prune
 ```
 
 This will remove the image. Removal of the containers is not necessary because the `--rm` flag was used.
