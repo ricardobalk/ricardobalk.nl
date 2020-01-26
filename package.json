@@ -8,7 +8,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx vuepress dev src",
     "build": "npx vuepress build src",
-    "cleanbuild": "npm run build && rm -r node_modules/",
     "reset": "rm -rf node_modules/ dist/ && npm i"
   },
   "repository": {
