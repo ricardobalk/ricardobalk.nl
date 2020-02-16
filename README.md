@@ -19,10 +19,13 @@ To build or develop my website, I recommend using Docker, as this prevents you f
 
 ```sh
 docker build -t ricardobalk/www .
+```
+
+```sh
 docker run --rm \
---mount type=bind,source="$(pwd)"/src/,target=/home/node/www/src/,readonly \
--p 8080:8080 \
-ricardobalk/www "dev"
+  --mount type=bind,source="$(pwd)"/src/,target=/home/node/www/src/,readonly \
+  -p 8080:8080 \
+  ricardobalk/www "dev"
 ```
 
 This will launch a dev server which you could use to tinker and try things. After a while, visit http://localhost:8080/. You're good to go.
@@ -31,11 +34,17 @@ This will launch a dev server which you could use to tinker and try things. Afte
 
 ```sh
 mkdir -p ./dist/
+```
+
+```sh
 docker build -t ricardobalk/www .
+```
+
+```sh
 docker run --rm \
---mount type=bind,source="$(pwd)"/src/,target=/home/node/www/src/,readonly \
---mount type=bind,source="$(pwd)"/dist/,target=/home/node/www/dist/ \
-ricardobalk/www "build"
+  --mount type=bind,source="$(pwd)"/src/,target=/home/node/www/src/,readonly \
+  --mount type=bind,source="$(pwd)"/dist/,target=/home/node/www/dist/ \
+  ricardobalk/www "build"
 ```
 
 This will build the website and place the result in `dist/`. You can use your own server to serve this directory.
