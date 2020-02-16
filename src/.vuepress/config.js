@@ -59,7 +59,7 @@ module.exports = {
         ],
         social: {
           behance: "https://behance.net/ricardobalk",
-          github: "https://github.com/ellipticcurv3/www",
+          github: "https://github.com/ricardobalk/www",
         },
       },
     },

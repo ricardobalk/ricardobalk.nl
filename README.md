@@ -1,5 +1,4 @@
-[![Codacy Code Quality Badge](https://api.codacy.com/project/badge/Grade/b10397298a3d443783985c67631ec597)](https://www.codacy.com/manual/ellipticcurv3/www?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ellipticcurv3/www&amp;utm_campaign=Badge_Grade) [![Travis CI Build Status](https://travis-ci.com/ellipticcurv3/www.svg?branch=develop)](https://travis-ci.com/ellipticcurv3/www)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fellipticcurv3%2Fwww.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fellipticcurv3%2Fwww?ref=badge_shield)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/57a0cccc1cdf4086817954a123034043)](https://www.codacy.com/manual/ricardobalk/www?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ricardobalk/www&amp;utm_campaign=Badge_Grade) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fricardobalk%2Fwww.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fricardobalk%2Fwww?ref=badge_shield)
 
 # Ricardo's Personal Website
 
@@ -19,11 +18,11 @@ To build or develop my website, I recommend using Docker, as this prevents you f
 **DEV SERVER**
 
 ```sh
-docker build -t ellipticcurv3/www .
+docker build -t ricardobalk/www .
 docker run --rm \
 --mount type=bind,source="$(pwd)"/src/,target=/home/node/www/src/,readonly \
 -p 8080:8080 \
-ellipticcurv3/www "dev"
+ricardobalk/www "dev"
 ```
 
 This will launch a dev server which you could use to tinker and try things. After a while, visit http://localhost:8080/. You're good to go.
@@ -32,11 +31,11 @@ This will launch a dev server which you could use to tinker and try things. Afte
 
 ```sh
 mkdir -p ./dist/
-docker build -t ellipticcurv3/www .
+docker build -t ricardobalk/www .
 docker run --rm \
 --mount type=bind,source="$(pwd)"/src/,target=/home/node/www/src/,readonly \
 --mount type=bind,source="$(pwd)"/dist/,target=/home/node/www/dist/ \
-ellipticcurv3/www "build"
+ricardobalk/www "build"
 ```
 
 This will build the website and place the result in `dist/`. You can use your own server to serve this directory.
@@ -52,7 +51,7 @@ rsync -ru dist/. ricardobalk.nl:/var/www/ricardobalk.nl --delete
 **REMOVAL**
 
 ```sh
-docker image rm ellipticcurv3/www && docker image prune
+docker image rm ricardobalk/www && docker image prune
 ```
 
 This will remove the image. Removal of the containers is not necessary because the `--rm` flag was used.
@@ -69,4 +68,4 @@ This website including all blog articles are licenced under the GPL 3.0+ license
 
 Please note that this product includes software and libraries from 3rd parties which could have a different license. See the below image for more information.
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fellipticcurv3%2Fwww.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fellipticcurv3%2Fwww?ref=badge_large)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fricardobalk%2Fwww.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fricardobalk%2Fwww?ref=badge_large)

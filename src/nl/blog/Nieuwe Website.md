@@ -54,5 +54,4 @@ Er zijn een aantal toekomstige verbeteringen die op mijn to-do-lijstje staan.
 
 
 
-Benieuwd naar de status van deze (en andere) verbeteringen? Check de [issues op GitHub](https://github.com/ellipticcurv3/www/issues)!
-
+Benieuwd naar de status van deze (en andere) verbeteringen? Check de [issues op GitHub](https://github.com/ricardobalk/www/issues)!

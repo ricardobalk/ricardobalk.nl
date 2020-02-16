@@ -53,7 +53,7 @@ There are many, many reasons.
 
 ## Where's the source code?
 
-It's on [GitHub](https://github.com/ellipticcurv3/www).
+It's on [GitHub](https://github.com/ricardobalk/www).
 
 ## What's next?
 
