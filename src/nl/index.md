@@ -65,7 +65,7 @@ nextMove:
       - serviceName: "GitHub"
         icon: ['fab', 'github']
         title: "Bekijk mijn online profiel op GitHub, een platform voor open source softwareontwikkeling"
-        url: "https://github.com/ellipticcurv3"
+        url: "https://github.com/ricardobalk"
       - serviceName: "Telephone"
         icon: ['fas', 'phone']
         title: "Bel me op"

@@ -55,5 +55,4 @@ There are a number of  improvements that are on my to-do list.
 
 
 
-Curious about the status of these (and other) improvements? Check out the [issues on GitHub](https://github.com/ellipticcurv3/www/issues)!
-
+Curious about the status of these (and other) improvements? Check out the [issues on GitHub](https://github.com/ricardobalk/www/issues)!

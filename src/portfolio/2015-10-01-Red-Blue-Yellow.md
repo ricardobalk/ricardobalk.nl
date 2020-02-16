@@ -33,7 +33,7 @@ Red Blue Yellow is an Unity (C#) game made by me and fellow students from my uni
 
 <ClientOnly>
 <div class="iframe-container">
-<iframe width="100%" height="640" src="https://ellipticcurv3.keybase.pub/RedBlueYellow-WebGL/">
+<iframe width="100%" height="640" src="https://ricardobalk.keybase.pub/RedBlueYellow-WebGL/">
 </iframe></div>
 </ClientOnly>
 
@@ -45,16 +45,16 @@ Red Blue Yellow is an Unity (C#) game made by me and fellow students from my uni
 
 ## More information
 
-- Are you looking to play the game online? [Head over to this place](https://ellipticcurv3.keybase.pub/RedBlueYellow-WebGL/)
-- Are you looking to download and play the game on Windows? [Head over to the releases on GitHub](https://github.com/ellipticcurv3/RedBlueYellow/releases/latest)
-- Are you looking for the source code? [Head over to the GitHub Repository](https://github.com/ellipticcurv3/RedBlueYellow)
+- Are you looking to play the game online? [Head over to this place](https://ricardobalk.keybase.pub/RedBlueYellow-WebGL/)
+- Are you looking to download and play the game on Windows? [Head over to the releases on GitHub](https://github.com/ricardobalk/RedBlueYellow/releases/latest)
+- Are you looking for the source code? [Head over to the GitHub Repository](https://github.com/ricardobalk/RedBlueYellow)
 
 
 ### People involved in this project
 
 #### Students
 
-- [Ricardo Balk](https://www.linkedin.com/in/ellipticcurv3)
+- [Ricardo Balk](https://www.linkedin.com/in/ricardo-nederland)
 - [Niels de Bont](https://www.linkedin.com/in/niels-de-bont-3169a185/)
 - [Max Douven](https://www.linkedin.com/in/max-douven-5b3365144/)
 - [Job Poels](https://www.linkedin.com/in/job-poels-581125b9/)
