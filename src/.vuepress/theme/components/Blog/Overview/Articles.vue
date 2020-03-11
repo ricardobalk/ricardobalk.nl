@@ -9,7 +9,7 @@
             !page.frontmatter.layout &&
               !page.frontmatter.home &&
               !page.frontmatter.portfolio === true &&
-              (page.frontmatter.lang || 'en-GB') === $lang
+              (page.frontmatter.lang || 'en-GB') === language
           "
           :data-category="page.frontmatter.category"
           :class="'post-' + index"
@@ -39,7 +39,7 @@
                 {{ page.frontmatter.excerpt }}
               </p>
               <p class="continue-reading">
-                <template v-if="showExcerpts === true && page.frontmatter.excerpt">Continue reading </template>
+                <template v-if="showExcerpts === true && page.frontmatter.excerpt">Continue reading</template>
                 <template v-else>Read this article</template>
                 <font-awesome-icon :icon="['fas', 'chevron-right']" />
               </p>
@@ -63,6 +63,17 @@
     components: { library, fas, FontAwesomeIcon, HumanReadableDate },
     created() {
       library.add(fas);
+    },
+    computed: {
+      language() {
+        switch (this.$lang) {
+          // What this code does, is replacing de-DE by en-GB, so that English blog posts are shown instead.
+          case "de-DE":
+            return "en-GB";
+          default:
+            return this.$lang;
+        }
+      },
     },
   };
 </script>

@@ -1,9 +1,5 @@
 <template>
   <div class="blog-overview-container">
-    <!--<header class="hero">
-
-        </header>-->
-
     <BigHero
       title="Blog"
       image="/assets/img/site/typewriter.svg"
