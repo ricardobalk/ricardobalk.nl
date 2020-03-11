@@ -7,7 +7,7 @@
         <div class="masonry-columns items">
           <article
             v-for="(item, index) in items"
-            v-if="item.frontmatter.portfolio === true && (item.frontmatter.lang || 'en-GB') === $lang"
+            v-if="item.frontmatter.portfolio === true && (item.frontmatter.lang || 'en-GB') === language"
             class="masonry-brick item"
             :data-category="item.frontmatter.category"
           >
@@ -62,6 +62,15 @@
       },
       assets() {
         return this.$site.themeConfig.defaultAssetPaths;
+      },
+      language() {
+        switch (this.$lang) {
+          // What this code does, is replacing de-DE by en-GB, so that English portfolio items are shown instead.
+          case "de-DE":
+            return "en-GB";
+          default:
+            return this.$lang;
+        }
       },
     },
   };

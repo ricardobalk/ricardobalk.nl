@@ -17,6 +17,13 @@ module.exports = {
       title: "Ricardo Balk",
       description: "Persoonlijke Website",
     },
+    "/de/": {
+      selectText: "Sprache wählen",
+      lang: "de-DE",
+      label: "Deutsch",
+      title: "Ricardo Balk",
+      description: "Meiner persönlichen Webseite",
+    },
   },
   themeConfig: {
     locales: {
@@ -33,6 +40,16 @@ module.exports = {
           { text: "Home", link: "/nl/" },
           { text: "Blog", link: "/nl/blog/" },
           { text: "Portfolio", link: "/nl/portfolio/" },
+        ],
+      },
+      "/de/": {
+        selectText: "Sprache wählen",
+        lang: "de-DE",
+        label: "Deutsch",
+        nav: [
+          { text: "Startseite", link: "/de/" },
+          { text: "Blog", link: "/de/blog/" },
+          { text: "Portfolio", link: "/de/portfolio/" },
         ],
       },
     },
