@@ -44,10 +44,6 @@ successStories:
     title: Voormalig werkgever bij Sollicity
     story: Ricardo is trots op zijn beroep. Hij weet er veel van en heeft een grote ambitie om altijd meer te leren. Hij is vrolijk, sociaal en ik waardeerde zijn tijd bij Sollicity.
     avatar: /assets/img/home/success-stories/dirk.jpg
-  - name: Mark van Eijk
-    title: Voormalig werkgever bij Vormkracht10
-    story: Ik heb nog geen aanbeveling mogen ontvangen van Mark maar ik weet zeker dat hij open staat voor een telefoontje!
-    avatar: /assets/img/home/success-stories/empty.png
   - name: Niels de Bont
     title: Assistent tijdens filmopnamen ELDA
     story: Ricardo en ik hebben in de zomer van 2016 een goede bedrijfsfilm gemaakt. Ricardo werkt op een gestructureerde manier, waardoor we vlot een goede film maakten. Het was een prettige samenwerking.
