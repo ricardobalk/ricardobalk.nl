@@ -10,6 +10,7 @@ images:
   hero:
      filename: "spoiler-alert.webp"
      description: "Clapperboard with the text Spoiler Alert on it"
+permalink: /blog/spoiler-with-html-and-css
 ---
 
 # 'Spoiler Alert!' using some HTML and CSS

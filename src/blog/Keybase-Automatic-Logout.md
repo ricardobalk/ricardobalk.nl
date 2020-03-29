@@ -9,6 +9,7 @@ images:
   hero:
      filename: "sleeping-keybase-icon.webp"
      description: "Keybase emoticon with closed eyelids"
+permalink: /blog/keybase-automatic-logout
 ---
 
 # Logging out of Keybase automatically

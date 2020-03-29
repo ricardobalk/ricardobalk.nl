@@ -10,6 +10,7 @@ images:
   hero:
      filename: "terminal-lockpad.webp"
      description: "A lockpad shown on a terminal-style computer background"
+permalink: /blog/generating-enterprise-grade-pgp-keys
 ---
 
 # Generating Enterprise-grade PGP Keys

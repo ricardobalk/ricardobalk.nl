@@ -10,6 +10,7 @@ images:
   hero:
      filename: "new-website-hero.webp"
      description: "Computer screen that visualizes the layout of a website and the associated code"
+permalink: /blog/new-website
 ---
 
 # New Website
