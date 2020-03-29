@@ -2,10 +2,7 @@
   <main class="page">
     <slot name="top" />
 
-    <BigHero
-      v-if="this.$page.frontmatter.images && this.$page.frontmatter.images.hero"
-      :image="`${assets.images}/${this.$page.frontmatter.images.hero.filename}`"
-    />
+    <BigHero v-if="this.$page.frontmatter.images && this.$page.frontmatter.images.hero" :image="`${heroImage}`" />
 
     <Content class="theme-default-content" />
 
@@ -28,6 +25,13 @@
     computed: {
       assets() {
         return this.$site.themeConfig.defaultAssetPaths;
+      },
+      heroImage() {
+        if (this.$page.frontmatter.portfolio) {
+          return `${this.assets.images}/content/portfolio/${this.$page.frontmatter.images.hero.filename}`;
+        } else {
+          return `${this.assets.images}/content/blog/${this.$page.frontmatter.images.hero.filename}`;
+        }
       },
     },
   };

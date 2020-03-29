@@ -8,7 +8,7 @@ heroText:
 
 polaroidImage:
  caption: Photo of me in 2015
- path: /assets/img/home/ricardo.png
+ path: /assets/img/content/home/ricardo.webp
 
 services:
 - title: Visual Design
@@ -31,18 +31,18 @@ process:
   - I design and develop web-based applications empowering users to achieve their goals in an easy, effective and pleasant way. I design according to the Design Thinking method, keeping users closely involved during the design process.
   - During development, I follow the principles of Atomic Design and use the latest web technologies available. such as Vue.js, Angular and React.
  image:
-  path: /assets/img/home/computer.png
+  path: /assets/img/content/home/computer.webp
   description: Laptop computer showing the design and development process
 
 successStories:
 - name: Dirk Goossens
   title: Former employer at Sollicity
   story: Ricardo takes pride in his profession. He knows a lot of it and has a great ambition to always learn more. He is upbeat and sociale and I very much appreciated his time with Sollicity.
-  avatar: /assets/img/home/success-stories/dirk.jpg
+  avatar: /assets/img/content/home/success-stories/dirk.webp
 - name: Niels de Bont
   title: Assistant during freelance assignment
   story: Ricardo and I made an impressive business movie during the summer of 2016. Ricardo works in a structured and considerate way, which made us able to reach our goals in a short time. It was a pleasure working with him.
-  avatar: /assets/img/home/success-stories/niels.png
+  avatar: /assets/img/content/home/success-stories/niels.webp
 
 nextMove:
   text:

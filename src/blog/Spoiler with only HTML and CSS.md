@@ -5,10 +5,10 @@ category: "front-end-development"
 tags: ["html", "css", "spoiler"]
 images:
   featured:
-     filename: "blog/spoiler-alert.png"
+     filename: "spoiler-alert.webp"
      description: "Clapperboard with the text Spoiler Alert on it"
   hero:
-     filename: "blog/spoiler-alert.png"
+     filename: "spoiler-alert.webp"
      description: "Clapperboard with the text Spoiler Alert on it"
 ---
 

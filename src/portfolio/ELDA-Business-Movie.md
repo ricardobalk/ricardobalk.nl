@@ -7,10 +7,10 @@ category: Camerawork
 tags: ["elda", "business movie", "dutch"]
 images:
   featured:
-     filename: "portfolio/goat.jpg"
+     filename: "goat.webp"
      description: "Goat"
   hero:
-     filename: "portfolio/goat.jpg"
+     filename: "goat.webp"
      description: "Goat"
 excerpt: I made a business movie for ELDA.
 permalink: /portfolio/ELDA-business-movie

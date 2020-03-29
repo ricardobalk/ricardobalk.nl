@@ -5,10 +5,10 @@ tags: ["personal", "website"]
 lang: nl-NL
 images:
   featured:
-     filename: "blog/new-website-featured.png"
+     filename: "new-website-featured.webp"
      description: "Computerscherm dat de layout van een website en de bijbehorende code visualiseert"
   hero:
-     filename: "blog/new-website-hero.png"
+     filename: "new-website-hero.webp"
      description: "Computerscherm dat de layout van een website en de bijbehorende code visualiseert"
 ---
 

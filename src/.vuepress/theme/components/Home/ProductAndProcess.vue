@@ -65,7 +65,7 @@
   // Standard
   .product-and-process {
     background-color: var(--splitter-background-color);
-    background-image: linear-gradient(to right, #979797, #171717), url("/assets/img/winder-bl.svg");
+    background-image: linear-gradient(to right, #979797, #171717), url("/assets/img/site/home/winder-bl.svg");
     background-blend-mode: soft-light, normal;
     background-repeat: no-repeat;
     background-size: cover, contain;

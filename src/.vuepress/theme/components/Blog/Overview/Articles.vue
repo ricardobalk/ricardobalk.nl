@@ -18,7 +18,7 @@
             <div v-if="page.frontmatter.images" class="show-for-medium image">
               <img
                 v-if="page.frontmatter.images.featured"
-                :src="`${assets.images}/${page.frontmatter.images.featured.filename}`"
+                :src="`${assets.images}/content/blog/${page.frontmatter.images.featured.filename}`"
                 :alt="page.frontmatter.images.featured.description"
               />
             </div>

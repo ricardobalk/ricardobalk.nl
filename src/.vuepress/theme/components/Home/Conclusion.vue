@@ -82,7 +82,7 @@
   .conclusion {
     color: var(--color-light-grey);
     background-color: var(--conclusion-background-color);
-    background-image: linear-gradient(to right, #979797, #171717), url("/assets/img/winder-top-left.svg");
+    background-image: linear-gradient(to right, #979797, #171717), url("/assets/img/site/home/winder-top-left.svg");
     background-blend-mode: soft-light, normal;
     background-repeat: no-repeat;
     background-size: cover, contain;
