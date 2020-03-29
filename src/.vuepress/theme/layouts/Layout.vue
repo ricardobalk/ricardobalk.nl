@@ -1,7 +1,5 @@
 <template>
   <div class="theme-container" :class="pageClasses" @touchstart="onTouchStart" @touchend="onTouchEnd">
-    <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar" />
-
     <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
 
     <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
