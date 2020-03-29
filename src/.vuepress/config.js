@@ -53,7 +53,7 @@ module.exports = {
         ],
       },
     },
-    logo: "/assets/img/logo.svg",
+    logo: "/assets/img/site/global/logo.svg",
     nav: [
       { text: "Home", link: "/" },
       { text: "Blog", link: "/blog/" },

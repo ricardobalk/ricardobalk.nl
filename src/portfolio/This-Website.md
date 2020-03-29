@@ -7,7 +7,7 @@ category: Front-end Development
 tags: ["personal", "website", "job", "blog", "portfolio"]
 images:
   featured:
-     filename: "portfolio/website-ricardobalk.png"
+     filename: "website-ricardobalk.webp"
      description: "Website of Ricardo Balk"
 permalink: "/portfolio/my-website"
 ---

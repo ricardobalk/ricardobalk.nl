@@ -37,8 +37,8 @@
     height: var(--height-hero);
 
     background-color: var(--hero-background-color);
-    background-image: linear-gradient(to right, #979797, #171717), url("/assets/img/hero.svg"),
-      url("/assets/img/winder.svg");
+    background-image: linear-gradient(to right, #979797, #171717), url("/assets/img/site/home/hero.svg"),
+      url("/assets/img/site/home/winder.svg");
     background-blend-mode: soft-light, soft-light, normal;
     background-repeat: no-repeat;
     background-size: cover, contain, contain;

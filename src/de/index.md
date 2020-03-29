@@ -8,7 +8,7 @@ heroText:
 
 polaroidImage:
  caption: Bild von mir im Jahr 2015
- path: /assets/img/home/ricardo.png
+ path: /assets/img/content/home/ricardo.webp
 
 services:
   title: "Mein Fachwissen"
@@ -33,7 +33,7 @@ process:
   - Ich entwerfe und baue webbasierte Anwendungen, damit die Benutzer ihre Ziele klar, effektiv und angenehm erreichen. Um die Benutzer während des Prozesses eng einzubeziehen, verwende ich die "Design Thinking-Methode".
   - Beim Erstellen der Anwendungen folge ich dem Prinzip des "Atomic Design" und verwende ich die neuesten Techniken von Webentwicklung, z.b. Vue.js und React.
  image:
-  path: /assets/img/home/computer.png
+  path: /assets/img/content/home/computer.webp
   description: Laptop mit einem Beispiel-Dashboard, damit eine Idee entsteht, welche Art von Webanwendungen möglich sind.
 
 successStories:
@@ -43,11 +43,11 @@ successStories:
   - name: Dirk Goossens
     title: Ehemaliger Arbeitgeber bei Sollicity
     story: Ricardo ist stolz auf seinen Beruf. Er weiß viel darüber und hat den großen Ehrgeiz, immer mehr zu lernen. Er ist fröhlich, sozial und seine Zeit bei Sollicity hat mir gut gefallen.
-    avatar: /assets/img/home/success-stories/dirk.jpg
+    avatar: /assets/img/content/home/success-stories/dirk.webp
   - name: Niels de Bont
     title: Assistent tijdens filmopnamen ELDA
     story: Ricardo und ich haben im Sommer 2016 einen guten Unternehmensfilm erstellt. Ricardo arbeitet strukturiert, deshalb haben wir schnell einen guten Film erstellt. Es war eine angenehme Zeit.
-    avatar: /assets/img/home/success-stories/niels.png
+    avatar: /assets/img/content/home/success-stories/niels.webp
 
 nextMove:
   text:

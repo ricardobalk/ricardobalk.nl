@@ -5,7 +5,7 @@ category: devops
 tags: [linux, docker, openproject, freeware]
 images:
   featured:
-     filename: "blog/gantt-chart.png"
+     filename: "gantt-chart.webp"
      description: "A global project planning shown as a GANTT chart"
 ---
 

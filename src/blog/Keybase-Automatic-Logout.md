@@ -4,10 +4,10 @@ excerpt: This article explains how to make Keybase automatically log out when a 
 category: devops
 images:
   featured:
-     filename: "blog/sleeping-keybase-icon.png"
+     filename: "sleeping-keybase-icon.webp"
      description: "Keybase emoticon with closed eyelids"
   hero:
-     filename: "blog/sleeping-keybase-icon.png"
+     filename: "sleeping-keybase-icon.webp"
      description: "Keybase emoticon with closed eyelids"
 ---
 

@@ -8,10 +8,10 @@ references:
  - https://obsproject.com/forum/resources/how-to-set-up-your-own-private-rtmp-server-using-nginx.50/
 images:
   featured:
-     filename: "blog/live.png"
+     filename: "live.webp"
      description: "Sign showing that a (broadcast) transmission went live"
   hero:
-     filename: "blog/live.png"
+     filename: "live.webp"
      description: "Sign showing that a (broadcast) transmission went live"
 ---
 

@@ -6,10 +6,10 @@ category: Sound Design
 tags: ["sound design", "foley sound", "game", "mudskipper"]
 images:
   featured:
-     filename: "portfolio/feat-the-mudskipper-family.png"
+     filename: "feat-the-mudskipper-family.webp"
      description: ""
   hero:
-     filename: "portfolio/hero-the-mudskipper-family.png"
+     filename: "hero-the-mudskipper-family.webp"
      description: ""
 excerpt: I created foley sounds for The Mudskipper Family.
 permalink: /portfolio/the-mudskipper-family

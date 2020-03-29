@@ -2,8 +2,8 @@
   <div class="blog-overview-container">
     <BigHero
       title="Blog"
-      image="/assets/img/site/typewriter.svg"
-      image-dark="/assets/img/site/typewriter-dark.svg"
+      image="/assets/img/site/blog/typewriter.svg"
+      image-dark="/assets/img/site/blog/typewriter-dark.svg"
       class="blog-hero"
     />
 

@@ -5,10 +5,10 @@ category: "devops"
 tags: ["pgp", "gpg", "encryption"]
 images:
   featured:
-     filename: "blog/terminal-lockpad.png"
+     filename: "terminal-lockpad.webp"
      description: "A lockpad shown on a terminal-style computer background"
   hero:
-     filename: "blog/terminal-lockpad.png"
+     filename: "terminal-lockpad.webp"
      description: "A lockpad shown on a terminal-style computer background"
 ---
 

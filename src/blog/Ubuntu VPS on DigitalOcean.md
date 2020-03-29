@@ -5,10 +5,10 @@ category: devops
 tags: [devops, linux, server, servers, digitalocean]
 images:
   featured:
-     filename: "blog/ubuntu-on-digitalocean.png"
+     filename: "ubuntu-on-digitalocean.webp"
      description: "How to install Ubuntu on DigitalOcean"
   hero:
-     filename: "blog/ubuntu-on-digitalocean.png"
+     filename: "ubuntu-on-digitalocean.webp"
      description: "How to install Ubuntu on DigitalOcean"
 ---
 

@@ -1,6 +1,6 @@
 <template>
   <section class="portfolio-overview">
-    <BigHero title="Portfolio" image="/assets/img/site/workbench.jpg" class="blog-hero" />
+    <BigHero title="Portfolio" image="/assets/img/site/portfolio/workbench.webp" class="blog-hero" />
 
     <div class="portfolio">
       <div class="masonry-container">
@@ -14,7 +14,7 @@
             <a :href="item.path" class="clickable">
               <img
                 v-if="item.frontmatter.images"
-                :src="`${assets.images}/${item.frontmatter.images.featured.filename}`"
+                :src="`${imagePath}/${item.frontmatter.images.featured.filename}`"
                 alt=""
               />
               <div class="meta overlay">
@@ -62,6 +62,9 @@
       },
       assets() {
         return this.$site.themeConfig.defaultAssetPaths;
+      },
+      imagePath() {
+        return `${this.assets.images}/content/portfolio`;
       },
       language() {
         switch (this.$lang) {
