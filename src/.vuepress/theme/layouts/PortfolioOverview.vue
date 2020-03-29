@@ -82,11 +82,6 @@
 <style lang="scss">
   @import "@theme/styles/global/mixins"; // Contains the Masonry-layout
 
-  // Standard
-  .navbar .site-logo {
-    fill: #fff;
-  }
-
   .portfolio-overview {
     .big-hero {
       margin-bottom: 0;
