@@ -7,6 +7,7 @@ images:
   featured:
      filename: "gantt-chart.webp"
      description: "A global project planning shown as a GANTT chart"
+permalink: /blog/openproject-in-docker
 ---
 
 # Running OpenProject Community Edition in Docker

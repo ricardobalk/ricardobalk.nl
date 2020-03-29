@@ -9,6 +9,7 @@ images:
   hero:
      filename: "fire.webp"
      description: "Fire"
+permalink: /blog/solid-firewall-linux
 ---
 
 # Solid Firewall Configuration with iptables

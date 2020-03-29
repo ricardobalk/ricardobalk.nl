@@ -13,6 +13,7 @@ images:
   hero:
      filename: "live.webp"
      description: "Sign showing that a (broadcast) transmission went live"
+permalink: /blog/rtmp-multiplexer-nginx
 ---
 
 # Setting up an RTMP Multiplexer with Nginx

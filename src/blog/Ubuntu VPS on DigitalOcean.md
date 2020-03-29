@@ -10,6 +10,7 @@ images:
   hero:
      filename: "ubuntu-on-digitalocean.webp"
      description: "How to install Ubuntu on DigitalOcean"
+permalink: /blog/digitalocean-ubuntu-vps
 ---
 
 # Setting up an Ubuntu VPS on DigitalOcean from scratch

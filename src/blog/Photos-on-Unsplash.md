@@ -3,6 +3,7 @@ date: 2019-08-20 06:00:00 +00:00
 excerpt: "My personal photographs are now available on Unsplash, check it out!"
 category: "personal"
 tags: ["unsplash", "instagram", "photography"]
+permalink: /blog/unsplash-photos
 ---
 
 # Photography on Unsplash
