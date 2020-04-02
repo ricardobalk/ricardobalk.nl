@@ -34,25 +34,35 @@
   };
 </script>
 
-<style lang="scss">
-  .success-story {
-    text-align: center;
-    .inner {
-      margin: 1em;
-      padding: 2em;
-      border: 1px solid #eee;
-      background-color: #fff;
-      box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.05);
+<style lang="stylus">
+  .success-story
+    text-align center
+    .inner
+      margin 1em
+      padding 2em
+      border 1px solid #eee
+      background-color #fff
+      box-shadow 3px 3px 9px rgba(0, 0, 0, 0.05)
 
-      .avatar-container {
-        width: 100px;
-        height: 100px;
-        margin: 0 auto 1em;
+      .avatar-container
+        width 100px
+        height 100px
+        margin 0 auto 1em
 
-        .avatar {
-          border-radius: 50px;
-        }
-      }
-    }
-  }
+        .avatar
+          border-radius 50px
+
+  @media screen and (prefers-color-scheme dark)
+    .card:not(:last-child)
+      border-right 1px solid #111
+
+    .success-story
+      .inner
+        color #8a8a8a
+        border none
+        background-color unset
+        box-shadow none
+
+        .avatar-container .avatar
+          opacity 0.85
 </style>

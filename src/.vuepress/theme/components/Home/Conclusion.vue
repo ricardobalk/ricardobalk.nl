@@ -77,73 +77,59 @@
   };
 </script>
 
-<style lang="scss">
-  // Standard
-  .conclusion {
-    color: var(--color-light-grey);
-    background-color: var(--conclusion-background-color);
-    background-image: linear-gradient(to right, #979797, #171717), url("/assets/img/site/home/winder-top-left.svg");
-    background-blend-mode: soft-light, normal;
-    background-repeat: no-repeat;
-    background-size: cover, contain;
-    background-position: left top, left top -5px;
+<style lang="stylus">
+  .conclusion
+    color var(--color-light-grey)
+    background-color var(--conclusion-background-color)
+    background-image linear-gradient(to right, #979797, #171717), url("/assets/img/site/home/winder-top-left.svg")
+    background-blend-mode soft-light, normal
+    background-repeat no-repeat
+    background-size cover, contain
+    background-position left top, left top -5px
+    margin 5em 0 0
+    padding 4em 0
 
-    margin: 5em 0 0;
-    padding: 4em 0;
+    @media screen and (prefers-color-scheme dark)
+      color #bdbdbd
+      background-color #000
+      background-image linear-gradient(to bottom, #000, #002451)
+      background-blend-mode unset
+      padding 0 0 6em
+      margin 0
 
-    .text-container {
-      text-align: center;
+    .text-container
+      text-align center
 
-      .title {
-        text-transform: uppercase;
-        font-size: 1.45em;
-        font-weight: 900;
-        margin-bottom: 0;
-        line-height: 1em;
-        margin-top: 1em;
-      }
+      h1, h2, h3, p
+        color inherit
 
-      .subtitle {
-        font-family: var(--font-family-primary-headings);
-        text-transform: uppercase;
-        font-size: 3em;
-        margin: 0.1em 0 0.25em;
-      }
-    }
+      .title
+        text-transform uppercase
+        font-size 1.45em
+        font-weight 900
+        margin-bottom 0
+        line-height 1em
+        margin-top 1em
 
-    .connect-on-social {
-      text-align: center;
-      font-size: 2em;
-      a {
-        padding: 0 0.5em;
-        color: rgba(255, 255, 255, 0.6);
-        &:hover {
-          color: #fff;
-          cursor: pointer;
-          @media screen and (prefers-color-scheme: dark) {
-            color: #d9d677;
-          }
-        }
-      }
-    }
 
-    h1,
-    h2,
-    h3,
-    p {
-      color: inherit;
-    }
-  }
+      .subtitle
+        font-family var(--font-family-primary-headings)
+        text-transform uppercase
+        font-size 3em
+        margin 0.1em 0 0.25em
 
-  // Dark
-  @media screen and (prefers-color-scheme: dark) {
-    .conclusion {
-      color: #bdbdbd;
-      background-color: #000;
-      background-image: linear-gradient(to bottom, #000, #002451);
-      background-blend-mode: unset;
-      padding: 0 0 6em;
-      margin: 0;
-    }
-  }
+
+    .connect-on-social
+      text-align center
+      font-size 2em
+
+      a
+        padding 0 0.5em
+        color rgba(255, 255, 255, 0.6)
+
+        &:hover
+          color #fff
+          cursor pointer
+          @media screen and (prefers-color-scheme: dark)
+            color #d9d677
 </style>

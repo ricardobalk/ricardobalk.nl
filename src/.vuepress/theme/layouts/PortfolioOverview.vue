@@ -79,113 +79,89 @@
   };
 </script>
 
-<style lang="scss">
-  @import "@theme/styles/global/mixins"; // Contains the Masonry-layout
+<style lang="stylus">
+  @require "~@theme/styles/global/masonry";
 
-  .portfolio-overview {
-    .big-hero {
-      margin-bottom: 0;
-      background-position: center;
-    }
+  .portfolio-overview
+    .big-hero
+      margin-bottom 0
+      background-position center
 
-    .portfolio {
-      .page-container {
-        margin-bottom: 5em;
-      }
 
-      .page-header {
-        font-size: 1.5em;
-        text-transform: uppercase;
-        margin: 1em 0;
-      }
+    .portfolio
+      masonry-layout(0)
 
-      @include masonry-layout(0);
+      .page-container
+        margin-bottom 5em
 
-      .items {
-        .item {
-          position: relative;
-          page-break-inside: avoid;
 
-          .meta {
-            h1,
-            h2,
-            h3,
-            p {
-              color: var(--color-light-grey);
-            }
+      .page-header
+        font-size 1.5em
+        text-transform uppercase
+        margin 1em 0
 
-            p {
-              margin: 0;
-            }
+      .items
+        .item
+          position relative
+          page-break-inside avoid
 
-            span {
-              font-size: 0.9em;
-              margin: 0;
-            }
+          .meta
+            h1, h2, h3, p
+              color var(--color-light-grey)
 
-            .date {
-              &:after {
-                content: "\2022";
-                margin: 0 0.25em;
-              }
-            }
+            p
+              margin 0
 
-            .btn {
-              text-transform: uppercase;
-              font-size: 1.25em;
-              font-weight: 700;
-              line-height: 1em;
-              border: 1px solid #eee;
-              display: inline-block;
-              padding: 0.5em 1em 0.5em 1.25em;
-              margin: 1.25em 0;
-              transition: color 0.25s ease-in-out;
+            span
+              font-size 0.9em
+              margin 0
 
-              .icon {
-                padding: 0.15em;
-              }
+            .date
+              &:after
+                content "\2022"
+                margin 0 0.25em
 
-              &:hover {
-                background-color: #fff;
-                color: var(--color-dark-grey);
-              }
-            }
+            .btn
+              text-transform uppercase
+              font-size 1.25em
+              font-weight 700
+              line-height 1em
+              border 1px solid #eee
+              display inline-block
+              padding 0.5em 1em 0.5em 1.25em
+              margin 1.25em 0
+              transition color 0.25s ease-in-out
 
-            .excerpt {
-              font-size: 0.8em;
-              color: #ccc;
-              text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
-            }
+              &:hover
+                background-color #fff
+                color var(--color-dark-grey)
 
-            &.overlay {
-              position: absolute;
-              top: 0;
-              width: 100%;
-              height: 100%;
-              padding: 2em;
-              text-align: center;
-              background-color: #000;
-              color: #eee;
-              opacity: 0;
-              transition: opacity 0.25s ease-in-out;
+              .icon
+                padding 0.15em
 
-              &:hover {
-                opacity: 0.95;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 
-  // Dark
+            .excerpt
+              font-size 0.8em
+              color #ccc
+              text-shadow 0 0 1px rgba(255, 255, 255, 0.5)
 
-  @media screen and (prefers-color-scheme: dark) {
-    .portfolio-overview {
-      .hero {
-        background-color: rgb(11, 11, 11) !important;
-      }
-    }
-  }
+            &.overlay
+              position absolute
+              top 0
+              width 100%
+              height 100%
+              padding 2em
+              text-align center
+              background-color #000
+              color #eee
+              opacity 0
+              transition opacity 0.25s ease-in-out
+
+              &:hover
+                opacity 0.95
+
+  @media screen and (prefers-color-scheme dark)
+    .portfolio-overview
+      .hero
+        background-color rgb(11, 11, 11) !important
 </style>

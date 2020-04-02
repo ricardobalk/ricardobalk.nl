@@ -64,58 +64,46 @@
   };
 </script>
 
-<style lang="scss">
-  // Standard
-  .footer {
-    color: #eee;
-    background-color: #1e1e1e;
-    width: 100%;
+<style lang="stylus">
+  .footer
+    color #eee
+    background-color #1e1e1e
+    width 100%
 
-    .footer-message {
-      font-size: 0.85em;
-      padding-left: 1em;
-      padding-right: 1em;
+    &.home
+      @media screen and (prefers-color-scheme: dark)
+        background-color #002451
 
-      p {
-        color: #eee;
-        margin: 1em 0;
-      }
+    .footer-message
+      font-size 0.85em
+      padding-left 1em
+      padding-right 1em
 
-      a {
-        color: inherit;
-        font-size: inherit;
-      }
+      p
+        color #eee
+        margin 1em 0
 
-      .site-links {
-        display: block;
-        float: right;
-        a {
-          color: inherit;
-          text-align: center;
+      a
+        color inherit
+        font-size inherit
 
-          &:not(:last-of-type) {
-            margin-right: 0.75em;
-          }
-        }
-      }
+      .site-links
+        display block
+        float right
 
-      svg {
-        margin: 0 0.2em;
-      }
+        a
+          color inherit
+          text-align center
 
-      span:not(:last-of-type):after {
-        font-size: 0.75em;
-        line-height: 0.95em;
-        content: "\2022";
-        margin: 0 0.25em 0 0.5em;
-      }
-    }
-  }
+          &:not(:last-of-type)
+            margin-right 0.75em
 
-  // Dark
-  @media screen and (prefers-color-scheme: dark) {
-    .footer.home {
-      background-color: #002451;
-    }
-  }
+      svg
+        margin 0 0.2em
+
+      span:not(:last-of-type):after
+        font-size 0.75em
+        line-height 0.95em
+        content "\2022"
+        margin 0 0.25em 0 0.5em
 </style>

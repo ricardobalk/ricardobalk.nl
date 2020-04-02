@@ -63,80 +63,48 @@
   };
 </script>
 
-<style lang="scss">
-  // Standard
-  .success-stories {
-    margin: 8em auto;
-    padding: 0 2em;
-    max-width: 1024px;
+<style lang="stylus">
+  .success-stories
+    margin 8em auto
+    padding 0 2em
+    max-width 1024px
 
-    .card {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-flow: row wrap;
-    }
+    .card
+      display -webkit-box
+      display -moz-box
+      display -ms-flexbox
+      display -webkit-flex
+      display flex
+      -webkit-flex-flow row wrap
 
-    .title {
-      text-transform: uppercase;
-      font-weight: 500;
-      font-size: 2em;
-    }
+    .title
+      text-transform uppercase
+      font-weight 500
+      font-size 2em
 
-    h2 {
-      font-family: var(--font-family-primary);
-      margin-bottom: 3em;
-      font-weight: 400;
-    }
+    h2
+      font-family var(--font-family-primary)
+      margin-bottom 3em
+      font-weight 400
 
-    .success-story {
-      display: flex;
-      text-align: center;
-      justify-self: stretch;
+    .success-story
+      display flex
+      text-align center
+      justify-self stretch
 
-      p {
-        margin: 0;
-      }
+      p
+        margin 0
 
-      .client {
-        font-size: 1.15em;
-        margin-bottom: 0.5em;
-      }
+      .client
+        font-size 1.15em
+        margin-bottom 0.5em
 
-      .position {
-        font-size: 0.85em;
-        font-weight: 600;
-        color: #666;
-        margin-bottom: 1em;
-      }
+      .position
+        font-size 0.85em
+        font-weight 600
+        color #666
+        margin-bottom 1em
 
-      .caption {
-        font-size: 0.9em;
-      }
-    }
-  }
-
-  // Dark
-  @media screen and (prefers-color-scheme: dark) {
-    .success-stories {
-      .card:not(:last-child) {
-        border-right: 1px solid #111;
-      }
-
-      .success-story {
-        .inner {
-          .avatar-container .avatar {
-            opacity: 0.85;
-          }
-
-          color: #8a8a8a;
-          border: none;
-          background-color: unset;
-          box-shadow: none;
-        }
-      }
-    }
-  }
+      .caption
+        font-size 0.9em
 </style>

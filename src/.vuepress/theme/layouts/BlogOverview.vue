@@ -36,17 +36,12 @@
   };
 </script>
 
-<style lang="scss">
-  // Standard
-  .blog-overview-container {
-    margin-top: 3.6rem; /* TODO: Make this dynamic, using the height of the navbar. */
-    margin-bottom: 5em;
-  }
+<style lang="stylus">
+  .blog-overview-container
+    margin-top 3.6rem /* TODO: Make this dynamic, using the height of the navbar. */
+    margin-bottom 5em
 
-  // Dark
-  @media screen and (prefers-color-scheme: dark) {
-    .blog-overview-container {
-      margin-top: 0; /* TODO: Make this dynamic, using the height of the navbar. */
-    }
-  }
+  @media screen and (prefers-color-scheme dark)
+    .blog-overview-container
+      margin-top 0 /* TODO: Make this dynamic, using the height of the navbar. */
 </style>
