@@ -55,26 +55,22 @@
   };
 </script>
 
-<style lang="scss">
-  @import "@theme/styles/global/variables";
+<style lang="stylus">
+  @import "~@theme/styles/global/variables";
 
-  .maxed {
-    max-width: 1600px;
-    margin: 0 auto;
-  }
+  .maxed
+    max-width 1600px
+    margin 0 auto
 
-  .content-padding {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
+  .content-padding
+    padding-left 1em
+    padding-right 1em
 
-  .hero {
-    margin-top: 3.6rem;
-    @media screen and (max-width: 639px) {
-      margin-bottom: 2rem;
-    }
-    @media screen and (prefers-color-scheme: dark) {
-      margin-top: unset;
-    }
-  }
+  .hero
+    margin-top 3.6rem
+    @media screen and (max-width: 639px)
+      margin-bottom 2rem
+
+    @media screen and (prefers-color-scheme: dark)
+      margin-top unset
 </style>

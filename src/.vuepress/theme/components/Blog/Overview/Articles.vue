@@ -78,81 +78,64 @@
   };
 </script>
 
-<style lang="scss">
-  @import "@theme/styles/global/mixins"; // Contains the Masonry-layout
+<style lang="stylus">
+  @require "~@theme/styles/global/masonry";
 
-  .posts {
-    @include masonry-layout(1em);
+  .posts
+    masonry-layout(1em)
 
-    .post {
-      text-align: center;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.065);
-      page-break-inside: avoid;
+    .post
+      text-align center
+      box-shadow 0 0 12px rgba(0, 0, 0, 0.065)
+      page-break-inside avoid
 
-      .clickable {
-        font: initial;
-        color: initial;
-      }
+    .clickable
+      font initial
+      color initial
 
-      .meta {
-        padding: 2.5em 2em;
+    .meta
+      padding 2.5em 2em
 
-        .date {
-          font-size: 0.85em;
-          font-weight: 600;
-          color: #666;
-        }
+      .date
+        font-size 0.85em
+        font-weight 600
+        color #666
 
-        .title {
-          color: #333;
-          font-family: var(--font-family-primary);
-          font-size: 1em;
-          font-weight: 700;
-          margin-bottom: 1em;
+      .title
+        color #333
+        font-family var(--font-family-primary)
+        font-size 1em
+        font-weight 700
+        margin-bottom 1em
 
-          &:after {
-            content: " ";
-            display: block;
-            width: 5em;
-            height: 1em;
-            margin: 0 auto;
-            border-bottom: 1px solid #eee;
-          }
-        }
+        &:after
+          content " "
+          display block
+          width 5em
+          height 1em
+          margin 0 auto
+          border-bottom 1px solid #eee
 
-        .continue-reading {
-          font-size: 0.95em;
-          padding-left: 0.5em;
-          color: #1779ba;
-        }
-      }
-    }
+        .continue-reading
+          font-size 0.95em
+          padding-left 0.5em
+          color #1779ba
 
-    @media screen and (prefers-color-scheme: dark) {
-      .post {
-        box-shadow: none;
 
-        .image {
-          border: 1px solid rgba(255, 255, 255, 0.14);
-          border-bottom: none;
+  @media screen and (prefers-color-scheme dark)
+    .post
+      box-shadow none
 
-          & + .meta {
-            border-top-style: none !important;
-          }
-        }
+      .image
+        border 1px solid rgba(255, 255, 255, 0.14)
+        border-bottom none
+        & + .meta
+          border-top-style none !important
 
-        .meta {
-          border: 1px solid rgba(255, 255, 255, 0.14);
-
-          .title {
-            color: #bcbcbc;
-
-            &:after {
-              border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-            }
-          }
-        }
-      }
-    }
-  }
+      .meta
+        border: 1px solid rgba(255, 255, 255, 0.14)
+        .title
+          color #bcbcbc
+          &:after
+            border-bottom 1px solid rgba(255, 255, 255, 0.14)
 </style>

@@ -51,58 +51,45 @@
   };
 </script>
 
-<style lang="scss">
-  // Standard
-  .about {
-    outline: 0;
-    color: #333;
-    position: relative;
-    margin: -4em 0 4em;
+<style lang="stylus">
+  .about
+    outline 0
+    color #333
+    position relative
+    margin -4em 0 4em
 
-    .maxed {
-      max-width: 920px;
-      margin: 0 auto;
-    }
+    .maxed
+      max-width 920px
+      margin 0 auto
 
-    .picture {
-      padding: 0 2em;
-      .polaroid-container {
-        .caption {
-          text-transform: uppercase;
-          font-weight: 500;
-          font-size: 1.2em;
-        }
-      }
-    }
 
-    .text-container {
-      margin-top: 5em;
-      padding: 0 2em;
-      @media screen and (min-width: 640px) {
-        margin-top: 6em;
-      }
+    .picture
+      padding 0 2em
 
-      h1 {
-        text-transform: uppercase;
-        font-size: 2.2em;
-        font-weight: 600;
-        margin: 0;
-      }
-    }
+      .polaroid-container
+        .caption
+          text-transform uppercase
+          font-weight 500
+          font-size 1.2em
+        @media screen and (prefers-color-scheme dark)
+          background-color unset
+          box-shadow none
+          border 2px solid #112
 
-    .grid-x:not(:first-of-type) {
-      margin-top: 2em;
-    }
-  }
 
-  // Dark
-  @media screen and (prefers-color-scheme: dark) {
-    .about {
-      .polaroid-container {
-        background-color: unset;
-        box-shadow: none;
-        border: 2px solid #112;
-      }
-    }
-  }
+    .text-container
+      margin-top 5em
+      padding 0 2em
+      @media screen and (min-width 640px)
+        margin-top 6em
+
+
+      h1
+        text-transform uppercase
+        font-size 2.2em
+        font-weight 600
+        margin 0
+
+    .grid-x:not(:first-of-type)
+      margin-top 2em
 </style>

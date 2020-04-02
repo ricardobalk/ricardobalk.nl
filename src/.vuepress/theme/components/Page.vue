@@ -39,12 +39,12 @@
 
 <style lang="scss">
   @import "@theme/styles/global/foundation.scss";
-  @import "@theme/styles/global/main.scss";
-  @import "@theme/styles/global/main.dark.scss";
 </style>
 
 <style lang="stylus">
   @require '../styles/wrapper.styl'
+  @import "~@theme/styles/global/main";
+  @import "~@theme/styles/global/main.dark";
 
   body
       min-height 100vh

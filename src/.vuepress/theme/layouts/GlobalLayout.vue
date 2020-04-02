@@ -27,7 +27,10 @@
 </script>
 
 <style lang="scss">
-  @import "@theme/styles/global/foundation.scss";
-  @import "@theme/styles/global/main.scss";
-  @import "@theme/styles/global/main.dark.scss";
+  @import "~@theme/styles/global/foundation.scss";
+</style>
+
+<style lang="stylus">
+  @import "~@theme/styles/global/main"
+  @import "~@theme/styles/global/main.dark"
 </style>
