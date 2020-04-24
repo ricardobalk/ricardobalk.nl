@@ -22,6 +22,11 @@ module.exports = {
       description: "Meiner persönlichen Webseite",
     },
   },
+  plugins: {
+    disqus: {
+      shortname: "ricardobalk",
+    },
+  },
   themeConfig: {
     locales: {
       "/": {

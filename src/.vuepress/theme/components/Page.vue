@@ -20,6 +20,8 @@
 
     <PageNav v-bind="{ sidebarItems }" />
 
+    <Disqus />
+
     <slot name="bottom" />
   </main>
 </template>
@@ -110,6 +112,10 @@
 
           > p:first-of-type
             margin-top: 1.5rem
+
+  #disqus_thread
+    margin-top 2rem
+    padding 0 2rem
 
   code
     border 1px solid #333;
