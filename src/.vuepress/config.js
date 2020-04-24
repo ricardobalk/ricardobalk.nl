@@ -4,21 +4,18 @@ module.exports = {
   dest: "dist",
   locales: {
     "/": {
-      selectText: "Languages",
       lang: "en-GB",
       label: "English",
       title: "Ricardo Balk",
       description: "Personal Website",
     },
     "/nl/": {
-      selectText: "Taalkeuze",
       lang: "nl-NL",
       label: "Nederlands",
       title: "Ricardo Balk",
       description: "Persoonlijke Website",
     },
     "/de/": {
-      selectText: "Sprache wählen",
       lang: "de-DE",
       label: "Deutsch",
       title: "Ricardo Balk",
@@ -64,6 +61,10 @@ module.exports = {
     defaultAssetPaths: {
       images: "/assets/img",
     },
+    defaultContributors: [
+      // Default contributors that are shown besides blog posts. Uses Keybase usernames.
+      "ricardobalk",
+    ],
     footer: {
       links: {
         navigation: [

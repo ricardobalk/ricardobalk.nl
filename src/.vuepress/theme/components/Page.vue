@@ -4,7 +4,17 @@
 
     <BigHero v-if="this.$page.frontmatter.images && this.$page.frontmatter.images.hero" :image="`${heroImage}`" />
 
-    <Content class="theme-default-content" />
+    <div class="content-area">
+      <div v-if="pageContributors" class="aside left">
+        <div class="keybaseUserCards">
+          <KeybaseUserCard v-for="(contributor, id) in pageContributors" :username="contributor" :key="id" />
+        </div>
+      </div>
+
+      <div class="article">
+        <Content class="theme-default-content custom" />
+      </div>
+    </div>
 
     <PageEdit />
 
@@ -18,13 +28,17 @@
   import BigHero from "@theme/components/BigHero";
   import PageEdit from "@theme/components/PageEdit.vue";
   import PageNav from "@theme/components/PageNav.vue";
+  import KeybaseUserCard from "../global-components/KeybaseUserCard";
 
   export default {
-    components: { BigHero, PageEdit, PageNav },
+    components: { KeybaseUserCard, BigHero, PageEdit, PageNav },
     props: ["sidebarItems"],
     computed: {
       assets() {
         return this.$site.themeConfig.defaultAssetPaths;
+      },
+      pageContributors() {
+        return this.$page.frontmatter.contributors || this.$site.themeConfig.defaultContributors || null;
       },
       heroImage() {
         if (this.$page.frontmatter.portfolio) {
@@ -47,29 +61,60 @@
   @import "~@theme/styles/global/main.dark";
 
   body
-      min-height 100vh
+    min-height 100vh
 
   .page
-      padding-bottom 2rem
-      display block
+    padding-bottom 2rem
+    display block
 
-      .page-title
+    .content-area
+      display flex
+      flex-direction row
+      flex-wrap wrap-reverse
+      margin 0 auto
+
+      .aside
+        &.left
+          margin 0 auto
+
+          .keybaseUserCards
+            display flex
+            flex-direction column
+            position sticky
+            top 5rem
+            margin 0 1rem
+
+            .keybaseUserCard
+              margin 0 auto
+
+              &:not(:last-of-type)
+                margin-bottom 1rem
+
+      .article
+        width 66%
+        flex-grow 1
+
+        .page-title
           max-width: 740px
           margin: 0 auto
           padding: 0 2.5rem
+
           &:first-child
             margin-top 5.5rem
 
-      .theme-default-content
-          padding: 0 2.5rem
+        .theme-default-content
+          margin 0 2rem 0 1rem
+
+          > h1:first-of-type
+            margin-top 0
 
           > p:first-of-type
-              margin-top: 1.5rem
+            margin-top: 1.5rem
 
   code
-      border 1px solid #333;
+    border 1px solid #333;
 
   .custom-block
-      &.danger p
-          color: #555
+    &.danger p
+      color: #555
 </style>
