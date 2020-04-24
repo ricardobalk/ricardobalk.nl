@@ -75,6 +75,9 @@
       flex-wrap wrap-reverse
       margin 0 auto
 
+      &:first-child
+        margin-top 5rem
+
       .aside
         &.left
           margin 0 auto
