@@ -100,9 +100,9 @@
         flex-grow 1
 
         .page-title
-          max-width: 740px
-          margin: 0 auto
-          padding: 0 2.5rem
+          max-width 740px
+          margin 0 auto
+          padding 0 2.5rem
 
           &:first-child
             margin-top 5.5rem
@@ -114,16 +114,16 @@
             margin-top 0
 
           > p:first-of-type
-            margin-top: 1.5rem
+            margin-top 1.5rem
 
   #disqus_thread
     margin-top 2rem
     padding 0 2rem
 
   code
-    border 1px solid #333;
+    border 1px solid #333
 
   .custom-block
     &.danger p
-      color: #555
+      color #555
 </style>
