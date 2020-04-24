@@ -1,31 +1,25 @@
 @import "/assets/fonts/oswald/oswald.css";
 @import "/assets/fonts/source-sans/source-sans-pro.css";
 
-p
-  font-family var(--font-family-primary)
-  line-height 1.5
-  font-weight 600
-  color var(--color-almost-black)
+for num in (1..6)
+  h{num}
+    font-family var(--font-family-primary)
+    color var(--color-almost-black)
+    margin-bottom 0
 
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
-  font-family var(--font-family-primary-headings)
-  color var(--color-almost-black)
-
+for num in (2..6)
+  h{num}
+    font-weight 600
 
 h1
   font-size 2em
+  font-weight 500
 
 h2
   font-size 1.5em
 
 h3
-  font-size 1.35em
+  font-size 1.3em
 
 h4
   font-size 1.25em
@@ -34,14 +28,10 @@ h5
   font-size 1.15em
 
 h6
-  font-size 1.1em
+  font-size 1em
 
-h1,
-h2
-  font-weight 400
-
-h3,
-h4,
-h5,
-h6
-  font-weight 200
+p
+  font-family var(--font-family-primary)
+  color var(--color-almost-black)
+  line-height 1.5
+  font-weight 500
