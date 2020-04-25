@@ -33,13 +33,16 @@
   },
   "homepage": "https://github.com/ricardobalk/www#readme",
   "devDependencies": {
+    "fibers": "^5.0.0",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^4.14.0",
     "prettier": "1.19.1",
+    "sass": "^1.26.5",
     "sass-loader": "^8.0.0",
     "vue-inline-svg": "^1.2.0",
-    "vuepress": "^1.2.0"
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-disqus": "^0.2.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
