@@ -12,6 +12,7 @@
       </div>
 
       <div class="article">
+        <Breadcrumbs />
         <Content class="theme-default-content custom" />
       </div>
     </div>
@@ -31,9 +32,10 @@
   import PageEdit from "@theme/components/PageEdit.vue";
   import PageNav from "@theme/components/PageNav.vue";
   import KeybaseUserCard from "../global-components/KeybaseUserCard";
+  import Breadcrumbs from "@theme/components/Breadcrumbs";
 
   export default {
-    components: { KeybaseUserCard, BigHero, PageEdit, PageNav },
+    components: { KeybaseUserCard, Breadcrumbs, BigHero, PageEdit, PageNav },
     props: ["sidebarItems"],
     computed: {
       assets() {
@@ -98,6 +100,10 @@
       .article
         width 66%
         flex-grow 1
+        margin 0 2rem 0 1rem
+
+        .breadcrumbs
+          padding-left 1px
 
         .page-title
           max-width 740px
@@ -108,8 +114,6 @@
             margin-top 5.5rem
 
         .theme-default-content
-          margin 0 2rem 0 1rem
-
           > h1:first-of-type
             margin-top 0
 
