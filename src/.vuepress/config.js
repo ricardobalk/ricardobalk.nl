@@ -26,6 +26,11 @@ module.exports = {
     disqus: {
       shortname: "ricardobalk",
     },
+    container: {
+      type: "spoiler",
+      before: info => "<details><summary>" + info + "</summary>\n",
+      after: "</details>\n",
+    },
   },
   themeConfig: {
     locales: {
