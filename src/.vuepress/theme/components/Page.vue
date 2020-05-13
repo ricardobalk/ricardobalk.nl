@@ -11,10 +11,10 @@
         </div>
       </div>
 
-      <div class="article">
+      <article class="main-article">
         <Breadcrumbs />
-        <Content class="theme-default-content custom" />
-      </div>
+        <Content class="theme-default-content custom content" />
+      </article>
     </div>
 
     <PageEdit />
@@ -68,14 +68,17 @@
     min-height 100vh
 
   .page
-    padding-bottom 2rem
     display block
+    padding-bottom 2rem
+
+    .content-area, #disqus_thread
+      max-width 60 + 18 rem // Text area (60 rem) and Keybase card (18 rem) together.
+      margin 0 auto
 
     .content-area
       display flex
       flex-direction row
       flex-wrap wrap-reverse
-      margin 0 auto
 
       &:first-child
         margin-top 5rem
@@ -97,10 +100,10 @@
               &:not(:last-of-type)
                 margin-bottom 1rem
 
-      .article
+      .main-article
         width 66%
         flex-grow 1
-        margin 0 2rem 0 1rem
+        margin 0 1rem
 
         .breadcrumbs
           padding-left 1px

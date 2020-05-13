@@ -64,6 +64,8 @@
 </script>
 
 <style lang="stylus">
+  @require "~@theme/styles/global/variables"
+
   .success-stories
     margin 8em auto
     padding 0 2em
@@ -76,6 +78,10 @@
       display -webkit-flex
       display flex
       -webkit-flex-flow row wrap
+      margin 0 auto
+
+      @media screen and (max-width breakpoint-l)
+        max-width 32rem
 
     .title
       text-transform uppercase

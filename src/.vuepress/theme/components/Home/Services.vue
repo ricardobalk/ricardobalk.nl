@@ -58,10 +58,18 @@
 </script>
 
 <style lang="stylus">
+  @require "~@theme/styles/global/variables"
+
   .services
     max-width 1600px
     margin 2em auto
     color var(--color-regular-text)
+
+    @media screen and (max-width breakpoint-m)
+      max-width 22rem
+
+    @media screen and (max-width breakpoint-l)
+      max-width 40rem
 
     .title
       text-transform uppercase
@@ -71,46 +79,49 @@
       letter-spacing 0.003em
       font-weight 500
 
-    .card
-      display -webkit-box
-      display -moz-box
-      display -ms-flexbox
-      display -webkit-flex
-      display flex
-      -webkit-flex-flow row wrap
+    .cards
 
-      .service
+      .card
+        display -webkit-box
+        display -moz-box
+        display -ms-flexbox
+        display -webkit-flex
         display flex
-        text-align center
-        justify-self stretch
+        -webkit-flex-flow row wrap
 
-        .icon-container
-          color var(--color-white)
-          background #001037 linear-gradient(-30deg, #001037, #1e3d95)
+        .service
+          display flex
+          text-align center
+          justify-self stretch
 
-          .icon
-            &.fa-mouse-pointer::before
-              padding-left 0.15em
+          .icon-container
+            color var(--color-white)
+            background #001037 linear-gradient(-30deg, #001037, #1e3d95)
 
-            &.fa-code::before
-              padding-right 0.05em
+            .icon
+              &.fa-mouse-pointer::before
+                padding-left 0.15em
 
-        .inner
-          h3
-            text-transform uppercase
-            font-weight 900
-            line-height 1.5
-            font-size 1em
-            letter-spacing 0
+              &.fa-code::before
+                padding-right 0.05em
 
-      @media screen and (max-width: 640px)
-        padding 0 1em
+          .inner
+            h3
+              text-transform uppercase
+              font-weight 900
+              line-height 1.5
+              font-size 1em
+              letter-spacing 0
+
+        @media screen and (max-width 640px)
+          padding 0 1em
 
   @media screen and (prefers-color-scheme dark)
     .services
       .cards
         .card
           color #707070
+
           .service
             .inner
               background-color #000 !important
