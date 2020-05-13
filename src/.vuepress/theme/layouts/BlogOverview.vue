@@ -10,9 +10,7 @@
     <section class="blog-overview">
       <div class="grid-x limited-width">
         <div class="small-offset-1 small-10 large-offset-2 large-8 cell">
-          <!-- TODO: Add breadcrumbs -->
-
-          <Articles :posts="pages" :assets="assets" showExcerpts="false" />
+          <Articles :posts="posts" :assets="assets" showExcerpts="false" />
         </div>
       </div>
     </section>
@@ -27,7 +25,16 @@
     components: { BigHero, Articles },
     computed: {
       pages() {
-        return this.$site.pages; // TODO: Also make a posts(), which only returns posts.
+        return this.$site.pages;
+      },
+      posts() {
+        let x = [];
+        Array.prototype.forEach.call(this.pages, function(e) {
+          if (!e.frontmatter.page) {
+            x.push(e);
+          }
+        });
+        return x;
       },
       assets() {
         return this.$site.themeConfig.defaultAssetPaths;

@@ -36,12 +36,18 @@
 <style lang="stylus" scoped>
   .breadcrumbs
     font-size .8em
+    margin 0
     margin-bottom 1rem
     text-transform uppercase
+    list-style none
 
     a
+      font-size inherit
+
       &:last-of-type
-        color initial
+        color #000
+        @media screen and (prefers-color-scheme dark)
+          color #bcbcbc
 
       &:not(:last-of-type):after
         color #444
