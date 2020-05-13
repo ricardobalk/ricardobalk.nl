@@ -32,7 +32,7 @@
   $navigation-bar-height = 75px
   $site-header-height = $contact-bar-height + $navigation-bar-height
   $hero-height = calc(66vh - $site-header-height)
-  $hero-height-on-overview-pages = calc(50vh - $site-header-height)
+  $hero-height-on-overview-pages = "calc(50vh - %s)" % $site-header-height
 
   .big-hero
     font-family "Source Sans Pro", Helvetica, Arial, sans-serif
@@ -49,7 +49,7 @@
     background-position bottom
 
     @media screen and (max-width: 640px)
-      height calc(30vh - $site-header-height)
+      height "calc(30vh - %s)" % $site-header-height
 
     @media screen and (prefers-color-scheme: dark)
       background-color #393939 !important
