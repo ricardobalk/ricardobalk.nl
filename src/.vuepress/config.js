@@ -75,6 +75,7 @@ module.exports = {
         navigation: [
           { text: "Privacy", location: "/privacy" },
           { text: "About", location: "/about" },
+          { text: "Changes", location: "/changes" },
           {
             text: "Tor",
             location: "http://3rfoq3ia75hnxgpmtwyeyvbjbhym354tcy4ox2jaqjqhtcmd4i2mt2id.onion/",
