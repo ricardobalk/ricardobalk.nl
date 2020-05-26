@@ -46,6 +46,7 @@ module.exports = {
         nav: [
           { text: "Home", link: "/nl/" },
           { text: "Blog", link: "/nl/blog/" },
+          { text: "Handleidingen", link: "/nl/guides/" },
           { text: "Portfolio", link: "/nl/portfolio/" },
         ],
       },
@@ -56,6 +57,7 @@ module.exports = {
         nav: [
           { text: "Startseite", link: "/de/" },
           { text: "Blog", link: "/de/blog/" },
+          { text: "Guides", link: "/de/guides/" },
           { text: "Portfolio", link: "/de/portfolio/" },
         ],
       },
@@ -64,6 +66,7 @@ module.exports = {
     nav: [
       { text: "Home", link: "/" },
       { text: "Blog", link: "/blog/" },
+      { text: "Guides", link: "/guides/" },
       { text: "Portfolio", link: "/portfolio/" },
     ],
     // sidebar: 'auto',
