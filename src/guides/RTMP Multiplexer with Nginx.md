@@ -1,4 +1,5 @@
 ---
+type: guide
 date: 2018-10-20 09:00:00 +00:00
 excerpt: Learn how to to create an RTMP Multiplexer with nginx so that you're able to stream video content to different servers simultaneously...
 category: devops
@@ -13,7 +14,7 @@ images:
   hero:
      filename: "live.webp"
      description: "Sign showing that a (broadcast) transmission went live"
-permalink: /blog/rtmp-multiplexer-nginx
+permalink: /guides/rtmp-multiplexer-nginx
 ---
 
 # Setting up an RTMP Multiplexer with Nginx

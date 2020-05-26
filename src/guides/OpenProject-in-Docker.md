@@ -1,4 +1,5 @@
 ---
+type: guide
 date: 2018-11-03 09:00:00 +00:00
 excerpt: OpenProject is a freeware project management tool that comes with a Docker image. Learn how to set it up...
 category: devops
@@ -7,7 +8,7 @@ images:
   featured:
      filename: "gantt-chart.webp"
      description: "A global project planning shown as a GANTT chart"
-permalink: /blog/openproject-in-docker
+permalink: /guides/openproject-in-docker
 ---
 
 # Running OpenProject Community Edition in Docker

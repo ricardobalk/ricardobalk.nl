@@ -1,9 +1,9 @@
 <template>
   <div class="blog-overview-container">
     <BigHero
-      title="Blog"
-      image="/assets/img/site/blog/typewriter.svg"
-      image-dark="/assets/img/site/blog/typewriter-dark.svg"
+      :title="pageTitle"
+      :image="heroImages.regular"
+      :image-dark="heroImages.dark"
       class="blog-hero"
     />
 
@@ -20,24 +20,35 @@
 <script>
   import BigHero from "@theme/components/BigHero";
   import Articles from "@theme/components/Blog/Overview/Articles";
+  import retrievePosts from "@theme/mixins/retrievePosts";
+
   export default {
     name: "BlogOverview",
     components: { BigHero, Articles },
+    mixins: [retrievePosts],
     computed: {
-      pages() {
-        return this.$site.pages;
+      heroImages(){
+        return this.$page.frontmatter.heroImages ? this.$page.frontmatter.heroImages : {
+          regular: "/assets/img/site/blog/typewriter.svg",
+          dark: "/assets/img/site/blog/typewriter-dark.svg"
+        };
       },
-      posts() {
-        let x = [];
-        Array.prototype.forEach.call(this.pages, function(e) {
-          if (!e.frontmatter.page) {
-            x.push(e);
-          }
-        });
-        return x;
+      pageTitle() {
+        return this.$page.title ? this.$page.title : "Blog";
+      },
+      whatToShow(){
+        if (this.$page.frontmatter.type) {
+          return this.$page.frontmatter.type;
+        }
+        else {
+          return "blogpost";
+        }
       },
       assets() {
         return this.$site.themeConfig.defaultAssetPaths;
+      },
+      posts() {
+        return this.retrievePosts(this.whatToShow);
       },
     },
   };

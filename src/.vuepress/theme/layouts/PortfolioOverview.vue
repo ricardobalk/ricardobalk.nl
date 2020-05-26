@@ -6,10 +6,11 @@
       <div class="masonry-container">
         <div class="masonry-columns items">
           <article
-            v-for="(item, index) in items"
-            v-if="item.frontmatter.portfolio === true && (item.frontmatter.lang || 'en-GB') === language"
+            v-for="(item, index) in portfolioItems"
+            v-if="(item.frontmatter.lang || 'en-GB') === language"
             class="masonry-brick item"
             :data-category="item.frontmatter.category"
+            :key="index"
           >
             <a :href="item.path" class="clickable">
               <img
@@ -49,16 +50,18 @@
   import { fas } from "@fortawesome/free-solid-svg-icons";
   import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
   import HumanReadableDate from "@theme/global-components/HumanReadableDate";
+  import retrievePosts from "@theme/mixins/retrievePosts";
 
   export default {
     name: "PortfolioOverview",
     components: { library, fas, FontAwesomeIcon, BigHero, HumanReadableDate },
+    mixins: [retrievePosts],
     created() {
       library.add(fas); // TODO: Reduce load time! We don't need a whole library for the chevron icon.
     },
     computed: {
-      items() {
-        return this.$site.pages;
+      portfolioItems() {
+        return this.retrievePosts("portfolio");
       },
       assets() {
         return this.$site.themeConfig.defaultAssetPaths;

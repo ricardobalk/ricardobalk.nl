@@ -1,6 +1,6 @@
 ---
 {
-  "portfolio": true,
+  "type": "portfolio",
   "date": "2013-06-01 03:00:00 -0400",
   "shortTitle": "Sound Artist & Engineer",
   "client": "HAN University of Applied Sciences",

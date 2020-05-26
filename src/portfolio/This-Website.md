@@ -1,6 +1,6 @@
 ---
+type: portfolio
 date: 2019-04-05 09:00:00 +02:00
-portfolio: true
 excerpt: "I made this website entirely myself."
 client: Ricardo Balk
 category: Front-end Development

@@ -1,6 +1,6 @@
 ---
+type: portfolio
 date: 2013-09-01 09:00:00 +02:00
-portfolio: true
 client: The Mudskipper Family
 shortTitle: "Sound Artist & Engineer"
 category: Sound Design

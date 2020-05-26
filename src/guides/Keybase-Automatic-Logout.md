@@ -1,4 +1,5 @@
 ---
+type: guide
 date: 2018-10-31 06:00:00 +00:00
 excerpt: This article explains how to make Keybase automatically log out when a Linux system is powered off or restarted.
 category: devops
@@ -9,7 +10,7 @@ images:
   hero:
      filename: "sleeping-keybase-icon.webp"
      description: "Keybase emoticon with closed eyelids"
-permalink: /blog/keybase-automatic-logout
+permalink: /guides/keybase-automatic-logout
 ---
 
 # Logging out of Keybase automatically

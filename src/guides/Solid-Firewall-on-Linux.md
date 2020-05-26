@@ -1,4 +1,5 @@
 ---
+type: guide
 date: 2018-10-30 10:00:00 +01:00
 excerpt: By default, Linux passes all network traffic (with some exceptions). Learn how to set-up a secure firewall with iptables.
 category: devops
@@ -9,7 +10,7 @@ images:
   hero:
      filename: "fire.webp"
      description: "Fire"
-permalink: /blog/solid-firewall-linux
+permalink: /guides/solid-firewall-linux
 ---
 
 # Solid Firewall Configuration with iptables
