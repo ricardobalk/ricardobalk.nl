@@ -1,4 +1,5 @@
 ---
+type: blogpost
 date: 2019-06-11 06:00:00 +00:00
 excerpt: "Are you a Tor user? My website is available via Tor!"
 category: "personal"

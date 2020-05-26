@@ -1,5 +1,5 @@
 ---
-portfolio: true
+type: portfolio
 date: 2019-01-01 09:00:00 +02:00
 shortTitle: Proofreader
 excerpt: I'm one of the proofreaders for the Dutch version.

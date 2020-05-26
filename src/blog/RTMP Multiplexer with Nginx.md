@@ -1,4 +1,5 @@
 ---
+type: blogpost
 date: 2018-10-20 09:00:00 +00:00
 excerpt: Learn how to to create an RTMP Multiplexer with nginx so that you're able to stream video content to different servers simultaneously...
 category: devops

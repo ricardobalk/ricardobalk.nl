@@ -20,24 +20,18 @@
 <script>
   import BigHero from "@theme/components/BigHero";
   import Articles from "@theme/components/Blog/Overview/Articles";
+  import retrievePosts from "@theme/mixins/retrievePosts";
+
   export default {
     name: "BlogOverview",
     components: { BigHero, Articles },
+    mixins: [retrievePosts],
     computed: {
-      pages() {
-        return this.$site.pages;
-      },
-      posts() {
-        let x = [];
-        Array.prototype.forEach.call(this.pages, function(e) {
-          if (!e.frontmatter.page) {
-            x.push(e);
-          }
-        });
-        return x;
-      },
       assets() {
         return this.$site.themeConfig.defaultAssetPaths;
+      },
+      posts() {
+        return this.retrievePosts("blogpost");
       },
     },
   };

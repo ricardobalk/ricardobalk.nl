@@ -8,7 +8,6 @@
           v-if="
             !page.frontmatter.layout &&
               !page.frontmatter.home &&
-              !page.frontmatter.portfolio === true &&
               (page.frontmatter.lang || 'en-GB') === language
           "
           :data-category="page.frontmatter.category"

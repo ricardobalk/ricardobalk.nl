@@ -1,4 +1,5 @@
 ---
+type: blogpost
 date: 2019-03-30 10:00:00 +01:00
 excerpt: How to create a modern and secure Ubuntu server on DigitalOcean with Apache, MariaDB, PHP 7.2, SSL, ModSecurity and HTTP/2.
 category: devops
