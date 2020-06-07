@@ -2,7 +2,11 @@
   <main class="page">
     <slot name="top" />
 
-    <BigHero v-if="this.$page.frontmatter.images && this.$page.frontmatter.images.hero" :image="`${heroImage}`" />
+    <BigHero
+      v-if="this.$page.frontmatter.images && this.$page.frontmatter.images.hero"
+      :image="`${heroImage}`"
+      class="big"
+    />
 
     <div class="content-area">
       <div v-if="pageContributors" class="aside left">

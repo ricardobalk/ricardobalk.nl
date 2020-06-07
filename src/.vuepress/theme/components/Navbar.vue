@@ -120,14 +120,17 @@
     left 0
     right 0
     height $navbarHeight
-    background-color #fff
+    background-color rgba(255, 255, 255, .95)
     box-sizing border-box
     transition background-color .5s ease-in
 
-    @media screen and (prefers-color-scheme: dark) {background-color transparent}
+    @media screen and (prefers-color-scheme dark)
+      background-color transparent
 
     &.page-scrolled
-      @media screen and (prefers-color-scheme: dark){background-color #000}
+      background-color #fff
+      @media screen and (prefers-color-scheme dark)
+        background-color #000
 
     .search-box
       display inline-block
@@ -135,67 +138,78 @@
       margin-left 2em
       position relative
       bottom 5px
-     input
-       left: 0
-       min-width 10rem
-       background transparent url(/assets/img/search.83621669.svg) 0.6rem 0.5rem no-repeat
-       color #eee
-       border-color: #666
-       &:focus
-         width 10rem
-         background rgba(0, 0, 0, 0.5) url(/assets/img/search.83621669.svg) 0.6rem 0.5rem no-repeat
-         border-color: #eee
-     .suggestions
-       top: 2.5rem;
-       right: 0
-       width 30rem
+
+    input
+      left: 0
+      min-width 10rem
+      background transparent url(/assets/img/search.83621669.svg) 0.6rem 0.5rem no-repeat
+      color #eee
+      border-color: #666
+
+      &:focus
+        width 10rem
+        background rgba(0, 0, 0, 0.5) url(/assets/img/search.83621669.svg) 0.6rem 0.5rem no-repeat
+        border-color: #eee
+
+    .suggestions
+      top: 2.5rem;
+      right: 0
+      width 30rem
 
     a, span, img
       display inline-block
+
     .site-logo
       height $navbarHeight - 1.4rem
       min-width $navbarHeight - 1.4rem
       margin-right 0.8rem
       vertical-align top
       fill #1d1d1b
-      position absolute  // TODO: Fix this
+      position absolute // TODO: Fix this
       top .75em // TODO: Fix this
-      @media screen and (prefers-color-scheme: dark) { fill: #ccc };
-    .site-name
-      font-size 1.3rem
-      font-weight 600
-      color $textColor
-      position relative
-      &.can-hide
-       display none
-
-    .links
-      padding-left 1.5rem
-      box-sizing border-box
-      white-space nowrap
-      font-size 0.9rem
-      position absolute
-      right $navbar-horizontal-padding
-      top $navbar-vertical-padding
-      display flex
-      color: #333;
       @media screen and (prefers-color-scheme: dark) {
-       color: #eee;
-      }
-      .nav-links a, .nav-links .dropdown-title
-        text-transform: uppercase
-        font-weight 700
-        font-size .9em
-      .search-box
-        flex: 0 0 auto
-        vertical-align top
+        fill: #ccc
+      };
+  .site-name
+    font-size 1.3rem
+    font-weight 600
+    color $textColor
+    position relative
+
+    &.can-hide
+      display none
+
+  .links
+    padding-left 1.5rem
+    box-sizing border-box
+    white-space nowrap
+    font-size 0.9rem
+    position absolute
+    right $navbar-horizontal-padding
+    top $navbar-vertical-padding
+    display flex
+    color: #333;
+    @media screen and (prefers-color-scheme: dark) {
+      color: #eee;
+    }
+
+    .nav-links a, .nav-links .dropdown-title
+      text-transform: uppercase
+      font-weight 700
+      font-size .9em
+
+    .search-box
+      flex: 0 0 auto
+      vertical-align top
 
   @media (max-width: $MQMobile)
     .navbar
       .can-hide
         display none
+
       .links
         padding-left 1.5rem
+
       .site-name
         width calc(100vw - 9.4rem)
         overflow hidden

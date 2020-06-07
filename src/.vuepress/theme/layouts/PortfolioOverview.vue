@@ -86,6 +86,8 @@
   @require "~@theme/styles/global/masonry";
 
   .portfolio-overview
+    margin-top 3.6rem
+
     .big-hero
       margin-bottom 0
       background-position center

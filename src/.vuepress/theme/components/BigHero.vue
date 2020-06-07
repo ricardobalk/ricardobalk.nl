@@ -48,8 +48,14 @@
     background-size cover
     background-position bottom
 
+    &.big
+      height 50vh
+      @media screen and (max-width 640px)
+        height 33vh
+
     @media screen and (max-width: 640px)
-      height "calc(30vh - %s)" % $site-header-height
+      height "calc(33vh - %s)" % $site-header-height
+      margin-bottom 2em
 
     @media screen and (prefers-color-scheme: dark)
       background-color #393939 !important
