@@ -1,10 +1,9 @@
 @media screen and (prefers-color-scheme dark)
   body
     background-color #000
-    color #bcbcbc
+    color $textColor_dark
 
     p,
-    a,
     ul,
     li,
     h1,
@@ -13,7 +12,10 @@
     h4,
     h5,
     h6
-      color #bcbcbc
+      color $textColor_dark
+
+    a
+      color $accentColor_dark
 
 
   .site-header
@@ -36,6 +38,9 @@
         &:hover
           color #28f
 
-
     & ~ *
       top 0
+
+  .theme-default-content.custom
+    a
+      text-decoration underline 1px dotted darken(desaturate($accentColor_dark, 60%), 30%)
