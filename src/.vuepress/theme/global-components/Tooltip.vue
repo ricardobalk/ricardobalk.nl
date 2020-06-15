@@ -5,17 +5,13 @@
   </div>
 </template>
 
-<script>
-  export default {
-    name: "Tooltip",
-    props: {
-      text: {
-        type: String,
-        required: true,
-        default: "This tooltip is missing its prop value",
-      },
-    },
-  };
+<script lang="ts">
+  import { Vue, Component, Prop } from "vue-property-decorator";
+
+  @Component
+  export default class Tooltip extends Vue {
+    @Prop({ required: true, default: "This tooltip is missing its prop value" }) private text!: string;
+  }
 </script>
 
 <style lang="stylus" scoped>
