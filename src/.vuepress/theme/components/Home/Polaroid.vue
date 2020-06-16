@@ -9,14 +9,14 @@
   </div>
 </template>
 
-<script>
-  export default {
-    name: "Polaroid",
-    props: ["image", "caption"],
-    data() {
-      return {};
-    },
-  };
+<script lang="ts">
+  import { Vue, Component, Prop } from "vue-property-decorator";
+
+  @Component
+  export default class Polaroid extends Vue {
+    @Prop({ required: true, default: "https://placehold.it/500x500" }) private image!: string;
+    @Prop({ required: true, default: "No caption given, did you forget to pass props?" }) private caption!: string;
+  }
 </script>
 
 <style lang="stylus">
