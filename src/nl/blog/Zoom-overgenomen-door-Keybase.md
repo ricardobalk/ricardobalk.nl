@@ -3,7 +3,7 @@ type: blogpost
 date: 2020-05-07 20:00:00 +00:00
 category: "front-end-development"
 tags: ["personal", "website"]
-lang: nl-NL
+lang: nl
 images:
   featured:
      filename: "zoom-and-keybase.webp"

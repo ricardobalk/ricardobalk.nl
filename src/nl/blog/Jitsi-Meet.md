@@ -3,7 +3,7 @@ type: blogpost
 date: 2020-06-01 08:00:00 +02:00
 category: "foss"
 tags: ["jitsi", "meet", "video communication"]
-lang: nl-NL
+lang: nl
 images:
   featured:
      filename: "jitsi-meet-logo.webp"

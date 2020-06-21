@@ -7,7 +7,7 @@
         <div class="masonry-columns items">
           <article
             v-for="(item, index) in portfolioItems"
-            v-if="(item.frontmatter.lang || 'en-GB') === language"
+            v-if="(item.frontmatter.lang || 'en') === language"
             class="masonry-brick item"
             :data-category="item.frontmatter.category"
             :key="index"
