@@ -3,6 +3,7 @@
     "target": "ES2019",
     "module": "esnext",
     "strict": true,
+    "noImplicitThis": true,
     "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
@@ -11,7 +12,7 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": ["webpack-env"],
+    "types": ["vuepress-types"],
     "paths": {
       "@/*": ["src/*"]
     },
