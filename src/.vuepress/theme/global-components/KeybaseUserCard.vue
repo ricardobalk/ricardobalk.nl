@@ -1,9 +1,10 @@
 <template>
-  <div class="keybaseUserCard" v-cloak>
+  <div class="keybaseUserCard" :class="{ loading: !ready }" v-cloak>
     <img
       class="avatar"
-      :src="userData.them.pictures.primary.url || 'https://placehold.it/500x500'"
+      :src="userData.them.pictures.primary.url || ''"
       :title="`${userData.them.profile.full_name}'s profile picture`"
+      @load="imagesLoaded"
     />
 
     <p class="fullName" :data-keybase-username="userData.them.basics.username">
@@ -63,57 +64,50 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+  import { Vue, Component, Prop } from "vue-property-decorator";
+  import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
   import { library } from "@fortawesome/fontawesome-svg-core";
   import { faTwitter, faGithub, faReddit, faMastodon, faKeybase } from "@fortawesome/free-brands-svg-icons";
   // import { faGlobe } from "@fortawesome/free-solid-svg-icons";
-  import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-  export default {
-    name: "KeybaseUserCard",
-    components: { FontAwesomeIcon },
-    props: {
-      username: {
-        type: String,
-        required: true,
-        default() {
-          return "ricardobalk";
+  @Component({ name: "KeybaseUserCard", components: { FontAwesomeIcon } })
+  export default class KeybaseUserCard extends Vue {
+    @Prop({ required: true, default: "ricardobalk" }) private username!: string;
+    private ready?: Boolean = false;
+    private userData?: object = {
+      them: {
+        basics: {
+          username: "",
         },
-      },
-    },
-    created() {
-      library.add(faTwitter, faGithub, faReddit, faMastodon, faKeybase);
-    },
-    data() {
-      return {
-        userData: {
-          them: {
-            basics: {
-              username: this.username,
-            },
-            profile: {
-              full_name: "Fetching data...",
-              bio: "Fetching bio from the Keybase servers...",
-            },
-            pictures: {
-              primary: {
-                url: "",
-              },
-            },
-            proofs_summary: {},
+        profile: {
+          full_name: "Fetching data...",
+          bio: "Fetching bio from the Keybase servers...",
+        },
+        pictures: {
+          primary: {
+            url: "",
           },
         },
-      };
-    },
-    mounted() {
+        proofs_summary: {},
+      },
+    };
+
+    created() {
+      library.add(faTwitter, faGithub, faReddit, faMastodon, faKeybase);
+
       let keybaseAPIEndpoint = `https://keybase.io/_/api/1.0/user/lookup.json?username=${this.username}&fields=basics,profile,proofs_summary,pictures`,
         self = this; // create a closure to access component in the callback below
 
       fetch(keybaseAPIEndpoint)
         .then(response => response.json())
         .then(data => (self.userData = data));
-    },
-  };
+    }
+
+    imagesLoaded() {
+      this.ready = true;
+    }
+  }
 </script>
 
 <style lang="stylus" scoped>
@@ -123,9 +117,14 @@
     padding 1.75rem 2rem
     text-align center
     width 18rem
+    opacity 1
+    transition transform .5s
+    transform translateX(0)
 
-    &[v-cloak]
-      display none
+    &[v-cloak], &.loading
+      opacity 0
+      transform translateX(-300%)
+
     @media screen and (prefers-color-scheme dark)
       border 1px solid #333
 

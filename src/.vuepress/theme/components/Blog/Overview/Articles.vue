@@ -5,11 +5,7 @@
         <article
           class="masonry-brick post"
           v-for="(page, index) in posts"
-          v-if="
-            !page.frontmatter.layout &&
-              !page.frontmatter.home &&
-              (page.frontmatter.lang || 'en-GB') === language
-          "
+          v-if="!page.frontmatter.layout && !page.frontmatter.home && (page.frontmatter.lang || 'en') === language"
           :data-category="page.frontmatter.category"
           :class="'post-' + index"
         >
@@ -50,31 +46,26 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+  import { Vue, Component, Prop } from "vue-property-decorator";
   import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
   import { library } from "@fortawesome/fontawesome-svg-core";
-  import { fas } from "@fortawesome/free-solid-svg-icons";
+  import { faCalendarAlt, faChevronRight } from "@fortawesome/free-solid-svg-icons";
   import HumanReadableDate from "@theme/global-components/HumanReadableDate.vue";
+  import languageSelection from "../../../mixins/languageSelection";
+  import { PageOptions } from "vuepress-types";
 
-  export default {
-    name: "Articles",
-    props: ["posts", "assets", "showExcerpts"],
-    components: { library, fas, FontAwesomeIcon, HumanReadableDate },
+  @Component({ name: "Articles", components: { FontAwesomeIcon, HumanReadableDate }, mixins: [languageSelection] })
+  export default class Articles extends Vue {
+    @Prop({ required: true, default: {} }) private posts!: PageOptions;
+    @Prop({ required: true, default: "" }) private assets!: string;
+    @Prop({ required: false, default: true }) private showExcerpts!: boolean;
+
     created() {
-      library.add(fas);
-    },
-    computed: {
-      language() {
-        switch (this.$lang) {
-          // What this code does, is replacing de-DE by en-GB, so that English blog posts are shown instead.
-          case "de-DE":
-            return "en-GB";
-          default:
-            return this.$lang;
-        }
-      },
-    },
-  };
+      library.add(faCalendarAlt);
+      library.add(faChevronRight);
+    }
+  }
 </script>
 
 <style lang="stylus">

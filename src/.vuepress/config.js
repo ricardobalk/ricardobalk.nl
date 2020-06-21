@@ -31,6 +31,15 @@ module.exports = {
       before: info => "<details><summary>" + info + "</summary>\n",
       after: "</details>\n",
     },
+    "vuepress-plugin-typescript": {
+      tsLoaderOptions: {
+        transpileOnly: true,
+        compilerOptions: {
+          // Vuepress needs an older target (as opposed to esnext) to correctly transpile optional chaining and nullish coalescing
+          target: "ES2019",
+        },
+      },
+    },
   },
   themeConfig: {
     locales: {

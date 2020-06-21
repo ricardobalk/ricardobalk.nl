@@ -30,25 +30,23 @@
   </section>
 </template>
 
-<script>
-  import Polaroid from "./Polaroid";
+<script lang="ts">
+  import { Vue, Component, Prop } from "vue-property-decorator";
+  import Polaroid from "./Polaroid.vue";
 
-  export default {
-    name: "About",
-    components: { Polaroid },
-    props: {
-      polaroidImage: {
-        type: Object,
-        required: true,
-        default() {
-          return {
-            path: "https://placehold.it/500x500",
-            caption: "You might have forgotten to add an image.",
-          };
-        },
-      },
-    },
-  };
+  interface polaroidImageData extends Object {
+    path: string;
+    caption: string;
+  }
+
+  @Component({ name: "About", components: { Polaroid } })
+  export default class About extends Vue {
+    @Prop({
+      required: true,
+      default: { path: "https://placehold.it/500x500", caption: "You might have forgotten to add an image." },
+    })
+    private polaroidImage!: polaroidImageData;
+  }
 </script>
 
 <style lang="stylus">
