@@ -44,49 +44,46 @@
   </section>
 </template>
 
-<script>
-  import BigHero from "@theme/components/BigHero";
+<script lang="ts">
+  import retrievePosts from "../mixins/retrievePosts";
+  import languageSelection from "../mixins/languageSelection";
+  import Component from "vue-class-component";
   import { library } from "@fortawesome/fontawesome-svg-core";
-  import { fas } from "@fortawesome/free-solid-svg-icons";
+  import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
   import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-  import HumanReadableDate from "@theme/global-components/HumanReadableDate";
-  import retrievePosts from "@theme/mixins/retrievePosts";
+  import BigHero from "@theme/components/BigHero.vue";
+  import HumanReadableDate from "@theme/global-components/HumanReadableDate.vue";
 
-  export default {
+  @Component({
     name: "PortfolioOverview",
-    components: { library, fas, FontAwesomeIcon, BigHero, HumanReadableDate },
-    mixins: [retrievePosts],
+    components: { FontAwesomeIcon, BigHero, HumanReadableDate },
+    mixins: [languageSelection],
+  })
+  export default class PortfolioOverview extends retrievePosts {
     created() {
-      library.add(fas); // TODO: Reduce load time! We don't need a whole library for the chevron icon.
-    },
-    computed: {
-      portfolioItems() {
-        return this.retrievePosts("portfolio");
-      },
-      assets() {
-        return this.$site.themeConfig.defaultAssetPaths;
-      },
-      imagePath() {
-        return `${this.assets.images}/content/portfolio`;
-      },
-      language() {
-        switch (this.$lang) {
-          // What this code does, is replacing de-DE by en-GB, so that English portfolio items are shown instead.
-          case "de-DE":
-            return "en-GB";
-          default:
-            return this.$lang;
-        }
-      },
-    },
-  };
+      library.add(faChevronRight);
+    }
+
+    get portfolioItems() {
+      return this.retrievePosts("portfolio");
+    }
+
+    get assets() {
+      return this.$site.themeConfig.defaultAssetPaths;
+    }
+
+    get imagePath() {
+      return `${this.assets.images}/content/portfolio`;
+    }
+  }
 </script>
 
 <style lang="stylus">
   @require "~@theme/styles/global/masonry";
+  @require "~@theme/styles/global/variables";
 
   .portfolio-overview
-    margin-top 3.6rem
+    margin-top $navigation-bar-height
 
     .big-hero
       margin-bottom 0
@@ -167,6 +164,7 @@
 
   @media screen and (prefers-color-scheme dark)
     .portfolio-overview
+      margin-top 0
       .hero
         background-color rgb(11, 11, 11) !important
 </style>
