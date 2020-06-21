@@ -11,11 +11,7 @@
             <font-awesome-icon :icon="['fas', 'mug-hot']" class="icon" title="coffee" />
             and some
             <font-awesome-icon :icon="['fas', 'code']" class="icon" title="code" />
-            by Ricardo Balk. Design available on
-            <a :href="links.social.behance" target="_blank"
-              ><font-awesome-icon :icon="['fab', 'behance']" class="icon" title="Behance" />.</a
-            >
-            Source code available on
+            by Ricardo Balk. Source code available on
             <a :href="links.social.github" target="_blank"
               ><font-awesome-icon :icon="['fab', 'github']" class="icon" title="GitHub" />.</a
             >
@@ -29,39 +25,35 @@
   </footer>
 </template>
 
-<script>
+<script lang="ts">
+  import { Vue, Component, Prop } from "vue-property-decorator";
   import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
   import { library } from "@fortawesome/fontawesome-svg-core";
   import { fas } from "@fortawesome/free-solid-svg-icons";
   import { fab } from "@fortawesome/free-brands-svg-icons";
 
-  export default {
-    name: "Footer",
-    components: { library, fas, fab, FontAwesomeIcon },
-    props: {
-      links: {
-        type: Object,
-        required: false,
-        default() {
-          return {
-            navigation: [
-              { text: "Privacy", location: "/privacy" },
-              { text: "About", location: "/about" },
-              { text: "Contact", location: "/contact" },
-            ],
-            social: {
-              behance: "https://behance.net/",
-              github: "https://github.com/",
-            },
-          };
+  @Component({ name: "Footer", components: { FontAwesomeIcon, fas, fab } })
+  export default class Footer extends Vue {
+    @Prop({
+      required: true,
+      default: {
+        navigation: [
+          { text: "Privacy", location: "/privacy" },
+          { text: "About", location: "/about" },
+          { text: "Contact", location: "/contact" },
+        ],
+        social: {
+          github: "https://github.com/",
         },
       },
-    },
+    })
+    private links!: Object;
+
     created() {
       library.add(fab);
       library.add(fas);
-    },
-  };
+    }
+  }
 </script>
 
 <style lang="stylus">
