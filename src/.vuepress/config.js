@@ -4,19 +4,19 @@ module.exports = {
   dest: "dist",
   locales: {
     "/": {
-      lang: "en-GB",
+      lang: "en",
       label: "English",
       title: "Ricardo Balk",
       description: "Personal Website",
     },
     "/nl/": {
-      lang: "nl-NL",
+      lang: "nl",
       label: "Nederlands",
       title: "Ricardo Balk",
       description: "Persoonlijke Website",
     },
     "/de/": {
-      lang: "de-DE",
+      lang: "de",
       label: "Deutsch",
       title: "Ricardo Balk",
       description: "Meiner persönlichen Webseite",
@@ -45,12 +45,12 @@ module.exports = {
     locales: {
       "/": {
         selectText: "Languages",
-        lang: "en-GB",
+        lang: "en",
         label: "English",
       },
       "/nl/": {
         selectText: "Taalkeuze",
-        lang: "nl-NL",
+        lang: "nl",
         label: "Nederlands",
         nav: [
           { text: "Home", link: "/nl/" },
@@ -61,7 +61,7 @@ module.exports = {
       },
       "/de/": {
         selectText: "Sprache wählen",
-        lang: "de-DE",
+        lang: "de",
         label: "Deutsch",
         nav: [
           { text: "Startseite", link: "/de/" },
@@ -99,7 +99,6 @@ module.exports = {
           },
         ],
         social: {
-          behance: "https://behance.net/ricardobalk",
           github: "https://github.com/ricardobalk/www",
         },
       },

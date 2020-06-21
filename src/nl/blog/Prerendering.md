@@ -4,7 +4,7 @@ date: 2019-09-03 06:00:00 +00:00
 excerpt: "Dankzij Prerendering laadt mijn website iets sneller."
 category: "front-end-development"
 tags: ["prerendering", "puppeteer"]
-lang: nl-NL
+lang: nl
 ---
 
 # Prerenderen van websites

@@ -14,7 +14,7 @@ images:
      description: "Goat"
 excerpt: Ik heb een bedrijfsvideo gemaakt voor ELDA.
 permalink: /portfolio/ELDA-business-movie
-lang: nl-NL
+lang: nl
 ---
 
 # Bedrijfsvideo voor ELDA
