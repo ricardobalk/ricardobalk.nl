@@ -52,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "cross-fetch": "^3.0.5",
     "fibers": "^5.0.0",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",

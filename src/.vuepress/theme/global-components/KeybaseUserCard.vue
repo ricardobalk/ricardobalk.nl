@@ -66,6 +66,7 @@
 
 <script lang="ts">
   import { Vue, Component, Prop } from "vue-property-decorator";
+  import fetch from "cross-fetch";
   import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
   import { library } from "@fortawesome/fontawesome-svg-core";
   import { faTwitter, faGithub, faReddit, faMastodon, faKeybase } from "@fortawesome/free-brands-svg-icons";
