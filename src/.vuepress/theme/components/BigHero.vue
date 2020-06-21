@@ -9,22 +9,31 @@
   </section>
 </template>
 
-<script>
-  export default {
-    name: "Hero",
-    props: ["title", "subtitle", "image", "imageDark"],
-    computed: {
-      hasImage() {
-        return !!this.image;
-      },
-      style() {
-        return `${this.image ? ' --image: url("' + this.image + ";" : "/assets/img/hero.svg" + '");'} ${
-          this.imageDark ? ' --image-dark: url("' + this.imageDark + '");' : ' --image-dark: url("' + this.image + '");'
-        }`;
-        // TODO: Refactor this.
-      },
-    },
-  };
+<script lang="ts">
+  import { Vue, Component, Prop } from "vue-property-decorator";
+
+  @Component({ name: "Hero" })
+  export default class Hero extends Vue {
+    @Prop({ required: false }) private image!: string;
+    @Prop({ required: false }) private imageDark!: string;
+    @Prop({ required: false }) private title!: string;
+    @Prop({ required: false }) private subtitle!: string;
+
+    hasImage() {
+      return !!this.image;
+    }
+
+    hasDarkImage() {
+      return !!this.imageDark;
+    }
+
+    get style(): string {
+      let defaultHeroImage: string = "/assets/img/site/home/hero.svg",
+        imageLocation: string = this.hasImage() ? this.image : defaultHeroImage,
+        darkImageLocation: string = this.hasDarkImage() ? this.imageDark : imageLocation;
+      return `--image: url("${imageLocation}"); --image-dark: url("${darkImageLocation}");`;
+    }
+  }
 </script>
 
 <style lang="stylus">
@@ -53,11 +62,11 @@
       @media screen and (max-width 640px)
         height 33vh
 
-    @media screen and (max-width: 640px)
+    @media screen and (max-width 640px)
       height "calc(33vh - %s)" % $site-header-height
       margin-bottom 2em
 
-    @media screen and (prefers-color-scheme: dark)
+    @media screen and (prefers-color-scheme dark)
       background-color #393939 !important
       background-image var(--image-dark)
       background-blend-mode overlay
@@ -84,7 +93,7 @@
         font-size 2.25em
         font-weight 700
         margin-bottom 0
-        @media screen and (max-width: 640px)
+        @media screen and (max-width 640px)
           font-size 1.5em
           margin-bottom 0.25em
 
@@ -92,7 +101,7 @@
         font-size 2.5em
         font-weight 700
         margin-bottom 0.25em
-        @media screen and (max-width: 640px)
+        @media screen and (max-width 640px)
           font-size 1.5em
           margin-bottom 0.5em
 
@@ -100,7 +109,7 @@
         font-size 0.95em
         font-weight 700
         text-transform uppercase
-        @media screen and (max-width: 640px)
+        @media screen and (max-width 640px)
           font-size 0.95em
           &.hasimage,
           &.hasimage img
