@@ -19,13 +19,13 @@
           :src="$withBase($site.themeConfig.logo)"
           :alt="$siteTitle"
       /></template>
-
-      <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
-
-      <span ref="siteName" class="site-name" v-if="$siteTitle" :class="{ 'can-hide': $site.themeConfig.logo }">{{
-        $siteTitle
-      }}</span>
     </router-link>
+
+    <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
+
+    <span ref="siteName" class="site-name" v-if="$siteTitle" :class="{ 'can-hide': $site.themeConfig.logo }">{{
+      $siteTitle
+    }}</span>
 
     <div
       class="links"

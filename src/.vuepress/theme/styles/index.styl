@@ -41,6 +41,11 @@ body
   box-sizing border-box
   border-right 1px solid $borderColor
   overflow-y auto
+  @media screen and (prefers-color-scheme dark)
+    background-color rgba(0, 0, 0, .8)
+    border-color #444
+    .nav-links
+      border-bottom none
 
 @media screen and (prefers-color-scheme: dark)
   .navbar
@@ -173,7 +178,7 @@ th, td
   border 1px solid #dfe2e5
   padding .6em 1em
 
-.theme-container
+.global-layout
   &.sidebar-open
     .sidebar-mask
       display: block
@@ -188,7 +193,7 @@ th, td
 
 
 @media (min-width: ($MQMobile + 1px))
-  .theme-container.no-sidebar
+  .global-layout.no-sidebar
     .sidebar
       display none
 

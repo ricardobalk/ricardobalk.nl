@@ -56,11 +56,4 @@
           top calc(1rem - 2px)
       & > .sidebar-links
         padding 1rem 0
-
-  @media screen and (prefers-color-scheme: dark)
-    .sidebar
-      background-color rgba(0,0,0,.8);
-      border-color #444;
-      .nav-links
-        border-bottom none
 </style>
