@@ -1,51 +1,61 @@
 <template>
   <main class="home" aria-labelledby="main-title">
-    <Hero :heroText="data.heroText" :heroImage="data.heroImage" />
-    <About :polaroidImage="data.polaroidImage">
+    <HomeHero
+      :name="frontmatter.heroText[0]"
+      :occupation="frontmatter.heroText[1]"
+      :tagline="frontmatter.heroText[2]"
+    />
+    <About :polaroidImage="frontmatter.polaroidImage">
       <Content class="theme-default-content custom" />
     </About>
-    <Services :services="data.services.services || data.services" :title="data.services.title" />
+    <Services :services="frontmatter.services.services || frontmatter.services" :title="frontmatter.services.title" />
     <ProductAndProcess
-      :image="data.process.image"
-      :title="data.process.title"
-      :subtitle="data.process.subtitle"
-      :text="data.process.text"
+      :image="frontmatter.process.image"
+      :title="frontmatter.process.title"
+      :subtitle="frontmatter.process.subtitle"
+      :text="frontmatter.process.text"
     />
     <SuccessStories
-      :stories="data.successStories.stories || data.successStories"
-      :title="data.successStories.title"
-      :subtitle="data.successStories.subtitle"
+      :stories="successStories.stories || frontmatter.successStories"
+      :title="successStories.title"
+      :subtitle="successStories.subtitle"
     />
-    <Conclusion :title="data.nextMove.text[0]" :subtitle="data.nextMove.text[1]" :connect="data.nextMove.connect" />
+    <Conclusion :title="nextMove.text[0]" :subtitle="nextMove.text[1]" :connect="nextMove.connect" />
   </main>
 </template>
 
-<script>
-  import NavLink from "@theme/components/NavLink";
-  import Hero from "@theme/components/Home/Hero.vue";
+<script lang="ts">
+  import { Vue, Component } from "vue-property-decorator";
+  import NavLink from "@theme/components/NavLink.vue";
+  import HomeHero from "@theme/components/Home/Hero.vue";
   import About from "@theme/components/Home/About.vue";
-  import Services from "@theme/components/Home/Services";
-  import ProductAndProcess from "@theme/components/Home/ProductAndProcess";
-  import SuccessStories from "@theme/components/Home/SuccessStories";
-  import Conclusion from "@theme/components/Home/Conclusion";
+  import Services from "@theme/components/Home/Services.vue";
+  import ProductAndProcess from "@theme/components/Home/ProductAndProcess.vue";
+  import SuccessStories from "@theme/components/Home/SuccessStories.vue";
+  import Conclusion from "@theme/components/Home/Conclusion.vue";
 
-  export default {
-    components: {
-      Hero,
-      About,
-      Services,
-      ProductAndProcess,
-      SuccessStories,
-      Conclusion,
-      NavLink,
-    },
+  @Component({ components: { HomeHero, About, Services, ProductAndProcess, SuccessStories, Conclusion, NavLink } })
+  export default class Home extends Vue {
+    get frontmatter() {
+      return this.$frontmatter;
+    }
 
-    computed: {
-      data() {
-        return this.$page.frontmatter;
-      },
-    },
-  };
+    get services(): Object {
+      return this.frontmatter.services;
+    }
+
+    get process(): Object {
+      return this.frontmatter.process;
+    }
+
+    get successStories(): Object {
+      return this.frontmatter.successStories;
+    }
+
+    get nextMove(): Object {
+      return this.frontmatter.nextMove;
+    }
+  }
 </script>
 
 <style lang="stylus">

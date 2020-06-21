@@ -2,32 +2,27 @@
   <header class="hero" tabindex="0">
     <div class="grid-x valign-center">
       <div class="small-12 cell text-container text-center">
-        <h1 class="name">{{ heroText[0] }}</h1>
-        <h2 v-if="heroText[1] !== null" class="occupation">
-          {{ heroText[1] }}
+        <h1 class="name">{{ name }}</h1>
+        <h2 v-if="occupation" class="occupation">
+          {{ occupation }}
         </h2>
-        <h3 v-if="heroText[2] !== null" class="tagline">
-          {{ heroText[2] }}
+        <h3 v-if="tagline" class="tagline">
+          {{ tagline }}
         </h3>
       </div>
     </div>
   </header>
 </template>
 
-<script>
-  export default {
-    name: "Hero",
-    props: {
-      heroText: {
-        type: Array,
-        required: true,
-        default() {
-          return [];
-        },
-      },
-      heroImage: { type: Object, required: false },
-    },
-  };
+<script lang="ts">
+  import { Vue, Component, Prop } from "vue-property-decorator";
+
+  @Component({ name: "HomeHero" })
+  export default class HomeHero extends Vue {
+    @Prop({ required: true, default: "Ricardo Balk" }) private name!: string;
+    @Prop({ required: false }) private occupation!: string;
+    @Prop({ required: false }) private tagline!: string;
+  }
 </script>
 
 <style lang="stylus">
