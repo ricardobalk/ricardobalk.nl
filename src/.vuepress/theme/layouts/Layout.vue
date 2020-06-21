@@ -2,6 +2,8 @@
   <div class="theme-container" :class="pageClasses" @touchstart="onTouchStart" @touchend="onTouchEnd">
     <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
 
+    <Navbar @toggle-sidebar="toggleSidebar" />
+
     <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
       <slot name="sidebar-top" #top />
       <slot name="sidebar-bottom" #bottom />

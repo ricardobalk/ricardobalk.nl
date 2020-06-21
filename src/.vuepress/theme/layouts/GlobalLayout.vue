@@ -1,6 +1,5 @@
 <template>
   <div id="global-layout">
-    <Navbar />
     <component :is="layout" />
     <Footer :links="$site.themeConfig.footer.links" :class="this.$frontmatter.home ? 'home' : ''" />
   </div>
