@@ -2,7 +2,7 @@
 type: guide
 date: 2018-10-02 08:00:00 +00:00
 excerpt: "In this article, I will guide through the generation of Enterprise-grade PGP keys."
-category: "devops"
+category: "Linux"
 tags: ["pgp", "gpg", "encryption"]
 images:
   featured:

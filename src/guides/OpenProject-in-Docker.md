@@ -2,7 +2,7 @@
 type: guide
 date: 2018-11-03 09:00:00 +00:00
 excerpt: OpenProject is a freeware project management tool that comes with a Docker image. Learn how to set it up...
-category: devops
+category: "Linux"
 tags: [linux, docker, openproject, freeware]
 images:
   featured:

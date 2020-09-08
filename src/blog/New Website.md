@@ -1,7 +1,7 @@
 ---
 type: blogpost
 date: 2019-12-27 06:00:00 +00:00
-category: "front-end-development"
+category: "Software Development"
 tags: ["personal", "website"]
 lang: en
 images:
