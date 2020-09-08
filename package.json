@@ -38,7 +38,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/vue-fontawesome": "^0.1.8",
     "foundation-sites": "^6.6.0",
-    "jquery": "^3.5.0"
+    "jquery": "^3.5.0",
+    "vue": "^2.6.12"
   },
   "husky": {
     "hooks": {
