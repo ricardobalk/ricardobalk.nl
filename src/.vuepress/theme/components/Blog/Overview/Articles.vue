@@ -1,5 +1,6 @@
 <template>
   <div class="posts">
+    <ElementFilter />
     <div class="masonry-container">
       <div class="masonry-columns">
         <article
@@ -53,9 +54,14 @@
   import { faCalendarAlt, faChevronRight } from "@fortawesome/free-solid-svg-icons";
   import HumanReadableDate from "@theme/global-components/HumanReadableDate.vue";
   import languageSelection from "../../../mixins/languageSelection";
+  import ElementFilter from "@theme/components/ElementFilter.vue";
   import { PageOptions } from "vuepress-types";
 
-  @Component({ name: "Articles", components: { FontAwesomeIcon, HumanReadableDate }, mixins: [languageSelection] })
+  @Component({
+    name: "Articles",
+    components: { FontAwesomeIcon, HumanReadableDate, ElementFilter },
+    mixins: [languageSelection],
+  })
   export default class Articles extends Vue {
     @Prop({ required: true, default: {} }) private posts!: PageOptions;
     @Prop({ required: true, default: "" }) private assets!: string;

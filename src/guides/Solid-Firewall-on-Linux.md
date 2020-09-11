@@ -2,7 +2,7 @@
 type: guide
 date: 2018-10-30 10:00:00 +01:00
 excerpt: By default, Linux passes all network traffic (with some exceptions). Learn how to set-up a secure firewall with iptables.
-category: devops
+category: "Linux"
 images:
   featured:
      filename: "fire.webp"

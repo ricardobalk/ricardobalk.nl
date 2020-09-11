@@ -1,7 +1,7 @@
 ---
 type: blogpost
 date: 2020-05-07 20:00:00 +00:00
-category: "front-end-development"
+category: "News"
 tags: ["personal", "website"]
 images:
   featured:
