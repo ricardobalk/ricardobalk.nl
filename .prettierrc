@@ -1,5 +1,0 @@
-trailingComma: "es5"
-tabWidth: 2
-vueIndentScriptAndStyle: true
-printWidth: 120
-endOfLine: "lf"
