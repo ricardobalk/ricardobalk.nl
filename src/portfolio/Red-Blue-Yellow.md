@@ -6,8 +6,8 @@ category: Game Development
 tags: ["unity", "game development", "programming", "c-sharp"]
 images:
   featured:
-     filename: "red-blue-yellow.webp"
-     description: ""
+    filename: "red-blue-yellow.webp"
+    description: ""
 excerpt: An arcade-like game made in Unity, with C##.
 permalink: /portfolio/red-blue-yellow
 ---
@@ -15,7 +15,6 @@ permalink: /portfolio/red-blue-yellow
 # Red Blue Yellow
 
 Red Blue Yellow is an Unity (C#) game made by me and fellow students from my university during the minor 'Scripting for Designers' in 2015.
-
 
 <ClientOnly>
 <style type="text/css">.iframe-container {
@@ -48,7 +47,6 @@ Red Blue Yellow is an Unity (C#) game made by me and fellow students from my uni
 - Are you looking to play the game online? [Head over to this place](https://ricardobalk.keybase.pub/RedBlueYellow-WebGL/)
 - Are you looking to download and play the game on Windows? [Head over to the releases on GitHub](https://github.com/ricardobalk/RedBlueYellow/releases/latest)
 - Are you looking for the source code? [Head over to the GitHub Repository](https://github.com/ricardobalk/RedBlueYellow)
-
 
 ### People involved in this project
 

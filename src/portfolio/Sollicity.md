@@ -6,8 +6,8 @@ category: Front-end Development
 tags: ["webapp", "responsive", "redesign", "ux", "interaction"]
 images:
   featured:
-     filename: "sollicity-logo.webp"
-     description: "Sollicity Logo"
+    filename: "sollicity-logo.webp"
+    description: "Sollicity Logo"
 excerpt: I made an entire redesign of a web application.
 permalink: /portfolio/sollicity-webapp
 ---

@@ -14,5 +14,5 @@ The fonts' source files and build instructions are available in the [repository'
 
 ## Releases
 
-* [Latest release](../../releases/latest)
-* [All releases](../../releases)
+- [Latest release](../../releases/latest)
+- [All releases](../../releases)

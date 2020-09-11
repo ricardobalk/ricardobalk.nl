@@ -7,8 +7,8 @@ category: User Experience Design
 tags: ["usability", "ux"]
 images:
   featured:
-     filename: "vormkracht10-logo.webp"
-     description: "Vormkracht10 Logo"
+    filename: "vormkracht10-logo.webp"
+    description: "Vormkracht10 Logo"
 excerpt: As part of my graduation project, I did research on the usability of a web application.
 permalink: /portfolio/vormkracht10-ux
 ---
@@ -16,4 +16,3 @@ permalink: /portfolio/vormkracht10-ux
 # UX Research & Concept Development
 
 As part of my graduation project, I did research on the usability of a web application.
-

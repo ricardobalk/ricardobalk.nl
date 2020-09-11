@@ -5,11 +5,11 @@ excerpt: By default, Linux passes all network traffic (with some exceptions). Le
 category: "Linux"
 images:
   featured:
-     filename: "fire.webp"
-     description: "Fire"
+    filename: "fire.webp"
+    description: "Fire"
   hero:
-     filename: "fire.webp"
-     description: "Fire"
+    filename: "fire.webp"
+    description: "Fire"
 permalink: /guides/solid-firewall-linux
 ---
 
@@ -27,10 +27,10 @@ This article gives a few examples of solid firewall setups which could help devo
 
 The following example shows a basic client side setup which...
 
-* Allows incoming local loop-back (`lo`) traffic (e.g. connections to `localhost`)
-* Allows outgoing traffic.
-* Allows incoming traffic of which is a response to outgoing traffic.
-* Drops all other, unspecified traffic.
+- Allows incoming local loop-back (`lo`) traffic (e.g. connections to `localhost`)
+- Allows outgoing traffic.
+- Allows incoming traffic of which is a response to outgoing traffic.
+- Drops all other, unspecified traffic.
 
 > **WARNING: Do not use the following set-up on a server.**
 >
@@ -56,7 +56,7 @@ iptables-save > /etc/iptables/basic.v4
 
 > **NOTE: iptables commands should be used as superuser.**
 >
-> So when you're a non-root user, you need to write `sudo iptables ` instead of `iptables`.
+> So when you're a non-root user, you need to write `sudo iptables` instead of `iptables`.
 
 To restore the configuration, use `iptables-restore < /etc/iptables/basic.v4`.
 
@@ -68,11 +68,11 @@ You might want to run an HTTP/HTTP(S) server, visible to the outside world.
 
 The following example shows a basic server side setup which...
 
-* Allows incoming local loop-back (`lo`) traffic (e.g. connections to `localhost`)
-* Allows outgoing traffic.
-* Allows incoming traffic of which is a response to outgoing traffic.
-* **Allows incoming traffic to ports `80` and `443`.**
-* Drops all other, unspecified traffic.
+- Allows incoming local loop-back (`lo`) traffic (e.g. connections to `localhost`)
+- Allows outgoing traffic.
+- Allows incoming traffic of which is a response to outgoing traffic.
+- **Allows incoming traffic to ports `80` and `443`.**
+- Drops all other, unspecified traffic.
 
 ```sh
 ## Reset standard policies and clear the firewall rules

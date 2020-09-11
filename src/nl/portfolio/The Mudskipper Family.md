@@ -5,24 +5,15 @@
   "shortTitle": "Sound Artist & Engineer",
   "client": "HAN University of Applied Sciences",
   "category": "Sound",
-  "tags": [
-    "UDK",
-    "Game",
-    "HAN"
-  ],
-  "images": {
-    "featured": {
-      "filename": "feat-the-mudskipper-family.webp",
-      "description": "The Mudskipper Family"
+  "tags": ["UDK", "Game", "HAN"],
+  "images":
+    {
+      "featured": { "filename": "feat-the-mudskipper-family.webp", "description": "The Mudskipper Family" },
+      "hero": { "filename": "hero-the-mudskipper-family.webp", "description": "Poster van The Mudskipper Family" },
     },
-   "hero": {
-      "filename": "hero-the-mudskipper-family.webp",
-      "description": "Poster van The Mudskipper Family"
-    }
-  },
   "excerpt": "Spannende game over het leven op Curaçao",
   "permalink": "/portfolio/the-mudskipper-family",
-  "lang": "nl"
+  "lang": "nl",
 }
 ---
 
@@ -50,8 +41,6 @@ Aan The Mudskipper Family werkten 40 studenten, verdeeld over 5 subteams:
 
 **Programming**: Verantwoordelijk voor de gamelogica, het renderen en bundelen.
 
-
-
 ## Foley Sounds
 
 Geluid is altijd al erg underrated is in zowel de film- en gameindustrie. Toch versterken zij de ervaring, indien de geluiden passend zijn. Het omgekeerde is ook mogelijk. Een verkeerd geluid kan afleidend zijn en afbreuk doen aan de kwaliteit van de film of game.
@@ -69,8 +58,6 @@ Samen met het programming-team hebben we de geluiden toegevoegd aan onze game, z
 ## Nevenwerkzaamheden
 
 Naast de Foley Sounds was ik samen met Joep Willemsen verantwoordelijk voor het opnemen van de voice-over van de introductievideo. Ook heb ik geholpen in het nabewerken van de muziek van de game en het regelen van het geluid tijdens de presentatie.
-
-
 
 ## Presentatie van de game
 

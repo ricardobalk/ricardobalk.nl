@@ -7,11 +7,11 @@ category: Sound Design
 tags: ["sound design", "foley sound", "game", "mudskipper"]
 images:
   featured:
-     filename: "feat-the-mudskipper-family.webp"
-     description: ""
+    filename: "feat-the-mudskipper-family.webp"
+    description: ""
   hero:
-     filename: "hero-the-mudskipper-family.webp"
-     description: ""
+    filename: "hero-the-mudskipper-family.webp"
+    description: ""
 excerpt: I created foley sounds for The Mudskipper Family.
 permalink: /portfolio/the-mudskipper-family
 ---
@@ -20,7 +20,7 @@ permalink: /portfolio/the-mudskipper-family
 
 <style>.big-hero.hasimage { background-position: left top, top center !important; }</style>
 
-I've been a Sound Engineer and Foley Sound Artist for The Mudskipper Family, a game about a family of fishes living on the island of Curaçao. 
+I've been a Sound Engineer and Foley Sound Artist for The Mudskipper Family, a game about a family of fishes living on the island of Curaçao.
 
 <iframe height="600" src="https://www.youtube-nocookie.com/embed/8KqmrHaaHi8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="width: 100%; margin-bottom: 2em;" allowfullscreen></iframe>
 
@@ -49,7 +49,6 @@ Besides creating Foley Sounds I was responsible for recording the voice-over of 
 Below is a video of our game presentation:
 
 <iframe height="600" src="https://www.youtube-nocookie.com/embed/iOck5YNdgmg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="width: 100%; margin-bottom: 2em;" allowfullscreen></iframe>
-
 
 ## Further Watching
 

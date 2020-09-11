@@ -6,11 +6,11 @@ category: "Linux"
 tags: ["pgp", "gpg", "encryption"]
 images:
   featured:
-     filename: "terminal-lockpad.webp"
-     description: "A lockpad shown on a terminal-style computer background"
+    filename: "terminal-lockpad.webp"
+    description: "A lockpad shown on a terminal-style computer background"
   hero:
-     filename: "terminal-lockpad.webp"
-     description: "A lockpad shown on a terminal-style computer background"
+    filename: "terminal-lockpad.webp"
+    description: "A lockpad shown on a terminal-style computer background"
 permalink: /guides/generating-enterprise-grade-pgp-keys
 ---
 
@@ -18,14 +18,13 @@ permalink: /guides/generating-enterprise-grade-pgp-keys
 
 In this article, I will guide through the generation of Enterprise-grade PGP keys.
 
-
 Since companies within the European Union are obliged to conform to the General Data Protection Regulation (GDPR), I am getting messages from many people and companies about the best way to create enterprise grade PGP-keys.
 
 ### What is PGP?
 
 For those that are not familiar with PGP yet, I’ll explain in short what PGP is.
 
-PGP is an abbreviation of ‘Pretty Good Privacy’, a piece of encryption software originally written by Phil Zimmerman in 1991\. It is used to encrypt/sign files and e-mail messages, and is used extensively by software developers and (*nix) system administrators.
+PGP is an abbreviation of ‘Pretty Good Privacy’, a piece of encryption software originally written by Phil Zimmerman in 1991\. It is used to encrypt/sign files and e-mail messages, and is used extensively by software developers and (\*nix) system administrators.
 
 ### Keys, subkeys and their usage flags
 
@@ -63,7 +62,6 @@ The E means encrypt, and is used by keys that are capable of decryption of encry
 The A means authenticate, and is used to function as authentication on systems, like using it to log on to a server, the same way as an SSH key would do.
 
 I personally like to refer to a key with such subkeys as _a full-featured ‘CSEA-key’_.
-
 
 ### Guide
 
@@ -131,8 +129,8 @@ Your selection? **11**
 Choose `11` for the master key pair, which will generate a modern, elliptic curve key pair. You will be able to set your own capabilities (that means, choosing the usage flags).
 
 ```
-Possible actions for a ECDSA/EdDSA key: Sign Certify Authenticate 
-**Current allowed actions: Sign Certify** 
+Possible actions for a ECDSA/EdDSA key: Sign Certify Authenticate
+**Current allowed actions: Sign Certify**
 
    (S) Toggle the sign capability
    (A) Toggle the authenticate capability
@@ -144,8 +142,8 @@ Now, gnupg _suggests_ you to use both **Sign** and **Certify** capabilities for 
 Toggle the Signature flag off by hitting the letter **S** and **return**. Now, gnupg should come up with a new overview.
 
 ```
-Possible actions for a ECDSA/EdDSA key: Sign Certify Authenticate 
-**Current allowed actions: Certify** 
+Possible actions for a ECDSA/EdDSA key: Sign Certify Authenticate
+**Current allowed actions: Certify**
 
    (S) Toggle the sign capability
    (A) Toggle the authenticate capability
@@ -196,7 +194,7 @@ If it’s correct, just hit y and return. The next step will be adding a user ID
 GnuPG needs to construct a user ID to identify your key.
 
 Real name: John Doe
-Email address: 
+Email address:
 Comment: example.com/john-doe
 You selected this USER-ID:
     "John Doe (example.com/john-doe)"
@@ -246,7 +244,7 @@ There is NO WARRANTY, to the extent permitted by law.
 Secret key is available.
 
 sec  ed25519/B1981EAEF087FC6A
-     created: 2018-08-01  expires: 2068-07-19  usage: C   
+     created: 2018-08-01  expires: 2068-07-19  usage: C
      trust: ultimate      validity: ultimate
 [ultimate] (1). John Doe (example.com/john-doe)
 ```
@@ -254,7 +252,7 @@ sec  ed25519/B1981EAEF087FC6A
 To add a new subkey, we’d use the command `addkey`.
 
 ```
-gpg> **addkey** 
+gpg> **addkey**
 Please select what kind of key you want:
    (3) DSA (sign only)
    (4) RSA (sign only)
@@ -306,7 +304,7 @@ Please specify how long the key should be valid.
       w = key expires in n weeks
       m = key expires in n months
       y = key expires in n years
-Key is valid for? (0) **5y** 
+Key is valid for? (0) **5y**
 Key expires at Mon Jul 31 12:00:00 2023 UTC
 Is this correct? (y/N) **y**
 Really create? (y/N) **y**
@@ -320,7 +318,7 @@ gnupg should now display the key with the new subkey:
 
 ```
 sec  ed25519/B1981EAEF087FC6A
-     created: 2018-08-01  expires: 2068-07-19  usage: C   
+     created: 2018-08-01  expires: 2068-07-19  usage: C
      trust: ultimate      validity: ultimate
 **ssb  ed25519/8E72B8A9808EFF52
      created: 2018-08-01  expires: 2023-07-31  usage: S** [ultimate] (1). John Doe (example.com/john-doe)
@@ -368,12 +366,12 @@ When that’s done, gpg should show you a key with an encryption subkey as well�
 
 ```
 sec  ed25519/B1981EAEF087FC6A
-     created: 2018-08-01  expires: 2068-07-19  usage: C   
+     created: 2018-08-01  expires: 2068-07-19  usage: C
      trust: ultimate      validity: ultimate
 ssb  ed25519/8E72B8A9808EFF52
-     created: 2018-08-01  expires: 2023-07-31  usage: S   
+     created: 2018-08-01  expires: 2023-07-31  usage: S
 **ssb  cv25519/2073A0C9CB78B17B
-     created: 2018-08-01  expires: 2023-07-31  usage: E**   
+     created: 2018-08-01  expires: 2023-07-31  usage: E**
 [ultimate] (1). John Doe (example.com/john-doe)
 ```
 
@@ -398,8 +396,8 @@ Your selection? **11**
 … turn **off** the **Sign** flag for this key
 
 ```
-Possible actions for a ECDSA/EdDSA key: Sign Authenticate 
-Current allowed actions: **Sign** 
+Possible actions for a ECDSA/EdDSA key: Sign Authenticate
+Current allowed actions: **Sign**
 
    **(S) Toggle the sign capability**
    (A) Toggle the authenticate capability
@@ -411,8 +409,8 @@ Your selection? **S**
 … and turn **on** the **Authentication** flag instead
 
 ```
-Possible actions for a ECDSA/EdDSA key: Sign Authenticate 
-Current allowed actions: 
+Possible actions for a ECDSA/EdDSA key: Sign Authenticate
+Current allowed actions:
 
    (S) Toggle the sign capability
    **(A) Toggle the authenticate capability**
@@ -420,7 +418,7 @@ Current allowed actions:
 
 Your selection? **A**
 
-Possible actions for a ECDSA/EdDSA key: Sign Authenticate 
+Possible actions for a ECDSA/EdDSA key: Sign Authenticate
 Current allowed actions: **Authenticate**
 
    (S) Toggle the sign capability
@@ -466,7 +464,7 @@ sec  ed25519/B1981EAEF087FC6A
 ssb  cv25519/2073A0C9CB78B17B
      created: 2018-08-01  expires: 2023-07-31  usage: E
 ssb  ed25519/A59C74CF220EF16D
-     created: 2018-08-01  expires: 2023-07-31  usage: A** 
+     created: 2018-08-01  expires: 2023-07-31  usage: A**
 [ultimate] (1). John Doe (example.com/john-doe)
 
 gpg> **save**

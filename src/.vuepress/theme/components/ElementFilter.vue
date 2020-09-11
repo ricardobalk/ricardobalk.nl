@@ -26,75 +26,82 @@
   .category-filter
     margin 0 auto 1em
     padding 0 1.15em
-    font-size .9em
-    font-weight 600
-    line-height .9em
     color #666
+    font-weight 600
+    font-size 0.9em
+    line-height 0.9em
 
     span
-      margin-right .5em
+      margin-right 0.5em
 
     form, label
       cursor pointer
 
     form
       display flex
+
       span
         cursor default
 
     label
-      margin-left .33em
-      margin-right .5em
+      margin-right 0.5em
+      margin-left 0.33em
 
   .container
-  	display block
-  	position relative
-  	padding-left 20px
-  	margin-bottom 12px
-  	cursor pointer
-  	user-select none
-  	input
-  		position absolute
-  		opacity 0
-  		cursor pointer
-  		height 0
-  		width 0
-  		&:checked
-  			& ~ .checkmark
-  				background-color #2196F3
-  				&:after
-  					display block
+    position relative
+    display block
+    margin-bottom 12px
+    padding-left 20px
+    cursor pointer
+    user-select none
 
-  	&:hover
-  		input
-  			& ~ .checkmark
-  				//background-color #ccc
-  	.checkmark
-  		&:after
-  			top 3px
-  			left 3px
-  			width 4px
-  			height 4px
-  			border-radius 50%
-  			background white
+    input
+      position absolute
+      width 0
+      height 0
+      opacity 0
+      cursor pointer
+
+      &:checked
+        & ~ .checkmark
+          background-color #2196F3
+
+          &:after
+            display block
+
+    &:hover
+      input
+        & ~ .checkmark
+          // background-color #ccc
+
+    .checkmark
+      &:after
+        top 3px
+        left 3px
+        width 4px
+        height 4px
+        border-radius 50%
+        background white
+
   .checkmark
-  	position absolute
-  	top 0
-  	left 0
-  	height 10px
-  	width 10px
-  	background-color #eee
-  	border-radius 50%
-  	&:after
-  		content ""
-  		position absolute
-  		display none
+    position absolute
+    top 0
+    left 0
+    width 10px
+    height 10px
+    border-radius 50%
+    background-color #eee
 
+    &:after
+      position absolute
+      display none
+      content ''
 
   @media screen and (prefers-color-scheme dark)
     .container
       .checkmark
         background-color #252525
+
       input
         &:checked ~ .checkmark
           background-color #666

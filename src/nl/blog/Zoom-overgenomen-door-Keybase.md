@@ -6,8 +6,8 @@ tags: ["personal", "website"]
 lang: nl
 images:
   featured:
-     filename: "zoom-and-keybase.webp"
-     description: "Het logo van Zoom en Keybase op een doorzichtige achtergrond"
+    filename: "zoom-and-keybase.webp"
+    description: "Het logo van Zoom en Keybase op een doorzichtige achtergrond"
 permalink: /blog/keybase-overgenomen-door-zoom
 ---
 
@@ -43,22 +43,15 @@ Juist omdat gebruikers van Zoom afhankelijk zijn van een centrale server, is end
 
 Nu Keybase in handen is van Zoom, betekent het dat Zoom de touwtjes in handen heeft. Hoewel er op de Keybase chat hier en daar wat ophef over is, is mijn persoonlijke verwachting dat de overname leidt tot iets goeds. Mijn verwachting is namelijk dat Zoom met de kennis van de Keybase in ieder geval op het gebied van cybersecurity een stuk beter wordt. Daarnaast verwacht ik dat Zoom meer richting open-source software gaat en dat de populariteit van Keybase toeneemt. Wat de toekomst ook brengt, ik blijf het in ieder geval op de voet volgen.
 
-
-
-
-
 ## Nederlands Keybase-team
 
 Heb je zin om te discussiëren over dit artikel? Meld je dan aan op Keybase en neem deel aan de chat op het [Nederlandse team (@europe.netherlands)][7], dat ik ongeveer een jaar geleden opgericht heb. Een berichtje achterlaten onder dit artikel kan natuurlijk ook.
 
-
-
 [0]: /blog/keybase-joins-zoom "Engelse versie van dit artikel"
 [1]: https://keybase.io/chris "Chris Coyne, medeoprichter van Keybase"
-[2]: https://keybase.io/blog/keybase-joins-zoom	"Keybase Blog: Keybase joins Zoom"
+[2]: https://keybase.io/blog/keybase-joins-zoom "Keybase Blog: Keybase joins Zoom"
 [3]: https://www.who.int/emergencies/diseases/novel-coronavirus-2019 "World Health Organization: Coronavirus disease 2019"
-[4]: https://jitsi.org/jitsi-meet/	"Jitsi Meet: Secure, fully featured, and completely free video conferencing"
-[5]: https://book.keybase.io/security#everything-you-store-or-share-on-keybase-is-end-to-end-encrypted	"Keybase Book: Security"
-[6]: https://www.nccgroup.com/us/our-research/keybase-protocol-security-review/	"NCC Group: Keybase Protocol Security Review"
-[7]: https://keybase.io/team/europe.netherlands	"Nederlands team op Keybase"
-
+[4]: https://jitsi.org/jitsi-meet/ "Jitsi Meet: Secure, fully featured, and completely free video conferencing"
+[5]: https://book.keybase.io/security#everything-you-store-or-share-on-keybase-is-end-to-end-encrypted "Keybase Book: Security"
+[6]: https://www.nccgroup.com/us/our-research/keybase-protocol-security-review/ "NCC Group: Keybase Protocol Security Review"
+[7]: https://keybase.io/team/europe.netherlands "Nederlands team op Keybase"

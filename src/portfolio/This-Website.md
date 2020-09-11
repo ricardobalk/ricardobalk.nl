@@ -7,8 +7,8 @@ category: Front-end Development
 tags: ["personal", "website", "job", "blog", "portfolio"]
 images:
   featured:
-     filename: "website-ricardobalk.webp"
-     description: "Website of Ricardo Balk"
+    filename: "website-ricardobalk.webp"
+    description: "Website of Ricardo Balk"
 permalink: "/portfolio/my-website"
 ---
 
@@ -38,7 +38,7 @@ After the ideation phase was finished, a rough design of the project was determi
 
 The visual designs were created with the 12 coloms grid in mind. The next thing to do was to transform my visual designs to working code fit it to the system I wanted to use.
 
-But remember, it is *an ongoing project*, so I will keep working on it and it will never be 'finished'.
+But remember, it is _an ongoing project_, so I will keep working on it and it will never be 'finished'.
 
 ## Why did you build it on your own and didn't you use a blogging platform like WordPress?
 

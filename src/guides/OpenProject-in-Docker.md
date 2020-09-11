@@ -6,14 +6,14 @@ category: "Linux"
 tags: [linux, docker, openproject, freeware]
 images:
   featured:
-     filename: "gantt-chart.webp"
-     description: "A global project planning shown as a GANTT chart"
+    filename: "gantt-chart.webp"
+    description: "A global project planning shown as a GANTT chart"
 permalink: /guides/openproject-in-docker
 ---
 
 # Running OpenProject Community Edition in Docker
 
-OpenProject is an open source web-based project administration tool and Docker is a tool for downloading software *images* for running them inside *containers*. Those containers could be set up very quickly without the hassle that comes with the installation of regular, native applications (e.g. setting the right permissions, bloat the file system with lots of files everywhere, messing up your configuration).
+OpenProject is an open source web-based project administration tool and Docker is a tool for downloading software _images_ for running them inside _containers_. Those containers could be set up very quickly without the hassle that comes with the installation of regular, native applications (e.g. setting the right permissions, bloat the file system with lots of files everywhere, messing up your configuration).
 
 Docker also makes it straightforward to completely remove images and containers, leaving no garbage on your system after removal. And, as an extra, Docker also allows to run multiple instances of the same image(s) simultaneously.
 
@@ -23,9 +23,9 @@ This article guides you through installing OpenProject in Docker in an easy and 
 
 First thing you'll need to do is to install Docker
 
-````sh
+```sh
 sudo apt install docker.io
-````
+```
 
 Then, add your current user to the `docker` group
 
@@ -35,9 +35,9 @@ sudo gpasswd -a $USER docker && newgrp docker
 
 After that, try to run the `hello-world` docker-image to test if all permissions are set up correctly and your Docker installation works
 
-````sh
+```sh
 docker run hello-world
-````
+```
 
 Docker should begin downloading the `hello-world` image and run it immediately, and shows the following output:
 
@@ -58,7 +58,7 @@ Nice, it works.
 sudo mkdir -p /var/lib/openproject/{pgdata,logs,static}
 ```
 
-Under *nix systems, permissions are king.
+Under \*nix systems, permissions are king.
 
 For a safe environment, it is recommended to change the permissions to make sure that only privileged users and applications have access to the files. The following commands will lock down access to your current user and users that are part of the `docker` group.
 
@@ -82,7 +82,7 @@ drwxrwx---  2 geekyb docker 4096 aug 16 15:01 pgdata
 drwxrwx---  2 geekyb docker 4096 aug 16 15:01 static
 ```
 
-Where it shows with that the directory`/var/lib/openproject` and the underlying ones are owned by you (user `geekyb` in this example) and the `docker` group and all permissions are set up correctly (`rwxrwx---`). 
+Where it shows with that the directory`/var/lib/openproject` and the underlying ones are owned by you (user `geekyb` in this example) and the `docker` group and all permissions are set up correctly (`rwxrwx---`).
 
 The parent directory `..` is owned by the `root` user.
 
@@ -92,9 +92,9 @@ Now that the directories are created with the correct permissions, it is time to
 
 The first environmental variable is a secret key base. That could be chosen by hand, but is much more secure to generate one programmatically by using openssl.
 
-````sh
+```sh
 printf 'SECRET_KEY_BASE=%16s\n' $(openssl rand -hex 16) >> /var/lib/openproject/.env
-````
+```
 
 That's all you need to do to get it working.
 
@@ -104,9 +104,9 @@ If you want to send outgoing e-mail from your OpenProject installation, you shou
 
 Open the `.env` file, for example, by using nano...
 
-````sh
+```sh
 nano /var/lib/openproject/.env
-````
+```
 
 Add the following lines after `SECRET_KEY_BASE`...
 
@@ -161,8 +161,6 @@ WantedBy=multi-user.target
 ```sh
 sudo systemctl enable openproject.service
 ```
-
-
 
 ## Next Steps...
 

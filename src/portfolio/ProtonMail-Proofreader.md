@@ -8,8 +8,8 @@ category: Technical Translations
 tags: ["protonmail", "translations", "template"]
 images:
   featured:
-     filename: "protonmail-proofreader.webp"
-     description: ""
+    filename: "protonmail-proofreader.webp"
+    description: ""
 permalink: /portfolio/protonmail-proofreading
 ---
 

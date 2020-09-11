@@ -15,7 +15,7 @@ I am running my site on a Tor Hidden Service, commonly called the 'dark web'. Mo
 
 Although I **never** keep access logs on my webserver, I can't prove it. Hosting a Tor Hidden Service guarantees that incoming and outgoing traffic is encrypted and anonymized. The IP addresses of both ends (server and visitor) stay unknown to each other. This guarantees that I won't keep access logs, as the information is not even available to me.
 
->  Note: I keep error logs on my server for non 4xx-status codes &mdash; e.g. when something went wrong internally.
+> Note: I keep error logs on my server for non 4xx-status codes &mdash; e.g. when something went wrong internally.
 
 ---
 

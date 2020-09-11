@@ -5,11 +5,11 @@ excerpt: This article explains how to make Keybase automatically log out when a 
 category: "Linux"
 images:
   featured:
-     filename: "sleeping-keybase-icon.webp"
-     description: "Keybase emoticon with closed eyelids"
+    filename: "sleeping-keybase-icon.webp"
+    description: "Keybase emoticon with closed eyelids"
   hero:
-     filename: "sleeping-keybase-icon.webp"
-     description: "Keybase emoticon with closed eyelids"
+    filename: "sleeping-keybase-icon.webp"
+    description: "Keybase emoticon with closed eyelids"
 permalink: /guides/keybase-automatic-logout
 ---
 

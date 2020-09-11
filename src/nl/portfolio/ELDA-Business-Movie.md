@@ -7,11 +7,11 @@ category: Fotografie & Film
 tags: ["elda", "bedrijfsvideo", "dutch"]
 images:
   featured:
-     filename: "goat.webp"
-     description: "Goat"
+    filename: "goat.webp"
+    description: "Goat"
   hero:
-     filename: "goat.webp"
-     description: "Goat"
+    filename: "goat.webp"
+    description: "Goat"
 excerpt: Ik heb een bedrijfsvideo gemaakt voor ELDA.
 permalink: /portfolio/ELDA-business-movie
 lang: nl

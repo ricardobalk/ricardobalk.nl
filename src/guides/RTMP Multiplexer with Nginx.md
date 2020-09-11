@@ -5,15 +5,15 @@ excerpt: Learn how to to create an RTMP Multiplexer with nginx so that you're ab
 category: "Multimedia"
 tags: ["linux", "nginx", "rtmp", "livestreaming", "multiplexer"]
 references:
- - https://www.vultr.com/docs/setup-nginx-rtmp-on-ubuntu-14-04 
- - https://obsproject.com/forum/resources/how-to-set-up-your-own-private-rtmp-server-using-nginx.50/
+  - https://www.vultr.com/docs/setup-nginx-rtmp-on-ubuntu-14-04
+  - https://obsproject.com/forum/resources/how-to-set-up-your-own-private-rtmp-server-using-nginx.50/
 images:
   featured:
-     filename: "live.webp"
-     description: "Sign showing that a (broadcast) transmission went live"
+    filename: "live.webp"
+    description: "Sign showing that a (broadcast) transmission went live"
   hero:
-     filename: "live.webp"
-     description: "Sign showing that a (broadcast) transmission went live"
+    filename: "live.webp"
+    description: "Sign showing that a (broadcast) transmission went live"
 permalink: /guides/rtmp-multiplexer-nginx
 ---
 
@@ -26,7 +26,6 @@ You might already even been streaming to a particular platform (e.g. YouTube, Tw
 With multiplexing, you send your stream to one device, which, in turn, will send the stream to multiple destinations (live streaming platforms) simultaneously. It only takes an online device with Linux, e.g. a VPS at DigitalOcean or a Raspberry Pi.
 
 Install some stuff, configure some stuff, go live. Here's how to do it.
-
 
 ## Step 1: Create a working directory
 
@@ -102,7 +101,7 @@ sudo update-rc.d nginx defaults
 sudo service nginx start
 ```
 
-Use `hostname -I`  to figure out the server's IP address. Check if the server is available by navigating to `http://<server ip>/`
+Use `hostname -I` to figure out the server's IP address. Check if the server is available by navigating to `http://<server ip>/`
 
 ```sh
 sudo service nginx stop
@@ -132,7 +131,7 @@ rtmp {
 
 - Send RTMP data to `rtmp://<your server ip>/live`, stream key `test`, e.g. with OBS or Wirecast.
 
-- Use a RTMP capable player like VLC to connect to `rtmp://<your server ip>/live`, stream key is `test` 
+- Use a RTMP capable player like VLC to connect to `rtmp://<your server ip>/live`, stream key is `test`
 - It should work.
 
 ## Step 10: Pushing incoming RTMP to other servers (e.g. Twitch, YouTube, ...)
@@ -173,8 +172,6 @@ rtmp {
         }
 }
 ```
-
-
 
 ## Step 12: Add a firewall
 

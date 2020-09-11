@@ -6,11 +6,11 @@ tags: ["personal", "website"]
 lang: nl
 images:
   featured:
-     filename: "new-website-featured.webp"
-     description: "Computerscherm dat de layout van een website en de bijbehorende code visualiseert"
+    filename: "new-website-featured.webp"
+    description: "Computerscherm dat de layout van een website en de bijbehorende code visualiseert"
   hero:
-     filename: "new-website-hero.webp"
-     description: "Computerscherm dat de layout van een website en de bijbehorende code visualiseert"
+    filename: "new-website-hero.webp"
+    description: "Computerscherm dat de layout van een website en de bijbehorende code visualiseert"
 permalink: /blog/nieuwe-website
 ---
 
@@ -36,8 +36,6 @@ Op het overzicht van mijn blog en portfolio maak ik gebruik van een Masonry-layo
 
 Misschien was het je al opgevallen, het is nu mogelijk om mijn website zowel in Nederlands als Engels te bekijken. De content moet ik nog schrijven / aanvullen maar het begin is er.
 
-
-
 ## Toekomstige verbeteringen
 
 Er zijn een aantal toekomstige verbeteringen die op mijn to-do-lijstje staan.
@@ -53,7 +51,5 @@ Er zijn een aantal toekomstige verbeteringen die op mijn to-do-lijstje staan.
 - **Commentaarsectie** &mdash; De mogelijkheid om te reageren op de blogposts ontbreekt nog. In eerste instantie denk ik aan het gebruiken van Disqus, wellicht kan ik later mijn eigen systeem bouwen.
 
 - **Contactformulier** &mdash; Ook een contactformulier ontbreekt nog.
-
-
 
 Benieuwd naar de status van deze (en andere) verbeteringen? Check de [issues op GitHub](https://github.com/ricardobalk/www/issues)!

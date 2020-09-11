@@ -6,11 +6,11 @@ tags: ["jitsi", "meet", "video communication"]
 lang: nl
 images:
   featured:
-     filename: "jitsi-meet-logo.webp"
-     description: "Jitsi Meet Logo"
+    filename: "jitsi-meet-logo.webp"
+    description: "Jitsi Meet Logo"
   hero:
-     filename: "video-conference.webp"
-     description: "Computerscherm dat een online vergadering visualiseert"
+    filename: "video-conference.webp"
+    description: "Computerscherm dat een online vergadering visualiseert"
 permalink: /blog/jitsi-meet-instance
 ---
 
@@ -31,8 +31,6 @@ Binnenkort publiceer ik een handleiding waarmee je zelf een Jitsi Meet instance 
 
 Geef je dit liever uit handen? Ik ben bereid om te helpen met het opzetten van een Jitsi Meet instance voor jouw bedrijf of vereniging, zodat je dit op je eigen domein kunt gebruiken. [Bel me even][2] of [stuur me een e-mail][3] om de mogelijkheden te bespreken.
 
-
-
-[1]: /guide/jitsi-meet	"Jitsi Meet instellen op een DigitalOcean VPS"
-[2]: tel:+31243010005	"Telefonisch contact opnemen met Ricardo"
+[1]: /guide/jitsi-meet "Jitsi Meet instellen op een DigitalOcean VPS"
+[2]: tel:+31243010005 "Telefonisch contact opnemen met Ricardo"
 [3]: mailto:business.inquiries@ricardobalk.nl "Per e-mail contact opnemen met Ricardo"

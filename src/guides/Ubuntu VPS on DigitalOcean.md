@@ -6,11 +6,11 @@ category: "Linux"
 tags: [devops, linux, server, servers, digitalocean]
 images:
   featured:
-     filename: "ubuntu-on-digitalocean.webp"
-     description: "How to install Ubuntu on DigitalOcean"
+    filename: "ubuntu-on-digitalocean.webp"
+    description: "How to install Ubuntu on DigitalOcean"
   hero:
-     filename: "ubuntu-on-digitalocean.webp"
-     description: "How to install Ubuntu on DigitalOcean"
+    filename: "ubuntu-on-digitalocean.webp"
+    description: "How to install Ubuntu on DigitalOcean"
 permalink: /guides/digitalocean-ubuntu-vps
 ---
 
@@ -19,8 +19,6 @@ permalink: /guides/digitalocean-ubuntu-vps
 In this guide, you'll learn how to set up a VPS server from scratch on DigitalOcean's platform, which is equipped with Apache, HTTP/2 support, PHP 7.2, MariaDB, SSL certificates and ModSecurity (OWASP rules).
 
 <span style="color: maroon; font-weight: bold;">Beware: This is a super comprehensive guide.</span>
-
-
 
 A while ago, my bare-metal server died. After running a backup server on a Raspberry Pi, I decided to rent a VPS at DigitalOcean and migrate my old stuff there. Therefore, I wrote this tutorial both to help myself and others to set up a new Ubuntu VPS at DigitalOcean.
 
@@ -43,7 +41,7 @@ You'll be asked to change the root password upon your first login. Change the pa
 > Notes:
 >
 > 1. Don't make your life hard by choosing a password like `3uor2jofn2oi45r`. A secure password is actually called a pass**phrase** and consists of multiple, randomly chosen words. (e.g. `eastbound sibling banana survey`)
-> 2. If you already have added one or multiple public SSH key(s) to your account, you won't  be asked to change your password. Proceed to the next step.
+> 2. If you already have added one or multiple public SSH key(s) to your account, you won't be asked to change your password. Proceed to the next step.
 
 ## 3 Enhance the overall server security
 
@@ -53,9 +51,9 @@ To make your server more secure, it is advised to change a few default things.
 
 The default listening port for SSH is `22`. It is advised to change this, because it is a well known port that gets scanned by malicious parties, which will try to log in to your system.
 
-Edit the file `/etc/ssh/sshd_config`, e.g. by using nano: `nano /etc/ssh/sshd_config`. 
+Edit the file `/etc/ssh/sshd_config`, e.g. by using nano: `nano /etc/ssh/sshd_config`.
 
-* In `/etc/sshd/sshd_config`, change the following lines:
+- In `/etc/sshd/sshd_config`, change the following lines:
 
 ```
 Port 22
@@ -69,11 +67,11 @@ Port 60022
 
 > Note: Any port between 1023-65535 will work, as long as it is not in use by another application. Remember this port. Write it down somewhere.
 
-* Save the configuration file (`Control-X` followed by `Y` if you're using `nano`).
+- Save the configuration file (`Control-X` followed by `Y` if you're using `nano`).
 
-* Restart the SSH daemon: `service sshd restart`.
+- Restart the SSH daemon: `service sshd restart`.
 
-* Open an extra terminal window and try to connect to your server, using the new port.
+- Open an extra terminal window and try to connect to your server, using the new port.
 
   > Note:
   >
@@ -85,16 +83,16 @@ Port 60022
 
 Public Key Authentication is a well-known and secure way of authentication and is preferred for the following reasons:
 
- 1. It is easier than remembering a password. &ndash; You're only using a "certificate file" to authenticate and log in.
- 2. You could create and use as many public keys as you want. &ndash; One for your computer at home, one for the computer at work, one for your notebook, one for your smart phone.
- 3. Certificates are cryptographically more secure. &ndash; A computer guesses a 40 bit human made up password/-phrase within minutes, a 2048 bit certificate would take much more time.
- 4. You could make keys unusable by removing a single line. &ndash; One of your devices got stolen? Remove the particular public key line from your droplet and all future access is denied.
- 5. Easier sharing and collaboration. &ndash; If you want to give someone else access, add their public key. No password sharing, no password leaking.
+1.  It is easier than remembering a password. &ndash; You're only using a "certificate file" to authenticate and log in.
+2.  You could create and use as many public keys as you want. &ndash; One for your computer at home, one for the computer at work, one for your notebook, one for your smart phone.
+3.  Certificates are cryptographically more secure. &ndash; A computer guesses a 40 bit human made up password/-phrase within minutes, a 2048 bit certificate would take much more time.
+4.  You could make keys unusable by removing a single line. &ndash; One of your devices got stolen? Remove the particular public key line from your droplet and all future access is denied.
+5.  Easier sharing and collaboration. &ndash; If you want to give someone else access, add their public key. No password sharing, no password leaking.
 
 Public key _pairs_ always consist of two parts:
 
- * A private key &mdash; which you should keep for yourself and never share with someone else.
- * A public key &mdash; which you could share.
+- A private key &mdash; which you should keep for yourself and never share with someone else.
+- A public key &mdash; which you could share.
 
 #### Generating new SSH key pairs
 
@@ -110,11 +108,11 @@ Windows users could use PuTTYgen to generate a new key pair.
 
 On Linux and macOS you could generate a new SSH key via terminal commands:
 
-* Use `ssh-keygen -t ed25519 -C 'Name of the new key'` to generate a new key pair. `ssh-keygen` saves the public key to `~/.ssh/id_ed25519.pub`
-* Execute `cat ~/.ssh/id_ed25519.pub`, it will show you your public key. Copy the output to the clipboard.
+- Use `ssh-keygen -t ed25519 -C 'Name of the new key'` to generate a new key pair. `ssh-keygen` saves the public key to `~/.ssh/id_ed25519.pub`
+- Execute `cat ~/.ssh/id_ed25519.pub`, it will show you your public key. Copy the output to the clipboard.
 
-> Notes: 
-> 
+> Notes:
+>
 > 1. `~/` is shorthand Unix (Linux/macOS) slang for the directory `/home/your-username/`.
 > 2. Adding a name is not required but recommended, it makes differentiating multiple keys a lot easier, e.g. `ssh-keygen -t ed25519 -C 'Computer-Home'`.
 > 3. The _private key_ is located at `~/.ssh/id_ed25519` (without `.pub`), the _public key_ is located at `~/.ssh/id_ed25519.pub`.
@@ -123,9 +121,9 @@ On Linux and macOS you could generate a new SSH key via terminal commands:
 
 To add the key
 
-  * Log in to the server
-  * Edit `~/.ssh/authorized_keys` 
-  * Paste the public key.
+- Log in to the server
+- Edit `~/.ssh/authorized_keys`
+- Paste the public key.
 
 #### Change the authentication method
 
@@ -175,13 +173,13 @@ The best thing to do is to create an additional user which does not have root pr
 
 While still being logged in to your droplet as root user, issue the following commands.
 
-* `useradd sysadmin`, which will create the new user `sysadmin`.
-* `passwd sysadmin`, which will set up a password. This password is needed when the new user `sysadmin` invokes a `sudo` command. Use a strong password and write it down somewhere.
-* `usermod -a -G sudo sysadmin`, which will grant `sysadmin` the rights to issue `sudo` commands.
-* `mkdir /home/sysadmin`, which will make a new home directory.
-* `chown -R sysadmin /home/sysadmin`, which will set the correct permissions in the new directory.
+- `useradd sysadmin`, which will create the new user `sysadmin`.
+- `passwd sysadmin`, which will set up a password. This password is needed when the new user `sysadmin` invokes a `sudo` command. Use a strong password and write it down somewhere.
+- `usermod -a -G sudo sysadmin`, which will grant `sysadmin` the rights to issue `sudo` commands.
+- `mkdir /home/sysadmin`, which will make a new home directory.
+- `chown -R sysadmin /home/sysadmin`, which will set the correct permissions in the new directory.
 
-> NOTE: Change the username `sysadmin` to something else if you have something different in mind, e.g. `devteam` or `voldermort`. 
+> NOTE: Change the username `sysadmin` to something else if you have something different in mind, e.g. `devteam` or `voldermort`.
 
 ### Adding another public key
 
@@ -336,8 +334,8 @@ Create the following script `/etc/init.d/restore-firewall`
 ## Provides:          restore-firewall
 ## Default-Start:     2 3 4 5
 ## Default-Stop:      0 1 6
-## Required-Start:  
-## Required-Stop:   
+## Required-Start:
+## Required-Stop:
 ## Short-Description: Restores firewall at startup
 ## Description:       Restores firewall at startup, after 60 seconds, using iptables-restore
 #### END INIT INFO
@@ -449,7 +447,6 @@ ModSecurity is a Web Application Firewall that prevents malicious parties (scrip
 
 Install ModSecurity with the OWASP CRS.
 
-
 ```sh
 sudo apt install libapache2-mod-security2 modsecurity-crs
 sudo cp /etc/modsecurity/modsecurity.conf-recommended /etc/modsecurity/modsecurity.conf
@@ -462,6 +459,7 @@ sudo nano /etc/modsecurity/modsecurity.conf
 ```
 
 Change the line
+
 ```
 SecRuleEngine DetectionOnly
 ```
@@ -584,8 +582,8 @@ It is recommended to perform automatic periodic backups.
 
 ## References
 
-Karunaratne, A. (2017, November 5). *How to enable HTTP/2 support in Apache*. Retrieved January 13, 2018, from https://http2.pro/doc/Apache
+Karunaratne, A. (2017, November 5). _How to enable HTTP/2 support in Apache_. Retrieved January 13, 2018, from https://http2.pro/doc/Apache
 
-Svoboda, P. (2012, May 14). *Laptop, SSD, tmpfs and Apache*. Retrieved January 13, 2018, from https://weits.blogspot.ch/2012/03/laptop-ssd-tmpfs-and-apache.html
+Svoboda, P. (2012, May 14). _Laptop, SSD, tmpfs and Apache_. Retrieved January 13, 2018, from https://weits.blogspot.ch/2012/03/laptop-ssd-tmpfs-and-apache.html
 
-*Tar archiving that takes input from a list of files*. (n.d.). Retrieved January 13, 2018, from https://stackoverflow.com/questions/8033857/tar-archiving-that-takes-input-from-a-list-of-files##8033898
+_Tar archiving that takes input from a list of files_. (n.d.). Retrieved January 13, 2018, from https://stackoverflow.com/questions/8033857/tar-archiving-that-takes-input-from-a-list-of-files##8033898

@@ -1,7 +1,7 @@
 ---
- permalink: /changes/
- contributors: ['ricardobalk']
- page: true
+permalink: /changes/
+contributors: ["ricardobalk"]
+page: true
 ---
 
 # Changelog
@@ -71,8 +71,6 @@ Moved to [VuePress](https://vuepress.vuejs.org/). Less bullshit, more overview. 
 - Repository: [GitHub](https://github.com/ricardobalk/www/tree/v3.0.0)
 - Download: [ZIP](https://github.com/ricardobalk/www/archive/v3.0.0.zip) &bullet; [Tarball](https://github.com/ricardobalk/www/archive/v3.0.0.tar.gz)
 
-
-
 ## 2.0
 
 **<Badge>Released</Badge>**
@@ -129,7 +127,6 @@ New visual design, including dark mode and various technical enhancements.
 ![Home page of ricardobalk.nl](https://ricardobalk.keybase.pub/Documents/Portfolio/InDesign/Linked%20Files/RicardoBalk.nl/v1.0/Home.jpg)
 </details>
 
-
 <details>
 <summary>Blog &bullet; Overview page</summary>
 ![Overview of blog articles on ricardobalk.nl](https://ricardobalk.keybase.pub/Documents/Portfolio/InDesign/Linked%20Files/RicardoBalk.nl/v1.0/Blog/Overview.png)
@@ -149,7 +146,6 @@ New visual design, including dark mode and various technical enhancements.
 <summary>Portfolio &bullet; Item details</summary>
 ![Single portfolio item on ricardobalk.nl](https://ricardobalk.keybase.pub//Documents/Portfolio/InDesign/Linked%20Files/RicardoBalk.nl/v1.0/Portfolio/Item.png)
 </details>
-
 
 **Download**
 
