@@ -29,7 +29,7 @@
                   </p>
                   <h2 class="title btn">
                     {{ item.frontmatter.shortTitle || item.title }}
-                    <font-awesome-icon class="icon" :icon="['fas', 'chevron-right']" />
+                    <font-awesome-icon class="icon" :icon="['fas', 'chevron-right']" size="sm" />
                   </h2>
                   <p class="excerpt">
                     {{ item.frontmatter.excerpt }}
@@ -79,8 +79,8 @@
 </script>
 
 <style lang="stylus">
-  @require "~@theme/styles/global/masonry";
-  @require "~@theme/styles/global/variables";
+  @require '~@theme/styles/global/masonry'
+  @require '~@theme/styles/global/variables'
 
   .portfolio-overview
     margin-top $navigation-bar-height
@@ -89,18 +89,16 @@
       margin-bottom 0
       background-position center
 
-
     .portfolio
       masonry-layout(0)
 
       .page-container
         margin-bottom 5em
 
-
       .page-header
-        font-size 1.5em
-        text-transform uppercase
         margin 1em 0
+        text-transform uppercase
+        font-size 1.5em
 
       .items
         .item
@@ -115,23 +113,23 @@
               margin 0
 
             span
-              font-size 0.9em
               margin 0
+              font-size 0.9em
 
             .date
               &:after
-                content "\2022"
                 margin 0 0.25em
+                content '\2022'
 
             .btn
-              text-transform uppercase
-              font-size 1.25em
-              font-weight 700
-              line-height 1em
-              border 1px solid #eee
               display inline-block
-              padding 0.5em 1em 0.5em 1.25em
               margin 1.25em 0
+              padding 0.5em 1em 0.5em 1.25em
+              border 1px solid #eee
+              text-transform uppercase
+              font-weight 700
+              font-size 1.25em
+              line-height 1em
               transition color 0.25s ease-in-out
 
               &:hover
@@ -141,21 +139,20 @@
               .icon
                 padding 0.15em
 
-
             .excerpt
-              font-size 0.8em
               color #ccc
               text-shadow 0 0 1px rgba(255, 255, 255, 0.5)
+              font-size 0.8em
 
             &.overlay
               position absolute
               top 0
+              padding 2em
               width 100%
               height 100%
-              padding 2em
-              text-align center
               background-color #000
               color #eee
+              text-align center
               opacity 0
               transition opacity 0.25s ease-in-out
 
@@ -165,6 +162,7 @@
   @media screen and (prefers-color-scheme dark)
     .portfolio-overview
       margin-top 0
+
       .hero
         background-color rgb(11, 11, 11) !important
 </style>
