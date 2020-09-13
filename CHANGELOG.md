@@ -10,15 +10,16 @@ This is the changelog, as found on the [GitHub repository](https://github.com/ri
 
 ## 3.3
 
-**<Badge type="yellow">Planned</Badge>**
+**<Badge>Released</Badge>**
 
-> [Version 3.3](https://github.com/ricardobalk/www/milestone/3) has been planned to be released on June 1, 2020.
+> [Version 3.3](https://github.com/ricardobalk/www/milestone/3) has been released on September 13, 2020.
 
-**What can be expected?**
+**What's new?**
 
-- There will be a guides section, so that it's easier to distinguish blog articles from guides/tutorials. Easier for humans, also better for SEO.
-- On the technical side, I'll move away from Zurb Foundation and use my own 12 column grid instead.
-- I will move from JavaScript to TypeScript. It makes my code more robust.
+- There is now a guides section available, that makes it easier to distinguish blog articles from guides/tutorials. Easier for humans, also better for SEO &bullet; [cee9f8](https://github.com/ricardobalk/www/commit/8a36b32fad215a4192ccc01a2d2a1ffdaacee9f8)
+- The blog and guides sections got a filter that automatically adapts to the available categories &bullet; [796538](https://github.com/ricardobalk/www/commit/dfdb12ef6e2b7b66f0003f5ac743ac189c796538).
+- Much of the JavaScript has been converted to TypeScript. It makes the code more robust &bullet; [0636a5](https://github.com/ricardobalk/www/commit/eafe2cf64c61b49380cb244213bab7bc760636a5), [97f919](https://github.com/ricardobalk/www/commit/add5d7a5bc19a26293cbc083be81e43ea897f919).
+- Made some small improvements, like the sidebar that didn't work correctly and removed the huge icons during page load &bullet; [5e904e](https://github.com/ricardobalk/www/commit/adb58c6f5013dc233b56aa3778d60869f75e904e), [a356bc](https://github.com/ricardobalk/www/commit/18501fe1bb0e63a1a194e764da49fecc77a356bc)
 
 ## 3.2
 
