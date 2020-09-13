@@ -9,7 +9,7 @@
           </div>
           <section class="connect-on-social" title="Ways to contact me">
             <a v-for="contactingMethod in connect" :href="contactingMethod.url" :title="contactingMethod.title"
-              ><font-awesome-icon :icon="contactingMethod.icon"
+              ><font-awesome-icon :icon="contactingMethod.icon" size="2x"
             /></a>
           </section>
         </div>
@@ -71,23 +71,23 @@
 
 <style lang="stylus">
   .conclusion
-    color var(--color-light-grey)
-    background-color var(--conclusion-background-color)
-    background-image linear-gradient(to right, #979797, #171717), url("/assets/img/site/home/winder-top-left.svg")
-    background-blend-mode soft-light, normal
-    background-repeat no-repeat
-    background-size cover, contain
-    background-position left top, left top -5px
     margin 5em 0 0
     padding 4em 0
+    background-color var(--conclusion-background-color)
+    background-image linear-gradient(to right, #979797, #171717), url('/assets/img/site/home/winder-top-left.svg')
+    background-position left top, left top -5px
+    background-size cover, contain
+    background-repeat no-repeat
+    color var(--color-light-grey)
+    background-blend-mode soft-light, normal
 
     @media screen and (prefers-color-scheme dark)
-      color #bdbdbd
+      margin 0
+      padding 0 0 6em
       background-color #000
       background-image linear-gradient(to bottom, #000, #002451)
+      color #bdbdbd
       background-blend-mode unset
-      padding 0 0 6em
-      margin 0
 
     .text-container
       text-align center
@@ -96,20 +96,18 @@
         color inherit
 
       .title
-        text-transform uppercase
-        font-size 1.45em
-        font-weight 900
-        margin-bottom 0
-        line-height 1em
         margin-top 1em
-
+        margin-bottom 0
+        text-transform uppercase
+        font-weight 900
+        font-size 1.45em
+        line-height 1em
 
       .subtitle
-        font-family var(--font-family-primary-headings)
+        margin 0.1em 0 0.25em
         text-transform uppercase
         font-size 3em
-        margin 0.1em 0 0.25em
-
+        font-family var(--font-family-primary-headings)
 
     .connect-on-social
       text-align center
@@ -122,6 +120,7 @@
         &:hover
           color #fff
           cursor pointer
-          @media screen and (prefers-color-scheme: dark)
+
+          @media screen and (prefers-color-scheme dark)
             color #d9d677
 </style>

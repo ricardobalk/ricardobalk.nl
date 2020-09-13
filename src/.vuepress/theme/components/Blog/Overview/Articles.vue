@@ -22,7 +22,7 @@
             <div class="meta">
               <p v-if="page.frontmatter.date" class="date">
                 <time :datetime="page.frontmatter.date">
-                  <font-awesome-icon :icon="['fas', 'calendar-alt']" />&nbsp;<HumanReadableDate
+                  <font-awesome-icon :icon="['fas', 'calendar-alt']" size="sm" />&nbsp;<HumanReadableDate
                     prefix=""
                     suffix="ago"
                     :date="page.frontmatter.date"
@@ -37,7 +37,7 @@
               <p class="continue-reading">
                 <template v-if="showExcerpts === true && page.frontmatter.excerpt">Continue reading</template>
                 <template v-else>Read this article</template>
-                <font-awesome-icon :icon="['fas', 'chevron-right']" />
+                <font-awesome-icon :icon="['fas', 'chevron-right']" size="sm" />
               </p>
             </div>
           </a>
@@ -75,48 +75,47 @@
 </script>
 
 <style lang="stylus">
-  @require "~@theme/styles/global/masonry";
+  @require '~@theme/styles/global/masonry'
 
   .posts
     masonry-layout(1em)
 
     .post
-      text-align center
       box-shadow 0 0 12px rgba(0, 0, 0, 0.065)
+      text-align center
       page-break-inside avoid
 
     .clickable
-      font initial
       color initial
+      font initial
 
     .meta
       padding 2.5em 2em
 
       .date
-        font-size 0.85em
-        font-weight 600
         color #666
+        font-weight 600
+        font-size 0.85em
 
       .title
-        color #333
-        font-family var(--font-family-primary)
-        font-size 1em
-        font-weight 700
         margin-bottom 1em
+        color #333
+        font-weight 700
+        font-size 1em
+        font-family var(--font-family-primary)
 
         &:after
-          content " "
           display block
+          margin 0 auto
           width 5em
           height 1em
-          margin 0 auto
           border-bottom 1px solid #eee
+          content ' '
 
         .continue-reading
-          font-size 0.95em
           padding-left 0.5em
           color #1779ba
-
+          font-size 0.95em
 
   @media screen and (prefers-color-scheme dark)
     .post
@@ -125,13 +124,16 @@
       .image
         border 1px solid rgba(255, 255, 255, 0.14)
         border-bottom none
+
         & + .meta
           border-top-style none !important
 
       .meta
-        border: 1px solid rgba(255, 255, 255, 0.14)
+        border 1px solid rgba(255, 255, 255, 0.14)
+
         .title
           color #bcbcbc
+
           &:after
             border-bottom 1px solid rgba(255, 255, 255, 0.14)
 </style>

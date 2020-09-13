@@ -18,7 +18,7 @@
           :title="`Get in touch with ${userData.them.profile.full_name} via Keybase`"
           target="_blank"
         >
-          <FontAwesomeIcon class="socialIcon" :icon="['fab', 'keybase']" />
+          <FontAwesomeIcon class="socialIcon" :icon="['fab', 'keybase']" size="sm" />
         </a>
       </span>
       <span v-for="(proof, index) in userData.them.proofs_summary.by_presentation_group">
@@ -27,30 +27,30 @@
           target="_blank"
           :title="`Get in touch with ${userData.them.profile.full_name} via GitHub`"
           v-if="proof[0].proof_type === 'github'"
-          ><FontAwesomeIcon class="socialIcon" :icon="['fab', 'github']"
+          ><FontAwesomeIcon class="socialIcon" :icon="['fab', 'github']" size="sm"
         /></a>
         <a
           :href="proof[0].service_url"
           target="_blank"
           :title="`Get in touch with ${userData.them.profile.full_name} via Reddit`"
           v-if="proof[0].proof_type === 'reddit'"
-          ><FontAwesomeIcon class="socialIcon" :icon="['fab', 'reddit']"
+          ><FontAwesomeIcon class="socialIcon" :icon="['fab', 'reddit']" size="sm"
         /></a>
         <a
           :href="proof[0].service_url"
           target="_blank"
           :title="`Get in touch with ${userData.them.profile.full_name} via Twitter`"
           v-if="proof[0].proof_type === 'twitter'"
-          ><FontAwesomeIcon class="socialIcon" :icon="['fab', 'twitter']"
+          ><FontAwesomeIcon class="socialIcon" :icon="['fab', 'twitter']" size="sm"
         /></a>
         <a
           :href="proof[0].service_url"
           target="_blank"
           :title="`Get in touch with ${userData.them.profile.full_name} via Mastodon`"
           v-if="proof[0].proof_type === 'mastodon.social'"
-          ><FontAwesomeIcon class="socialIcon" :icon="['fab', 'mastodon']"
+          ><FontAwesomeIcon class="socialIcon" :icon="['fab', 'mastodon']" size="sm"
         /></a>
-        <!-- <a :href="proof[0].service_url" v-if="proof[0].proof_type === 'generic_web_site'"><FontAwesomeIcon class="socialIcon" :icon="['fas', 'globe']" /></a> -->
+        <!-- <a :href="proof[0].service_url" v-if="proof[0].proof_type === 'generic_web_site'"><FontAwesomeIcon class="socialIcon" :icon="['fas', 'globe']" size="sm"/></a> -->
       </span>
     </span>
 
@@ -113,13 +113,13 @@
 
 <style lang="stylus" scoped>
   .keybaseUserCard
+    padding 1.75rem 2rem
+    width 18rem
     border 1px solid #ccc
     border-radius 2%
-    padding 1.75rem 2rem
     text-align center
-    width 18rem
     opacity 1
-    transition transform .5s
+    transition transform 0.5s
     transform translateX(0)
 
     &[v-cloak], &.loading
@@ -131,32 +131,34 @@
 
     img.avatar
       display block
-      border-radius 50%
-      margin 0 auto .75rem
+      margin 0 auto 0.75rem
       max-width 60%
       max-height 33%
+      border-radius 50%
 
     .fullName
-      font-weight 700
       margin 0
+      font-weight 700
 
     .bio
-      max-height 10em
       overflow hidden
-      margin .75em 0
+      margin 0.75em 0
+      max-height 10em
 
     .socialIcons
       display block
+      margin 0.5rem 0
       font-size 1.2rem
-      margin .5rem 0
 
       .socialIcon
         color #333
+
         @media screen and (prefers-color-scheme dark)
           color #aaa
 
         &:hover
           color dodgerblue
+
           @media screen and (prefers-color-scheme dark)
             color yellow
 </style>
