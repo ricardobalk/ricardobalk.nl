@@ -1,6 +1,6 @@
 {
   "name": "personal-website",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "Ricardo's Personal Website",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx vuepress dev src",
     "build": "npx vuepress build src",
+    "serve": "npx serve dist/",
     "deploy": "rsync -ru dist/. ricardobalk.nl:/var/www/ricardobalk.nl --delete",
+    "build:serve": "npm run build && npm run serve",
     "build:deploy": "npm run build && npm run deploy",
     "reset": "rm -rf node_modules/ dist/ && npm i"
   },
@@ -63,6 +65,7 @@
     "prettier": "1.19.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.0",
+    "serve": "^11.3.2",
     "typescript": "^3.9.5",
     "vue-class-component": "^7.2.3",
     "vue-disqus": "^3.0.5",
