@@ -74,8 +74,4 @@ import Service from "*.vue";
     display: block;
     margin: 0 auto;
   }
-
-  h1 {
-    color: #000;
-  }
 </style>

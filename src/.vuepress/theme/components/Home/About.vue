@@ -1,7 +1,7 @@
 <template>
   <section class="about" title="Information about Ricardo" tabindex="0">
     <div class="grid-x">
-      <div class="small-12 medium-offset-1 medium-10 large-offset-2 large-8 cell maxed">
+      <div class="small-12 medium-offset-1 medium-10 large-offset-2 large-8 cell inner-container">
         <div class="grid-x">
           <div class="small-offset-1 small-10 medium-offset-0 medium-6 cell picture">
             <Polaroid :caption="polaroidImage.caption" :image="polaroidImage.path" />
@@ -52,14 +52,15 @@
 <style lang="stylus">
   .about
     outline 0
-    color #333
+    color #333 // TODO: Check usage
     position relative
     margin -4em 0 4em
+    @media screen and (prefers-color-scheme dark)
+      color $textColorDarkmode // TODO: Same
 
-    .maxed
+    .inner-container
       max-width 920px
       margin 0 auto
-
 
     .picture
       padding 0 2em
