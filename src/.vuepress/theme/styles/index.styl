@@ -15,6 +15,8 @@ body
   -moz-osx-font-smoothing grayscale
   font-size 16px
   color $textColor
+  @media screen and (prefers-color-scheme dark)
+    color $textColorDarkmode
 
 .page
   padding-left $sidebarWidth
@@ -83,6 +85,8 @@ a
   font-weight 500
   color $accentColor
   text-decoration none
+  @media screen and (prefers-color-scheme dark)
+    color $accentColorDarkmode
 
 p a code
   font-weight 400
@@ -161,6 +165,9 @@ p, ul, ol
 hr
   border 0
   border-top 1px solid $borderColor
+  margin 2em 0
+  @media screen and (prefers-color-scheme dark)
+    border-top 1px solid #434343
 
 table
   border-collapse collapse
