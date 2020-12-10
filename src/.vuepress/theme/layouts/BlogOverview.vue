@@ -47,7 +47,7 @@
 </script>
 
 <style lang="stylus">
-  @require '~@theme/styles/global/variables';
+  @require '~@theme/styles/global/variables'
 
   .blog-overview-container
     margin-top $navigation-bar-height /* TODO: Make this dynamic, using the height of the navbar. */
