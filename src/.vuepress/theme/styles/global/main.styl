@@ -1,6 +1,23 @@
 @import "variables";
 @import "fonts";
 
+html
+  &[lang="en"]
+    figure
+      figcaption
+        &:before
+          content "Figure: "
+  &[lang="nl"]
+    figure
+      figcaption
+        &:before
+          content "Afbeelding: "
+  &[lang="de"]
+    figure
+      figcaption
+        &:before
+          content "Bild: "
+
 body
   background-color var(--color-body-background)
   color var(--color-almost-black)
@@ -44,3 +61,8 @@ body
 .svg-inline--fa
   width 1em
   height 1em
+
+figure
+  figcaption
+    text-align center
+    margin 1em 0
