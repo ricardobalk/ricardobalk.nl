@@ -17,8 +17,9 @@
 <style lang="stylus" scoped>
   .tooltip
     position relative
-    display inline-block
+    display inline-flex
     border-bottom 1px dotted black
+
     @media screen and (prefers-color-scheme dark)
       border-bottom-color #666
 
@@ -29,26 +30,30 @@
         opacity 1
 
     .tooltip-text
-      // display none
+      position absolute
+      left 0
+      z-index 1
       visibility hidden
-      opacity 0
+      padding 0.25em 1em
+      min-width max-content
+      width auto
+      border-width 1px
+      border-style solid
+      border-color #222
+      border-radius 6px
       background-color #555
       color #fff
       text-align center
-      border-radius 6px
-      padding .25em 1em
-      position absolute
-      z-index 1
-      left 0
-      width 100%
-      transform translate(0, -105%)
-      transition opacity .25s
+      opacity 0
+      transition opacity 0.25s
+      transform translate(-45%, -100%)
+
       @media screen and (prefers-color-scheme dark)
+        border-color #9cb44a
         background-color #222
         color #aaa
 
       &:after
-        content ""
         position absolute
         top 100%
         left 50%
@@ -56,4 +61,5 @@
         border-width 5px
         border-style solid
         border-color #555 transparent transparent transparent
+        content ''
 </style>
