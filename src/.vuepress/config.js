@@ -2,6 +2,7 @@ module.exports = {
   title: "Ricardo Balk",
   description: "Personal Website",
   dest: "dist",
+  theme: "ricardobalk",
   locales: {
     "/": {
       lang: "en",
