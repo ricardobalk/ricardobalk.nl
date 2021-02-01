@@ -65,7 +65,7 @@ nextMove:
     - serviceName: "Telephone"
       icon: ["fas", "phone"]
       title: "Ruf mich an"
-      url: "tel:+31653773206"
+      url: "tel:+31243010005"
 ---
 
 <h1>Über mich&hellip;</h1>
