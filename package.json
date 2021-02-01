@@ -4,15 +4,15 @@
   "description": "Ricardo's Personal Website",
   "main": "index.js",
   "scripts": {
-    "start": "npm run dev",
+    "start": "yarn dev",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx vuepress dev src",
-    "build": "npx vuepress build src",
-    "serve": "npx serve dist/",
+    "dev": "yarn vuepress dev src",
+    "build": "yarn vuepress build src",
+    "serve": "yarn serve dist/",
     "deploy": "rsync -ru dist/. ricardobalk.nl:/var/www/ricardobalk.nl --delete",
-    "build:serve": "npm run build && npm run serve",
-    "build:deploy": "npm run build && npm run deploy",
-    "reset": "rm -rf node_modules/ dist/ && npm i"
+    "build:serve": "yarn build && yarn serve",
+    "build:deploy": "yarn build && yarn deploy",
+    "reset": "rm -rf node_modules/ dist/ && yarn"
   },
   "repository": {
     "type": "git",
