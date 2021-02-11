@@ -1,0 +1,55 @@
+{
+  "editor.defaultFormatter": "octref.vetur",
+  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.format.defaultFormatter.css": "prettier",
+  "vetur.format.defaultFormatter.postcss": "prettier",
+  "vetur.format.defaultFormatter.scss": "prettier",
+  "vetur.format.defaultFormatter.less": "prettier",
+  "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+  "vetur.format.defaultFormatter.js": "prettier",
+  "vetur.format.defaultFormatter.ts": "prettier",
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "force-expand-multiline"
+    },
+    "prettyhtml": {
+      "printWidth": 100,
+      "singleQuote": false,
+      "wrapAttributes": false,
+      "sortAttributes": false
+    }
+  },
+  "vetur.format.styleInitialIndent": true,
+  "stylusSupremacy": {
+    "insertColons": false,
+    "insertSemicolons": false,
+    "insertBraces": false,
+    "insertNewLineAroundImports": true,
+    "insertNewLineAroundBlocks": true,
+    "insertNewLineAroundProperties": false,
+    "insertNewLineAroundOthers": false,
+    "preserveNewLinesBetweenPropertyValues": false,
+    "insertSpaceBeforeComment": true,
+    "insertSpaceAfterComment": true,
+    "insertSpaceAfterComma": true,
+    "insertSpaceInsideParenthesis": false,
+    "insertParenthesisAfterNegation": false,
+    "insertParenthesisAroundIfCondition": true,
+    "insertNewLineBeforeElse": false,
+    "insertLeadingZeroBeforeFraction": true,
+    "selectorSeparator": ", ",
+    "tabStopChar": "\t",
+    "newLineChar": "\n",
+    "quoteChar": "'",
+    "sortProperties": "grouped",
+    "alwaysUseImport": false,
+    "alwaysUseNot": false,
+    "alwaysUseAtBlock": false,
+    "alwaysUseExtends": false,
+    "alwaysUseNoneOverZero": false,
+    "alwaysUseZeroWithoutUnit": true,
+    "reduceMarginAndPaddingValues": true,
+    "ignoreFiles": []
+  },
+  "vetur.format.scriptInitialIndent": true
+}

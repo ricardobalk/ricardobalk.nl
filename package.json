@@ -1,0 +1,81 @@
+{
+  "name": "personal-website",
+  "version": "3.3.0",
+  "description": "Ricardo's Personal Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "yarn dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vuepress dev src",
+    "build": "vuepress build src",
+    "serve": "serve dist/",
+    "deploy": "rsync -ru dist/. ricardobalk.nl:/var/www/ricardobalk.nl --delete",
+    "build:serve": "yarn build && yarn serve",
+    "build:deploy": "yarn build && yarn deploy",
+    "reset": "rm -rf node_modules/ dist/ && yarn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardobalk/www.git"
+  },
+  "keywords": [
+    "personal",
+    "website",
+    "website",
+    "blog",
+    "portfolio",
+    "vue",
+    "vuepress",
+    "markdown"
+  ],
+  "author": "Ricardo Balk",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ricardobalk/www/issues"
+  },
+  "homepage": "https://github.com/ricardobalk/www#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/vue-fontawesome": "^2.0.0",
+    "foundation-sites": "^6.6.0",
+    "jquery": "^3.5.0",
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12",
+    "vuepress-theme-ricardobalk": "ricardobalk/vuepress-theme-ricardobalk"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,scss,json,vue}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "cross-fetch": "^3.0.5",
+    "fibers": "^5.0.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "moment": "^2.24.0",
+    "node-sass": "^4.14.1",
+    "prettier": "1.19.1",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.0",
+    "serve": "^11.3.2",
+    "typescript": "^3.9.5",
+    "vue-class-component": "^7.2.3",
+    "vue-disqus": "^3.0.5",
+    "vue-inline-svg": "^2.0.0",
+    "vue-property-decorator": "^8.5.0",
+    "vuepress": "^1.5.2",
+    "vuepress-plugin-container": "^2.1.3",
+    "vuepress-plugin-disqus": "^0.2.0",
+    "vuepress-plugin-typescript": "^0.3.0",
+    "vuepress-types": "^0.9.3"
+  }
+}
