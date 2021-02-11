@@ -1,0 +1,10 @@
+{
+  "name": "vuepress-theme-ricardobalk",
+  "version": "1.0.0",
+  "description": "Ricardo Balk's VuePress Theme",
+  "main": "index.js",
+  "repository": "https://github.com/ricardobalk/vuepress-theme-ricardobalk",
+  "author": "Ricardo Balk",
+  "license": "EUPL-1.2",
+  "private": false
+}

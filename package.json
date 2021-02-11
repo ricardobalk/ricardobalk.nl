@@ -42,8 +42,7 @@
     "foundation-sites": "^6.6.0",
     "jquery": "^3.5.0",
     "vue": "^2.6.12",
-    "vue-template-compiler": "^2.6.12",
-    "vuepress-theme-ricardobalk": "ricardobalk/vuepress-theme-ricardobalk"
+    "vue-template-compiler": "^2.6.12"
   },
   "husky": {
     "hooks": {
