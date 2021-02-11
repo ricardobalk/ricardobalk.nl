@@ -12,8 +12,18 @@ WORKDIR /home/node/app/
 COPY package*.json ./
 COPY yarn.lock ./
 COPY tsconfig.json ./
-RUN yarn
+COPY ./src/ ./src/
+RUN yarn             # This fetches all dependencies and installs them
+RUN yarn run build   # This runs an initial build, so we can know if this Docker image is working
 
 EXPOSE 8080
+
+# After the inital build, it is up to you. Serve the files that came with the image,
+# mount files from the host and run a 'dev' server, mount the dist/ and 'build' the site again, whatever.
+
 ENTRYPOINT ["yarn", "run"]
-CMD ["build"]
+
+# The default is to run a development version of the website. People can do `docker run --rm -p 8080:8080 -it ricardobalk/website`.
+# (equals to `docker run --rm -p 8080:8080 -it ricardobalk/website "start"`) and see the website on http://localhost:8080.
+
+CMD ["dev"] # start | dev | build | serve | build:serve ... see package.json ;-)
