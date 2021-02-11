@@ -15,17 +15,25 @@ Under the hood, VuePress uses things like Webpack and the Vue Router, which make
 
 To build or develop my website, I recommend using Docker, as this prevents you from installing and configuring many things.
 
+## 1) BUILD DOCKER IMAGE
+
+The first step is to build the _Docker image_ according to the _Dockerfile_ recipe found in the root directory of this repository.
+
+## 2) Run Docker image in a container.
+
+The second step is to run the freshly created _image_ in a _container_. You could choose to run a dev server for development purposes, or to build my website.
+
 **DEV SERVER**
 
 ```sh
-docker build -t ricardobalk/www .
+docker build -t ricardobalk/website .
 ```
 
 ```sh
 docker run --rm \
-  --mount type=bind,source="$(pwd)"/src/,target=/home/node/www/src/,readonly \
+  --mount type=bind,source="$(pwd)"/src/,target=/home/node/app/src/,readonly \
   -p 8080:8080 \
-  ricardobalk/www "dev"
+  ricardobalk/website "dev"
 ```
 
 This will launch a dev server which you could use to tinker and try things. After a while, visit http://localhost:8080/. You're good to go.
@@ -37,17 +45,22 @@ mkdir -p ./dist/
 ```
 
 ```sh
-docker build -t ricardobalk/www .
+docker build -t ricardobalk/website .
 ```
 
 ```sh
 docker run --rm \
-  --mount type=bind,source="$(pwd)"/src/,target=/home/node/www/src/,readonly \
-  --mount type=bind,source="$(pwd)"/dist/,target=/home/node/www/dist/ \
-  ricardobalk/www "build"
+  --mount type=bind,source="$(pwd)"/src/,target=/home/node/app/src/,readonly \
+  --mount type=bind,source="$(pwd)"/dist/,target=/home/node/app/dist/ \
+  ricardobalk/website "build"
 ```
 
 This will build the website and place the result in `dist/`. You can use your own server to serve this directory.
+
+
+## 3) Deploy
+
+Although I don't expect **you** to deploy **my** website, here are the instructions given as a reference.
 
 **DEPLOY**
 
@@ -57,17 +70,21 @@ Build the website using the instructions above. After that, use `rsync` to push 
 rsync -ru dist/. ricardobalk.nl:/var/www/ricardobalk.nl --delete
 ```
 
+That was easy! Build and upload. No need for heavy back-ends and complex databases. This is possible because we're working with a JAMstack website. :tada:
+
+P.S. If you're not using Linux, macOS or WSL, you could also upload the contents of `dist/` via (S)FTP. I'll just stick with the `rsync` approach, because I like to get shit done and save time. :+1:
+
 **REMOVAL**
 
 ```sh
-docker image rm ricardobalk/www && docker image prune
+docker image rm ricardobalk/website && docker image prune
 ```
 
 This will remove the image. Removal of the containers is not necessary because the `--rm` flag was used.
 
-**WITHOUT DOCKER**
+## Doing the same without Docker...
 
-Don't want to use Docker and prefer to use local installation? Read the [Slowstart Guide](./SLOWSTART.md).
+Don't want to use Docker and prefer to use a local installation? Read the [Slowstart Guide](./SLOWSTART.md).
 
 ---
 

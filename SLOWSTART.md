@@ -8,16 +8,20 @@ Make sure you have installed Node and are using a stable version.
 
 ```sh
 npm install n -g && n stable  # Switches to a stable version of nodejs
+npm install -g yarn # Nice to have a stable version of nodejs. Let's use yarn.
 ```
+
+P.S. Also take a look at the Dockerfile, it shows how to install global npm packages without root privileges ;-)
+It basically comes down to setting up the right PATH environment variables.
 
 ---
 
 **INSTALL**
 
-Make sure that you cloned this repository to a directory of choice and you have already installed npm. Then, open a console and start it.
+Make sure that you cloned this repository to a directory of choice and you have already installed yarn. Then, open a console and start it.
 
 ```sh
-npm install
+yarn
 ```
 
 Then, you could either start the development server or build the complete site.
@@ -27,7 +31,7 @@ Then, you could either start the development server or build the complete site.
 - Builds the website and spins up a web server at `localhost:8080`
 
 ```sh
-npm run dev
+yarn run dev
 ```
 
 **BUILD**
@@ -35,7 +39,7 @@ npm run dev
 - Builds the website and outputs it to `dist/`, where you can point an own server.
 
 ```sh
-npm run build
+yarn run build
 ```
 
 
@@ -44,7 +48,7 @@ npm run build
 - Builds the website and cleans up `node_modules/`, so that you can focus on serving `dist/`.
 
 ```sh
-npm run cleanbuild
+yarn run cleanbuild
 ```
 
 **RESET**
@@ -52,5 +56,5 @@ npm run cleanbuild
 - Use this when everything breaks, it deletes `node_modules/`, deletes `dist/` and runs `npm install`.
 
 ```sh
-npm run reset
+yarn run reset
 ```
