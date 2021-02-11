@@ -6,9 +6,9 @@
   "scripts": {
     "start": "yarn dev",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "yarn vuepress dev src",
-    "build": "yarn vuepress build src",
-    "serve": "yarn serve dist/",
+    "dev": "vuepress dev src",
+    "build": "vuepress build src",
+    "serve": "serve dist/",
     "deploy": "rsync -ru dist/. ricardobalk.nl:/var/www/ricardobalk.nl --delete",
     "build:serve": "yarn build && yarn serve",
     "build:deploy": "yarn build && yarn deploy",
