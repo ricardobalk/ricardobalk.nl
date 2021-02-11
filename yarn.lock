@@ -9129,10 +9129,6 @@ vuepress-plugin-typescript@^0.3.0:
     cache-loader "^3.0.0"
     ts-loader "^7.0.3"
 
-vuepress-theme-ricardobalk@ricardobalk/vuepress-theme-ricardobalk:
-  version "1.0.0"
-  resolved "https://codeload.github.com/ricardobalk/vuepress-theme-ricardobalk/tar.gz/eae781c04cc380f72c1b87fa30469520daa32c1e"
-
 vuepress-types@^0.9.3:
   version "0.9.4"
   resolved "https://registry.yarnpkg.com/vuepress-types/-/vuepress-types-0.9.4.tgz#798b4a5c7c12fbb2c7bb4e9318b3a6be22e88330"
