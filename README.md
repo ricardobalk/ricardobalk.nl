@@ -58,10 +58,6 @@ mkdir -p ./dist/
 ```
 
 ```sh
-docker build -t ricardobalk/website .
-```
-
-```sh
 docker run --rm \
   --mount type=bind,source="$(pwd)"/src/,target=/home/node/app/src/,readonly \
   --mount type=bind,source="$(pwd)"/dist/,target=/home/node/app/dist/ \
