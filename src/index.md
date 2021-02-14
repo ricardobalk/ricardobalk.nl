@@ -60,7 +60,7 @@ nextMove:
     - serviceName: "Telephone"
       icon: ["fas", "phone"]
       title: "Contact me by phone"
-      url: "tel:+31611272075"
+      url: "tel:+31243010005"
 ---
 
 <h1>About me&hellip;</h1>

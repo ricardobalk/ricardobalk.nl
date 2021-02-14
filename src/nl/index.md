@@ -65,7 +65,7 @@ nextMove:
     - serviceName: "Telephone"
       icon: ["fas", "phone"]
       title: "Bel me op"
-      url: "tel:+31653773206"
+      url: "tel:+31243010005"
 ---
 
 <h1>Over mij&hellip;</h1>
