@@ -2,18 +2,33 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/57a0cccc1cdf4086817954a123034043)](https://www.codacy.com/manual/ricardobalk/www?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ricardobalk/www&amp;utm_campaign=Badge_Grade) [![StyleCI](https://github.styleci.io/repos/200295886/shield?branch=develop&style=flat)](https://github.styleci.io/repos/200295886) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fricardobalk%2Fwww.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fricardobalk%2Fwww?ref=badge_shield) [![Sponsor me via bunq.me](./.github/badges/bunqme.svg)](https://bunq.me/ricardodev/2.50/Support%20for%20your%20work%20on%20GitHub) [![Sponsor me via ko-fi.com](./.github/badges/ko-fi.svg)](https://ko-fi.com/H2H71EMIK)
 
+
+
 This repository contains my personal website. It's made with VuePress, ZURB Foundation and Docker.
 
-- VuePress provides a way to transform Markdown files to HTML.
-- Zurb Foundation is used for its 12 column grid layout.
+- VuePress provides a way to run a blog with Markdown files.
+- Foundation is used for its 12 column grid layout, but I'm [getting rid of that soon (#63)](https://github.com/ricardobalk/www/issues/63).
+- Docker packs up everything and ensures that everything works as expected, on any computer.
 
-Under the hood, VuePress uses things like Webpack and the Vue Router, which makes it possible to split the website into several components, enhancing overall maintainability.
+
 
 ---
 
+**Driven by JAMstack, and proud of it!**
+
+My website is basically a JAMstack website. JAMstack (JavaScript, APIs and Markup) is not something you would install, but an approach for having a simpler developer experience, higher performance, lower cost and greater scalability.
+
+Many web developers call it the 'modern' website approach, but I think that you basically travel back to the 90s when web servers did one thing, and one thing only &mdash; serving files. No runtime scripts (PHP), big databases, server-side render functions, caching or other bullshit. You want to see the website, so the server spits out the entire website as-is. And the dynamic parts? Hah, they use an API.
+
+So, yes, this website is driven by JAMstack, and I am fucking proud of that.
+
+---
+
+
+
 # Building / Developing
 
-To build or develop my website, I recommend using Docker, as this prevents you from installing and configuring many things.
+To build or develop my website, I recommend using Docker, as this prevents you from installing and configuring many things. I just like to get shit done in a fast and effective way. Don't blame me for that. :man_shrugging:
 
 ## 1) Pull or build the Docker image
 
