@@ -1,6 +1,8 @@
 # Ricardo's Personal Website
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/57a0cccc1cdf4086817954a123034043)](https://www.codacy.com/manual/ricardobalk/www?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ricardobalk/www&amp;utm_campaign=Badge_Grade) [![StyleCI](https://github.styleci.io/repos/200295886/shield?branch=develop&style=flat)](https://github.styleci.io/repos/200295886) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fricardobalk%2Fwww.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fricardobalk%2Fwww?ref=badge_shield) [![Sponsor me via bunq.me](./.github/badges/bunqme.svg)](https://bunq.me/ricardodev/2.50/Support%20for%20your%20work%20on%20GitHub) [![Sponsor me via ko-fi.com](./.github/badges/ko-fi.svg)](https://ko-fi.com/H2H71EMIK)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/57a0cccc1cdf4086817954a123034043)](https://www.codacy.com/manual/ricardobalk/www?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ricardobalk/www&amp;utm_campaign=Badge_Grade) [![StyleCI](https://github.styleci.io/repos/200295886/shield?branch=develop&style=flat)](https://github.styleci.io/repos/200295886) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fricardobalk%2Fwww.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fricardobalk%2Fwww?ref=badge_shield)
+
+[![Sponsor via GitHub Sponsors](https://img.shields.io/badge/support%20me%20via%20GitHub%20Sponsors%20%E2%9D%A4-%2300bb00?logo=github)](https://github.com/sponsors/ricardobalk) [![Sponsor me via bunq.me](./.github/badges/bunqme.svg)](https://bunq.me/ricardodev/2.50/Support%20for%20your%20work%20on%20GitHub) [![Sponsor me via ko-fi.com](./.github/badges/ko-fi.svg)](https://ko-fi.com/H2H71EMIK)
 
 
 
