@@ -10,23 +10,4 @@
   </div>
 </template>
 
-<style lang="stylus">
-  .sidebar-button
-    cursor pointer
-    display none
-    width 1.25rem
-    height 1.25rem
-    padding 0.6rem
-    position absolute
-    top 0.6rem
-    left 1rem
-    .icon
-      color #000
-      display block
-      width 1.25rem
-      height 1.25rem
-
-  @media (max-width: $MQMobile)
-    .sidebar-button
-      display inline-block
-</style>
+<style lang="stylus" src="./SidebarButton.styl" />

@@ -1,0 +1,41 @@
+  .footer
+    width 100%
+    background-color #1e1e1e
+    color #eee
+
+    &.home
+      @media screen and (prefers-color-scheme dark)
+        background-color #002451
+
+    .footer-message
+      padding-right 1em
+      padding-left 1em
+      font-size 0.85em
+
+      p
+        margin 1em 0
+        color #eee
+
+      a
+        color inherit
+        font-size inherit
+
+      .site-links
+        display block
+        float right
+
+        a
+          color inherit
+          text-align center
+
+          &:not(:last-of-type)
+            margin-right 0.75em
+
+      svg
+        margin 0 0.2em
+
+      span:not(:last-of-type):after
+        margin 0 0.25em 0 0.5em
+        content '\2022'
+        font-size 0.75em
+        line-height 0.95em

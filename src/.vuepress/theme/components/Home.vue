@@ -24,56 +24,5 @@
   </main>
 </template>
 
-<script lang="ts">
-  import { Vue, Component } from "vue-property-decorator";
-  import NavLink from "@theme/components/NavLink.vue";
-  import HomeHero from "@theme/components/Home/Hero.vue";
-  import About from "@theme/components/Home/About.vue";
-  import Services from "@theme/components/Home/Services.vue";
-  import ProductAndProcess from "@theme/components/Home/ProductAndProcess.vue";
-  import SuccessStories from "@theme/components/Home/SuccessStories.vue";
-  import Conclusion from "@theme/components/Home/Conclusion.vue";
-
-  @Component({ components: { HomeHero, About, Services, ProductAndProcess, SuccessStories, Conclusion, NavLink } })
-  export default class Home extends Vue {
-    get frontmatter() {
-      return this.$frontmatter;
-    }
-
-    get services(): Record<string, any> {
-      return this.frontmatter.services;
-    }
-
-    get process(): Object {
-      return this.frontmatter.process;
-    }
-
-    get successStories(): Object {
-      return this.frontmatter.successStories;
-    }
-
-    get nextMove(): Object {
-      return this.frontmatter.nextMove;
-    }
-  }
-</script>
-
-<style lang="stylus">
-  @import "~@theme/styles/global/variables";
-
-  .maxed
-    max-width 1600px
-    margin 0 auto
-
-  .content-padding
-    padding-left 1em
-    padding-right 1em
-
-  .hero
-    margin-top 3.6rem
-    @media screen and (max-width: 639px)
-      margin-bottom 2rem
-
-    @media screen and (prefers-color-scheme: dark)
-      margin-top unset
-</style>
+<script lang="ts" src="./Home.ts" />
+<style lang="stylus" src="./Home.styl" />
