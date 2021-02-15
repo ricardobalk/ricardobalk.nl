@@ -1,0 +1,49 @@
+  @require "~@theme/styles/global/variables"
+
+  .success-stories
+    margin 8em auto
+    padding 0 2em
+    max-width 1024px
+
+    .card
+      display -webkit-box
+      display -moz-box
+      display -ms-flexbox
+      display -webkit-flex
+      display flex
+      -webkit-flex-flow row wrap
+      margin 0 auto
+
+      @media screen and (max-width breakpoint-l)
+        max-width 32rem
+
+    .title
+      text-transform uppercase
+      font-weight 500
+      font-size 2em
+
+    h2
+      font-family var(--font-family-primary)
+      margin-bottom 3em
+      font-weight 400
+
+    .success-story
+      display flex
+      text-align center
+      justify-self stretch
+
+      p
+        margin 0
+
+      .client
+        font-size 1.15em
+        margin-bottom 0.5em
+
+      .position
+        font-size 0.85em
+        font-weight 600
+        color #666
+        margin-bottom 1em
+
+      .caption
+        font-size 0.9em
