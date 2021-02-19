@@ -1,0 +1,17 @@
+{
+  "name": "Ricardo's Personal Website",
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+  "forwardPorts": [8080],
+  "workspaceFolder": "/home/node/app",
+  "containerUser": "node",
+  "mounts": [
+    "source=${localWorkspaceFolder}/package.json,target=/home/node/app/package.json,type=bind,consistency=cached,readonly",
+    "source=${localWorkspaceFolder}/yarn.lock,target=/home/node/app/yarn.lock,type=bind,consistency=cached,readonly",
+    "source=${localWorkspaceFolder}/tsconfig.json,target=/home/node/app/tsconfig.json,type=bind,consistency=cached,readonly",
+    "source=${localWorkspaceFolder}/src,target=/home/node/app/src,type=bind,consistency=cached",
+    "source=${localWorkspaceFolder}/dist,target=/home/node/app/dist,type=bind,consistency=cached"
+  ],
+  "extensions": ["sysoev.language-stylus", "octref.vetur"]
+}
