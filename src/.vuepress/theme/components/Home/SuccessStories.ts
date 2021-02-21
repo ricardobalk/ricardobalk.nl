@@ -6,8 +6,8 @@ import Story from "@theme/components/Home/SuccessStory.vue";
 
 @Component({ name: "SuccessStories", components: { SuccessStory } })
 export default class SuccessStories extends Vue {
-  @Prop({ required: true, default: "Success Stories" }) private title!: string;
-  @Prop({ required: true, default: "What others say about my work" }) private subtitle!: string;
+  @Prop({ required: true, default: "Success Stories" }) title!: string;
+  @Prop({ required: true, default: "What others say about my work" }) subtitle!: string;
   @Prop({
     required: true,
     default: [
@@ -31,5 +31,5 @@ export default class SuccessStories extends Vue {
       },
     ],
   })
-  private stories!: Array<Story>;
+  stories!: Array<Story>;
 }

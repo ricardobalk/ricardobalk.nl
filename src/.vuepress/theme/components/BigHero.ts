@@ -2,10 +2,10 @@ import { Vue, Component, Prop } from "vue-property-decorator";
 
 @Component({ name: "Hero" })
 export default class Hero extends Vue {
-  @Prop({ required: false }) private image!: string;
-  @Prop({ required: false }) private imageDark!: string;
-  @Prop({ required: false }) private title!: string;
-  @Prop({ required: false }) private subtitle!: string;
+  @Prop({ required: false }) image!: string;
+  @Prop({ required: false }) imageDark!: string;
+  @Prop({ required: false }) title!: string;
+  @Prop({ required: false }) subtitle!: string;
 
   hasImage() {
     return !!this.image;

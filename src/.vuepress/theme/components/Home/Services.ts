@@ -5,7 +5,7 @@ import ServiceDetails from "@theme/components/Home/Service.vue";
 
 @Component({ name: "Services", components: { Service } })
 export default class Services extends Vue {
-  @Prop({ required: false, default: "Things I could help you with" }) private title!: string;
+  @Prop({ required: false, default: "Things I could help you with" }) title!: string;
   @Prop({
     required: true,
     default: [
@@ -31,5 +31,5 @@ export default class Services extends Vue {
       },
     ],
   })
-  private services!: Array<ServiceDetails>;
+  services!: Array<ServiceDetails>;
 }

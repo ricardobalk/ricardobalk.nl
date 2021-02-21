@@ -1,7 +1,7 @@
 import { Vue, Component, Prop } from "vue-property-decorator";
 import Polaroid from "./Polaroid.vue";
 
-interface polaroidImageData extends Object {
+interface polaroidImageData extends Record<string, string> {
   path: string;
   caption: string;
 }
@@ -12,5 +12,5 @@ export default class About extends Vue {
     required: true,
     default: { path: "https://placehold.it/500x500", caption: "You might have forgotten to add an image." },
   })
-  private polaroidImage!: polaroidImageData;
+  polaroidImage!: polaroidImageData;
 }

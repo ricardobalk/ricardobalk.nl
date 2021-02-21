@@ -5,7 +5,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 
-export interface WebService extends Object {
+export interface WebService extends Record<string, string | string[]> {
   serviceName: string; // "Example.com, an example website"
   title: string; // "An example profile on example.com"
   icon: Array<string>; // ["fas", "envelope"]
@@ -19,8 +19,8 @@ export default class Conclusion extends Vue {
     library.add(fas);
   }
 
-  @Prop({ required: false, default: "It's time for the next move" }) private title!: string;
-  @Prop({ required: false, default: "Let's have a talk!" }) private subtitle!: string;
+  @Prop({ required: false, default: "It's time for the next move" }) title!: string;
+  @Prop({ required: false, default: "Let's have a talk!" }) subtitle!: string;
   @Prop({
     required: true,
     default: [
@@ -44,5 +44,5 @@ export default class Conclusion extends Vue {
       },
     ],
   })
-  private connect!: Array<WebService>; // TODO: Rename this variable (check usage!), it is unclear
+  connect!: Array<WebService>; // TODO: Rename this variable (check usage!), it is unclear
 }

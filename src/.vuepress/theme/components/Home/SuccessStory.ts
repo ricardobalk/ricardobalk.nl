@@ -1,7 +1,7 @@
 import Vue from "vue";
 import { Component, Prop } from "vue-property-decorator";
 
-export interface Story extends Object {
+export interface Story extends Record<string, string> {
   name: string;
   title: string;
   story: string;
@@ -20,5 +20,5 @@ export default class SuccessStory extends Vue {
       avatar: "/assets/img/home/success-stories/empty.png",
     },
   })
-  private story!: Story;
+  story!: Story;
 }

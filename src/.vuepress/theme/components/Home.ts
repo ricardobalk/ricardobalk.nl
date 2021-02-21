@@ -17,15 +17,15 @@ export default class Home extends Vue {
     return this.frontmatter.services;
   }
 
-  get process(): Object {
+  get process(): Record<string, any> {
     return this.frontmatter.process;
   }
 
-  get successStories(): Object {
+  get successStories(): Record<string, any> {
     return this.frontmatter.successStories;
   }
 
-  get nextMove(): Object {
+  get nextMove(): Record<string, any> {
     return this.frontmatter.nextMove;
   }
 }

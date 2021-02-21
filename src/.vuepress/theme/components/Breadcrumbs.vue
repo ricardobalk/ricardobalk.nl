@@ -1,8 +1,8 @@
 <template>
   <nav class="breadcrumbs">
-    <a v-for="page in breadcrumbs" :href="page.path">{{ page.title }}</a>
+    <a v-for="page in breadcrumbs" :href="page.link">{{ page.title }}</a>
   </nav>
 </template>
 
-<script lang="js" src="./Breadcrumbs.js" />
+<script lang="ts" src="./Breadcrumbs.ts" />
 <style lang="stylus" src="./Breadcrumbs.styl" />

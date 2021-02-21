@@ -7,9 +7,9 @@ import { faTwitter, faGithub, faReddit, faMastodon, faKeybase } from "@fortaweso
 
 @Component({ name: "KeybaseUserCard", components: { FontAwesomeIcon } })
 export default class KeybaseUserCard extends Vue {
-  @Prop({ required: true, default: "ricardobalk" }) private username!: string;
-  private ready?: Boolean = false;
-  private userData?: object = {
+  @Prop({ required: true, default: "ricardobalk" }) username!: string;
+  ready?: Boolean = false;
+  userData?: Record<string, any> = {
     them: {
       basics: {
         username: "",
