@@ -14,17 +14,9 @@ This repository contains my personal website. It's made with VuePress, ZURB Foun
 
 
 
----
-
 **Driven by JAMstack, and proud of it!**
 
 My website is basically a JAMstack website. JAMstack (JavaScript, APIs and Markup) is not something you would install, but an approach for having a simpler developer experience, higher performance, lower cost and greater scalability.
-
-Many web developers call it the 'modern' website approach, but I think that you basically travel back to the 90s when web servers did one thing, and one thing only &mdash; serving files. No runtime scripts (PHP), big databases, server-side render functions, caching or other bullshit. You want to see the website, so the server spits out the entire website as-is. And the dynamic parts? Hah, they use an API.
-
-So, yes, this website is driven by JAMstack, and I am fucking proud of that.
-
----
 
 
 
