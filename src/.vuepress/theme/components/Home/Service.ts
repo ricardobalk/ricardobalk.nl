@@ -24,5 +24,5 @@ export default class Service extends Vue {
       icon: "times",
     },
   })
-  private service!: ServiceDetails;
+  service!: ServiceDetails;
 }

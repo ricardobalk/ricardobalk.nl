@@ -13,9 +13,9 @@ import { PageOptions } from "vuepress-types";
   mixins: [languageSelection],
 })
 export default class Articles extends Vue {
-  @Prop({ required: true, default: {} }) private posts!: PageOptions;
-  @Prop({ required: true, default: "" }) private assets!: string;
-  @Prop({ required: false, default: true }) private showExcerpts!: boolean;
+  @Prop({ required: true, default: {} }) posts!: PageOptions;
+  @Prop({ required: true, default: "" }) assets!: string;
+  @Prop({ required: false, default: true }) showExcerpts!: boolean;
 
   created() {
     library.add(faCalendarAlt);

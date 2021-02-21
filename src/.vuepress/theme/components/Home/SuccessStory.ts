@@ -20,5 +20,5 @@ export default class SuccessStory extends Vue {
       avatar: "/assets/img/home/success-stories/empty.png",
     },
   })
-  private story!: Story;
+  story!: Story;
 }

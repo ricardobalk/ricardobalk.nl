@@ -19,8 +19,8 @@ export default class Conclusion extends Vue {
     library.add(fas);
   }
 
-  @Prop({ required: false, default: "It's time for the next move" }) private title!: string;
-  @Prop({ required: false, default: "Let's have a talk!" }) private subtitle!: string;
+  @Prop({ required: false, default: "It's time for the next move" }) title!: string;
+  @Prop({ required: false, default: "Let's have a talk!" }) subtitle!: string;
   @Prop({
     required: true,
     default: [
@@ -44,5 +44,5 @@ export default class Conclusion extends Vue {
       },
     ],
   })
-  private connect!: Array<WebService>; // TODO: Rename this variable (check usage!), it is unclear
+  connect!: Array<WebService>; // TODO: Rename this variable (check usage!), it is unclear
 }

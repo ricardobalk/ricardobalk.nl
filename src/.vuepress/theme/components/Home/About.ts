@@ -12,5 +12,5 @@ export default class About extends Vue {
     required: true,
     default: { path: "https://placehold.it/500x500", caption: "You might have forgotten to add an image." },
   })
-  private polaroidImage!: polaroidImageData;
+  polaroidImage!: polaroidImageData;
 }
