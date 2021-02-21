@@ -4,6 +4,16 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faHeart, faMugHot, faCode } from "@fortawesome/free-solid-svg-icons";
 
+interface FooterLink extends Record<string, string> {
+  text: string,
+  location: string
+}
+
+interface FooterLinks extends Record<string, any> {
+  navigation: Array<FooterLink>,
+  social: Record<string, string>
+}
+
 @Component({ name: "Footer", components: { FontAwesomeIcon } })
 export default class Footer extends Vue {
   @Prop({
@@ -19,7 +29,7 @@ export default class Footer extends Vue {
       },
     },
   })
-  private links!: Object;
+  links!: FooterLinks;
 
   created() {
     library.add(faGithub, faHeart, faMugHot, faCode);

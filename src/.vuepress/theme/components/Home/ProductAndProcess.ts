@@ -1,7 +1,7 @@
 
   import { Vue, Component, Prop } from "vue-property-decorator";
 
-  interface ImageProperties extends Object {
+interface ImageProperties extends Record<string, string> {
     path: string;
     description: string;
   }

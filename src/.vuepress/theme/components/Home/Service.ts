@@ -4,7 +4,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-export interface ServiceDetails extends Object {
+export interface ServiceDetails extends Record<string, string> {
   title: string;
   caption: string;
   icon: string;

@@ -9,7 +9,7 @@ import { faTwitter, faGithub, faReddit, faMastodon, faKeybase } from "@fortaweso
 export default class KeybaseUserCard extends Vue {
   @Prop({ required: true, default: "ricardobalk" }) private username!: string;
   private ready?: Boolean = false;
-  private userData?: object = {
+  userData?: Record<string, any> = {
     them: {
       basics: {
         username: "",
