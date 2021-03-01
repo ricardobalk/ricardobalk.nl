@@ -53,9 +53,9 @@ I stopped the printer, leveled the printing bed and put it about 3/10 mm from th
 
 Somehow, my nozzle managed to become stuck in the object during printing, and it literally dragged the entire object over the printing bed. You could see that on the top-front side of the print. Another failed print, such a pity. I almost nailed it!
 
-## Attempt 3: Yes, we can! (Smoke it in Amsterdam.
+## Attempt 3: Yes, we can! (Smoke it in Amsterdam).
 
-I thought... The nozzle is made out of brass, a metal composition. Metals tend to expand when they become hot, so the inital 3/10 mm I used during the set-up could be way too little when the printer is warmed up. In other words &mdash; the nozzle could be too close to the printing bed when it's hot. And eventally, it just gets stuck in the printed model. To fix this, I put the nozzle slightly further away from the printing bed, about 5/10 mm instead of 3/10 mm. I also warmed the printing bed to 60&deg;C instead of 40&deg;C, to make the model stick a bit better to the printing bed. This resulted in my very first successful print:
+I thought... The nozzle is made out of brass, a metal composition. Metals tend to expand when they become hot, so the inital 3/10 mm I used during the set-up could be way too little when the printer is warmed up. In other words &mdash; the nozzle could be too close to the printing bed when it's hot. And eventally, it just gets stuck in the printed model. To fix this, I put the nozzle slightly further away from the printing bed, about 5/10 mm instead of 3/10 mm. I also warmed up the printing bed to 60&deg;C instead of 40&deg;C, to make the model stick a bit better to the printing bed. This resulted in my very first successful print:
 
 <figure><img src="/assets/img/content/blog/3D-printing-First-successful-print.webp"/><figcaption>My first successful 3D print!</figcaption></figure>
 
