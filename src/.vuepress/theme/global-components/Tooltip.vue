@@ -1,7 +1,6 @@
 <template>
   <div class="tooltip">
-    <span class="text"><slot>This tooltip is missing its slot value</slot></span>
-    <span class="tooltip-text">{{ text }}</span>
+    <span class="text" :title="text"><slot>This tooltip is missing its slot value</slot></span>
   </div>
 </template>
 
