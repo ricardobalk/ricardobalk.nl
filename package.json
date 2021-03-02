@@ -53,6 +53,10 @@
     "*.{js,css,scss,json,vue}": [
       "prettier --write",
       "git add"
+    ],
+    "*.styl": [
+      "stylus-supremacy format -p './.vscode/settings.json' --replace",
+      "git add"
     ]
   },
   "devDependencies": {
