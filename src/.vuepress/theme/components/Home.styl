@@ -1,17 +1,18 @@
-  @import "~@theme/styles/global/variables";
+@import '~@theme/styles/global/variables'
 
-  .maxed
-    max-width 1600px
-    margin 0 auto
+.maxed
+  margin 0 auto
+  max-width 1600px
 
-  .content-padding
-    padding-left 1em
-    padding-right 1em
+.content-padding
+  padding-right 1em
+  padding-left 1em
 
-  .hero
-    margin-top 3.6rem
-    @media screen and (max-width: 639px)
-      margin-bottom 2rem
+.hero
+  margin-top 3.6rem
 
-    @media screen and (prefers-color-scheme: dark)
-      margin-top unset
+  @media screen and (max-width 639px)
+    margin-bottom 2rem
+
+  @media screen and (prefers-color-scheme dark)
+    margin-top unset

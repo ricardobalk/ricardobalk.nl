@@ -1,50 +1,49 @@
-  $color-navigation-text = #333
-  $color-navigation-text-darkmode = #b4b4b4
-  Scolor-navigation-text-highlight = #001037
-  Scolor-navigation-text-highlight-darkmode = #eee
+$color-navigation-text = #333
+$color-navigation-text-darkmode = #b4b4b4
+Scolor-navigation-text-highlight = #001037
+Scolor-navigation-text-highlight-darkmode = #eee
 
+.nav-links
+  display inline-block
+
+  a
+    color $color-navigation-text
+    line-height 1.4rem
+
+    @media screen and (prefers-color-scheme dark)
+      color $color-navigation-text-darkmode
+
+    &:hover, &.router-link-active
+      color Scolor-navigation-text-highlight
+
+      @media screen and (prefers-color-scheme dark)
+        color lighten(Scolor-navigation-text-highlight-darkmode, 20%)
+
+  .nav-item
+    position relative
+    display inline-block
+    margin-left 1.5rem
+
+    &:first-child
+      margin-left 0
+
+    .dropdown-wrapper
+      .dropdown-title
+        color $color-navigation-text
+
+        @media screen and (prefers-color-scheme dark)
+          color $color-navigation-text-darkmode
+
+  .repo-link
+    margin-left 1.5rem
+
+@media (max-width $MQMobile)
   .nav-links
-      display inline-block
+    .nav-item, .repo-link
+      margin-left 0
 
-      a
-          line-height 1.4rem
-          color $color-navigation-text
-          @media screen and (prefers-color-scheme: dark) {
-              color $color-navigation-text-darkmode
-          }
-
-          &:hover, &.router-link-active
-              color Scolor-navigation-text-highlight
-              @media screen and (prefers-color-scheme: dark) {
-                  color lighten(Scolor-navigation-text-highlight-darkmode, 20%)
-              }
-
-      .nav-item
-          position relative
-          display inline-block
-          margin-left 1.5rem
-
-          &:first-child
-              margin-left 0
-
-          .dropdown-wrapper
-            .dropdown-title
-             color $color-navigation-text
-             @media screen and (prefers-color-scheme: dark) {
-               color $color-navigation-text-darkmode
-             }
-
-      .repo-link
-          margin-left 1.5rem
-
-  @media (max-width: $MQMobile)
-      .nav-links
-          .nav-item, .repo-link
-              margin-left 0
-
-  @media (min-width: $MQMobile)
-      .nav-links a
-      .nav-item > a:not(.external)
-          &:hover, &.router-link-active
-              margin-bottom -2px
-              border-bottom 2px solid darken(Scolor-navigation-text-highlight-darkmode, 10%)
+@media (min-width $MQMobile)
+  .nav-links a, .nav-item > a:not(.external)
+    &:hover, &.router-link-active
+      margin-bottom -2px
+      border-bottom 2px solid darken(Scolor-navigation-text-highlight-darkmode, 10%)

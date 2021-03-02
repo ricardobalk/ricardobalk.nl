@@ -1,7 +1,5 @@
 <template>
-  <div class="tooltip">
-    <span class="text" :title="text"><slot>This tooltip is missing its slot value</slot></span>
-  </div>
+  <span class="tooltip" :title="text"><slot>This tooltip is missing its slot value</slot></span>
 </template>
 
 <script lang="ts" src="./Tooltip.ts" />
