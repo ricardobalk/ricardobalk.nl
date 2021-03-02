@@ -37,7 +37,7 @@
   "stylusSupremacy.insertNewLineBeforeElse": false,
   "stylusSupremacy.insertLeadingZeroBeforeFraction": true,
   "stylusSupremacy.selectorSeparator": ", ",
-  "stylusSupremacy.tabStopChar": "\t",
+  "stylusSupremacy.tabStopChar": "  ",
   "stylusSupremacy.newLineChar": "\n",
   "stylusSupremacy.quoteChar": "'",
   "stylusSupremacy.sortProperties": "grouped",
