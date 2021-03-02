@@ -66,6 +66,7 @@
     "sass": "^1.26.5",
     "sass-loader": "^8.0.0",
     "serve": "^11.3.2",
+    "stylus-supremacy": "^2.15.0",
     "typescript": "^3.9.5",
     "vue-class-component": "^7.2.3",
     "vue-disqus": "^3.0.5",
