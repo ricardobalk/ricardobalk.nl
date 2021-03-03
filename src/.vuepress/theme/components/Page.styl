@@ -1,73 +1,73 @@
-  @require '../styles/wrapper.styl'
-  @import "~@theme/styles/global/main";
-  @import "~@theme/styles/global/main.dark";
+@require '../styles/wrapper.styl'
+@import '~@theme/styles/global/main'
+@import '~@theme/styles/global/main.dark'
 
-  body
-    min-height 100vh
+body
+  min-height 100vh
 
-  .page
-    display block
-    padding-bottom 2rem
+.page
+  display block
+  padding-bottom 2rem
 
-    .content-area, #disqus_thread
-      max-width 60 + 18 rem // Text area (60 rem) and Keybase card (18 rem) together.
-      margin 0 auto
+  .content-area, #disqus_thread
+    margin 0 auto
+    max-width 60 + 18 rem // Text area (60 rem) and Keybase card (18 rem) together.
 
-    .content-area
-      display flex
-      flex-direction row
-      flex-wrap wrap-reverse
+  .content-area
+    display flex
+    flex-direction row
+    flex-wrap wrap-reverse
 
-      &:first-child
-        margin-top 5rem
+    &:first-child
+      margin-top 5rem
 
-      .aside
-        &.left
-          margin 0 auto
+    .aside
+      &.left
+        margin 0 auto
 
-          .keybaseUserCards
-            display flex
-            flex-direction column
-            position sticky
-            top 5rem
-            margin 0 1rem
+        .keybaseUserCards
+          position sticky
+          top 5rem
+          display flex
+          flex-direction column
+          margin 0 1rem
 
-            .keybaseUserCard
-              margin 0 auto
+          .keybaseUserCard
+            margin 0 auto
 
-              &:not(:last-of-type)
-                margin-bottom 1rem
+            &:not(:last-of-type)
+              margin-bottom 1rem
 
-      .main-article
-        width 66%
-        flex-grow 1
-        margin 0 1rem
+    .main-article
+      flex-grow 1
+      margin 0 1rem
+      width 66%
 
-        .breadcrumbs
-          padding-left 1px
+      .breadcrumbs
+        padding-left 1px
 
-        .page-title
-          max-width 740px
-          margin 0 auto
-          padding 0 2.5rem
+      .page-title
+        margin 0 auto
+        padding 0 2.5rem
+        max-width 740px
 
-          &:first-child
-            margin-top 5.5rem
+        &:first-child
+          margin-top 5.5rem
 
-        .theme-default-content
-          > h1:first-of-type
-            margin-top 0
+      .theme-default-content
+        > h1:first-of-type
+          margin-top 0
 
-          > p:first-of-type
-            margin-top 1.5rem
+        > p:first-of-type
+          margin-top 1.5rem
 
-  #disqus_thread
-    margin-top 2rem
-    padding 0 2rem
+#disqus_thread
+  margin-top 2rem
+  padding 0 2rem
 
-  code
-    border 1px solid #333
+code
+  border 1px solid #333
 
-  .custom-block
-    &.danger p
-      color #555
+.custom-block
+  &.danger p
+    color #555

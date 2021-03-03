@@ -1,86 +1,89 @@
-  @require '~@theme/styles/global/masonry'
-  @require '~@theme/styles/global/variables'
+@require '~@theme/styles/global/masonry'
+@require '~@theme/styles/global/variables'
 
+.portfolio-overview
+  margin-top $navigation-bar-height
+
+  .big-hero
+    margin-bottom 0
+    background-position center
+
+  .portfolio
+    masonry-layout(0)
+
+    .page-container
+      margin-bottom 5em
+
+    .page-header
+      margin 1em 0
+      text-transform uppercase
+      font-size 1.5em
+
+    .items
+      .item
+        position relative
+        page-break-inside avoid
+
+        img
+          width 100%
+
+        .meta
+          h1, h2, h3, p
+            color var(--color-light-grey)
+
+          p
+            margin 0
+
+          span
+            margin 0
+            font-size 0.9em
+
+          .date
+            &:after
+              margin 0 0.25em
+              content '\2022'
+
+          .btn
+            display inline-block
+            margin 1.25em 0
+            padding 0.5em 1em 0.5em 1.25em
+            border 1px solid #eee
+            text-transform uppercase
+            font-weight 700
+            font-size 1.25em
+            line-height 1em
+            transition color 0.25s ease-in-out
+
+            &:hover
+              background-color #fff
+              color var(--color-dark-grey)
+
+            .icon
+              padding 0.15em
+
+          .excerpt
+            color #ccc
+            text-shadow 0 0 1px rgba(255, 255, 255, 0.5)
+            font-size 0.8em
+
+          &.overlay
+            position absolute
+            top 0
+            padding 2em
+            width 100%
+            height 100%
+            background-color #000
+            color #eee
+            text-align center
+            opacity 0
+            transition opacity 0.25s ease-in-out
+
+            &:hover
+              opacity 0.95
+
+@media screen and (prefers-color-scheme dark)
   .portfolio-overview
-    margin-top $navigation-bar-height
+    margin-top 0
 
-    .big-hero
-      margin-bottom 0
-      background-position center
-
-    .portfolio
-      masonry-layout(0)
-
-      .page-container
-        margin-bottom 5em
-
-      .page-header
-        margin 1em 0
-        text-transform uppercase
-        font-size 1.5em
-
-      .items
-        .item
-          position relative
-          page-break-inside avoid
-
-          .meta
-            h1, h2, h3, p
-              color var(--color-light-grey)
-
-            p
-              margin 0
-
-            span
-              margin 0
-              font-size 0.9em
-
-            .date
-              &:after
-                margin 0 0.25em
-                content '\2022'
-
-            .btn
-              display inline-block
-              margin 1.25em 0
-              padding 0.5em 1em 0.5em 1.25em
-              border 1px solid #eee
-              text-transform uppercase
-              font-weight 700
-              font-size 1.25em
-              line-height 1em
-              transition color 0.25s ease-in-out
-
-              &:hover
-                background-color #fff
-                color var(--color-dark-grey)
-
-              .icon
-                padding 0.15em
-
-            .excerpt
-              color #ccc
-              text-shadow 0 0 1px rgba(255, 255, 255, 0.5)
-              font-size 0.8em
-
-            &.overlay
-              position absolute
-              top 0
-              padding 2em
-              width 100%
-              height 100%
-              background-color #000
-              color #eee
-              text-align center
-              opacity 0
-              transition opacity 0.25s ease-in-out
-
-              &:hover
-                opacity 0.95
-
-  @media screen and (prefers-color-scheme dark)
-    .portfolio-overview
-      margin-top 0
-
-      .hero
-        background-color rgb(11, 11, 11) !important
+    .hero
+      background-color rgb(11, 11, 11) !important
