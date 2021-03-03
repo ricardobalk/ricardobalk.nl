@@ -1,0 +1,181 @@
+*
+  box-sizing border-box
+  margin 0
+  padding 0
+
+/* === Grid Settings */
+base-font-size = 16 // base font size it is 16px by default it is used to calculate rem sizes
+gutter = 20px // gutters size
+columns = 12 // how many columns you need in your grid (usage with helper classes)
+gridClassName = 'g' // main grid wrapper class name (usage with helper classes)
+cellClassName = 'c' // main grid cell class name (usage with helper classes)
+breakpoints = {
+  sm: 0,
+  md: 640px,
+  lg: 1200px,
+  xlg: 1440px,
+  xxlg: 1920px
+} // media queries breakpoints
+
+/* === Grid Functions */
+rem-calc(value)
+  u = unit(value)
+
+  if (u == 'rem')
+    return unit(value, u)
+  else
+    return unit((value / base-font-size), 'rem')
+
+grid(direction = 'row', cells-align = 'top', justify = '')
+  display flex
+  flex-wrap wrap
+
+  if (cells-align == 'top')
+    align-items flex-start
+
+  if (cells-align == 'bottom')
+    align-items flex-end
+
+  if (cells-align == 'center')
+    align-items center
+
+  if (cells-align == 'stretch')
+    align-items stretch
+
+  if (direction == 'row')
+    flex-direction row
+
+  if (direction == 'row-reverse')
+    flex-direction row-reverse
+
+  if (direction == 'column')
+    flex-direction column
+
+  if (direction == 'column-reverse')
+    flex-direction column-reverse
+
+  if (justify == 'center')
+    justify-content center
+
+  if (justify == 'start')
+    justify-content flex-start
+
+  if (justify == 'end')
+    justify-content flex-end
+
+cell(i = 1, cols = columns, align = '', g = gutter)
+  if (g != 0)
+    flex-basis s('calc(100% * %s - %s)', (i / cols), rem-calc(g))
+  else
+    flex-basis s('calc(100% * %s)', (i / cols))
+
+  min-width 0 // FF adjustment for responsive images
+
+  if (g != 0)
+    margin rem-calc((g / 2))
+
+  if (align == 'top')
+    align-self flex-start
+
+  if (align == 'bottom')
+    align-self flex-end
+
+  if (align == 'center')
+    align-self center
+
+cell-offset(i = 1, cols = columns, g = gutter)
+  if (g != 0)
+    margin-left s('calc(100% * %s + (%s / 2))', (i / cols), rem-calc(g)) !important
+  else
+    margin-left s('calc(100% * %s)', (i / cols)) !important
+
+center(value, pad = null)
+  margin-right auto
+  margin-left auto
+  width 100%
+  u = unit(value)
+
+  if (u == 'rem' || (u == '%'))
+    max-width unit(value, u)
+  else
+    max-width rem-calc(value)
+
+  if (pad == null)
+    return null
+  else
+    p = unit(pad)
+
+    if (p == 'rem' || (p == '%'))
+      padding-right unit(pad, p)
+      padding-left unit(pad, p)
+    else
+      padding-right rem-calc(pad)
+      padding-left rem-calc(pad)
+
+stack()
+  cell(1, 1)
+
+/* === Grid Class Helpers */
+grid-cell-classes-generator(cols = columns, g = gutter, cellClass = cellClassName)
+  for key, value in breakpoints
+    @media screen and (min-width rem-calc(value))
+      for i in range(1, cols, 1)
+        .{cellClass}-{key}-{i}
+          cell(i, cols, g)
+
+        .{cellClass}-offset-{key}-{i}
+          cell-offset(i, cols, g)
+
+grid-classes-generator(cols = columns, g = gutter, gridClass = gridClassName, cellClass = cellClassName)
+  for key, value in breakpoints
+    @media screen and (min-width rem-calc(value))
+      for i in range(1, cols, 1)
+        .{gridClass}-{key}-{i} > [class~={cellClass}]
+          cell(i, cols, g)
+
+.{gridClassName}-top
+  grid(cells-align: 'top')
+
+.{gridClassName}-bottom
+  grid(cells-align: 'bottom')
+
+.{gridClassName}-center
+  grid(cells-align: 'center')
+
+.{gridClassName}-stretch
+  grid(cells-align: 'stretch')
+
+.{gridClassName}-justify-center
+  justify-content center
+
+.{gridClassName}-justify-start
+  justify-content flex-start
+
+.{gridClassName}-justify-end
+  justify-content flex-end
+
+.{gridClassName}-row
+  grid(direction: 'row')
+
+.{gridClassName}-row-reverse
+  grid(direction: 'row-reverse')
+
+.{gridClassName}-column
+  grid(direction: 'column')
+
+.{gridClassName}-column-reverse
+  grid(direction: 'column-reverse')
+
+grid-classes-generator()
+
+// cell styles
+.{cellClassName}-top
+  align-self flex-start
+
+.{cellClassName}-bottom
+  align-self flex-end
+
+.{cellClassName}-center
+  align-self center
+
+grid-cell-classes-generator()

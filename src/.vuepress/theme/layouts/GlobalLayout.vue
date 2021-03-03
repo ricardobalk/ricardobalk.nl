@@ -16,5 +16,4 @@
 </template>
 
 <script lang="js" src="./GlobalLayout.js" />
-<style lang="scss" src="./GlobalLayout.scss" />
 <style lang="stylus" src="./GlobalLayout.styl" />

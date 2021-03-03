@@ -1,11 +1,11 @@
 <template>
   <section class="product-and-process" title="" tabindex="0">
     <div class="maxed">
-      <div class="grid-x">
-        <div class="show-for-large large-6 cell picture">
+      <div class="g-row">
+        <div class="show-from-lg c-lg-6 picture">
           <img :src="image.path" :alt="image.description" />
         </div>
-        <div class="small-12 medium-12 large-6 cell">
+        <div class="c-sm-12 c-md-12 c-lg-6">
           <div class="text-container">
             <h2 class="section-title">{{ title }}</h2>
             <span class="design-process">{{ subtitle }}</span>

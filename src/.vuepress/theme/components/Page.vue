@@ -32,5 +32,4 @@
 </template>
 
 <script lang="js" src="./Page.js" />
-<style lang="scss" src="./Page.scss" />
 <style lang="stylus" src="./Page.styl" />

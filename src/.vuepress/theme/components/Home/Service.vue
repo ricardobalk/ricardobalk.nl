@@ -1,6 +1,6 @@
 import Service from "*.vue";
 <template>
-  <div class="small-12 medium-6 large-3 cell card">
+  <div class="c-sm-12 c-md-6 c-lg-3 card">
     <div class="service">
       <div class="inner">
         <div class="icon-container">

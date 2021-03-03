@@ -1,8 +1,8 @@
 <template>
   <section class="conclusion" title="" tabindex="0">
     <div class="maxed">
-      <div class="grid-x">
-        <div class="small-12 cell">
+      <div class="g-row">
+        <div class="c-sm-12">
           <div class="text-container">
             <p class="title">{{ title }}</p>
             <p class="subtitle">{{ subtitle }}</p>
