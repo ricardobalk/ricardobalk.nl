@@ -1,0 +1,4 @@
+node_modules/
+src/.vuepress/.cache/
+src/.vuepress/.temp/
+yarn-error.log
