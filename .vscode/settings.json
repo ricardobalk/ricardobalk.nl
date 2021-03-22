@@ -49,5 +49,9 @@
   "stylusSupremacy.alwaysUseZeroWithoutUnit": true,
   "stylusSupremacy.reduceMarginAndPaddingValues": true,
   "stylusSupremacy.ignoreFiles": [],
-  "vetur.format.scriptInitialIndent": true
+  "vetur.format.scriptInitialIndent": true,
+  "githubIssues.issueBranchTitle": "feature/issues/#${issueNumber}-${sanitizedIssueTitle}",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

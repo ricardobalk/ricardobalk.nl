@@ -2,34 +2,35 @@
   <main class="page">
     <slot name="top" />
 
-    <BigHero
-      v-if="this.$page.frontmatter.images && this.$page.frontmatter.images.hero"
-      :image="`${heroImage}`"
-      class="big"
-    />
+    <Breadcrumbs />
 
-    <div class="content-area">
-      <div v-if="pageContributors" class="aside left">
-        <div class="keybaseUserCards">
-          <KeybaseUserCard v-for="(contributor, id) in pageContributors" :username="contributor" :key="id" />
-        </div>
-      </div>
-
-      <article class="main-article">
-        <Breadcrumbs />
-        <Content class="theme-default-content custom content" />
-      </article>
+    <div class="theme-default-content">
+      <Content />
     </div>
 
-    <PageEdit />
+    <PageMeta />
 
-    <PageNav v-bind="{ sidebarItems }" />
-
-    <Disqus />
+    <PageNav />
 
     <slot name="bottom" />
   </main>
 </template>
 
-<script lang="js" src="./Page.js" />
-<style lang="stylus" src="./Page.styl" />
+<script>
+  import { defineComponent } from "vue";
+  import Breadcrumbs from "./Breadcrumbs"
+  import PageMeta from "./PageMeta.vue";
+  import PageNav from "./PageNav.vue";
+
+  export default defineComponent({
+    name: "Page",
+
+    components: {
+      Breadcrumbs,
+      PageMeta,
+      PageNav,
+    },
+  });
+</script>
+
+<style lang="stylus" src="../styles/global/main.styl" />

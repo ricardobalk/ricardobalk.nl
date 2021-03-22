@@ -1,9 +1,9 @@
 ---
-type: blogpost
+type: post
 date: 2019-12-27 06:00:00 +00:00
+lang: en-GB
 category: "Software Development"
 tags: ["personal", "website"]
-lang: en
 images:
   featured:
     filename: "new-website-featured.webp"
@@ -11,7 +11,7 @@ images:
   hero:
     filename: "new-website-hero.webp"
     description: "Computer screen that visualizes the layout of a website and the associated code"
-permalink: /blog/new-website
+permalink: /blog/new-website/
 ---
 
 # New Website

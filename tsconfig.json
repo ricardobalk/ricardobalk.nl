@@ -1,23 +1,5 @@
 {
-  "compilerOptions": {
-    "target": "ES2019",
-    "module": "esnext",
-    "strict": true,
-    "noImplicitThis": true,
-    "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "types": ["vuepress-types"],
-    "paths": {
-      "@/*": ["src/*"]
-    },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
-  },
-  "include": ["src/.vuepress/**/*.ts", "src/.vuepress/**/*.tsx", "src/.vuepress/**/*.vue"],
-  "exclude": ["node_modules"]
+  "extends": "./tsconfig.base.json",
+  "references": [],
+  "files": []
 }

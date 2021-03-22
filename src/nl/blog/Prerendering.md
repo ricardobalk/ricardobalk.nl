@@ -1,10 +1,10 @@
 ---
-type: blogpost
+type: post
 date: 2019-09-03 06:00:00 +00:00
+lang: nl-NL
 excerpt: "Dankzij Prerendering laadt mijn website iets sneller."
 category: "Softwareontwikkeling"
 tags: ["prerendering", "puppeteer"]
-lang: nl
 ---
 
 # Prerenderen van websites

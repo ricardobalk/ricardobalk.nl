@@ -1,6 +1,7 @@
 ---
 type: portfolio
 date: 2013-09-01 09:00:00 +02:00
+lang: en-GB
 client: The Mudskipper Family
 shortTitle: "Sound Artist & Engineer"
 category: Sound Design
@@ -13,7 +14,7 @@ images:
     filename: "hero-the-mudskipper-family.webp"
     description: ""
 excerpt: I created foley sounds for The Mudskipper Family.
-permalink: /portfolio/the-mudskipper-family
+permalink: /portfolio/the-mudskipper-family/
 ---
 
 # The Mudskipper Family: Sound Engineer

@@ -1,7 +1,7 @@
 ---
-layout: BlogOverview
+blog: true
 ---
 
 # Blog
 
-Everything here is currently ignored.
+Alles wat hier staat wordt momenteel genegeerd.

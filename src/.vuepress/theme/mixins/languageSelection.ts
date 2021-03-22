@@ -1,9 +1,12 @@
-import { Vue, Component } from 'vue-property-decorator'
+import { defineComponent } from 'vue'
+import { useSiteData } from '@vuepress/client'
 
-@Component
-export default class languageSelection extends Vue {
-  get language(): string {
-    /* Replaces "de" with "en" to show English posts on German version. */
-    return this.$lang === "de" ? "en" : this.$lang;
+export const languageSelection = defineComponent({
+  setup(){
+    const siteData = useSiteData()
+    const language : string = siteData.value.lang === "de" ? "en" : siteData.value.lang;
+    return { language }
   }
-}
+})
+
+export default languageSelection

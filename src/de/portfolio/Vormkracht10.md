@@ -20,7 +20,7 @@
   },
   "excerpt": "Als mein Abschlussprojekt habe ich die Benutzerfreundlichkeit einer Webanwendung untersucht.",
   "permalink": "/portfolio/vormkracht10",
-  "lang": "de"
+  "lang": "de-DE"
 }
 ---
 

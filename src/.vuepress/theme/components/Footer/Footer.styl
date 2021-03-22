@@ -1,0 +1,30 @@
+.footer
+  width 100%
+  background-color #1e1e1e
+  color #eee
+  align-self flex-end
+
+  &.home
+    @media screen and (prefers-color-scheme dark)
+      background-color #002451
+
+  .footer-message
+    padding-right 1em
+    padding-left 1em
+    font-size 0.85em
+
+    p
+      color #eee
+
+    a
+      color inherit
+      font-size inherit
+
+    svg
+      margin 0 0.2em
+
+    span:not(:last-of-type):after
+      margin 0 0.25em 0 0.5em
+      content '\2022'
+      font-size 0.75em
+      line-height 0.95em

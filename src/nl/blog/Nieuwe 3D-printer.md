@@ -1,9 +1,9 @@
 ---
-type: blogpost
+type: post
 date: 2021-03-01 08:00:00 +01:00
+lang: "nl-NL"
 category: "3D Printen"
 tags: ["persoonlijk", "3d", "hobby", "technologie", "3d printen", "creativiteit"]
-lang: nl
 images:
   featured:
     filename: "3D-printing-Printer-part-closeup_sm.webp"

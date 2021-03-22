@@ -1,6 +1,7 @@
 ---
 type: portfolio
 date: 2018-06-01 09:00:00 +02:00
+lang: nl-NL
 shortTitle: Bedrijfsvideo
 client: ELDA
 category: Fotografie & Film
@@ -14,7 +15,6 @@ images:
     description: "Goat"
 excerpt: Ik heb een bedrijfsvideo gemaakt voor ELDA.
 permalink: /portfolio/ELDA-business-movie
-lang: nl
 ---
 
 # Bedrijfsvideo voor ELDA

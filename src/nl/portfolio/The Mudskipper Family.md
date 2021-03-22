@@ -13,7 +13,7 @@
     },
   "excerpt": "Spannende game over het leven op Curaçao",
   "permalink": "/portfolio/the-mudskipper-family",
-  "lang": "nl",
+  "lang": "nl-NL",
 }
 ---
 

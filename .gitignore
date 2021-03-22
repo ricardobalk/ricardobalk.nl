@@ -1,9 +1,6 @@
 .idea/
 dist/
 node_modules/
-
-# Ignore these files during the implementation of vuepress@next
-vuepress-next/node_modules/
-vuepress-next/src/.vuepress/.cache/
-vuepress-next/src/.vuepress/.temp/
-vuepress-next/yarn-error.log
+src/.vuepress/.cache/
+src/.vuepress/.temp/
+yarn-error.log

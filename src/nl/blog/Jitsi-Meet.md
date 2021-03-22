@@ -1,9 +1,9 @@
 ---
-type: blogpost
+type: post
 date: 2020-06-01 08:00:00 +02:00
 category: "Softwareontwikkeling"
 tags: ["jitsi", "meet", "video communication"]
-lang: nl
+lang: nl-NL
 images:
   featured:
     filename: "jitsi-meet-logo.webp"

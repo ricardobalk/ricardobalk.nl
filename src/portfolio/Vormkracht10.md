@@ -19,8 +19,8 @@
     }
   },
   "excerpt": "As part of my graduation project, I did research on the usability of a web application.",
-  "permalink": "/portfolio/vormkracht10",
-  "lang": "en"
+  "permalink": "/portfolio/vormkracht10/",
+  "lang": "en-GB"
 }
 ---
 

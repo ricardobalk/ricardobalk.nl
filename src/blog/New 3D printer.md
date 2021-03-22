@@ -1,9 +1,9 @@
 ---
-type: blogpost
+type: post
 date: 2021-03-01 08:00:00 +01:00
+lang: en-GB
 category: "3D Printing"
 tags: ["personal", "3d", "fun", "technology", "3d printing", "creativity"]
-lang: en
 images:
   featured:
     filename: "3D-printing-Printer-part-closeup_sm.webp"
@@ -11,7 +11,7 @@ images:
   hero:
     filename: "3D-printing-Printer-part-closeup_g.webp"
     description: "Close-up of a 3D printer part"
-permalink: /blog/3d-printer
+permalink: /blog/3d-printer/
 ---
 
 # New 3D printer

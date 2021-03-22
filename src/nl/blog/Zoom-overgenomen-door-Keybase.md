@@ -1,9 +1,9 @@
 ---
-type: blogpost
+type: post
 date: 2020-05-07 20:00:00 +00:00
+lang: nl-NL
 category: "Nieuws"
 tags: ["personal", "website"]
-lang: nl
 images:
   featured:
     filename: "zoom-and-keybase.webp"

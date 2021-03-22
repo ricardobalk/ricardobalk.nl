@@ -20,7 +20,7 @@
   },
   "excerpt": "Ik heb voor Vormkracht10 onderzoek verricht naar hun CMS.",
   "permalink": "/portfolio/vormkracht10",
-  "lang": "nl"
+  "lang": "nl-NL"
 }
 ---
 

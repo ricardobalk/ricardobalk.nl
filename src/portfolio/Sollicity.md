@@ -1,6 +1,7 @@
 ---
 type: portfolio
 date: 2015-11-05 09:00:00 +02:00
+lang: en-GB
 client: Sollicity
 category: Front-end Development
 tags: ["webapp", "responsive", "redesign", "ux", "interaction"]
