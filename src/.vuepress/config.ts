@@ -7,6 +7,7 @@ import path from 'path'
 
 const config: UserConfig<DefaultThemeOptions> = {
   base: '/',
+  dest: 'dist',
 
   theme: path.resolve(__dirname, 'theme'),
 
@@ -64,12 +65,17 @@ const config: UserConfig<DefaultThemeOptions> = {
       title: 'Ricardo Balk',
       description: 'Persoonlijke website met blog, handleidingen en portfolio.',
     },
+    '/de/': {
+      lang: 'de-DE',
+      title: 'Ricardo Balk',
+      description: 'Persönliche Website mit Blog, Guides und Portfolio.',
+    },
   },
 
   themeConfig: {
     logo: '/assets/img/site/global/logo.svg',
 
-    //repo: 'ricardobalk/website',
+    repo: 'ricardobalk/website',
 
     docsDir: 'src',
 
@@ -86,7 +92,7 @@ const config: UserConfig<DefaultThemeOptions> = {
         navbar: navbar.en,
 
         // sidebar
-        sidebar: sidebar.en,
+        sidebar: {},
 
         // page meta
         editLinkText: 'Edit this page on GitHub',
@@ -103,7 +109,7 @@ const config: UserConfig<DefaultThemeOptions> = {
         selectLanguageAriaLabel: 'Taalkeuze',
 
         // sidebar
-        sidebar: sidebar.zh,
+        sidebar: {},
 
         // page meta
         editLinkText: 'Pagina bewerken op GitHub',
@@ -126,6 +132,39 @@ const config: UserConfig<DefaultThemeOptions> = {
 
         // other
         openInNewWindow: 'In apart venster openen',
+      },
+
+      '/de/': {
+        // navbar
+        navbar: navbar.de,
+        selectLanguageName: 'Deutsch',
+        selectLanguageText: 'Sprachen',
+        selectLanguageAriaLabel: 'Sprachauswahl',
+
+        // sidebar
+        sidebar: {},
+
+        // page meta
+        editLinkText: 'Bearbeiten Sie diese Seite auf GitHub',
+        lastUpdatedText: 'Aktualisiert',
+        contributorsText: 'Mitwirkende',
+
+        // custom containers
+        tip: 'Tip',
+        warning: 'Achtung',
+        danger: 'Gefahr',
+
+        // 404 page
+        notFound: [
+          'Hoppla, Das Internet hat Sie im Stich gelassen!',
+          'Schade! Seite nicht gefunden.',
+          'Es scheint, dass diese Seite nicht existiert. Andernfalls gehen Sie eine Partie Tischfußball spielen!',
+          '看起来我们进入了错误的链接. Mit anderen Worten, diese Seite ist nicht gefunden.',
+        ],
+        backToHome: 'Zurück zur Startseite',
+
+        // other
+        openInNewWindow: 'In separatem Fenster öffnen',
       },
     },
 
