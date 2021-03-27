@@ -1,5 +1,5 @@
 <template>
-  <header ref="navbar" class="navbar">
+  <header ref="navbar" class="navbar" :class="{ 'opaque': navBarOpacity }">
     <ToggleSidebarButton @toggle="$emit('toggle-sidebar')" />
 
     <span ref="siteBrand">
@@ -58,6 +58,10 @@
         };
       });
 
+      const navBarOpacity = ref(false);
+      let navbarDebounceTimer !: number;
+
+
       // avoid overlapping of long title and long navbar links
       onMounted(() => {
         // TODO: migrate to css var
@@ -73,8 +77,25 @@
               navbar.value!.offsetWidth - navbarHorizontalPadding - (siteBrand.value?.offsetWidth || 0);
           }
         };
+
+        /**
+         * @function handleNavbarOpacity() changes the value of `navBarOpacity` to `true` when the user scrolls down.
+         * The value of `navBarOpacity` can be used to add and remove CSS classes throughout the Vue component, in this case for changing the appearance of the NavBar.
+         * 
+         * It comes with a debouncing mechanism to prevent changing the value too many times, as JavaScript could trigger events an excessive amount of times,
+         * especially when using it with a scroll listener.
+         */
+        const handleNavbarOpacity = (): void => {
+          navbarDebounceTimer && window.cancelAnimationFrame(navbarDebounceTimer);
+          navbarDebounceTimer = window.requestAnimationFrame(function () {
+            (window.scrollY > 50 && (navBarOpacity.value = true)) || (navBarOpacity.value = false)
+          });
+        }
+
+        handleNavbarOpacity();
         handleLinksWrapWidth();
         window.addEventListener("resize", handleLinksWrapWidth, false);
+        window.addEventListener("scroll", handleNavbarOpacity, false);
       });
 
       return {
@@ -84,6 +105,7 @@
         siteBrandLogo,
         siteBrandTitle,
         linksWrapperStyle,
+        navBarOpacity,
       };
     },
   });

@@ -15,9 +15,20 @@ $mobileSidebarWidth: $sidebarWidth * 0.82;
   left: 0;
   right: 0;
   height: $navbarHeight;
-  // background-color: #fff;
+  background-color: white;
   box-sizing: border-box;
-  // border-bottom: 1px solid $borderColor;
+  transition: .2s ease background-color;
+  @media screen and (prefers-color-scheme: dark) {
+    background-color: unset;
+  }
+  &.opaque {
+    background-color: #fff;
+    border-bottom: 1px solid $borderColor;
+    @media screen and (prefers-color-scheme: dark) {
+      background-color: rgba(0,0,0,.95);
+      border-bottom: 1px solid #222;
+    }
+  }
 }
 
 .sidebar {
