@@ -1,5 +1,5 @@
 <template>
-  <section class="portfolio-overview">
+  <main class="portfolio-overview">
     <Hero title="Portfolio"
     image="/assets/img/site/portfolio/workbench.webp"
     imageDark="/assets/img/site/portfolio/workbench.webp"
@@ -43,7 +43,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </main>
 </template>
 
 <script lang="ts" src="./Portfolio.ts" />
