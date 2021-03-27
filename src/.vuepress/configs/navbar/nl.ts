@@ -41,7 +41,7 @@ export const nl: NavbarConfig = [
         text: 'Over deze website',
         children: [
           '/changes/',
-          '/privacy/',
+          '/nl/privacy/',
           {
             text: 'Broncode',
             link: 'https://github.com/ricardobalk/website',
