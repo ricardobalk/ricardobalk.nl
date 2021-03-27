@@ -1,20 +1,23 @@
 ---
-{
-  "type": "portfolio",
-  "date": "2013-06-01 03:00:00 -0400",
-  "shortTitle": "Sound Artist & Engineer",
-  "client": "HAN University of Applied Sciences",
-  "category": "Sound",
-  "tags": ["UDK", "Game", "HAN"],
-  "images":
-    {
-      "featured": { "filename": "feat-the-mudskipper-family.webp", "description": "The Mudskipper Family" },
-      "hero": { "filename": "hero-the-mudskipper-family.webp", "description": "Poster van The Mudskipper Family" },
-    },
-  "excerpt": "Spannende game over het leven op Curaçao",
-  "permalink": "/portfolio/the-mudskipper-family",
-  "lang": "nl-NL",
-}
+type: portfolio
+date: 2013-06-01 03:00:00 -04:00
+shortTitle: Sound Artist & Engineer
+client: HAN University of Applied Sciences
+category: Sound
+tags:
+  - UDK
+  - Game
+  - HAN
+images:
+  featured:
+    filename: feat-the-mudskipper-family.webp
+    description: The Mudskipper Family
+  hero:
+    filename: hero-the-mudskipper-family.webp
+    description: Poster van The Mudskipper Family
+excerpt: Spannende game over het leven op Curaçao
+permalink: /nl/portfolio/the-mudskipper-family/
+lang: nl-NL
 ---
 
 # The Mudskipper Family: Sound Engineer

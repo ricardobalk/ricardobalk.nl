@@ -1,27 +1,22 @@
 ---
-{
-  "type": "portfolio",
-  "date": "2019-02-01 03:00:00 -0400",
-  "shortTitle": "UX Research & Design",
-  "client": "Vormkracht10",
-  "category": "UX Design",
-  "tags": [
-    "Vormkracht10",
-    "UX",
-    "Design",
-    "Prototyping",
-    "Usability"
-  ],
-  "images": {
-    "featured": {
-      "filename": "vormkracht10-logo.webp",
-      "description": "Logo van Vormkracht10"
-    }
-  },
-  "excerpt": "Ik heb voor Vormkracht10 onderzoek verricht naar hun CMS.",
-  "permalink": "/portfolio/vormkracht10",
-  "lang": "nl-NL"
-}
+type: portfolio
+date: 2019-02-01 03:00:00 -04:00
+shortTitle: UX Research & Design
+client: Vormkracht10
+category: UX Design
+tags:
+  - Vormkracht10
+  - UX
+  - Design
+  - Prototyping
+  - Usability
+images:
+  featured:
+    filename: vormkracht10-logo.webp
+    description: Logo van Vormkracht10
+excerpt: Ik heb voor Vormkracht10 onderzoek verricht naar hun CMS.
+permalink: /nl/portfolio/vormkracht10/
+lang: nl-NL
 ---
 
 # Vormkracht10: UX-research & Design
