@@ -2,9 +2,8 @@
   <main class="page">
     <slot name="top" />
 
-    <Breadcrumbs />
-
     <div class="theme-default-content">
+      <Breadcrumbs />
       <Content />
     </div>
 
@@ -18,7 +17,7 @@
 
 <script>
   import { defineComponent } from "vue";
-  import Breadcrumbs from "./Breadcrumbs"
+  import Breadcrumbs from "./Breadcrumbs";
   import PageMeta from "./PageMeta.vue";
   import PageNav from "./PageNav.vue";
 

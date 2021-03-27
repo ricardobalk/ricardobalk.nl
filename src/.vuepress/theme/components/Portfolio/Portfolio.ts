@@ -1,19 +1,17 @@
   import { defineComponent, computed, reactive } from 'vue';
   import { usePageData, usePageFrontmatter } from "@vuepress/client"
   import filterPagesByFrontmatter from "../../mixins/filterPagesByFrontmatter";
-  import languageSelection from "../../mixins/languageSelection";
+  import getPageLanguage from "../../mixins/getPageLanguage";
   import { library } from "@fortawesome/fontawesome-svg-core";
   import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
   import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
   import type { PageData } from '@vuepress/core/lib/types'
   import Hero from "../Hero";
-  import { resolvePageLang } from '@vuepress/client'
   import { DateTime } from 'luxon';
-  // import HumanReadableDate from "../components/global/HumanReadableDate.vue";
 
  export const Portfolio = defineComponent({
     name: "Portfolio",
-    components: { FontAwesomeIcon, Hero, languageSelection, DateTime },
+    components: { FontAwesomeIcon, Hero, DateTime },
     setup () {
     const frontmatter = usePageFrontmatter<any>() // TODO: Add strict types
     const pageData = usePageData()
@@ -37,7 +35,7 @@
       return posts
     }
 
-    const portfolioItems = computed(() => fetchPosts({lang: [resolvePageLang(pageData.value)], type: ["portfolio"]}))
+    const portfolioItems = computed(() => fetchPosts({lang: [getPageLanguage()], type: ["portfolio"]}))
 
     return { heroImages, pageTitle, portfolioItems, DateTime }
     },

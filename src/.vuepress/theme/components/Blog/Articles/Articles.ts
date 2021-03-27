@@ -2,14 +2,12 @@ import { defineComponent, PropType } from "vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faCalendarAlt, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import HumanReadableDate from "../../global/HumanReadableDate.vue";
-import languageSelection from "../../../mixins/languageSelection";
+import { DateTime } from 'luxon';
 import { PageOptions } from "@vuepress/core"
 
 export const Articles = defineComponent({
   name: "Articles",
-  components: { FontAwesomeIcon },
-  //components: { FontAwesomeIcon, HumanReadableDate, languageSelection },
+  components: { FontAwesomeIcon, DateTime },
   props: {
     posts: {
       type: Object as PropType<PageOptions>,
@@ -24,6 +22,9 @@ export const Articles = defineComponent({
   created() {
     library.add(faCalendarAlt);
     library.add(faChevronRight);
+  },
+  setup(){
+    return { DateTime }
   }
 })
 
