@@ -103,6 +103,9 @@ $navbar-horizontal-padding: 1.5rem;
     &:hover,
     &.router-link-active {
       color: $textColor;
+      @media screen and (prefers-color-scheme: dark) {
+        color: #eee;
+      }
     }
   }
 
