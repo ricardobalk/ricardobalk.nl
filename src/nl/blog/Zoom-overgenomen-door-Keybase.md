@@ -8,7 +8,7 @@ images:
   featured:
     filename: "zoom-and-keybase.webp"
     description: "Het logo van Zoom en Keybase op een doorzichtige achtergrond"
-permalink: /blog/keybase-overgenomen-door-zoom
+permalink: /nl/blog/keybase-overgenomen-door-zoom/
 ---
 
 # Zoom neemt Keybase over

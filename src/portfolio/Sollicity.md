@@ -10,7 +10,7 @@ images:
     filename: "sollicity-logo.webp"
     description: "Sollicity Logo"
 excerpt: I made an entire redesign of a web application.
-permalink: /portfolio/sollicity-webapp
+permalink: /portfolio/sollicity-webapp/
 ---
 
 # Web-app Redesign

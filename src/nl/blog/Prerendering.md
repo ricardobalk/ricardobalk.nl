@@ -5,6 +5,7 @@ lang: nl-NL
 excerpt: "Dankzij Prerendering laadt mijn website iets sneller."
 category: "Softwareontwikkeling"
 tags: ["prerendering", "puppeteer"]
+permalink: /nl/blog/prerendering/
 ---
 
 # Prerenderen van websites

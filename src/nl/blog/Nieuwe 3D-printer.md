@@ -11,7 +11,7 @@ images:
   hero:
     filename: "3D-printing-Printer-part-closeup_g.webp"
     description: "Close-up van een 3D-printer-onderdeel"
-permalink: /blog/3d-printer
+permalink: /nl/blog/3d-printer/
 ---
 
 # Nieuwe 3D-printer

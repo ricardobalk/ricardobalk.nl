@@ -11,7 +11,7 @@ images:
   hero:
     filename: "video-conference.webp"
     description: "Computerscherm dat een online vergadering visualiseert"
-permalink: /blog/jitsi-meet-instance
+permalink: /nl/blog/jitsi-meet-instance/
 ---
 
 # Jitsi Meet

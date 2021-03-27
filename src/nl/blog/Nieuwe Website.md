@@ -11,7 +11,7 @@ images:
   hero:
     filename: "new-website-hero.webp"
     description: "Computerscherm dat de layout van een website en de bijbehorende code visualiseert"
-permalink: /blog/nieuwe-website
+permalink: /nl/blog/nieuwe-website/
 ---
 
 # Nieuwe website (opnieuw)

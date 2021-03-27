@@ -14,7 +14,7 @@ images:
     filename: "goat.webp"
     description: "Goat"
 excerpt: Ik heb een bedrijfsvideo gemaakt voor ELDA.
-permalink: /portfolio/ELDA-business-movie
+permalink: /nl/portfolio/ELDA-business-movie/
 ---
 
 # Bedrijfsvideo voor ELDA
