@@ -3,13 +3,13 @@ import { usePagesData } from "@vuepress/client"
 import type { InjectionKey } from "vue"
 import type { PageData } from "@vuepress/core/lib/types"
 
-export const pagesSymbol: InjectionKey<Promise<PageData[]>> = Symbol("posts")
+export const pagesSymbol: InjectionKey<Promise<PageData[]>> = Symbol("pages")
 
 /**
  * Inject pages global computed
  */
 export const usePages = async (): Promise<PageData[]> => {
-  const pages= inject(pagesSymbol)
+  const pages = inject(pagesSymbol)
   if (!pages) {
     throw new Error("usePages() is called without provider.")
   }
