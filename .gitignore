@@ -1,6 +1,6 @@
 .idea/
 dist/
 node_modules/
-#src/.vuepress/.cache/
-#src/.vuepress/.temp/
-#yarn-error.log
+src/.vuepress/.cache/
+src/.vuepress/.temp/
+yarn-error.log
