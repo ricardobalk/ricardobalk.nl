@@ -4,15 +4,11 @@
 
 [![Sponsor via GitHub Sponsors](https://img.shields.io/badge/support%20me%20via%20GitHub%20Sponsors%20%E2%9D%A4-%2300bb00?logo=github)](https://github.com/sponsors/ricardobalk) [![Sponsor me via bunq.me](./.github/badges/bunqme.svg)](https://bunq.me/ricardodev/2.50/Support%20for%20your%20work%20on%20GitHub) [![Sponsor me via ko-fi.com](./.github/badges/ko-fi.svg)](https://ko-fi.com/H2H71EMIK)
 
-
-
 This repository contains my personal website. It's made with VuePress 2 (based on Vue 3), some code, a lot of coffee and loads of love.
 
 - VuePress provides a way to run a blog with Markdown files.
 - A modern Flexbox-approach is used for creating a 12 column grid layout.
 - Docker packs up everything and ensures that everything works as expected, on any computer.
-
-
 
 **Driven by JAMstack, and proud of it!**
 
@@ -23,14 +19,6 @@ My website is basically a JAMstack website. JAMstack (JavaScript, APIs and Marku
 My entire website is open source. This means that anyone could download the source code, inspect it, play around with it, help me in improving the website or run their own version of it. Don't forget to star this repository on GitHub if you like it. :+1:
 
 
+**License: ISC**
 
-
----
-
-# License
-
-This website including all blog articles are licenced under the GPL 3.0+ license.
-
-Please note that this product includes software and libraries from 3rd parties which could have a different license. See the below image for more information.
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fricardobalk%2Fwww.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fricardobalk%2Fwww?ref=badge_large)
+This website including all blog articles are licenced under the [ISC license](./LICENSE).
