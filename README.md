@@ -9,7 +9,7 @@
 This repository contains my personal website. It's made with VuePress, ZURB Foundation and Docker.
 
 - VuePress provides a way to run a blog with Markdown files.
-- Foundation is used for its 12 column grid layout, but I'm [getting rid of that soon (#63)](https://github.com/ricardobalk/www/issues/63).
+- A modern Flexbox-approach is used for creating a 12 column grid layout.
 - Docker packs up everything and ensures that everything works as expected, on any computer.
 
 

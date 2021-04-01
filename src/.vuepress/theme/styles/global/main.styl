@@ -1,22 +1,24 @@
-@import "variables";
-@import "fonts";
+@import 'variables'
+@import 'fonts'
 
 html
-  &[lang="en"]
+  &[lang='en']
     figure
       figcaption
         &:before
-          content "Figure: "
-  &[lang="nl"]
+          content 'Figure: '
+
+  &[lang='nl']
     figure
       figcaption
         &:before
-          content "Afbeelding: "
-  &[lang="de"]
+          content 'Afbeelding: '
+
+  &[lang='de']
     figure
       figcaption
         &:before
-          content "Bild: "
+          content 'Bild: '
 
 body
   background-color var(--color-body-background)
@@ -25,22 +27,17 @@ body
   & *
     outline 0
 
-
 .grid-container
-  max-width 100%
   padding 0
-
+  max-width 100%
 
 .limited-width
-  max-width 1920px
   margin 0 auto
-
+  max-width 1920px
 
 // Alignment of items
-
 .text-center
   text-align center
-
 
 .valign-center
   position relative
@@ -50,12 +47,8 @@ body
   -o-transform translateY(-50%)
   -ms-transform translateY(-50%)
 
-
 .hero
-  h1,
-  h2,
-  h3,
-  p
+  h1, h2, h3, p
     color var(--color-light-grey)
 
 .svg-inline--fa
@@ -64,5 +57,5 @@ body
 
 figure
   figcaption
-    text-align center
     margin 1em 0
+    text-align center

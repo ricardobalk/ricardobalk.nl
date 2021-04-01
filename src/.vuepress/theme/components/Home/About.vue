@@ -1,13 +1,13 @@
 <template>
   <section class="about" title="Information about Ricardo" tabindex="0">
-    <div class="grid-x">
-      <div class="small-12 medium-offset-1 medium-10 large-offset-2 large-8 cell inner-container">
-        <div class="grid-x">
-          <div class="small-offset-1 small-10 medium-offset-0 medium-6 cell picture">
+    <div class="g-row">
+      <div class="c-sm-12 c-md-offset-1 c-md-10 c-lg-offset-2 c-lg-8 inner-container">
+        <div class="g-row">
+          <div class="c-sm-offset-1 c-sm-10 c-md-offset-0 c-md-6 picture">
             <Polaroid :caption="polaroidImage.caption" :image="polaroidImage.path" />
           </div>
 
-          <div class="small-12 medium-6 cell text-container">
+          <div class="c-sm-12 c-md-6 text-container">
             <slot>
               <h1>Uh oh!</h1>
               <p>

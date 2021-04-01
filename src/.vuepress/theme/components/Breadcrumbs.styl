@@ -1,20 +1,21 @@
-  .breadcrumbs
-    font-size .8em
-    margin 0
-    margin-bottom 1rem
-    text-transform uppercase
-    list-style none
+.breadcrumbs
+  margin 0
+  margin-bottom 1rem
+  list-style none
+  text-transform uppercase
+  font-size 0.8em
 
-    a
-      font-size inherit
+  a
+    font-size inherit
 
-      &:last-of-type
-        color #000
-        @media screen and (prefers-color-scheme dark)
-          color #bcbcbc
+    &:last-of-type
+      color #000
 
-      &:not(:last-of-type):after
-        color #444
-        display inline-block
-        content "\2013"
-        padding 0 .25em
+      @media screen and (prefers-color-scheme dark)
+        color #bcbcbc
+
+    &:not(:last-of-type):after
+      display inline-block
+      padding 0 0.25em
+      color #444
+      content '\2013'
