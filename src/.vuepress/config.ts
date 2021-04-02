@@ -75,7 +75,7 @@ const config: UserConfig<DefaultThemeOptions> = {
   themeConfig: {
     logo: '/assets/img/site/global/logo.svg',
 
-    repo: 'ricardobalk/website',
+    // repo: 'ricardobalk/website',
 
     docsDir: 'src',
 

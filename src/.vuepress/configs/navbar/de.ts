@@ -6,37 +6,8 @@ export const de: NavbarConfig = [
     link: '/de/',
   },
   {
-    text: 'Blog (auf Englisch)',
-    link: '/blog/',
-  },
-  {
-    text: 'Anleitungen (auf Englisch)',
-    link: '/guides/',
-  },
-  {
-    text: 'Portfolio (auf Englisch)',
-    link: '/portfolio/',
-  },
-  {
     text: 'Weitere Links',
     children: [
-      {
-        text: 'Ricardo auf Social Media',
-        children: [
-          {
-            text: 'GitHub',
-            link: 'https://github.com/ricardobalk',
-          },
-          {
-            text: 'Twitter',
-            link: 'https://twitter.com/ricardobalk',
-          },
-          {
-            text: 'Keybase',
-            link: 'https://keybase.io/ricardobalk',
-          },
-        ],
-      },
       {
         text: 'Infos zu dieser Website',
         children: [
@@ -51,6 +22,49 @@ export const de: NavbarConfig = [
             link: 'http://3rfoq3ia75hnxgpmtwyeyvbjbhym354tcy4ox2jaqjqhtcmd4i2mt2id.onion/',
           },
         ],
+      },
+      {
+        text: 'Englische Teile der Website',
+        children: [
+          {
+            text: 'Blog',
+            link: '/blog/',
+          },
+          {
+            text: 'Anleitungen',
+            link: '/guides/',
+          },
+          {
+            text: 'Portfolio',
+            link: '/portfolio/',
+          },
+        ]
+      },
+      {
+        text: 'Ricardo auf Social Media',
+        children: [
+          {
+            text: 'GitHub',
+            link: 'https://github.com/ricardobalk',
+          },
+          {
+            text: 'Twitter',
+            link: 'https://twitter.com/ricardobalk',
+          },
+        ],
+      },
+      {
+        text: 'Werde einer meiner Sponsoren',
+        children: [
+          { 
+            text: 'Einmaliges Sponsoring (Ko-Fi.com)',
+            link: 'https://ko-fi.com/ricardobalk',
+          },
+          {
+            text: 'Monatliches Sponsoring (GitHub Sponsors)',
+            link: 'https://github.com/sponsors/ricardobalk',
+          }
+        ]
       },
     ],
   }
