@@ -175,40 +175,8 @@ const config: UserConfig<DefaultThemeOptions> = {
   },
 
   plugins: [
-    ['@vuepress/plugin-debug'],
-  /*  [
-      '@vuepress/plugin-docsearch',
-      {
-        apiKey: '3a539aab83105f01761a137c61004d85',
-        indexName: 'vuepress',
-        searchParameters: {
-          facetFilters: ['tags:v2'],
-        },
-        locales: {
-          '/zh/': {
-            placeholder: '搜索文档',
-          },
-        },
-      },
-    ], */
- /* [
-      '@vuepress/plugin-google-analytics',
-      {
-        id: process.env.GA_ID,
-      },
-    ], */
     ['@vuepress/plugin-pwa'],
     [
-      '@vuepress/plugin-pwa-popup',
-      {
-        locales: {
-          '/zh/': {
-            message: '发现新内容可用',
-            buttonText: '刷新',
-          },
-        },
-      },
-    ],
   ],
 
   evergreen: process.env.NODE_ENV !== 'production',
