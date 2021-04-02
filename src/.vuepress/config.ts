@@ -176,7 +176,7 @@ const config: UserConfig<DefaultThemeOptions> = {
 
   plugins: [
     ['@vuepress/plugin-pwa'],
-    [
+    ['@vuepress/plugin-prismjs', { preloadLanguages: ['vue', 'ts', 'js', 'json'] }],
   ],
 
   evergreen: process.env.NODE_ENV !== 'production',
