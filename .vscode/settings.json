@@ -53,5 +53,8 @@
   "githubIssues.issueBranchTitle": "feature/issues/#${issueNumber}-${sanitizedIssueTitle}",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[stylus]": {
+    "editor.defaultFormatter": "thisismanta.stylus-supremacy"
   }
 }
