@@ -35,7 +35,7 @@
   "stylusSupremacy.insertParenthesisAfterNegation": false,
   "stylusSupremacy.insertParenthesisAroundIfCondition": true,
   "stylusSupremacy.insertNewLineBeforeElse": false,
-  "stylusSupremacy.insertLeadingZeroBeforeFraction": true,
+  "stylusSupremacy.insertLeadingZeroBeforeFraction": false,
   "stylusSupremacy.selectorSeparator": ", ",
   "stylusSupremacy.tabStopChar": "  ",
   "stylusSupremacy.newLineChar": "\n",
