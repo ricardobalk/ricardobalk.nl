@@ -1,32 +1,24 @@
 .category-filter
+  display flex
+  flex-direction row
+  flex-wrap wrap
   margin 1rem auto
   padding 0 1.15em
   color #666
   font-weight 600
-  font-size 0.9em
-  line-height 0.9em
+  font-size .9em
+  line-height .9em
 
   span
-    margin-right 0.5em
+    margin-right .5em
+    cursor default
 
-  form, label
-    cursor pointer
-
-  form
-    display flex
-
-    span
-      cursor default
-
-  label
-    margin-right 0.5em
-    margin-left 0.33em
-
-.container
+.option
   position relative
   display block
-  margin-bottom 12px
+  margin 0 .5em 1em .33em
   padding-left 20px
+  cursor pointer
   cursor pointer
   user-select none
 
@@ -73,7 +65,7 @@
     content ''
 
 @media screen and (prefers-color-scheme dark)
-  .container
+  .option
     .checkmark
       background-color #252525
 
