@@ -92,7 +92,7 @@ const config: UserConfig<DefaultThemeOptions> = {
         navbar: navbar.en,
 
         // sidebar
-        sidebar: {},
+        sidebar: false,
 
         // page meta
         editLinkText: 'Edit this page on GitHub',
@@ -109,7 +109,7 @@ const config: UserConfig<DefaultThemeOptions> = {
         selectLanguageAriaLabel: 'Taalkeuze',
 
         // sidebar
-        sidebar: {},
+        sidebar: false,
 
         // page meta
         editLinkText: 'Pagina bewerken op GitHub',
@@ -142,7 +142,7 @@ const config: UserConfig<DefaultThemeOptions> = {
         selectLanguageAriaLabel: 'Sprachauswahl',
 
         // sidebar
-        sidebar: {},
+        sidebar: false,
 
         // page meta
         editLinkText: 'Bearbeiten Sie diese Seite auf GitHub',
