@@ -4,7 +4,7 @@ date: 2020-11-07 09:00:00 +00:00
 excerpt: "Ever wondered how to run Keybase on Tails? I got you covered."
 category: "Linux"
 tags: ["linux", "tails", "keybase"]
-contributors: ["jms1", "ricardobalk", "mrmarkdmurray"]
+contributors: ["jms1", "ricardobalk", "themurray"]
 permalink: /guides/keybase-on-tails
 ---
 
