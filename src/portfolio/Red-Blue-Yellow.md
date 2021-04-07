@@ -1,6 +1,7 @@
 ---
 type: portfolio
 date: 2015-10-01 09:00:00 +02:00
+lang: en-GB
 client: HAN University of Applied Sciences
 category: Game Development
 tags: ["unity", "game development", "programming", "c-sharp"]
@@ -9,32 +10,12 @@ images:
     filename: "red-blue-yellow.webp"
     description: ""
 excerpt: An arcade-like game made in Unity, with C##.
-permalink: /portfolio/red-blue-yellow
+permalink: /portfolio/red-blue-yellow/
 ---
 
 # Red Blue Yellow
 
 Red Blue Yellow is an Unity (C#) game made by me and fellow students from my university during the minor 'Scripting for Designers' in 2015.
-
-<ClientOnly>
-<style type="text/css">.iframe-container {
-  overflow: hidden;
-  padding-top: 56.25%;
-  position: relative;
-} .iframe-container iframe {
-   border: 0;
-   height: 100%;
-   left: 0;
-   position: absolute;
-   top: 0;
-   width: 100%;}</style>
-</ClientOnly>
-
-<ClientOnly>
-<div class="iframe-container">
-<iframe width="100%" height="640" src="https://ricardobalk.keybase.pub/RedBlueYellow-WebGL/">
-</iframe></div>
-</ClientOnly>
 
 ## Project Responsibilities
 

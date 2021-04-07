@@ -1,11 +1,38 @@
 <template>
   <aside class="sidebar">
-    <NavLinks />
+    <NavbarLinks />
+
     <slot name="top" />
-    <SidebarLinks :depth="0" :items="items" />
+
+    <ul class="sidebar-links">
+      <template v-for="item in sidebarItems" :key="item.link">
+        <SidebarChild :item="item" />
+      </template>
+    </ul>
+
     <slot name="bottom" />
   </aside>
 </template>
 
-<script lang="js" src="./Sidebar.js" />
-<style lang="stylus" src="./Sidebar.styl" />
+<script lang="ts">
+  import { defineComponent } from "vue";
+  import { useSidebarItems } from "../composables";
+  import NavbarLinks from "./NavbarLinks.vue";
+  import { SidebarChild } from "./SidebarChild";
+
+  export default defineComponent({
+    name: "Sidebar",
+
+    components: {
+      NavbarLinks,
+      SidebarChild,
+    },
+
+    setup() {
+      const sidebarItems = useSidebarItems();
+      return {
+        sidebarItems,
+      };
+    },
+  });
+</script>

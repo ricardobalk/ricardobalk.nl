@@ -1,6 +1,7 @@
 ---
 type: guide
 date: 2018-10-02 08:00:00 +00:00
+lang: en-GB
 excerpt: "In this article, I will guide through the generation of Enterprise-grade PGP keys."
 category: "Linux"
 tags: ["pgp", "gpg", "encryption"]
@@ -9,9 +10,9 @@ images:
     filename: "terminal-lockpad.webp"
     description: "A lockpad shown on a terminal-style computer background"
   hero:
-    filename: "terminal-lockpad.webp"
+    path: "/assets/img/content/blog/terminal-lockpad.webp"
     description: "A lockpad shown on a terminal-style computer background"
-permalink: /guides/generating-enterprise-grade-pgp-keys
+permalink: /guides/generating-enterprise-grade-pgp-keys/
 ---
 
 # Generating Enterprise-grade PGP Keys

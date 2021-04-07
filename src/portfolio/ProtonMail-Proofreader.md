@@ -1,6 +1,7 @@
 ---
 type: portfolio
 date: 2019-01-01 09:00:00 +02:00
+lang: en-GB
 shortTitle: Proofreader
 excerpt: I'm one of the proofreaders for the Dutch version.
 client: ProtonMail
@@ -10,7 +11,7 @@ images:
   featured:
     filename: "protonmail-proofreader.webp"
     description: ""
-permalink: /portfolio/protonmail-proofreading
+permalink: /portfolio/protonmail-proofreading/
 ---
 
 # Proofreader for ProtonMail

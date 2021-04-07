@@ -1,6 +1,7 @@
 ---
 type: portfolio
 date: 2019-04-05 09:00:00 +02:00
+lang: en-GB
 excerpt: "I made this website entirely myself."
 client: Ricardo Balk
 category: Front-end Development
@@ -9,7 +10,7 @@ images:
   featured:
     filename: "website-ricardobalk.webp"
     description: "Website of Ricardo Balk"
-permalink: "/portfolio/my-website"
+permalink: "/portfolio/my-website/"
 ---
 
 # My own website

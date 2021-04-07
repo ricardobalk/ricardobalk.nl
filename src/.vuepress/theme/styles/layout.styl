@@ -1,0 +1,160 @@
+@import '_variables'
+@import '_wrapper'
+
+$mobileSidebarWidth = $sidebarWidth * .82
+
+.page
+  padding-left $sidebarWidth
+  height 100%
+
+.navbar
+  position fixed
+  top 0
+  right 0
+  left 0
+  z-index 20
+  box-sizing border-box
+  height $navbarHeight
+  background-color white
+  transition .2s ease background-color
+
+  @media screen and (prefers-color-scheme dark)
+    background-color unset
+
+  &.opaque
+    border-bottom 1px solid $borderColor
+    background-color #fff
+
+    @media screen and (prefers-color-scheme dark)
+      border-bottom 1px solid #222
+      background-color rgba(0, 0, 0, .95)
+
+.sidebar
+  position fixed
+  top $navbarHeight
+  bottom 0
+  left 0
+  z-index 10
+  overflow-y auto
+  box-sizing border-box
+  margin 0
+  width $sidebarWidth
+  border-right 1px solid $borderColor
+  background-color #fff
+  font-size 16px
+  scrollbar-width thin
+  scrollbar-color $accentColor $borderColor
+
+  &::-webkit-scrollbar
+    width 7px
+
+  &::-webkit-scrollbar-track
+    background-color $borderColor
+
+  &::-webkit-scrollbar-thumb
+    background-color $accentColor
+
+.sidebar-mask
+  position fixed
+  top 0
+  left 0
+  z-index 9
+  display none
+  width 100vw
+  height 100vh
+
+.theme-container
+  display flex
+  flex-direction column
+  height 100%
+
+  &.sidebar-open
+    .sidebar-mask
+      display block
+
+  &.no-navbar
+    {$contentClass}:not(.custom) > h1
+      margin-top 1.5rem
+      padding-top 0
+
+    .sidebar
+      top 0
+
+@media (min-width ($MQMobile + 1px))
+  .theme-container.no-sidebar
+    .sidebar
+      display none
+
+    .page
+      padding-left 0
+
+h1, h2, h3, h4, h5, h6
+  {$contentClass}:not(.custom) > &
+    margin-top .5rem - $navbarHeight
+    margin-bottom 0
+    padding-top: ($navbarHeight + 1rem)
+
+    &:first-child
+      margin-top -1.5rem
+      margin-bottom 1rem
+
+      + p, + pre, + .custom-container
+        margin-top 2rem
+
+{$contentClass}:not(.custom)
+  @extend $wrapper
+
+  > *:first-child
+    margin-top $navbarHeight
+
+  a:hover
+    text-decoration underline
+
+  p.demo
+    padding 1rem 1.5rem
+    border 1px solid #ddd
+    border-radius 4px
+
+  img
+    max-width 100%
+
+{$contentClass}.custom
+  margin 0
+  padding 0
+
+  img
+    max-width 100%
+
+// narrow desktop / iPad
+@media (max-width $MQNarrow)
+  .sidebar
+    width $mobileSidebarWidth
+    font-size 15px
+
+  .page
+    padding-left $mobileSidebarWidth
+
+// wide mobile
+@media (max-width $MQMobile)
+  .sidebar
+    top 0
+    padding-top $navbarHeight
+    transition transform .2s ease
+    transform translateX(-100%)
+
+  .page
+    padding-left 0
+
+  .theme-container
+    &.sidebar-open
+      .sidebar
+        transform translateX(0)
+
+    &.no-navbar
+      .sidebar
+        padding-top 0
+
+// narrow mobile
+@media (max-width $MQMobileNarrow)
+  h1
+    font-size 1.9rem

@@ -1,5 +1,5 @@
 ---
-layout: BlogOverview
+blog: true
 ---
 
 # Blog
