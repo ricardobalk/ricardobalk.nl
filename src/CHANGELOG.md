@@ -6,7 +6,19 @@ page: true
 
 # Changelog
 
-This is the changelog, as found on the [GitHub repository](https://github.com/ricardobalk/www/blob/develop/CHANGELOG.md) of this website. It gives an overview of changes to my website.
+This is the changelog, as found on the [GitHub repository](https://github.com/ricardobalk/website/blob/main/src/CHANGELOG.md) of this website. It gives an overview of changes to my website.
+
+## 3.4
+
+**<Badge>Released</Badge>**
+
+> [Version 3.4](https://github.com/ricardobalk/website/milestone/4) has been released on April 8, 2021.
+
+**What's new?**
+
+- VuePress has been upgraded to VuePress 2, a modern version of VuePress that uses TypeScript and has been built on top of Vue 3. :sunglasses:
+- All components have been split into separate Template, Style and TypeScript files. It's the opposite of Vue's SFC-approach, but it increases maintainability of the website as it becomes easier to run linters and check for errors. &bullet; [57c207](https://github.com/ricardobalk/website/commit/d903d0bac96e4ee547d6ea4b062878ce8e57c207)
+- The website now uses a Flexbox-based approach for its 12-column grid layout, instead of relying on Zurb Foundation. This also means that we got rid of JQuery :vomiting_face:, SCSS and the Webpack SCSS loader. :tada: &bullet; [57c207](https://github.com/ricardobalk/website/commit/d903d0bac96e4ee547d6ea4b062878ce8e57c207)
 
 ## 3.3
 

@@ -1,156 +1,134 @@
-{$contentClass}
-  code
-    margin 0
-    padding 0.25rem 0.5rem
-    border-radius 3px
-    background-color rgba(27, 31, 35, 0.05)
-    color lighten($textColor, 20%)
-    font-weight 600
-    font-size 0.85em
-
-    @media screen and (prefers-color-scheme dark)
-      color #7ec699
-
-    .token
-      &.deleted
-        color #EC5975
-
-      &.inserted
-        color $accentColor
+@import '_variables'
+@import 'prismjs/themes/prism-tomorrow.css'
 
 {$contentClass}
-  pre, pre[class*='language-']
-    overflow auto
-    margin 0.85rem 0
-    padding 1.25rem 1.5rem
-    border-radius 6px
-    background-color $codeBgColor
-    line-height 1.4
-
     code
-      padding 0
-      border none
-      border-radius 0
-      background-color transparent
-      color #fff
+        margin 0
+        padding .25rem .5rem
+        border-radius 3px
+        background-color rgba(27, 31, 35, .05)
+        color lighten($textColor, 20%)
+        font-size .85em
+
+        .token
+            &.deleted
+                color #ec5975
+
+            &.inserted
+                color $accentColor
+
+        @media screen and (prefers-color-scheme dark)
+            color #6c6
+
+{$contentClass}
+    pre, pre[class*='language-']
+        overflow auto
+        margin .85rem 0
+        padding 1.25rem 1.5rem
+        border-radius 6px
+        background-color $codeBgColor
+        line-height 1.4
+
+        code
+            padding 0
+            border-radius 0
+            background-color transparent
+            color #fff
+
+    .line-number
+        font-family source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
 
 div[class*='language-']
-  position relative
-  border-radius 6px
-  background-color $codeBgColor
-
-  .highlight-lines
-    position absolute
-    top 0
-    left 0
-    padding-top 1.3rem
-    width 100%
-    line-height 1.4
-    user-select none
-
-    .highlighted
-      background-color rgba(0, 0, 0, 66%)
-
-  pre, pre[class*='language-']
     position relative
-    z-index 1
-    background transparent
+    border-radius 6px
+    background-color $codeBgColor
 
-  &::before
-    position absolute
-    top 0.8em
-    right 1em
-    z-index 3
-    color rgba(255, 255, 255, 0.4)
-    font-size 0.75rem
+    &::before
+        position absolute
+        top .8em
+        right 1em
+        z-index 3
+        color rgba(255, 255, 255, .4)
+        font-size .75rem
 
-  &:not(.line-numbers-mode)
-    .line-numbers-wrapper
-      display none
+    pre, pre[class*='language-']
+        position relative
+        z-index 1
+        background transparent
 
-  &.line-numbers-mode
-    .highlight-lines .highlighted
-      position relative
-
-      &:before
+    .highlight-lines
         position absolute
         top 0
         left 0
-        z-index 3
-        display block
-        width $lineNumbersWrapperWidth
-        height 100%
-        background-color rgba(0, 0, 0, 66%)
-        content ' '
-
-    pre
-      padding-left: ($lineNumbersWrapperWidth + 1) rem
-      vertical-align middle
-
-    .line-numbers-wrapper
-      position absolute
-      top 0
-      padding 1.25rem 0
-      width $lineNumbersWrapperWidth
-      color rgba(255, 255, 255, 0.3)
-      text-align center
-      line-height 1.4
-
-      br
+        padding-top 1.3rem
+        width 100%
+        line-height 1.4
         user-select none
 
-      .line-number
-        position relative
-        z-index 4
-        font-size 0.85em
-        user-select none
+        .highlight-line
+            background-color rgba(0, 0, 0, 66%)
 
-    &::after
-      position absolute
-      top 0
-      left 0
-      z-index 2
-      width $lineNumbersWrapperWidth
-      height 100%
-      border-right 1px solid rgba(0, 0, 0, 66%)
-      border-radius 6px 0 0 6px
-      background-color $codeBgColor
-      content ''
+    &:not(.line-numbers-mode)
+        .line-numbers
+            display none
 
-for lang in $codeLang
-  div{'[class~="language-' + lang + '"]'}
-    &:before
-      content '' + lang
+    &.line-numbers-mode
+        .highlight-lines .highlight-line
+            position relative
 
-div[class~='language-javascript']
-  &:before
-    content 'js'
+            &::before
+                position absolute
+                top 0
+                left 0
+                z-index 2
+                display block
+                width $lineNumbersWrapperWidth
+                height 100%
+                background-color rgba(0, 0, 0, 66%)
+                content ' '
 
-div[class~='language-typescript']
-  &:before
-    content 'ts'
+        pre
+            margin-left $lineNumbersWrapperWidth
+            padding-left 1rem
+            vertical-align middle
 
-div[class~='language-markup']
-  &:before
-    content 'html'
+        .line-numbers
+            position absolute
+            top 0
+            padding-top 1.25rem
+            width $lineNumbersWrapperWidth
+            color rgba(255, 255, 255, .3)
+            text-align center
+            line-height 1.4
 
-div[class~='language-markdown']
-  &:before
-    content 'md'
+            br
+                user-select none
 
-div[class~='language-json']:before
-  content 'json'
+            .line-number
+                position relative
+                z-index 3
+                font-size .85em
+                user-select none
 
-div[class~='language-ruby']:before
-  content 'rb'
+        &::after
+            position absolute
+            top 0
+            left 0
+            width $lineNumbersWrapperWidth
+            height 100%
+            border-right 1px solid rgba(0, 0, 0, 66%)
+            border-radius 6px 0 0 6px
+            background-color $codeBgColor
+            content ''
 
-div[class~='language-python']:before
-  content 'py'
+for $lang in $codeLang
+    div[class*='language-'].ext-{$lang}
+        &:before
+            content '' + $lang
 
-div[class~='language-bash']:before
-  content 'sh'
-
-div[class~='language-php']:before
-  content 'php'
-
-@import '~prismjs/themes/prism-tomorrow.css'
+// narrow mobile
+@media (max-width $MQMobileNarrow)
+    {$contentClass}
+        div[class*='language-']
+            margin .85rem -1.5rem
+            border-radius 0

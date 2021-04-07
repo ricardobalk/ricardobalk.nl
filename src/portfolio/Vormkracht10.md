@@ -1,27 +1,24 @@
 ---
-{
-  "type": "portfolio",
-  "date": "2019-02-01 03:00:00 -0400",
-  "shortTitle": "UX Research & Design",
-  "client": "Vormkracht10",
-  "category": "UX Design",
-  "tags": [
-    "Vormkracht10",
-    "UX",
-    "Design",
-    "Prototyping",
-    "Usability"
-  ],
-  "images": {
-    "featured": {
-      "filename": "vormkracht10-logo.webp",
-      "description": "Logo of Vormkracht10"
-    }
-  },
-  "excerpt": "As part of my graduation project, I did research on the usability of a web application.",
-  "permalink": "/portfolio/vormkracht10",
-  "lang": "en"
-}
+type: portfolio
+date: 2019-02-01 03:00:00 -04:00
+shortTitle: UX Research & Design
+client: Vormkracht10
+category: UX Design
+tags:
+  - Vormkracht10
+  - UX
+  - Design
+  - Prototyping
+  - Usability
+images:
+  featured:
+    filename: vormkracht10-logo.webp
+    description: Logo of Vormkracht10
+excerpt: >-
+  As part of my graduation project, I did research on the usability of a web
+  application.
+permalink: /portfolio/vormkracht10/
+lang: en-GB
 ---
 
 # Vormkracht10: UX Research & Design

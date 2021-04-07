@@ -1,6 +1,8 @@
 ---
 home: true
 
+title: Home
+
 heroText:
   - Ricardo Balk
   - Digitale Designer & Front-end Developer

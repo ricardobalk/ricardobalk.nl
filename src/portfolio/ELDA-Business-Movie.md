@@ -1,6 +1,7 @@
 ---
 type: portfolio
 date: 2018-06-01 09:00:00 +02:00
+lang: en-GB
 shortTitle: Business Movie
 client: ELDA
 category: Camerawork
@@ -10,10 +11,10 @@ images:
     filename: "goat.webp"
     description: "Goat"
   hero:
-    filename: "goat.webp"
+    path: "/assets/img/content/portfolio/goat.webp"
     description: "Goat"
 excerpt: I made a business movie for ELDA.
-permalink: /portfolio/ELDA-business-movie
+permalink: /portfolio/ELDA-business-movie/
 ---
 
 # Business Movie for ELDA

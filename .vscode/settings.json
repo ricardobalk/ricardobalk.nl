@@ -35,7 +35,7 @@
   "stylusSupremacy.insertParenthesisAfterNegation": false,
   "stylusSupremacy.insertParenthesisAroundIfCondition": true,
   "stylusSupremacy.insertNewLineBeforeElse": false,
-  "stylusSupremacy.insertLeadingZeroBeforeFraction": true,
+  "stylusSupremacy.insertLeadingZeroBeforeFraction": false,
   "stylusSupremacy.selectorSeparator": ", ",
   "stylusSupremacy.tabStopChar": "  ",
   "stylusSupremacy.newLineChar": "\n",
@@ -49,5 +49,12 @@
   "stylusSupremacy.alwaysUseZeroWithoutUnit": true,
   "stylusSupremacy.reduceMarginAndPaddingValues": true,
   "stylusSupremacy.ignoreFiles": [],
-  "vetur.format.scriptInitialIndent": true
+  "vetur.format.scriptInitialIndent": true,
+  "githubIssues.issueBranchTitle": "feature/issues/#${issueNumber}-${sanitizedIssueTitle}",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[stylus]": {
+    "editor.defaultFormatter": "thisismanta.stylus-supremacy"
+  }
 }
