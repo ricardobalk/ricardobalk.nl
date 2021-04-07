@@ -10,7 +10,7 @@ images:
     filename: "ubuntu-on-digitalocean.webp"
     description: "How to install Ubuntu on DigitalOcean"
   hero:
-    filename: "ubuntu-on-digitalocean.webp"
+    path: "/assets/img/content/guides/ubuntu-on-digitalocean.webp"
     description: "How to install Ubuntu on DigitalOcean"
 permalink: /guides/digitalocean-ubuntu-vps/
 ---

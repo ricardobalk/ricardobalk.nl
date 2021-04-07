@@ -9,7 +9,7 @@ images:
     filename: "fire.webp"
     description: "Fire"
   hero:
-    filename: "fire.webp"
+    path: "/assets/img/content/blog/fire.webp"
     description: "Fire"
 permalink: /guides/solid-firewall-linux/
 ---

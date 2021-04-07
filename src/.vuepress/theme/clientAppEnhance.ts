@@ -5,7 +5,7 @@ import CodeGroupItem from './components/global/CodeGroupItem.vue'
 import OutboundLink from './components/global/OutboundLink.vue'
 import Tooltip from './components/global/Tooltip.vue'
 
-import './styles/index.scss'
+import './styles/index.styl';
 
 declare const DOCSEARCH_PROPS: unknown
 

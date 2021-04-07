@@ -1,81 +1,80 @@
-  @require "../../../styles/global/variables"
+@require '../../../styles/_variables'
 
-  .services
-    max-width 1600px
-    margin 2em auto
-    color var(--color-regular-text)
+.services
+  margin 2em auto
+  max-width 1600px
+  color var(--color-regular-text)
 
-    @media screen and (max-width breakpoint-m)
-      max-width 22rem
+  @media screen and (max-width breakpoint-m)
+    max-width 22rem
 
-    @media screen and (max-width breakpoint-l)
-      max-width 40rem
+  @media screen and (max-width breakpoint-l)
+    max-width 40rem
 
-    .title
-      text-transform uppercase
-      padding 0 1em
-      font-size 1.33em
-      line-height 1.5
-      letter-spacing 0.003em
-      font-weight 500
+  .title
+    padding 0 1em
+    text-transform uppercase
+    letter-spacing .003em
+    font-weight 500
+    font-size 1.33em
+    line-height 1.5
 
-    .cards
+  .cards
+    .card
+      display -webkit-box
+      display -moz-box
+      display -ms-flexbox
+      display -webkit-flex
+      display flex
+      align-self stretch
+      -webkit-flex-flow row wrap
 
-      .card
-        display -webkit-box
-        display -moz-box
-        display -ms-flexbox
-        display -webkit-flex
+      .service
         display flex
-        align-self stretch
-        -webkit-flex-flow row wrap
+        text-align center
+
+        .icon-container
+          background #001037 linear-gradient(-30deg, #001037, #1e3d95)
+          color var(--color-white)
+
+          .icon
+            &.fa-mouse-pointer::before
+              padding-left .15em
+
+            &.fa-code::before
+              padding-right .05em
+
+        .inner
+          h3
+            text-transform uppercase
+            letter-spacing 0
+            font-weight 900
+            font-size 1em
+            line-height 1.5
+
+      @media screen and (max-width 640px)
+        padding 0 1em
+
+@media screen and (prefers-color-scheme dark)
+  .services
+    .cards
+      .card
+        color #707070
 
         .service
-          display flex
-          text-align center
-
-          .icon-container
-            color var(--color-white)
-            background #001037 linear-gradient(-30deg, #001037, #1e3d95)
-
-            .icon
-              &.fa-mouse-pointer::before
-                padding-left 0.15em
-
-              &.fa-code::before
-                padding-right 0.05em
-
           .inner
-            h3
-              text-transform uppercase
-              font-weight 900
-              line-height 1.5
-              font-size 1em
-              letter-spacing 0
+            border none
+            background-color #000 !important
+            color #707070
 
-        @media screen and (max-width 640px)
-          padding 0 1em
+            .icon-container
+              align-items center
+              box-sizing content-box
+              margin-bottom 1.5em
+              border 1px solid rgba(248, 248, 248, .21)
+              border-radius 25%
+              background none
+              color #cacaca
 
-  @media screen and (prefers-color-scheme dark)
-    .services
-      .cards
-        .card
-          color #707070
-
-          .service
-            .inner
-              background-color #000 !important
-              color #707070
-              border none
-
-              .icon-container
-                background none
-                color #cacaca
-                border 1px solid rgba(248, 248, 248, 0.21)
-                box-sizing content-box
-                align-items center
-                border-radius 25%
-                margin-bottom 1.5em
-
-          &:not(:last-child)
-            border-right 1px solid #111
+        &:not(:last-child)
+          border-right 1px solid #111

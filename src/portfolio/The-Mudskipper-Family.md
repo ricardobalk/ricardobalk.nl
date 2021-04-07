@@ -11,7 +11,7 @@ images:
     filename: "feat-the-mudskipper-family.webp"
     description: ""
   hero:
-    filename: "hero-the-mudskipper-family.webp"
+    path: "/assets/img/content/portfolio/hero-the-mudskipper-family.webp"
     description: ""
 excerpt: I created foley sounds for The Mudskipper Family.
 permalink: /portfolio/the-mudskipper-family/

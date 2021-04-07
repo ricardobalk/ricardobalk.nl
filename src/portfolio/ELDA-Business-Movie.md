@@ -11,7 +11,7 @@ images:
     filename: "goat.webp"
     description: "Goat"
   hero:
-    filename: "goat.webp"
+    path: "/assets/img/content/portfolio/goat.webp"
     description: "Goat"
 excerpt: I made a business movie for ELDA.
 permalink: /portfolio/ELDA-business-movie/

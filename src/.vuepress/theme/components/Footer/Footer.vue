@@ -11,7 +11,7 @@
             and some
             <font-awesome-icon :icon="['fas', 'code']" class="icon" title="code" size="sm" />
             by Ricardo Balk. Source code available on
-            <a :href="links.social.github" target="_blank"
+            <a href="https://github.com/ricardobalk/website" target="_blank"
               ><font-awesome-icon :icon="['fab', 'github']" class="icon" title="GitHub" size="sm" />.</a
             >
           </p>

@@ -9,14 +9,12 @@ images:
     filename: "3D-printing-Printer-part-closeup_sm.webp"
     description: "Close-up of a 3D printer part"
   hero:
-    filename: "3D-printing-Printer-part-closeup_g.webp"
+    path: "/assets/img/content/blog/3D-printing-Printer-part-closeup_g.webp"
     description: "Close-up of a 3D printer part"
 permalink: /blog/3d-printer/
 ---
 
 # New 3D printer
-
-> Speaking Dutch? This article is also available in Dutch. [Don't do moeilijk and read the Dutch version][Dutch article version].
 
 This past week, I bought a 3D printer and received it a few days after ordering it. I was not able to do much with it yet, because the dental surgeon also <tooltip text="I might just sound stupid now">extracted my wisdom teeth</tooltip> a few days ago and I <tooltip text="went AWOL">needed to take some rest</tooltip>. Still, I thought: let's blog again, because 3D printing is very cool. 
 
@@ -65,6 +63,5 @@ Very nice to see! My next step is to picking up 3D modeling again, so that I can
 
 I will blog more often about my 3D printing experiences in the near future, because it's a really cool thing to do :+1:
 
-[Dutch article version]: /nl/blog/3d-printer
 [Ender 3 Pro]: https://www.creality3dofficial.com/products/creality-ender-3-pro-3d-printer	"Order page of the Ender 3 Pro, a 3D printer made by Creality"
 [Makerbot's Thingiverse]: https://www.thingiverse.com/	"Makerbot Thingiverse, a website where 3D artists share their creations."

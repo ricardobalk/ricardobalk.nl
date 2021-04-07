@@ -9,7 +9,7 @@ images:
     filename: "jitsi-meet-logo.webp"
     description: "Jitsi Meet Logo"
   hero:
-    filename: "video-conference.webp"
+    filename: "/assets/img/content/blog/video-conference.webp"
     description: "Computer screen showing an online video conference call"
 permalink: /blog/jitsi-meet-instance/
 ---

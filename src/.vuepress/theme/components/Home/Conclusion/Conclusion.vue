@@ -4,11 +4,15 @@
       <div class="g-row">
         <div class="c-sm-12">
           <div class="text-container">
-            <p class="title">{{ title }}</p>
-            <p class="subtitle">{{ subtitle }}</p>
+            <h1 class="title">{{ title }}</h1>
+            <h2 class="subtitle">{{ subtitle }}</h2>
           </div>
           <section class="connect-on-social" title="Ways to contact me">
-            <a v-for="(contactingMethod, index) in socialLinks" :href="contactingMethod.url" :title="contactingMethod.title" :key="index"
+            <a
+              v-for="(contactingMethod, index) in socialLinks"
+              :href="contactingMethod.url"
+              :title="contactingMethod.title"
+              :key="index"
               ><font-awesome-icon :icon="contactingMethod.icon" size="lg"
             /></a>
           </section>

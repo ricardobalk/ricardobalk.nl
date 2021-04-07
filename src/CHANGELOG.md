@@ -10,9 +10,9 @@ This is the changelog, as found on the [GitHub repository](https://github.com/ri
 
 ## 3.4
 
-**<Badge type="warning">In progress</Badge>**
+**<Badge>Released</Badge>**
 
-> [Version 3.4](https://github.com/ricardobalk/website/milestone/4) has been planned for release on April 1, 2021.
+> [Version 3.4](https://github.com/ricardobalk/website/milestone/4) has been released on April 8, 2021.
 
 **What's new?**
 

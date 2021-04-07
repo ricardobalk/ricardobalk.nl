@@ -9,7 +9,7 @@ images:
     filename: "sleeping-keybase-icon.webp"
     description: "Keybase emoticon with closed eyelids"
   hero:
-    filename: "sleeping-keybase-icon.webp"
+    path: "/assets/img/content/blog/sleeping-keybase-icon.webp"
     description: "Keybase emoticon with closed eyelids"
 permalink: /guides/keybase-automatic-logout/
 ---

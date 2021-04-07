@@ -13,7 +13,7 @@ images:
     filename: "live.webp"
     description: "Sign showing that a (broadcast) transmission went live"
   hero:
-    filename: "live.webp"
+    path: "/assets/img/content/blog/live.webp"
     description: "Sign showing that a (broadcast) transmission went live"
 permalink: /guides/rtmp-multiplexer-nginx/
 ---

@@ -9,7 +9,7 @@ images:
     filename: "new-website-featured.webp"
     description: "Computer screen that visualizes the layout of a website and the associated code"
   hero:
-    filename: "new-website-hero.webp"
+    path: "/assets/img/content/blog/new-website-hero.webp"
     description: "Computer screen that visualizes the layout of a website and the associated code"
 permalink: /blog/new-website/
 ---

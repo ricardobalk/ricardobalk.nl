@@ -1,5 +1,5 @@
-@require '../../styles/global/masonry'
-@require '../../styles/global/variables'
+@require '../../styles/grid/masonry'
+@require '../../styles/_variables'
 
 .portfolio-overview
   margin-top $navigation-bar-height
@@ -37,35 +37,35 @@
 
           span
             margin 0
-            font-size 0.9em
+            font-size .9em
 
           .date
             &:after
-              margin 0 0.25em
+              margin 0 .25em
               content '\2022'
 
           .btn
             display inline-block
             margin 1.25em 0
-            padding 0.5em 1em 0.5em 1.25em
+            padding .5em 1em .5em 1.25em
             border 1px solid #eee
             text-transform uppercase
             font-weight 700
             font-size 1.25em
             line-height 1em
-            transition color 0.25s ease-in-out
+            transition color .25s ease-in-out
 
             &:hover
               background-color #fff
               color var(--color-dark-grey)
 
             .icon
-              padding 0.15em
+              padding .15em
 
           .excerpt
             color #ccc
-            text-shadow 0 0 1px rgba(255, 255, 255, 0.5)
-            font-size 0.8em
+            text-shadow 0 0 1px rgba(255, 255, 255, .5)
+            font-size .8em
 
           &.overlay
             position absolute
@@ -73,11 +73,11 @@
             padding 2em
             width 100%
             height 100%
-            background-color rgba(0,0,0,.85)
+            background-color rgba(0, 0, 0, .85)
             color #eee
             text-align center
             opacity 0
-            transition opacity 0.25s ease-in-out
+            transition opacity .25s ease-in-out
 
             &:hover
               opacity 1
