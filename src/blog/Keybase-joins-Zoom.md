@@ -1,13 +1,14 @@
 ---
-type: blogpost
+type: post
 date: 2020-05-07 20:00:00 +00:00
+lang: en-GB
 category: "News"
 tags: ["personal", "website"]
 images:
   featured:
     filename: "zoom-and-keybase.webp"
     description: "Zoom logo and Keybase logo on a transparant background"
-permalink: /blog/keybase-joins-zoom
+permalink: /blog/keybase-joins-zoom/
 ---
 
 # Keybase joins Zoom

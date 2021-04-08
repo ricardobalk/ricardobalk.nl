@@ -1,5 +1,5 @@
 ---
-layout: PortfolioOverview
+portfolio: true
 ---
 
 # Portfolio

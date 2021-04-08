@@ -1,8 +1,29 @@
 <template>
-  <transition name="dropdown" @enter="setHeight" @after-enter="unsetHeight" @before-leave="setHeight">
+  <Transition name="dropdown" @enter="setHeight" @after-enter="unsetHeight" @before-leave="setHeight">
     <slot />
-  </transition>
+  </Transition>
 </template>
 
-<script lang="js" src="./DropdownTransition.js" />
-<style lang="stylus" src="./DropdownTransition.styl" />
+<script lang="ts">
+  import { defineComponent } from "vue";
+
+  export default defineComponent({
+    name: "DropdownTransition",
+
+    setup() {
+      const setHeight = (items): void => {
+        // explicitly set height so that it can be transitioned
+        items.style.height = items.scrollHeight + "px";
+      };
+
+      const unsetHeight = (items): void => {
+        items.style.height = "";
+      };
+
+      return {
+        setHeight,
+        unsetHeight,
+      };
+    },
+  });
+</script>

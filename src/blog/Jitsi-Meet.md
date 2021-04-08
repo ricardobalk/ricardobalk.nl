@@ -1,6 +1,7 @@
 ---
-type: blogpost
+type: post
 date: 2020-06-01 08:00:00 +02:00
+lang: en-GB
 category: "Software Development"
 tags: ["jitsi", "meet", "video communication"]
 images:
@@ -8,9 +9,9 @@ images:
     filename: "jitsi-meet-logo.webp"
     description: "Jitsi Meet Logo"
   hero:
-    filename: "video-conference.webp"
+    filename: "/assets/img/content/blog/video-conference.webp"
     description: "Computer screen showing an online video conference call"
-permalink: /blog/jitsi-meet-instance
+permalink: /blog/jitsi-meet-instance/
 ---
 
 # Jitsi Meet

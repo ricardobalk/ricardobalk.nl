@@ -1,10 +1,11 @@
 ---
-type: blogpost
+type: post
 date: 2019-08-20 06:00:00 +00:00
+lang: en-GB
 excerpt: "My personal photographs are now available on Unsplash, check it out!"
 category: "Photography"
 tags: ["unsplash", "instagram", "photography"]
-permalink: /blog/unsplash-photos
+permalink: /blog/unsplash-photos/
 ---
 
 # Photography on Unsplash

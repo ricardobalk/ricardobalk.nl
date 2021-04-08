@@ -1,6 +1,7 @@
 ---
 type: portfolio
 date: 2015-11-05 09:00:00 +02:00
+lang: en-GB
 client: Sollicity
 category: Front-end Development
 tags: ["webapp", "responsive", "redesign", "ux", "interaction"]
@@ -9,7 +10,7 @@ images:
     filename: "sollicity-logo.webp"
     description: "Sollicity Logo"
 excerpt: I made an entire redesign of a web application.
-permalink: /portfolio/sollicity-webapp
+permalink: /portfolio/sollicity-webapp/
 ---
 
 # Web-app Redesign

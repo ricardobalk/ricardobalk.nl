@@ -1,6 +1,8 @@
 ---
 home: true
 
+title: Home
+
 heroText:
   - Ricardo Balk
   - Digital Designer & Front-end Developer
@@ -11,6 +13,8 @@ polaroidImage:
   path: /assets/img/content/home/ricardo.webp
 
 services:
+  title: Things I could help you with
+  services:
   - title: Visual Design
     caption: I love to create astonishing visuals that no one has ever seen before.
     icon: eye
@@ -35,6 +39,7 @@ process:
     description: Laptop computer showing the design and development process
 
 successStories:
+  stories:
   - name: Dirk Goossens
     title: Former employer at Sollicity
     story: Ricardo takes pride in his profession. He knows a lot of it and has a great ambition to always learn more. He is upbeat and sociale and I very much appreciated his time with Sollicity.

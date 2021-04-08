@@ -1,0 +1,58 @@
+@import '_variables'
+
+.custom-container
+    .custom-container-title
+        margin-bottom -.4rem
+        font-weight 600
+
+    &.tip, &.warning, &.danger
+        margin 1rem 0
+        padding .1rem 1.5rem
+        border-left-width .5rem
+        border-left-style solid
+
+    &.tip
+        border-color $tipColor
+        background-color #f3f5f7
+
+    &.warning
+        border-color $warningColor
+        background-color darken($warningColor, 10%)
+        color darken($warningColor, 50%)
+
+        .custom-container-title
+            color darken($warningColor, 25%)
+
+        a
+            color $textColor
+
+    &.danger
+        border-color $dangerColor
+        background-color darken($dangerColor, 10%)
+        color darken($dangerColor, 50%)
+
+        .custom-container-title
+            color darken($dangerColor, 25%)
+
+        a
+            color $textColor
+
+    &.details
+        position relative
+        display block
+        margin 1.6em 0
+        padding 1.6em
+        border-radius 2px
+        background-color #eee
+
+        h4
+            margin-top 0
+
+        figure, p
+            &:last-child
+                margin-bottom 0
+                padding-bottom 0
+
+        summary
+            outline none
+            cursor pointer
