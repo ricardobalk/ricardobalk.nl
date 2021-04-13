@@ -13,4 +13,4 @@ title: Privacy
 - **The server is located in Zürich, Switzerland.** Switzerland is not under EU / US jurisdiction and is known for its very strict privacy laws. :switzerland:
 - **I don't save website access logs.** I only save error logs, keep them in memory instead of disk, and purge them after 14 days. You could always [access my website over Tor](http://nciwf3vh63efdjqymcpq2uey2ahufyskyzeon4zomd6vg4lpdg5vfiyd.onion/), if you don't trust it. :nerd_face:
 - **I only use strong security standards.** No time for weaknesses. I've got an **<span style="color: #00cc00;">A+</span>** on [SSLLabs](https://www.ssllabs.com/ssltest/analyze.html?d=ricardobalk.nl) and on [SecurityHeaders.io](https://securityheaders.com/?q=ricardobalk.nl&followRedirects=on). :muscle:
-- **Everything is open source.** By publishing the source code of my website, I allow anyone to inspect the code, play with it and helping me in improving my website. :rainbow:
+- **Everything is open source.** By publishing the source code of my website, I allow anyone to inspect the code, play with it and help me in improving my website. :rainbow:
