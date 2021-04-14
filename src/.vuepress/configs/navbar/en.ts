@@ -31,7 +31,7 @@ export const en: NavbarConfig = [
           },
           {
             text: 'Tor version',
-            link: 'http://3rfoq3ia75hnxgpmtwyeyvbjbhym354tcy4ox2jaqjqhtcmd4i2mt2id.onion/',
+            link: 'http://nciwf3vh63efdjqymcpq2uey2ahufyskyzeon4zomd6vg4lpdg5vfiyd.onion/',
           },
         ],
       },
