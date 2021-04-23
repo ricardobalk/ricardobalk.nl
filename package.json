@@ -18,7 +18,8 @@
     "build:serve": "yarn build && yarn serve",
     "build:deploy": "yarn build && yarn deploy",
     "clean": "rm -rf node_modules/ dist/",
-    "reset": "yarn clean && yarn"
+    "reset": "yarn clean && yarn",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@types/luxon": "^1.26.2",
@@ -46,19 +47,12 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/vue-fontawesome": "3.0.0-1"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{ts,js,css,scss,json,vue}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "*.styl": [
-      "stylus-supremacy format -p './.vscode/settings.json' --replace",
-      "git add"
+      "stylus-supremacy format -p './.vscode/settings.json' --replace"
     ]
   }
 }
