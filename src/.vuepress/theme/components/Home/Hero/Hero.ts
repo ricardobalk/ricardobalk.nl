@@ -1,12 +1,12 @@
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, PropType } from "vue";
 
 export default defineComponent({
-  name: 'HomeHero',
+  name: "HomeHero",
   props: {
     name: {
       type: String,
       required: true,
-      default: 'Ricardo Balk'
+      default: "Ricardo Balk",
     },
     occupation: {
       type: String,
@@ -15,6 +15,6 @@ export default defineComponent({
     tagline: {
       type: String,
       required: false,
-    }
-  }
-})
+    },
+  },
+});

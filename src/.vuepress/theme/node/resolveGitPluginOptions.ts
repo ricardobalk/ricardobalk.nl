@@ -1,8 +1,5 @@
-import type { GitPluginOptions } from '@vuepress/plugin-git'
-import type {
-  DefaultThemePluginsOptions,
-  DefaultThemeLocaleOptions,
-} from '../types'
+import type { GitPluginOptions } from "@vuepress/plugin-git";
+import type { DefaultThemePluginsOptions, DefaultThemeLocaleOptions } from "../types";
 
 /**
  * Resolve options for @vuepress/plugin-git
@@ -12,19 +9,19 @@ export const resolveGitPluginOptions = (
   localeOptions: DefaultThemeLocaleOptions
 ): GitPluginOptions | boolean => {
   if (themePlugins?.git === false) {
-    return false
+    return false;
   }
 
-  const enableUpdatedTime = localeOptions.lastUpdated !== false
-  const enableContributors = localeOptions.contributors !== false
+  const enableUpdatedTime = localeOptions.lastUpdated !== false;
+  const enableContributors = localeOptions.contributors !== false;
 
   if (!enableUpdatedTime && !enableContributors) {
-    return false
+    return false;
   }
 
   return {
     createdTime: false,
     updatedTime: enableUpdatedTime,
     contributors: enableContributors,
-  }
-}
+  };
+};

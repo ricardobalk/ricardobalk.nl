@@ -1,2 +1,2 @@
-import Blog from "./Blog.vue"
-export default Blog
+import Blog from "./Blog.vue";
+export default Blog;

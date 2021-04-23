@@ -1,16 +1,17 @@
 <template>
   <main class="portfolio-overview">
-    <Hero title="Portfolio"
-    image="/assets/img/site/portfolio/workbench.webp"
-    imageDark="/assets/img/site/portfolio/workbench.webp"
-    class="blog-hero" />
+    <Hero
+      title="Portfolio"
+      image="/assets/img/site/portfolio/workbench.webp"
+      imageDark="/assets/img/site/portfolio/workbench.webp"
+      class="blog-hero"
+    />
 
     <div class="portfolio">
       <div class="masonry-container">
         <div class="masonry-columns items">
           <article
             v-for="(item, index) in portfolioItems"
-            
             class="masonry-brick item"
             :data-category="item.frontmatter.category"
             :key="index"
@@ -25,8 +26,9 @@
                 <div class="valign-center">
                   <p>
                     <span class="date">
-                      <time :datetime="item.frontmatter.date"
-                        >{{ DateTime.fromISO(item.frontmatter.date).toFormat('LLL yyyy', { locale: item.frontmatter.lang }) }}</time> </span
+                      <time :datetime="item.frontmatter.date">{{
+                        DateTime.fromISO(item.frontmatter.date).toFormat("LLL yyyy", { locale: item.frontmatter.lang })
+                      }}</time> </span
                     ><span class="client">{{ item.frontmatter.client }}</span>
                   </p>
                   <h2 class="title btn">

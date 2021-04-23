@@ -1,5 +1,5 @@
-import { useResolveRouteWithRedirect } from './useResolveRouteWithRedirect'
-import type { NavLink } from '../types'
+import { useResolveRouteWithRedirect } from "./useResolveRouteWithRedirect";
+import type { NavLink } from "../types";
 
 /**
  * Resolve NavLink props from string
@@ -9,9 +9,9 @@ import type { NavLink } from '../types'
  * - Output: { text: 'Home', link: '/' }
  */
 export const useNavLink = (item: string): NavLink => {
-  const resolved = useResolveRouteWithRedirect(item)
+  const resolved = useResolveRouteWithRedirect(item);
   return {
     text: resolved.meta.title || item,
-    link: resolved.name === '404' ? item : resolved.fullPath,
-  }
-}
+    link: resolved.name === "404" ? item : resolved.fullPath,
+  };
+};

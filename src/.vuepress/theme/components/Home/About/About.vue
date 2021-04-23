@@ -10,9 +10,7 @@
           <div class="c-sm-12 c-md-6 text-container">
             <slot>
               <h1>Uh oh!</h1>
-              <p>
-                You didn't fill in this slot, so I'm showing some example paragraphs instead.
-              </p>
+              <p>You didn't fill in this slot, so I'm showing some example paragraphs instead.</p>
               <p>
                 Sed nibh libero, scelerisque quis viverra in, egestas id magna. Etiam vel dolor vel mauris fringilla
                 molestie sodales vitae metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere

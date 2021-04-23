@@ -2,55 +2,55 @@
 @import '_wrapper'
 
 .page
-    display block
-    flex-grow 1
-    padding-bottom 2rem
+  display block
+  flex-grow 1
+  padding-bottom 2rem
 
 .page-meta
-    @extend $wrapper
-    overflow auto
-    padding-top 1rem
-    padding-bottom 1rem
+  @extend $wrapper
+  overflow auto
+  padding-top 1rem
+  padding-bottom 1rem
 
-    .meta-item
-        margin-top .8rem
-        cursor default
+  .meta-item
+    margin-top .8rem
+    cursor default
 
-        .meta-item-label
-            color darken($textColor, 25%)
-            font-weight 500
+    .meta-item-label
+      color darken($textColor, 25%)
+      font-weight 500
 
-        .meta-item-info
-            color #767676
-            font-weight 400
+    .meta-item-info
+      color #767676
+      font-weight 400
 
-    .edit-link
-        display inline-block
-        margin-right .25rem
+  .edit-link
+    display inline-block
+    margin-right .25rem
 
-    .last-updated
-        float right
+  .last-updated
+    float right
 
 @media (max-width $MQMobile)
-    .page-meta
-        .last-updated
-            float none
-            font-size .8em
+  .page-meta
+    .last-updated
+      float none
+      font-size .8em
 
-        .contributors
-            font-size .8em
+    .contributors
+      font-size .8em
 
 .page-nav
-    @extend $wrapper
+  @extend $wrapper
+  padding-top 1rem
+  padding-bottom 0
+
+  .inner
+    overflow auto
+    margin-top 0
     padding-top 1rem
-    padding-bottom 0
+    min-height 2rem
+    border-top 1px solid $borderColor
 
-    .inner
-        overflow auto
-        margin-top 0
-        padding-top 1rem
-        min-height 2rem
-        border-top 1px solid $borderColor
-
-    .next
-        float right
+  .next
+    float right

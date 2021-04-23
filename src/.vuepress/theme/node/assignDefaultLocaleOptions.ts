@@ -1,26 +1,23 @@
-import type {
-  DefaultThemeLocaleOptions,
-  DefaultThemeLocaleData,
-} from '../types'
+import type { DefaultThemeLocaleOptions, DefaultThemeLocaleData } from "../types";
 
 const defaultLocaleOptions: DefaultThemeLocaleOptions = {
   // navbar
   navbar: [],
   logo: null,
   repo: null,
-  selectLanguageText: 'Languages',
-  selectLanguageAriaLabel: 'Select language',
+  selectLanguageText: "Languages",
+  selectLanguageAriaLabel: "Select language",
 
   // sidebar
-  sidebar: 'auto',
+  sidebar: "auto",
 
   // page meta
   editLink: true,
-  editLinkText: 'Edit this page',
+  editLinkText: "Edit this page",
   lastUpdated: true,
-  lastUpdatedText: 'Last Updated',
+  lastUpdatedText: "Last Updated",
   contributors: true,
-  contributorsText: 'Contributors',
+  contributorsText: "Contributors",
 
   // 404 page messages
   notFound: [
@@ -29,41 +26,39 @@ const defaultLocaleOptions: DefaultThemeLocaleOptions = {
     `That's a Four-Oh-Four.`,
     `Looks like we've got some broken links.`,
   ],
-  backToHome: 'Take me home',
+  backToHome: "Take me home",
 
   // `<OutboundLink>` sr-only
-  openInNewWindow: 'open in new window',
-}
+  openInNewWindow: "open in new window",
+};
 
 const defaultLocaleData: DefaultThemeLocaleData = {
   // navbar
-  selectLanguageName: 'English',
+  selectLanguageName: "English",
 
   // custom block
-  danger: 'WARNING',
-}
+  danger: "WARNING",
+};
 
 /**
  * Assign default options to `themeConfig`
  */
-export const assignDefaultLocaleOptions = (
-  localeOptions: DefaultThemeLocaleOptions
-): void => {
+export const assignDefaultLocaleOptions = (localeOptions: DefaultThemeLocaleOptions): void => {
   if (!localeOptions.locales) {
-    localeOptions.locales = {}
+    localeOptions.locales = {};
   }
 
-  if (!localeOptions.locales['/']) {
-    localeOptions.locales['/'] = {}
+  if (!localeOptions.locales["/"]) {
+    localeOptions.locales["/"] = {};
   }
 
   Object.assign(localeOptions, {
     ...defaultLocaleOptions,
     ...localeOptions,
-  })
+  });
 
-  Object.assign(localeOptions.locales['/'], {
+  Object.assign(localeOptions.locales["/"], {
     ...defaultLocaleData,
-    ...localeOptions.locales['/'],
-  })
-}
+    ...localeOptions.locales["/"],
+  });
+};

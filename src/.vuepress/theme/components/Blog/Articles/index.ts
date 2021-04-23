@@ -1,2 +1,2 @@
-import Articles from './Articles.vue'
-export default Articles
+import Articles from "./Articles.vue";
+export default Articles;

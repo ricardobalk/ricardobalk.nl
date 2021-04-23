@@ -22,7 +22,7 @@
               <p v-if="page.frontmatter.date" class="date">
                 <time :datetime="page.frontmatter.date">
                   <font-awesome-icon :icon="['fas', 'calendar-alt']" size="sm" />&nbsp;
-                  {{ DateTime.fromISO(page.frontmatter.date).toFormat('LLL yyyy', { locale: page.frontmatter.lang }) }}
+                  {{ DateTime.fromISO(page.frontmatter.date).toFormat("LLL yyyy", { locale: page.frontmatter.lang }) }}
                 </time>
               </p>
               <h2 class="title">{{ page.title }}</h2>

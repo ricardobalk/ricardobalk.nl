@@ -11,10 +11,10 @@
       text: {
         type: String,
         required: true,
-        default: "This tooltip is missing its prop value"
-      }
-    }
-  })
+        default: "This tooltip is missing its prop value",
+      },
+    },
+  });
 </script>
 
 <style lang="stylus">

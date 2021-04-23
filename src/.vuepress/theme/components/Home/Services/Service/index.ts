@@ -1,2 +1,2 @@
-import Service from "./Service.vue"
-export default Service
+import Service from "./Service.vue";
+export default Service;

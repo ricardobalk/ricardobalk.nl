@@ -15,34 +15,32 @@
 </template>
 
 <script lang="ts">
-  import { computed, defineComponent } from 'vue'
-  import { useRoute } from 'vue-router'
-  import { usePageFrontmatter } from '@vuepress/client'
-  import { isPlainObject, isString } from '@vuepress/shared'
-  import { useNavLink, useSidebarItems } from '../composables'
-  import type { NavLink as NavLinkType, ResolvedSidebarItem } from '../types'
-  import NavLink from './NavLink.vue'
+  import { computed, defineComponent } from "vue";
+  import { useRoute } from "vue-router";
+  import { usePageFrontmatter } from "@vuepress/client";
+  import { isPlainObject, isString } from "@vuepress/shared";
+  import { useNavLink, useSidebarItems } from "../composables";
+  import type { NavLink as NavLinkType, ResolvedSidebarItem } from "../types";
+  import NavLink from "./NavLink.vue";
 
   /**
    * Resolve `prev` or `next` config from frontmatter
    */
-  const resolveFromFrontmatterConfig = (
-    conf: unknown
-  ): null | false | NavLinkType => {
+  const resolveFromFrontmatterConfig = (conf: unknown): null | false | NavLinkType => {
     if (conf === false) {
-      return null
+      return null;
     }
 
     if (isString(conf)) {
-      return useNavLink(conf)
+      return useNavLink(conf);
     }
 
     if (isPlainObject<NavLinkType>(conf)) {
-      return conf
+      return conf;
     }
 
-    return false
-  }
+    return false;
+  };
 
   /**
    * Resolve `prev` or `next` config from sidebar items
@@ -52,65 +50,61 @@
     currentPath: string,
     offset: number
   ): null | NavLinkType => {
-    const index = sidebarItems.findIndex((item) => item.link === currentPath)
+    const index = sidebarItems.findIndex((item) => item.link === currentPath);
     if (index !== -1) {
-      const targetItem = sidebarItems[index + offset]
+      const targetItem = sidebarItems[index + offset];
       if (!targetItem?.link) {
-        return null
+        return null;
       }
-      return targetItem as NavLinkType
+      return targetItem as NavLinkType;
     }
 
     for (const item of sidebarItems) {
       if (item.children) {
-        const childResult = resolveFromSidebarItems(
-          item.children,
-          currentPath,
-          offset
-        )
+        const childResult = resolveFromSidebarItems(item.children, currentPath, offset);
         if (childResult) {
-          return childResult
+          return childResult;
         }
       }
     }
 
-    return null
-  }
+    return null;
+  };
 
   export default defineComponent({
-    name: 'PageNav',
+    name: "PageNav",
 
     components: {
       NavLink,
     },
 
     setup() {
-      const frontmatter = usePageFrontmatter()
-      const sidebarItems = useSidebarItems()
-      const route = useRoute()
+      const frontmatter = usePageFrontmatter();
+      const sidebarItems = useSidebarItems();
+      const route = useRoute();
 
       const prevNavLink = computed(() => {
-        const prevConfig = resolveFromFrontmatterConfig(frontmatter.value.prev)
+        const prevConfig = resolveFromFrontmatterConfig(frontmatter.value.prev);
         if (prevConfig !== false) {
-          return prevConfig
+          return prevConfig;
         }
 
-        return resolveFromSidebarItems(sidebarItems.value, route.path, -1)
-      })
+        return resolveFromSidebarItems(sidebarItems.value, route.path, -1);
+      });
 
       const nextNavLink = computed(() => {
-        const nextConfig = resolveFromFrontmatterConfig(frontmatter.value.next)
+        const nextConfig = resolveFromFrontmatterConfig(frontmatter.value.next);
         if (nextConfig !== false) {
-          return nextConfig
+          return nextConfig;
         }
 
-        return resolveFromSidebarItems(sidebarItems.value, route.path, 1)
-      })
+        return resolveFromSidebarItems(sidebarItems.value, route.path, 1);
+      });
 
       return {
         prevNavLink,
         nextNavLink,
-      }
+      };
     },
-  })
+  });
 </script>

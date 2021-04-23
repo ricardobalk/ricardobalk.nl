@@ -1,17 +1,17 @@
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, PropType } from "vue";
 import Service from "./Service";
 import type { ServiceDetails } from "./Service/types";
 
 export const Services = defineComponent({
-  name: 'Services',
+  name: "Services",
   components: {
-    Service
+    Service,
   },
   props: {
     title: {
       type: String,
       required: true,
-      default: "Things I could help you with"
+      default: "Things I could help you with",
     },
     services: {
       type: Array as PropType<Array<ServiceDetails>>,
@@ -37,9 +37,9 @@ export const Services = defineComponent({
           caption: "At least things won't break this way.",
           icon: "ban",
         },
-      ]
+      ],
     },
-  }
-})
+  },
+});
 
-export default Services
+export default Services;
