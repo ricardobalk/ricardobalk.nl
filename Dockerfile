@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:16.0-buster-slim
 
 USER node
 RUN mkdir -p /home/node/.npm-global \
