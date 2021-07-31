@@ -18,9 +18,9 @@
   import { useRouter } from "vue-router";
   import { useRouteLocale, useSiteLocaleData } from "@vuepress/client";
   import { isString } from "@vuepress/shared";
-  import { useNavLink, useThemeLocaleData } from "../composables";
-  import type { NavbarItem, NavbarGroup, ResolvedNavbarItem } from "../types";
-  import { resolveRepoType } from "../utils";
+  import { useNavLink, useThemeLocaleData } from "@/theme/composables";
+  import type { NavbarItem, NavbarGroup, ResolvedNavbarItem } from "@/theme/types";
+  import { resolveRepoType } from "@/theme/utils";
   import DropdownLink from "./DropdownLink.vue";
   import NavLink from "./NavLink.vue";
 

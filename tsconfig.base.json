@@ -1,4 +1,6 @@
 {
+  "include": ["**/*.ts", "**/*.vue"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "composite": true,
     "declaration": true,
@@ -16,5 +18,23 @@
     "strictNullChecks": true,
     "target": "ES2018",  
     "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/theme/*": [
+        "src/.vuepress/theme/*"
+      ],
+      "@/components/*": [
+        "src/.vuepress/theme/components/*",
+      ],
+      "@/styles/*": [
+        "src/.vuepress/theme/styles/*"
+      ],
+      "@/public/*": [
+        "src/.vuepress/public/*"
+      ],
+      "@/types/*": [
+        "src/.vuepress/theme/types/*"
+      ]
+    }
   }
 }

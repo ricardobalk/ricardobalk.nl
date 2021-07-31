@@ -1,4 +1,4 @@
-import type { NavLink, SidebarConfig } from "../../types/nav";
+import type { NavLink, SidebarConfig } from "@/theme/types/nav";
 
 export interface ArticleFrontmatter {
   blog?: boolean;

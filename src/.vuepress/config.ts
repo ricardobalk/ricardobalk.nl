@@ -11,6 +11,14 @@ const config: UserConfig<DefaultThemeOptions> = {
 
   theme: path.resolve(__dirname, "theme"),
 
+  alias: {
+    "@/theme": path.resolve(__dirname, "theme"),
+    "@/components": path.resolve(__dirname, "theme", "components"),
+    "@/styles": path.resolve(__dirname, "theme", "styles"),
+    "@/public": path.resolve(__dirname, "public"),
+    "@/types": path.resolve(__dirname, "types"),
+  },
+
   head: [
     [
       "link",

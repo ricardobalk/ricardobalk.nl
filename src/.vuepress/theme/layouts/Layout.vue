@@ -43,14 +43,14 @@
   import { computed, defineComponent, onMounted, onUnmounted, ref, Transition } from "vue";
   import { useRouter } from "vue-router";
   import { usePageFrontmatter } from "@vuepress/client";
-  import Home from "../components/Home";
-  import Blog from "../components/Blog";
-  import Portfolio from "../components/Portfolio";
-  import Page from "../components/Page.vue";
-  import Navbar from "../components/Navbar.vue";
-  import Sidebar from "../components/Sidebar.vue";
-  import Footer from "../components/Footer";
-  import { useSidebarItems, useThemeLocaleData } from "../composables";
+  import Home from "@/components/Home";
+  import Blog from "@/components/Blog";
+  import Portfolio from "@/components/Portfolio";
+  import Page from "@/components/Page.vue";
+  import Navbar from "@/components/Navbar.vue";
+  import Sidebar from "@/components/Sidebar.vue";
+  import Footer from "@/components/Footer";
+  import { useSidebarItems, useThemeLocaleData } from "@/theme/composables";
 
   export default defineComponent({
     name: "Layout",

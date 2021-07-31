@@ -3,7 +3,7 @@ import type { ComputedRef } from "vue";
 import { useRouter } from "vue-router";
 import { resolvePageData } from "@vuepress/client";
 import { useRouteLocale } from "@vuepress/client";
-import { useThemeLocaleData } from "../../composables";
+import { useThemeLocaleData } from "@/theme/composables";
 
 import type { Breadcrumb } from "./types";
 

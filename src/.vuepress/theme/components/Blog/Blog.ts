@@ -1,8 +1,8 @@
-import filterPagesByFrontmatter from "../../mixins/filterPagesByFrontmatter";
-import Hero from "../Hero";
-import Articles from "./Articles";
-import CategoryFilter from "../CategoryFilter";
-import Breadcrumbs from "../Breadcrumbs";
+import filterPagesByFrontmatter from "@/theme/mixins/filterPagesByFrontmatter";
+import Hero from "@/components/Hero";
+import Articles from "@/components/Blog/Articles";
+import CategoryFilter from "@/components/CategoryFilter";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { defineComponent, computed, reactive } from "vue";
 import { usePageData, usePageFrontmatter, resolvePageLang } from "@vuepress/client";
 import type { PageData } from "@vuepress/core/lib/types";

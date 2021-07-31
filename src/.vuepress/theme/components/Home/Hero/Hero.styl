@@ -1,11 +1,11 @@
 
-@require '../../../styles/_variables'
+@require '@/styles/_variables'
 
 .home-hero
   height var(--height-hero)
   outline 0
   background-color var(--hero-background-color)
-  background-image linear-gradient(to right, #979797, #171717), url('../../../../public/assets/img/site/home/hero.svg'), url('../../../../public/assets/img/site/home/winder.svg')
+  background-image linear-gradient(to right, #979797, #171717), url('@/public//assets/img/site/home/hero.svg'), url('@/public//assets/img/site/home/winder.svg')
   background-position left top, -100px -100px, right bottom -5px
   background-size cover, contain, contain
   background-repeat no-repeat
@@ -53,7 +53,7 @@
 
 @media screen and (prefers-color-scheme dark)
   .home-hero
-    background-image url('../../../../public/assets/img/site/home/hero.svg'), linear-gradient(to bottom, #00000073, #000) !important
+    background-image url('@/public//assets/img/site/home/hero.svg'), linear-gradient(to bottom, #00000073, #000) !important
     background-position -100px -100px, top
     background-size contain, contain, cover
     background-blend-mode soft-light, luminosity

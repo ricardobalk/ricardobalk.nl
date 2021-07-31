@@ -19,8 +19,8 @@
   import { useRoute } from "vue-router";
   import { usePageFrontmatter } from "@vuepress/client";
   import { isPlainObject, isString } from "@vuepress/shared";
-  import { useNavLink, useSidebarItems } from "../composables";
-  import type { NavLink as NavLinkType, ResolvedSidebarItem } from "../types";
+  import { useNavLink, useSidebarItems } from "@/theme/composables";
+  import type { NavLink as NavLinkType, ResolvedSidebarItem } from "@/theme/types";
   import NavLink from "./NavLink.vue";
 
   /**

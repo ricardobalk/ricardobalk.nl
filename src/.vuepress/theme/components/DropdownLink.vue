@@ -51,8 +51,8 @@
   import { computed, defineComponent, ref, toRefs, watch } from "vue";
   import type { PropType } from "vue";
   import { useRoute } from "vue-router";
-  import type { NavGroup, NavItem } from "../types";
-  import NavLink from "./NavLink.vue";
+  import type { NavGroup, NavItem } from "@/types/nav";
+  import NavLink from "@/components/NavLink";
 
   export default defineComponent({
     name: "DropdownLink",

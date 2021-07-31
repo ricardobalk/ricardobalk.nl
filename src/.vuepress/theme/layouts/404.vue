@@ -13,7 +13,7 @@
 <script lang="ts">
   import { defineComponent } from "vue";
   import { useRouteLocale } from "@vuepress/client";
-  import { useThemeLocaleData } from "../composables";
+  import { useThemeLocaleData } from "@/theme/composables";
 
   export default defineComponent({
     name: "404",

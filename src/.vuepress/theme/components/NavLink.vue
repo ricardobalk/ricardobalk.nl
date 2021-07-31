@@ -32,7 +32,7 @@
   import type { PropType } from "vue";
   import { useSiteData } from "@vuepress/client";
   import { isLinkHttp, isLinkMailto, isLinkTel } from "@vuepress/shared";
-  import type { NavLink } from "../types";
+  import type { NavLink } from "@/theme/types";
 
   export default defineComponent({
     name: "NavLink",

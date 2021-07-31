@@ -27,9 +27,9 @@
   import { computed, defineComponent } from "vue";
   import type { ComputedRef } from "vue";
   import { usePageData, usePageFrontmatter, useSiteLocaleData } from "@vuepress/client";
-  import { useThemeLocaleData } from "../composables";
-  import type { DefaultThemePageData, NavLink as NavLinkType } from "../types";
-  import { resolveEditLink } from "../utils";
+  import { useThemeLocaleData } from "@/theme/composables";
+  import type { DefaultThemePageData, NavLink as NavLinkType } from "@/theme/types";
+  import { resolveEditLink } from "@/theme/utils";
   import NavLink from "./NavLink.vue";
 
   const useEditNavLink = (): ComputedRef<null | NavLinkType> => {
