@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:16.0-buster-slim
 
 USER node
 RUN mkdir -p /home/node/.npm-global \
@@ -16,8 +16,12 @@ COPY package*.json ./
 COPY yarn.lock ./
 COPY tsconfig*.json ./
 COPY ./src/ ./src/
-RUN yarn             # This fetches all dependencies and installs them
-RUN yarn run build   # This runs an initial build, so we can know if this Docker image is working
+
+# Fetch all dependencies and install them
+RUN yarn
+
+# Run an initial build
+RUN yarn run build
 
 EXPOSE 8080
 
