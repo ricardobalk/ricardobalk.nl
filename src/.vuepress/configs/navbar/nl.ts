@@ -6,10 +6,6 @@ export const nl: NavbarConfig = [
     link: "/nl/",
   },
   {
-    text: "Portfolio",
-    link: "/nl/portfolio/",
-  },
-  {
     text: "Meer",
     children: [
       {
