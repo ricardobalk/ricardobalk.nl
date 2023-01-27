@@ -855,10 +855,10 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.2.34"
 
-"@fortawesome/vue-fontawesome@3.0.0-1":
-  version "3.0.0-1"
-  resolved "https://registry.yarnpkg.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-3.0.0-1.tgz#dbb360f95d56c21c7f921c3d5f9c3c84b2f11be7"
-  integrity sha512-gwL7yUMz1voBPyXF2GVdy7WSDQIAvvixD/GxsXlxEgdELFKd9UmZsriE0WbXa6uy64YM3AWN4CN9xduRIue68w==
+"@fortawesome/vue-fontawesome@3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-3.0.2.tgz#1b2ec546caab790c38d3dcb38407485a70703dd2"
+  integrity sha512-xHVtVY8ASUeEvgcA/7vULUesENhD+pi/EirRHdMBqooHlXBqK+yrV6d8tUye1m5UKQKVgYAHMhUBfOnoiwvc8Q==
 
 "@hapi/address@2.x.x", "@hapi/address@^2.1.2":
   version "2.1.4"
