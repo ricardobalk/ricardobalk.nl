@@ -12,22 +12,6 @@ polaroidImage:
   caption: Bild von mir im Jahr 2015
   path: /assets/img/content/home/ricardo.webp
 
-services:
-  title: "Mein Fachwissen"
-  services:
-    - title: Grafikdesign
-      caption: Ich finde es cool, Designs zu machen, die noch niemand zuvor gesehen hat.
-      icon: eye
-    - title: Interaktionsdesign
-      caption: Ich biete meinen Benutzern elegante und effektive Websites und Web Applikationen.
-      icon: mouse-pointer
-    - title: Webentwicklung
-      caption: Die Kunst, ein visuelles Design in Computercode umzuwandeln, ist ganz und gar mein Ding.
-      icon: code
-    - title: Film & Fotografie
-      caption: Neben meiner regulären Arbeit filme und fotografiere ich gerne, und ich betrachte es als mein „professionelles Hobby“.
-      icon: film
-
 process:
   title: Gut funktionierende Web-Apps, gebaut für echte Benutzer.
   subtitle: Untersuchen • Designs erstellen • Prototypen erstellen • Testen • Verbessern • Bauen

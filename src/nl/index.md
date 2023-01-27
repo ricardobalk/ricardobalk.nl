@@ -12,22 +12,6 @@ polaroidImage:
   caption: Foto van mij in 2015
   path: /assets/img/content/home/ricardo.webp
 
-services:
-  title: "Mijn expertises"
-  services:
-    - title: Grafisch vormgeven
-      caption: Ik vind 't gaaf om vette dingen te designen die niemand ooit eerder heeft gezien.
-      icon: eye
-    - title: Interactie-ontwerp
-      caption: Ik help gebruikers hun doelen tegemoet te komen op een elegante en effectieve manier.
-      icon: mouse-pointer
-    - title: Web development
-      caption: De kunst om een (visueel) ontwerp naar werkende code te transformeren is helemaal mijn ding.
-      icon: code
-    - title: Film & Fotografie
-      caption: Daarnaast film en fotografeer ik graag in mijn vrije tijd, en noem het dan ook mijn 'professionele hobby'.
-      icon: film
-
 process:
   title: Goed werkende Web-apps, gemaakt voor echte gebruikers.
   subtitle: Onderzoeken • Ontwerpen • Prototype bouwen • Testen • Verbeteren • Bouwen

@@ -4,7 +4,6 @@ import type { HomepageFrontmatter } from "./types";
 import NavLink from "../NavLink.vue";
 import Hero from "./Hero";
 import About from "./About";
-import Services from "./Services";
 import ProductAndProcess from "./ProductAndProcess";
 import SuccessStories from "./SuccessStories";
 import Conclusion from "./Conclusion";
@@ -15,16 +14,12 @@ export default defineComponent({
     NavLink,
     Hero,
     About,
-    Services,
     ProductAndProcess,
     SuccessStories,
     Conclusion,
   },
   setup() {
     const frontmatter = usePageFrontmatter<HomepageFrontmatter>();
-    const services = computed(() => {
-      return frontmatter.value.services;
-    });
     const heroText = computed(() => {
       return frontmatter.value.heroText;
     });
@@ -44,7 +39,6 @@ export default defineComponent({
     return {
       heroText,
       polaroidImage,
-      services,
       process,
       successStories,
       callToAction,

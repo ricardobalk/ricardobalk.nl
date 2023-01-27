@@ -12,22 +12,6 @@ polaroidImage:
   caption: Photo of me in 2015
   path: /assets/img/content/home/ricardo.webp
 
-services:
-  title: Things I could help you with
-  services:
-  - title: Visual Design
-    caption: I love to create astonishing visuals that no one has ever seen before.
-    icon: eye
-  - title: Interaction Design
-    caption: Helping users reach their goals, in an elegant, effective & satisfying way.
-    icon: mouse-pointer
-  - title: Web development
-    caption: It's the art of transforming a visual design into working code.
-    icon: code
-  - title: Filming & Photography
-    caption: I create movies and photographs as part of my professional hobby.
-    icon: film
-
 process:
   title: Pleasant, User-Centered Web Apps.
   subtitle: Design • Prototype • Test • Enhance • Build • Deliver
