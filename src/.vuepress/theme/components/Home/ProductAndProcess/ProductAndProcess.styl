@@ -1,11 +1,12 @@
 .product-and-process
   margin 6em 0 0
   padding 3em 0
-  background-color var(--splitter-background-color)
+  background-color #459774
   background-image linear-gradient(to right, #979797, #171717), url('@/public//assets/img/site/home/winder-bl.svg')
   background-position left top, left bottom -5px
   background-size cover, contain
   background-repeat no-repeat
+  color #fff
   background-blend-mode soft-light, normal
 
   .picture
@@ -26,7 +27,6 @@
     right 1em
     margin-bottom 3em
     padding 0 2em
-    color var(--color-light-grey)
 
     .section-title
       margin-bottom 0
@@ -47,6 +47,9 @@
 
     h1, h2, h3, p
       color inherit
+
+    p
+      font-weight 600
 
 @media screen and (prefers-color-scheme dark)
   .product-and-process

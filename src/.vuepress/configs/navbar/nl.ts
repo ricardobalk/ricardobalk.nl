@@ -36,32 +36,6 @@ export const nl: NavbarConfig = [
           },
         ],
       },
-      {
-        text: "Ricardo op Social Media",
-        children: [
-          {
-            text: "GitHub",
-            link: "https://github.com/ricardobalk",
-          },
-          {
-            text: "Twitter",
-            link: "https://twitter.com/ricardobalk",
-          },
-        ],
-      },
-      {
-        text: "Sponsor mijn werk",
-        children: [
-          {
-            text: "Eenmalig sponsoren (Ko-Fi.com)",
-            link: "https://ko-fi.com/ricardobalk",
-          },
-          {
-            text: "Maandelijks sponsoren (GitHub Sponsors)",
-            link: "https://github.com/ricardobalk",
-          },
-        ],
-      },
     ],
   },
 ];

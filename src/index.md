@@ -5,19 +5,19 @@ title: Home
 
 heroText:
   - Ricardo Balk
-  - Digital Designer & Front-end Developer
-  - Creative • Passionate • Exploring
+  - Web Developer
+  - User-Centered Design • Clean Code • Modern Stacks
 
 polaroidImage:
-  caption: Photo of me in 2015
+  caption: ''
   path: /assets/img/content/home/ricardo.webp
 
 process:
-  title: Pleasant, User-Centered Web Apps.
-  subtitle: Design • Prototype • Test • Enhance • Build • Deliver
+  title: User-Centered Approach.
+  subtitle: Research • Analysis • Design • Build • Testen • Improve
   text:
-    - I design and develop web-based applications empowering users to achieve their goals in an easy, effective and pleasant way. I design according to the Design Thinking method, keeping users closely involved during the design process.
-    - During development, I follow the principles of Atomic Design and use the latest web technologies available. such as Vue.js, Angular and React.
+    - I am a firm believer in the power of user-centered design and I always strive to create a pleasant user experience. In order to achieve this, I spend a lot of time researching and understanding my users and their needs. I believe that by focusing on the user and their needs, we can create products that are both functional and visually appealing, that will ultimately lead to a better user experience.
+    - When it comes to development, I follow the principles of Atomic Design. This methodology helps me to create consistent, modular and reusable components that can be easily assembled into larger, more complex interfaces. Additionally, I am a strong advocate of the mobile-first approach. I believe that mobile devices are now the primary way that people access the web and that a good mobile experience is the foundation of a good web experience.
   image:
     path: /assets/img/content/home/computer.webp
     description: Laptop computer showing the design and development process
@@ -53,6 +53,19 @@ nextMove:
 ---
 
 <h1>About me&hellip;</h1>
-<p>I'm a digital designer, front-end developer and blogger. I've studied Communcation &amp; Multimedia Design at HAN University of Applied Sciences and obtained my Bachelor of Science in February, 2019.</p>
-<p>I have an intense love for UX/UI design, front-end web development and photography. Knowing that I both love graphic design and technology, I chose to combine those passions.</p>
-<p>On my blog, you could learn more about the things I'm doing. There's also a portfolio available showing an overview of projects I worked on in the past.</p>
+
+<p>
+  I'm Ricardo - a web developer who is passionate about technology, creating beautiful user interfaces and writing clean and reusable code. I love working on challenging projects that push the boundaries of what is possible and require me to think creatively and outside the box.
+</p>
+
+<p>
+  I am currently working as a full stack developer with a strong focus on design and user experience. My preferred stack is a combination of Vue and Go, powerful frameworks that allows me to create fast, elegant and responsive web applications.
+</p>
+
+<p>
+  In my spare time, I like to give back to the community by contributing to open-source projects. I believe that open-source software is a powerful tool for driving innovation and progress, and I want to be a part of that.
+</p>
+
+<p>
+  When I'm not glued to my screen, I love reading a good book or going for a hike.
+</p>
