@@ -60,17 +60,12 @@ const config: UserConfig<DefaultThemeOptions> = {
     "/": {
       lang: "en-GB",
       title: "Ricardo Balk",
-      description: "Personal website with blog, guides and portfolio.",
+      description: "Personal website with blog.",
     },
     "/nl/": {
       lang: "nl-NL",
       title: "Ricardo Balk",
-      description: "Persoonlijke website met blog, handleidingen en portfolio.",
-    },
-    "/de/": {
-      lang: "de-DE",
-      title: "Ricardo Balk",
-      description: "Persönliche Website mit Blog, Guides und Portfolio.",
+      description: "Persoonlijke website met blog.",
     },
   },
 
@@ -134,39 +129,6 @@ const config: UserConfig<DefaultThemeOptions> = {
 
         // other
         openInNewWindow: "In apart venster openen",
-      },
-
-      "/de/": {
-        // navbar
-        navbar: navbar.de,
-        selectLanguageName: "Deutsch",
-        selectLanguageText: "Sprachen",
-        selectLanguageAriaLabel: "Sprachauswahl",
-
-        // sidebar
-        sidebar: false,
-
-        // page meta
-        editLinkText: "Bearbeiten Sie diese Seite auf GitHub",
-        lastUpdatedText: "Aktualisiert",
-        contributorsText: "Mitwirkende",
-
-        // custom containers
-        tip: "Tip",
-        warning: "Achtung",
-        danger: "Gefahr",
-
-        // 404 page
-        notFound: [
-          "Hoppla, Das Internet hat Sie im Stich gelassen!",
-          "Schade! Seite nicht gefunden.",
-          "Es scheint, dass diese Seite nicht existiert. Andernfalls gehen Sie eine Partie Tischfußball spielen!",
-          "看起来我们进入了错误的链接. Mit anderen Worten, diese Seite ist nicht gefunden.",
-        ],
-        backToHome: "Zurück zur Startseite",
-
-        // other
-        openInNewWindow: "In separatem Fenster öffnen",
       },
     },
 

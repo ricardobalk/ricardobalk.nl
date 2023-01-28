@@ -20,9 +20,15 @@
       color darken($textColor, 25%)
       font-weight 500
 
+      @media screen and (prefers-color-scheme dark)
+        color #888
+
     .meta-item-info
       color #767676
       font-weight 400
+
+      @media screen and (prefers-color-scheme dark)
+        color #ccc
 
   .edit-link
     display inline-block

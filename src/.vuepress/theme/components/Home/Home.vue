@@ -4,7 +4,6 @@
     <About :polaroidImage="polaroidImage">
       <Content class="theme-default-content custom" />
     </About>
-    <Services :services="services.services" :title="services.title" />
     <ProductAndProcess
       :title="process.title"
       :image="process.image"
