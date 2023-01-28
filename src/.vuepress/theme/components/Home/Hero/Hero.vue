@@ -1,6 +1,6 @@
 <template>
   <header class="home-hero" tabindex="0">
-    <div class="g-row valign-center">
+    <div class="g-row">
       <div class="c-sm-12 text-container text-center">
         <h1 class="name">{{ name }}</h1>
         <h2 v-if="occupation" class="occupation">

@@ -5,6 +5,7 @@ $hero-height = calc(66vh - $site-header-height)
 $hero-height-on-overview-pages = 'calc(50vh - %s)' % $site-header-height
 
 .big-hero
+  display grid
   margin-bottom 5em
   height 25vh
   outline 0
@@ -15,6 +16,7 @@ $hero-height-on-overview-pages = 'calc(50vh - %s)' % $site-header-height
   color #fff
   text-shadow 1px 1px 5px rgba(150, 150, 150, .33)
   font-family 'Source Sans Pro', Helvetica, Arial, sans-serif
+  place-items center
 
   &.big
     height 50vh
