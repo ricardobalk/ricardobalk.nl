@@ -1,2 +1,2 @@
-import filterPagesByFrontmatter from './filterPagesByFrontmatter'
-export default filterPagesByFrontmatter
+import filterPagesByFrontmatter from "./filterPagesByFrontmatter";
+export default filterPagesByFrontmatter;

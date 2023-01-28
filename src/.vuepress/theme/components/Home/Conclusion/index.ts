@@ -1,2 +1,2 @@
-import Conclusion from "./Conclusion.vue"
-export default Conclusion
+import Conclusion from "./Conclusion.vue";
+export default Conclusion;

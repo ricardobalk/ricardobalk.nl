@@ -1,2 +1,2 @@
-import SuccessStories from "./SuccessStories.vue"
-export default SuccessStories
+import SuccessStories from "./SuccessStories.vue";
+export default SuccessStories;

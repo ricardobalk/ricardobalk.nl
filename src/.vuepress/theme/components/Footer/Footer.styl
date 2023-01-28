@@ -1,35 +1,38 @@
 .footer
-  width 100%
-  background-color #1e1e1e
-  color #eee
   align-self flex-end
+  width 100%
+  background-color #052623
+  color #fff
+  font-weight 600
+  font-size .95em
 
-  &.home
-    @media screen and (prefers-color-scheme dark)
-      background-color #002451
-
-  .footer-message
+  &.home, .footer-message
     padding-right 1em
     padding-left 1em
-    font-size 0.85em
+    font-size .85em
 
     p
-      color #eee
+      color inherit
 
     a
       color inherit
       font-size inherit
 
     svg
-      margin 0 0.2em
+      margin 0 .2em
 
     span:not(:last-of-type):after
-      margin 0 0.25em 0 0.5em
+      margin 0 .25em 0 .5em
       content '\2022'
-      font-size 0.75em
-      line-height 0.95em
-
+      font-size .75em
+      line-height .95em
 
 @media screen and (prefers-color-scheme dark)
+  .footer
+    border-top 1px dashed #333
+    background-color #000
+    color #eee
+
   .home ~ .footer
-    background-color #002451
+    border-top none
+    background #006a3d

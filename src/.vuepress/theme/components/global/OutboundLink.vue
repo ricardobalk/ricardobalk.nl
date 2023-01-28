@@ -7,7 +7,7 @@
 <script>
   import { defineComponent } from "vue";
   import { OutboundLink } from "@vuepress/client";
-  import { useThemeLocaleData } from "../../composables";
+  import { useThemeLocaleData } from "@/theme/composables";
 
   /**
    * Override the built-in `<OutboundLink>` for a11y

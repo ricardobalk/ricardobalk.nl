@@ -1,6 +1,6 @@
-import type { PageData } from '@vuepress/core/lib/types'
-import { usePages } from '../../composables';
-import { reactive } from 'vue'
+import type { PageData } from "@vuepress/core/lib/types";
+import { usePages } from "../../composables";
+import { reactive } from "vue";
 
 /**
  * Runs an inclusive filter on an array containing objects.
@@ -10,16 +10,16 @@ import { reactive } from 'vue'
  * @example - nestedFilter([{id: 0, lang: "en-US"}, {id: 1, lang: "nl-NL"}], {lang: ["en-US"]})
  * @example - nestedFilter([{id: 0, lang: "en-US"}, {id: 1, lang: "nl-NL"}], {lang: ["en-US", "nl-NL"]})
  */
-const nestedFilter = (target : Array<any>, filters: Record<string, any[]>) : Array<typeof target> => {
-    const filterKeys = Object.keys(filters);
-    return target.filter(function (eachObj) {
-      return filterKeys.every(function (eachKey) {
-        if (!filters[eachKey].length) {
-          return true; 
-        }
-        return filters[eachKey].includes(eachObj[eachKey]);
-     });
- });
+const nestedFilter = (target: Array<any>, filters: Record<string, any[]>): Array<typeof target> => {
+  const filterKeys = Object.keys(filters);
+  return target.filter(function (eachObj) {
+    return filterKeys.every(function (eachKey) {
+      if (!filters[eachKey].length) {
+        return true;
+      }
+      return filters[eachKey].includes(eachObj[eachKey]);
+    });
+  });
 };
 
 /**
@@ -35,18 +35,18 @@ const nestedFilter = (target : Array<any>, filters: Record<string, any[]>) : Arr
  *          - Get all English blog posts:
  *              filterPagesByFrontmatter({ lang: ["en-US"], type: ["blog"] } )
  */
- export async function filterPagesByFrontmatter(filter: Record<string, any>): Promise<Array<PageData>> {
-    const defaultFilter : Record<string, string[]> = { type: ["post"] }
-    !filter && (filter = defaultFilter)
+export async function filterPagesByFrontmatter(filter: Record<string, any>): Promise<Array<PageData>> {
+  const defaultFilter: Record<string, string[]> = { type: ["post"] };
+  !filter && (filter = defaultFilter);
 
-    let filteredPages : PageData[] = reactive([])
+  let filteredPages: PageData[] = reactive([]);
 
-    const pages = await usePages()    
+  const pages = await usePages();
 
-    // TODO: Refactor this. There's probably a shorter, more concise and technically more correct way.
-    pages.forEach( (page) => (nestedFilter([page.frontmatter], filter).length > 0 && filteredPages.push(page)) )
+  // TODO: Refactor this. There's probably a shorter, more concise and technically more correct way.
+  pages.forEach((page) => nestedFilter([page.frontmatter], filter).length > 0 && filteredPages.push(page));
 
-    return filteredPages
-  }
-  
-  export default filterPagesByFrontmatter
+  return filteredPages;
+}
+
+export default filterPagesByFrontmatter;

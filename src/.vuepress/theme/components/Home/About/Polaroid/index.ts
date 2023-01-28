@@ -1,2 +1,2 @@
-import Polaroid from "./Polaroid.vue"
-export default Polaroid
+import Polaroid from "./Polaroid.vue";
+export default Polaroid;

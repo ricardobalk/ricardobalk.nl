@@ -1,8 +1,11 @@
-FROM node:12
+FROM node:16.0-buster-slim
 
 USER node
 RUN mkdir -p /home/node/.npm-global \
-             /home/node/app
+             /home/node/app \
+             /home/node/app/src/.vuepress/.cache \
+             /home/node/app/src/.vuepress/.temp
+RUN ls -la /home/node/app/src/.vuepress/
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH=$NPM_CONFIG_PREFIX/bin:$PATH
 RUN npm -g config set user "$USER" && \
@@ -11,10 +14,14 @@ RUN npm -g config set user "$USER" && \
 WORKDIR /home/node/app/
 COPY package*.json ./
 COPY yarn.lock ./
-COPY tsconfig.json ./
+COPY tsconfig*.json ./
 COPY ./src/ ./src/
-RUN yarn             # This fetches all dependencies and installs them
-RUN yarn run build   # This runs an initial build, so we can know if this Docker image is working
+
+# Fetch all dependencies and install them
+RUN yarn
+
+# Run an initial build
+RUN yarn run build
 
 EXPOSE 8080
 

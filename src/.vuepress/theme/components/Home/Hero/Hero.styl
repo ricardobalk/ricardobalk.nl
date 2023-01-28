@@ -1,62 +1,59 @@
 
-@require '../../../styles/_variables'
+@require '@/styles/_variables'
 
 .home-hero
+  display grid
   height var(--height-hero)
   outline 0
-  background-color var(--hero-background-color)
-  background-image linear-gradient(to right, #979797, #171717), url('../../../../public/assets/img/site/home/hero.svg'), url('../../../../public/assets/img/site/home/winder.svg')
-  background-position left top, -100px -100px, right bottom -5px
-  background-size cover, contain, contain
+  background-color #6bffdc
+  background-image url('@/public//assets/img/site/home/winder.svg'), linear-gradient(to right, #00000022, #00000085)
+  background-position right bottom -5px, left top
+  background-size contain, cover
   background-repeat no-repeat
   color #fff
-  text-shadow 1px 1px 5px rgba(150, 150, 150, .33)
+  text-shadow 1px 1px 5px rgba(26, 26, 26, .33)
   font-family $font-stack-text
-  background-blend-mode soft-light, soft-light, normal
+  place-items center
+  background-blend-mode normal, multiply
 
   @media screen and (max-width 640px)
     height calc(50vh - var(--height-site-header))
 
   .text-container
+    display flex
+    flex-direction column
     padding 0 1em
 
     h1, h2, h3
-      color var(--color-white)
+      margin 0
+      color inherit
       text-transform uppercase
       font-family inherit
 
     h1
-      margin-bottom 0
-      font-weight 300
-      font-size 2.25em
+      font-weight 900
+      font-size 4rem
 
       @media screen and (max-width 640px)
         margin-bottom .25em
-        font-size 2em
+        font-size 2rem
 
     h2
-      margin .25em 0
-      font-weight 700
-      font-size 2.5em
+      font-weight 600
+      font-size 3.5rem
 
       @media screen and (max-width 640px)
-        margin-bottom .5em
-        font-size 1.5em
+        margin-bottom .5rem
+        font-size 1.5rem
 
     h3
       text-transform uppercase
       font-weight 700
-      font-size .95em
-
-      @media screen and (max-width 640px)
-        font-size .95em
+      font-size .95rem
 
 @media screen and (prefers-color-scheme dark)
   .home-hero
-    background-image url('../../../../public/assets/img/site/home/hero.svg'), linear-gradient(to bottom, #00000073, #000) !important
-    background-position -100px -100px, top
-    background-size contain, contain, cover
-    background-blend-mode soft-light, luminosity
+    background linear-gradient(to bottom, #006a3d, #000)
 
     .text-container
       h1, h2, h3

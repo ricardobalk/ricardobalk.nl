@@ -1,4 +1,4 @@
-import { defineComponent, computed, ComputedRef } from 'vue'
+import { defineComponent, computed, ComputedRef } from "vue";
 
 export const Hero = defineComponent({
   name: "Hero",
@@ -6,28 +6,29 @@ export const Hero = defineComponent({
     image: {
       type: String,
       required: false,
-      default: "/assets/img/site/home/hero.svg"
+      default: "/assets/img/site/home/hero.svg",
     },
     imageDark: {
       type: String,
       required: false,
-      default: "/assets/img/site/home/hero.svg"
+      default: "/assets/img/site/home/hero.svg",
     },
     title: {
       type: String,
-      required: false
+      required: false,
     },
     subtitle: {
       type: String,
-      required: false
-    }
+      required: false,
+    },
   },
 
-  setup(context){
-    const style : ComputedRef<String> = computed(() => `--image: url("${context.image}"); --image-dark: url("${context.imageDark}");`)
-    return { style }
+  setup(context) {
+    const style: ComputedRef<String> = computed(
+      () => `--image: url("${context.image}"); --image-dark: url("${context.imageDark}");`
+    );
+    return { style };
   },
-  
-})
+});
 
-export default Hero
+export default Hero;

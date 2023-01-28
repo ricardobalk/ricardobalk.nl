@@ -1,2 +1,2 @@
-import getPageLanguage from "./getPageLanguage"
-export default getPageLanguage
+import getPageLanguage from "./getPageLanguage";
+export default getPageLanguage;

@@ -1,27 +1,25 @@
-import { inject } from "vue"
-import { usePagesData } from "@vuepress/client"
-import type { InjectionKey } from "vue"
-import type { PageData } from "@vuepress/core/lib/types"
+import { inject } from "vue";
+import { usePagesData } from "@vuepress/client";
+import type { InjectionKey } from "vue";
+import type { PageData } from "@vuepress/core/lib/types";
 
-export const pagesSymbol: InjectionKey<Promise<PageData[]>> = Symbol("pages")
+export const pagesSymbol: InjectionKey<Promise<PageData[]>> = Symbol("pages");
 
 /**
  * Inject pages global computed
  */
 export const usePages = async (): Promise<PageData[]> => {
-  const pages = inject(pagesSymbol)
+  const pages = inject(pagesSymbol);
   if (!pages) {
-    throw new Error("usePages() is called without provider.")
+    throw new Error("usePages() is called without provider.");
   }
-  return pages
-}
+  return pages;
+};
 
 export const resolvePages = async (): Promise<PageData[]> => {
-  const pagesData = usePagesData()
+  const pagesData = usePagesData();
 
-  const pages = await Promise.all(
-    Object.keys(pagesData.value).map((key) => pagesData.value[key]())
-  )
+  const pages = await Promise.all(Object.keys(pagesData.value).map((key) => pagesData.value[key]()));
 
-  return pages as PageData[]
-}
+  return pages as PageData[];
+};

@@ -1,14 +1,9 @@
 <template>
   <main class="home" aria-labelledby="main-title">
-    <Hero
-      :name="heroText[0]"
-      :occupation="heroText[1]"
-      :tagline="heroText[2]"
-    />
+    <Hero :name="heroText[0]" :occupation="heroText[1]" :tagline="heroText[2]" />
     <About :polaroidImage="polaroidImage">
       <Content class="theme-default-content custom" />
     </About>
-    <Services :services="services.services" :title="services.title" />
     <ProductAndProcess
       :title="process.title"
       :image="process.image"

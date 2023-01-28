@@ -1,2 +1,2 @@
-import Portfolio from "./Portfolio.vue"
-export default Portfolio
+import Portfolio from "./Portfolio.vue";
+export default Portfolio;
