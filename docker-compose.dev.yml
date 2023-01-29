@@ -1,0 +1,13 @@
+version: "3"
+services:
+  ricardobalk-website:
+    build:
+      context: .
+      target: dev
+    ports:
+      - 8080:8080
+    volumes:
+      - ./src:/home/node/app/src
+    environment:
+      NODE_ENV: development
+    command: ["dev"]
