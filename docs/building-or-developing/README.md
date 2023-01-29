@@ -2,80 +2,63 @@
 
 To build or develop my website, I recommend using Docker, as this prevents you from installing and configuring many things. I just like to get shit done in a fast and effective way. Don't blame me for that. :man_shrugging:
 
-## 1) Pull or build the Docker image
+## Development
 
-The first step is to pull my website's Docker image from Docker Hub, or build it locally with to the _Dockerfile_ recipe found in the root directory of this repository.
+To start developing, run the following commands:
 
-**Pull from Docker Hub (recommended)**
+1) Build the Docker image
 
 ```sh
-docker pull ricardobalk/website
+docker build --target dev -t ricardobalk/website:dev . && docker run -it --rm -p 8080:8080 -v "$(pwd)/src:/home/node/app/src" ricardobalk/website:dev "dev"
 ```
 
-**Build it yourself**
-
-Assuming you've cloned this repository and are currently in the directory where the Dockerfile resides...
+2) Run the image as a container
 
 ```sh
-docker build -t ricardobalk/website .
+docker run -it --rm -p 8080:8080 -v "$(pwd)/src:/home/node/app/src" ricardobalk/website:dev "dev"
 ```
 
-## 2) Run Docker image in a container.
+This will start a container that will run the website on port 8080. You can now open the website in your browser by going to `http://localhost:8080`. You can now start developing. :tada:
 
-The second step is to run the freshly created _image_ in a _container_. You could choose to run a dev server for development purposes, or to build my website.
-
-**DEV SERVER**
-
+3) Remove the image
 
 ```sh
-docker run --rm \
-  --mount type=bind,source="$(pwd)"/src/,target=/home/node/app/src/,readonly \
-  -p 8080:8080 \
-  ricardobalk/website "dev"
-```
-
-This will launch a dev server which you could use to tinker and try things. After a while, visit http://localhost:8080/. You're good to go.
-
-P.S. You could also omit the bind mounts to just see the site as it was published to Docker Hub.
-
-**BUILD**
-
-```sh
-mkdir -p ./dist/
-```
-
-```sh
-docker run --rm \
-  --mount type=bind,source="$(pwd)"/src/,target=/home/node/app/src/,readonly \
-  --mount type=bind,source="$(pwd)"/dist/,target=/home/node/app/dist/ \
-  ricardobalk/website "build"
-```
-
-This will build the website and place the result in `dist/`. You can use your own server to serve this directory.
-
-## 3) Deploy
-
-Although I don't expect **you** to deploy **my** website, here are the instructions given as a reference.
-
-**DEPLOY**
-
-Build the website using the instructions above. After that, use `rsync` to push the contents of `dist/` to your server.
-
-```sh
-rsync -ru dist/. ricardobalk.nl:/var/www/ricardobalk.nl --delete
-```
-
-That was easy! Build and upload. No need for heavy back-ends and complex databases. This is possible because we're working with a JAMstack website. :tada:
-
-P.S. If you're not using Linux, macOS or WSL, you could also upload the contents of `dist/` via (S)FTP. I'll just stick with the `rsync` approach, because I like to get shit done and save time. :+1:
-
-**REMOVAL**
-
-```sh
-docker image rm ricardobalk/website
+docker image rm ricardobalk/website:dev
 ```
 
 This will remove the image. Removal of the containers is not necessary because the `--rm` flag was used. However, if there still are containers that depend on the image, Docker will notify you :wink:
+
+## Production build
+
+To run a production build, run the following commands:
+
+1) Build the Docker image
+
+```sh
+docker build --no-cache -t ricardobalk/website:latest .
+```
+
+`--no-cache` is used to ensure that the latest version of the image is used. This is not necessary, but it's a good practice.
+
+2) Run the image as a container
+
+```sh
+docker run -it --rm -p 8080:8080 ricardobalk/website:latest
+```
+
+This will start a container that will run the website on port 8080. You can now open the website in your browser by going to `http://localhost:8080`. You can now set up a reverse proxy to make it available publicly, e.g. with Apache, nginx or Caddy :tada:
+
+3) Remove the image
+
+```sh
+docker image rm ricardobalk/website:latest
+```
+
+This will remove the image. Removal of the containers is not necessary because the `--rm` flag was used. However, if there still are containers that depend on the image, Docker will notify you :wink:
+
+## Bare production build
+
+The Dockerfile is a multi-stage build, which means that the final image is very small. It is also possible to use the `release-base` stage to build a production build without nginx. This is useful if you want to use a different web server or if you want to extract the static files to use them in another way. Please take a look at the [Dockerfile](../../Dockerfile) to see how it works.
 
 ## Doing the same without Docker...
 
