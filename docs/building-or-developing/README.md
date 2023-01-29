@@ -28,6 +28,14 @@ docker image rm ricardobalk/website:dev
 
 This will remove the image. Removal of the containers is not necessary because the `--rm` flag was used. However, if there still are containers that depend on the image, Docker will notify you :wink:
 
+### Development with Docker Compose
+
+Docker Compose:
+
+```sh
+docker-compose -f docker-compose.dev.yml up --build
+```
+
 ## Production build
 
 To run a production build, run the following commands:
@@ -55,6 +63,14 @@ docker image rm ricardobalk/website:latest
 ```
 
 This will remove the image. Removal of the containers is not necessary because the `--rm` flag was used. However, if there still are containers that depend on the image, Docker will notify you :wink:
+
+### Production build with Docker Compose
+
+Docker Compose:
+
+```sh
+docker-compose -f docker-compose.prod.yml up --build
+```
 
 ## Bare production build
 
