@@ -1,17 +1,26 @@
 <template>
-  <NuxtLayout name="hello">
-    <template #title>{{ productName }}</template>
-    <template #message>{{ message }}</template>
+  <NuxtLayout name="default">
+    <template #site-header>
+      <p>
+        This is the site header.
+      </p>
+    </template>
+
+    <template #default>
+      <p>
+        This is the main content.
+      </p>
+    </template>
+
+    <template #site-footer>
+      <p>
+        This is the site footer.
+      </p>
+    </template>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-const productName: string = "Nuxt 3 Starter Kit";
-const features: string[] = ["Vite", "Vue 3", "TypeScript", "PostCSS", "TailwindCSS"];
-const message = computed(
-  () => `This is a ${productName} with ${features.slice(0, -1).join(", ")} and ${features.slice(-1)}!`
-);
-
 definePageMeta({
   layout: false,
 });
