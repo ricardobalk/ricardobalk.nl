@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt/config'
+import svgLoader from 'vite-svg-loader'
 
 export default defineNuxtConfig({
   modules: [ '@nuxt/content' ],
@@ -12,5 +13,14 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  vite: {
+    plugins: [
+      svgLoader({
+        svgoConfig: {
+          // https://github.com/jpkleemans/vite-svg-loader
+        }
+      }),
+    ],
   },
 })
