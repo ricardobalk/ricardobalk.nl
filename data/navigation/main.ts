@@ -1,4 +1,4 @@
-import { NavigationItems } from '@/components/molecules/Navigation.vue';
+import { NavigationItems } from '@/components/molecule/Navigation.vue';
 
 const NavigationItems: NavigationItems = [
   {
@@ -14,21 +14,21 @@ const NavigationItems: NavigationItems = [
     },
     children: [
       {
-        label: 'Subject one',
+        label: 'Article one',
         link: {
-          to: '/blog/subject-one',
+          to: '/blog/article',
         },
       },
       {
-        label: 'Second Post',
+        label: 'Article two',
         link: {
-          to: '/blog/subject-two',
+          to: '/blog/article-two',
         },
         children: [
           {
-            label: 'Some article',
+            label: 'Some sub article',
             link: {
-              to: '/blog/subject-two/sub-post',
+              to: '/blog/article-two/sub-article',
             }
           }
         ]

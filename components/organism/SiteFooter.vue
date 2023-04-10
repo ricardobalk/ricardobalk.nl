@@ -14,14 +14,13 @@
     <p>
       Source code available on
         <strong>
-          <Link :to="repositoryUrl" target="_blank">GitHub</Link>
+          <AtomLink :to="repositoryUrl" target="_blank">GitHub</AtomLink>
         </strong>.
     </p>
   </footer>
 </template>
 
 <script setup lang="ts">
-  import Link from '@/components/atoms/Link.vue';
   const repositoryUrl = `https://github.com/ricardobalk/website`;
 </script>
 

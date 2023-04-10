@@ -1,11 +1,11 @@
 <!-- Contains the site's header. -->
 <template>
   <header :class="computedClassnames" class="site-header">
-    <Link to="/" title="Go back home" tabindex="0">
+    <AtomLink to="/" title="Go back home" tabindex="0">
       <SiteLogo width="32" height="32" alt="Site Logo" />
-    </Link>
+    </AtomLink>
 
-    <NavigationBar :items="NavigationItems" class="navbar" />
+    <MoleculeNavigationBar :items="NavigationItems" class="navbar" />
   </header>
 </template>
 
@@ -26,9 +26,7 @@
 </style>
 
 <script setup lang="ts">
-import Link from '@/components/atoms/Link.vue';
 import SiteLogo from '@/assets/svg/site-logo.svg?component';
-import NavigationBar from '@/components/molecules/NavigationBar.vue';
 import NavigationItems from '@/data/navigation/main';
 
 const scrolledDown = ref(false);

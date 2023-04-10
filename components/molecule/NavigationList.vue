@@ -3,9 +3,9 @@
   <ul>
     <li v-for="(item, index) in props.items" :key="index" tabindex="0">
       <template v-if="item.link">
-        <Link :to="item.link.to">
+        <AtomLink :to="item.link.to">
           {{ item.label }}
-        </Link>
+        </AtomLink>
       </template>
 
       <template v-else>
@@ -22,8 +22,7 @@
 </template>
 
 <script setup lang="ts">
-  import Link                from '@/components/atoms/Link.vue';
-  import { NavigationItems } from '@/components/molecules/Navigation.vue'
+  import { NavigationItems } from '@/components/molecule/Navigation.vue'
 
   export interface Props {
     items: NavigationItems;

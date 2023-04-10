@@ -3,8 +3,20 @@ import svgLoader from 'vite-svg-loader'
 
 export default defineNuxtConfig({
   modules: [ '@nuxt/content' ],
+  components: {
+    // Makes all components in the components directory global,
+    // for MDC (::component) to work.
+    global: true,
+    dirs: ['~/components'],
+  },
   content: {
     // https://content.nuxtjs.org/api/configuration
+    highlight: {
+      theme: {
+        default: 'github-light',
+        dark: 'github-dark',
+      }
+    },
   },
   postcss: {
     plugins: {

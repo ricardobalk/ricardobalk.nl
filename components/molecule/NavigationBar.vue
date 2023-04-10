@@ -1,6 +1,6 @@
 <!-- Renders a styled navigation menu, using CSS classes. -->
 <template>
-  <Navigation :items="props.items" class="navbar" />
+  <MoleculeNavigation :items="props.items" class="navbar" />
 </template>
 
 <style lang="postcss">
@@ -51,7 +51,7 @@
 </style>
 
 <script setup lang="ts">
-  import Navigation, { NavigationItems } from "@/components/molecules/Navigation.vue"
+  import { NavigationItems } from "@/components/molecule/Navigation.vue"
 
   export interface Props {
     items: NavigationItems;

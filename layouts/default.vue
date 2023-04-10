@@ -4,6 +4,7 @@
   <main>
     <slot />
   </main>
+
   <slot name="site-footer" />
 </template>
 

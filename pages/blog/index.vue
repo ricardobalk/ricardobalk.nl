@@ -18,4 +18,4 @@
 main {
   @apply gap-2;
 }
-</style>ß
+</style>

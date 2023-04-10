@@ -1,13 +1,12 @@
 <!-- Renders an accessible, simple, unstyled navigation menu, i.e. nav>ul>li -->
 <template>
   <nav>
-    <NavigationList :items="props.items" />
+    <MoleculeNavigationList :items="props.items" />
   </nav>
 </template>
 
 <script setup lang="ts">
-  import { ILink } from '@/components/atoms/Link.vue';
-  import NavigationList from '@/components/molecules/NavigationList.vue'
+  import { ILink } from '@/components/atom/Link.vue';
 
   export interface NavigationItem {
     label: string;
