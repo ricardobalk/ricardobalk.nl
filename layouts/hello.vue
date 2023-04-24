@@ -9,6 +9,8 @@
 
         Always check the <a href="https://github.com/ricardobalk/nuxt3-tailwindcss">GitHub repository</a> for the latest version!
       </p>
+
+      <slot />
     </div>
   </div>
 </template>
