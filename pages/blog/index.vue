@@ -1,11 +1,11 @@
 <template>
-  <NuxtLayout name="home">
+  <NuxtLayout name="default">
     <template #site-header>
       <OrganismSiteHeader />
     </template>
 
     <template #default>
-      <ContentDoc tag="main" />
+      <ContentDoc />
     </template>
 
     <template #site-footer>

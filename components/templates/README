@@ -1,0 +1,1 @@
+Templates can be found in the `layouts` directory, as we're using Nuxt 3. In Nuxt 3, the `layouts` directory is the equivalent of Atomic Design Principles' `templates` directory.
