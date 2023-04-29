@@ -21,6 +21,6 @@
   const props = defineProps<Props>();
 
   const showCaption = computed(() => {
-    return props.caption !== undefined;
+    return props.caption !== undefined && props.caption.length > 0;
   });
   </script>

@@ -1,18 +1,75 @@
-# Home
+:MoleculeHomeHero{name="Ricardo Balk" occupation="Web Developer" tagline="User-Centered Design • Clean Code • Modern Stacks"}
 
-Hello world. This is a test for the home page. Everything is unstyled, but it's a start. Take a look at the HTML and the Markdown source code to see how it works.
+::MoleculeHomeAbout
+---
+picture:
+  path:    "/home/about-me/ricardo.webp"
+  alt:     "Photo of Ricardo"
+  caption: "Photo of me taken during the Four Days Marches of 2022 in the Netherlands"
+---
 
-If you're looking for something styled, take a look at [this blog article](/blog/article).
-## Lorem ipsum dolor sit amet
+  # About me&hellip;
 
-This is a paragraph, and here is some **bold** text. Here is some *italic* text. Here is some `inline code` text. Here is a [link](https://www.example.com). Here is a [link with a title](https://www.example.com "Example"). And also, below is a blockquote with Lorem Ipsum:
+  I'm Ricardo - a web developer who is passionate about technology, creating beautiful user interfaces and writing clean and reusable code. I love working on challenging projects that push the boundaries of what is possible and require me to think creatively and outside the box.
 
-> :MoleculeLoremIpsum{:count=1}
+  I am currently working as a full stack developer with a strong focus on design and user experience. My preferred stack is a combination of Vue and Go, powerful frameworks that allows me to create fast, elegant and responsive web applications.
 
-It shows the ability to import a so-called Molecule component from the `molecules` directory, and use it in the content. The molecule component is a simple Vue component that renders one or more paragraphs with some Lorem Ipsum text.
+  In my spare time, I like to give back to the community by contributing to open-source projects. I believe that open-source software is a powerful tool for driving innovation and progress, and I want to be a part of that.
 
-In MDC, it is defined using `:MoleculeLoremIpsum{:count=1}`.
+  When I'm not glued to my screen, I love reading a good book or going for a hike. 
+::
 
-Molecules will be used to create more complex components, called Organisms, Templates and Pages, such as a blog post, a page, a product, etc.
+::MoleculeHomeProcess
+---
+picture:
+  path:    "/home/process/computer.webp"
+  alt:     "Laptop computer showing an example of a dashboard interface."
+---
 
-I'm still figuring out how to use these components in the content, but I think it's in the right direction.
+  # User-centered Approach.
+
+  Research • Analysis • Design • Build • Test • Improve
+
+  I am a firm believer in the power of user-centered design and I always strive to create a pleasant user experience. In order to achieve this, I spend a lot of time researching and understanding my users and their needs. I believe that by focusing on the user and their needs, we can create products that are both functional and visually appealing, that will ultimately lead to a better user experience.
+
+  When it comes to development, I follow the principles of Atomic Design. This methodology helps me to create consistent, modular and reusable components that can be easily assembled into larger, more complex interfaces. Additionally, I am a strong advocate of the mobile-first approach. I believe that mobile devices are now the primary way that people access the web and that a good mobile experience is the foundation of a good web experience.
+::
+
+::MoleculeHomeSuccessStories
+  # Success Stories
+
+  What others say about my work
+
+#stories
+    ::MoleculeHomeSuccessStory
+    ---
+    name:        "Dirk Goossens"
+    occupation:  "CEO at Sollicity"
+    picture:     "/home/success-stories/dirk-goossens.webp"
+    ---
+      Ricardo takes pride in his profession. He knows a lot of it and has a great ambition to always learn more. He is upbeat and sociale and I very much appreciated his time with Sollicity.
+    ::
+
+    ::MoleculeHomeSuccessStory
+    ---
+    name:        "Niels de Bont"
+    occupation:  "Friend and UX/UI assistant"
+    picture:     "/home/success-stories/niels-de-bont.webp"
+    ---
+      Ricardo is a very talented developer. He is very passionate about his work and loves helping others solving their technical challenges. He has a great ability to understand complex problems and come up with innovative solutions. His attention to detail and dedication to his craft make him an exceptional developer.
+    ::
+::
+
+::MoleculeHomeCallToAction
+  # Contact
+
+  It's time for the next move!
+
+  ::MoleculeHomeContactMethods
+    :MoleculeIconLink{ link="https://mas.to/ricardobalk"          icon="mastodon"  title="Ricardo's profile on Mastodon, a decentralized social network" }
+    :MoleculeIconLink{ link="https://github.com/ricardobalk"      icon="github"    title="Ricardo's profile on GitHub, a platform for hosting and collaborating on computer programming code" }
+    :MoleculeIconLink{ link="https://linkedin.com/in/ricardobalk" icon="linkedin"  title="Ricardo's profile on LinkedIn, a social network for professionals" }
+
+    <!-- TODO: To be replaced with a contact form in the future.. -->
+  ::
+::

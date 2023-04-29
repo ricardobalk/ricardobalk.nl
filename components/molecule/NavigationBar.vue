@@ -25,24 +25,24 @@
     }
 
     a {
-      @apply block py-2 no-underline text-gray-700 bg-gray-100 break-inside-avoid px-2;
+      @apply block py-2 no-underline text-gray-700 bg-white break-inside-avoid px-2;
       @apply w-full min-w-max;
 
       &:hover,
       &:focus,
       &:active {
-        @apply bg-gray-200;
+        @apply bg-green-200;
       }
     }
 
     ul ul {
       a {
-        @apply py-2 pl-4 pr-8 no-underline text-gray-700 bg-gray-300;
+        @apply py-2 pl-4 pr-8 no-underline text-gray-700 bg-white;
 
         &:hover,
         &:focus,
         &:active {
-          @apply bg-gray-400;
+          @apply bg-green-200;
         }
       }
     }

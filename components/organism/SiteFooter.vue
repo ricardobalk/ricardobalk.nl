@@ -3,11 +3,17 @@
   <footer class="site-footer">
     <p>
       This website was made with
-      <span aria-label="love">love</span>,
+      <span title="love" aria-label="love">
+        <AtomIcon iconName="heart" />
+      </span>,
       a lot of
-      <span aria-label="coffee">coffee</span>
+      <span title="coffee" aria-label="coffee">
+        <AtomIcon iconName="coffee" />
+      </span>
       and some
-      <span aria-label="code">code</span>
+      <span title="code" aria-label="code">
+        <AtomIcon iconName="code" />
+      </span>
       by <strong>Ricardo Balk</strong>.
     </p>
     
@@ -26,6 +32,24 @@
 
 <style lang="postcss">
 .site-footer {
-  @apply flex gap-1 p-4 text-sm;
+  @apply p-4 text-sm justify-start items-center;
+  @apply border-t border-t-gray-200;
+
+  p {
+    @apply inline;
+  }
+
+  p, span {
+    @apply mb-0 text-sm;
+  }
+
+  strong {
+    @apply text-green-600;
+  }
+
+  .icon {
+    @apply text-xs text-green-900;
+  }
+  
 }
 </style>

@@ -12,11 +12,12 @@
 <style lang="postcss">
 .site-header {
   @apply sticky top-0 z-10;
-  @apply flex w-full justify-between px-2 py-0.5 items-center;
-  @apply border-b border-gray-200 bg-gray-100 transition-colors duration-300 ease-in-out;
+  @apply flex w-full justify-between px-2 py-1 items-center;
+  @apply bg-white transition-colors duration-300 ease-in-out;
+  @apply border-b border-gray-200;
 
   &.scrolled-down {
-    @apply bg-black backdrop-filter backdrop-blur-sm bg-opacity-30;
+    @apply bg-white backdrop-filter backdrop-blur-sm bg-opacity-60;
   }
 
   .navbar {
@@ -46,7 +47,7 @@ const addScrollListener = ({
   tickingRef = ticking, // The ref to update to throttle the scroll event using requestAnimationFrame.
 }): void => {
   if (typeof window === 'undefined') {
-    console.log('No window object found.');
+    // console.log('No window object found.');
     return;
   }
 

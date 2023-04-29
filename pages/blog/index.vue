@@ -13,9 +13,3 @@
     </template>
   </NuxtLayout>
 </template>
-
-<style lang="postcss">
-main {
-  @apply gap-2;
-}
-</style>

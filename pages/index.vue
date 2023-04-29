@@ -1,11 +1,11 @@
 <template>
-  <NuxtLayout name="default">
+  <NuxtLayout name="home">
     <template #site-header>
       <OrganismSiteHeader />
     </template>
 
     <template #default>
-      <ContentDoc />
+      <ContentDoc tag="main" />
     </template>
 
     <template #site-footer>
@@ -13,9 +13,3 @@
     </template>
   </NuxtLayout>
 </template>
-
-<style lang="postcss">
-main {
-  @apply gap-2;
-}
-</style>ß
