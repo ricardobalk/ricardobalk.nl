@@ -32,7 +32,7 @@
 
 <style lang="postcss">
 .site-footer {
-  @apply p-4 text-sm justify-start items-center;
+  @apply w-full p-4 text-sm justify-start items-center;
   @apply border-t border-t-gray-200;
 
   p {
@@ -43,12 +43,8 @@
     @apply mb-0 text-sm;
   }
 
-  strong {
-    @apply text-green-600;
-  }
-
   .icon {
-    @apply text-xs text-green-900;
+    @apply text-xs;
   }
   
 }

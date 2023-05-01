@@ -2,7 +2,7 @@
 <template>
   <header :class="computedClassnames" class="site-header">
     <AtomLink to="/" title="Go back home" tabindex="0">
-      <SiteLogo width="32" height="32" alt="Site Logo" />
+      <SiteLogo width="32" height="32" alt="Site Logo" class="logo" />
     </AtomLink>
 
     <MoleculeNavigationBar :items="NavigationItems" class="navbar" />
@@ -15,9 +15,15 @@
   @apply flex w-full justify-between px-2 py-1 items-center;
   @apply bg-white transition-colors duration-300 ease-in-out;
   @apply border-b border-gray-200;
+  @apply dark:bg-gray-900 dark:text-white dark:border-gray-500;
 
   &.scrolled-down {
     @apply bg-white backdrop-filter backdrop-blur-sm bg-opacity-60;
+    @apply dark:bg-black dark:bg-opacity-20;
+  }
+
+  .logo {
+    @apply text-black dark:text-gray-100;
   }
 
   .navbar {

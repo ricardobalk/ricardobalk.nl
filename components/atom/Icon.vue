@@ -5,18 +5,20 @@
 </template>
 
 <script setup lang="ts">
-  import { FontAwesomeIcon }                   from  "@fortawesome/vue-fontawesome";
-  import { library, IconDefinition }           from  "@fortawesome/fontawesome-svg-core";
-  import { faMastodon, faGithub, faLinkedin }  from  "@fortawesome/free-brands-svg-icons";
-  import { faHeart, faCode, faCoffee }         from  "@fortawesome/free-solid-svg-icons";
+  import { FontAwesomeIcon }                                             from  "@fortawesome/vue-fontawesome";
+  import { library, IconDefinition }                                     from  "@fortawesome/fontawesome-svg-core";
+  import { faGithub, faLinkedin }                                        from  "@fortawesome/free-brands-svg-icons";
+  import { faChevronLeft, faCode, faCoffee, faHeart, faPaste, faPhone }  from  "@fortawesome/free-solid-svg-icons";
   
   const iconNames : { [ name: string ] : IconDefinition } = {
-    'code':     faCode,
-    'coffee':   faCoffee,
-    'github':   faGithub,
-    'heart':    faHeart,
-    'linkedin': faLinkedin,
-    'mastodon': faMastodon,
+    'chevron-left': faChevronLeft,
+    'code':         faCode,
+    'coffee':       faCoffee,
+    'github':       faGithub,
+    'heart':        faHeart,
+    'linkedin':     faLinkedin,
+    'pasteboard':   faPaste,
+    'phone':        faPhone,
   }
 
   interface Props {

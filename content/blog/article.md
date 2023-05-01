@@ -1,3 +1,11 @@
+---
+type: "article"
+author:
+  name: "Ricardo Balk"
+  occupation: "Web Developer"
+  picture: "/images/avatar-ricardo-balk.webp"
+---
+
 # Markdown Blog Post Example
 
 Hello world. This is a test.

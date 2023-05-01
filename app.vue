@@ -12,9 +12,16 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply scroll-smooth;
+  @apply scroll-pt-16;  /* Helps with anchor links, so the header doesn't cover the content */
+}
+
 @layer base {
   body {
     @apply font-sans;
+
+    @apply dark:bg-black dark:text-gray-300;
 
     #app { @apply min-h-screen; }
 
@@ -38,8 +45,11 @@
     ul, ol
       { @apply list-disc list-inside; }
 
-    blockquote, p, pre, span
+    blockquote, p, pre
       { @apply mb-4; }
+    
+    input, textarea, select, button
+      { @apply dark:bg-transparent; }
 
     span
       { @apply inline-block; }
@@ -54,7 +64,7 @@
     }
 
     pre {
-      @apply bg-gray-100 p-4;
+      @apply p-4 bg-gray-100 dark:bg-transparent dark:border dark:border-gray-200;
 
       code
         { @apply text-sm font-bold }
@@ -64,7 +74,7 @@
       @apply text-green-600 underline hover:text-green-900 transition-colors ease-in-out;
 
       &[href^="#"]
-        { @apply text-gray-600 decoration-dotted; }
+        { @apply text-gray-600 dark:text-gray-500 decoration-dotted; }
     }
 
     blockquote {

@@ -63,10 +63,10 @@ picture:
 ::MoleculeHomeCallToAction
   # Contact
 
-  It's time for the next move!
+  Let's have a chat about your project!
 
   ::MoleculeHomeContactMethods
-    :MoleculeIconLink{ link="https://mas.to/ricardobalk"          icon="mastodon"  title="Ricardo's profile on Mastodon, a decentralized social network" }
+    :MoleculeIconLink{ link="tel:+31653773206"                    icon="phone"     title="Ricardo's telephone number" }
     :MoleculeIconLink{ link="https://github.com/ricardobalk"      icon="github"    title="Ricardo's profile on GitHub, a platform for hosting and collaborating on computer programming code" }
     :MoleculeIconLink{ link="https://linkedin.com/in/ricardobalk" icon="linkedin"  title="Ricardo's profile on LinkedIn, a social network for professionals" }
 

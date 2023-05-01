@@ -10,6 +10,6 @@
 
 <style lang="postcss">
 main {
-  @apply flex flex-col items-center;
+  @apply flex flex-col items-center gap-4;
 }
 </style>
