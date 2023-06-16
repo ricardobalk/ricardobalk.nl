@@ -30,7 +30,7 @@ RUN ["yarn", "run", "build"]
 RUN ["yarn", "cache", "clean"]
 RUN ["rm", "-rf", "node_modules"]
 
-FROM alpine:3.17.1 AS release-base
+FROM alpine:3 AS release-base
 COPY --from=build /home/node/app/dist /usr/share/nginx/html
 
 FROM release-base AS release
