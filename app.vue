@@ -4,6 +4,27 @@
   </div>
 </template>
 
+<script setup lang="ts">
+  const isDarkMode = useState<boolean>('isDarkMode', () => false);
+
+  if (typeof window !== 'undefined') {
+    onMounted(() => {
+    watch(
+      isDarkMode,
+      (value) => {
+        if (value === true) {
+          document.documentElement.classList.add('dark');
+          return;
+        }
+
+        document.documentElement.classList.remove('dark');
+      },
+      { immediate: true }
+    )
+    });
+  }
+</script>
+
 <style lang="postcss">
 @import "/fonts/Lato/lato.css";
 @import "/fonts/Raleway/raleway.css";
@@ -13,15 +34,14 @@
 @tailwind utilities;
 
 html {
-  @apply scroll-smooth;
-  @apply scroll-pt-16;  /* Helps with anchor links, so the header doesn't cover the content */
+  @apply scroll-smooth overscroll-none scroll-pt-16; /* scroll-pt helps with anchor links, so the header doesn't cover the content when clicking on an anchor */
 }
 
 @layer base {
   body {
     @apply font-sans;
 
-    @apply dark:bg-black dark:text-gray-300;
+    @apply dark:bg-black dark:text-blue-50 dark:text-opacity-60;
 
     #app { @apply min-h-screen; }
 
@@ -64,14 +84,14 @@ html {
     }
 
     pre {
-      @apply p-4 bg-gray-100 dark:bg-transparent dark:border dark:border-gray-200;
+      @apply p-4 bg-gray-100 dark:bg-transparent dark:border dark:border-gray-200 overflow-scroll;
 
       code
-        { @apply text-sm font-bold }
+        { @apply text-sm; }
     }
 
     a {
-      @apply text-green-600 underline hover:text-green-900 transition-colors ease-in-out;
+      @apply text-green-600 underline hover:text-green-900 dark:hover:text-green-300 transition-colors ease-in-out;
 
       &[href^="#"]
         { @apply text-gray-600 dark:text-gray-500 decoration-dotted; }

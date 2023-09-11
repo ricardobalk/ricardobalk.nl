@@ -25,24 +25,25 @@
     }
 
     a {
-      @apply block py-2 no-underline text-gray-700 bg-white break-inside-avoid px-2;
+      @apply block py-2 no-underline text-gray-700 bg-transparent dark:bg-transparent dark:text-gray-200 break-inside-avoid px-2;
       @apply w-full min-w-max;
 
       &:hover,
       &:focus,
       &:active {
-        @apply bg-green-200;
+        @apply bg-green-200 text-gray-700 
+               dark:bg-slate-700 dark:text-gray-25;
       }
     }
 
     ul ul {
       a {
-        @apply py-2 pl-4 pr-8 no-underline text-gray-700 bg-white;
+        @apply py-2 pl-4 pr-8 no-underline text-gray-700 bg-white dark:bg-black dark:text-gray-200;
 
         &:hover,
         &:focus,
         &:active {
-          @apply bg-green-200;
+          @apply bg-green-200 dark:bg-green-800;
         }
       }
     }

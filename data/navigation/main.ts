@@ -12,29 +12,13 @@ const NavigationItems: NavigationItems = [
     link: {
       to: '/blog',
     },
-    children: [
-      {
-        label: 'Article one',
-        link: {
-          to: '/blog/article',
-        },
-      },
-      {
-        label: 'Article two',
-        link: {
-          to: '/blog/article-two',
-        },
-        children: [
-          {
-            label: 'Some sub article',
-            link: {
-              to: '/blog/article-two/sub-article',
-            }
-          }
-        ]
-      },
-    ]
   },
+  {
+    label: 'Privacy',
+    link: {
+      to: '/privacy',
+    },
+  }
 ];
 
 export default NavigationItems;

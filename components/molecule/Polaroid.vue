@@ -30,6 +30,7 @@
 <style lang="postcss">
   .polaroid-container {
     @apply flex flex-col items-center my-2 border border-gray-200 bg-white shadow-xl;
+    @apply dark:bg-slate-900 dark:bg-opacity-50 dark:border-slate-800;
 
     .photo-container {
       @apply relative p-[8%];
@@ -46,12 +47,13 @@
 
           img {
             @apply w-full h-full object-cover;
+            @apply dark:filter dark:brightness-75 dark:contrast-125;
           }
       }
     }
 
     figcaption {
-      @apply mb-6 px-[8%] text-center uppercase font-bold text-base text-gray-600;
+      @apply mb-6 px-[8%] text-center uppercase font-bold text-base text-gray-600 dark:text-gray-400;
     }
 
   }

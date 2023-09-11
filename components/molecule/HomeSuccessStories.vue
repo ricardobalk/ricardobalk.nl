@@ -10,12 +10,10 @@
 
 <style lang="postcss">
   .success-stories {
-    @apply flex flex-col items-center;
+    @apply flex flex-col items-center py-12 dark:py-8;
 
     .stories {
-      @apply max-w-screen-xl;
-      @apply flex flex-wrap md:flex-nowrap gap-12 my-6;
-      @apply px-8 sm:px-0;
+      @apply max-w-screen-xl flex flex-wrap md:flex-nowrap gap-12 my-6 justify-center px-8 sm:px-0;
     }
   }
 </style>

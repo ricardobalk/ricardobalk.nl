@@ -28,15 +28,13 @@
 
 <style lang="postcss">
   .home-hero {
-    @apply w-full h-[60vh] md:h-[40vh] md:min-h-[420px] outline-none text-white;
-    
+    @apply w-full h-[60vh] md:h-[40vh] md:min-h-[420px] outline-none text-white mb-12 bg-[#6bffdc] bg-[contain,cover] [background-blend-mode:normal,_normal] dark:[background-blend-mode:soft-light,_normal] dark:bg-slate-900 dark:bg-opacity-80 dark:text-inherit;
     text-shadow: 1px 1px 5px rgba(26, 26, 26, 0.33);
-    background-color: #6bffdc;
     background-image: url("/winder.svg"), linear-gradient(to right, #00000022, #00000085);
     background-position: right bottom -5px, left top;
-    background-size: contain, cover;
     background-repeat: no-repeat;
-    background-blend-mode: normal, multiply;
+
+    @apply dark:bg-gradient-to-b dark:from-slate-900 dark:to-black dark:bg-blend-multiply dark:bg-opacity-50;
 
     .text-container {
       @apply flex flex-col gap-4 px-4 py-8 text-center h-full justify-center;

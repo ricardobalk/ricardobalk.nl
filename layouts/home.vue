@@ -4,8 +4,8 @@
   <slot name="site-footer" />
 </template>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
 main {
-  @apply flex flex-col items-stretch w-screen gap-6;
+  @apply flex flex-col items-stretch w-screen;
 }
 </style>

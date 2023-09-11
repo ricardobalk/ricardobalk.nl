@@ -5,7 +5,10 @@
       <SiteLogo width="32" height="32" alt="Site Logo" class="logo" />
     </AtomLink>
 
-    <MoleculeNavigationBar :items="NavigationItems" class="navbar" />
+    <span class="flex gap-6">
+      <MoleculeNavigationBar :items="NavigationItems" class="navbar" />
+      <MoleculeDarkmodeToggle />
+    </span>
   </header>
 </template>
 
@@ -15,11 +18,11 @@
   @apply flex w-full justify-between px-2 py-1 items-center;
   @apply bg-white transition-colors duration-300 ease-in-out;
   @apply border-b border-gray-200;
-  @apply dark:bg-gray-900 dark:text-white dark:border-gray-500;
+  @apply dark:bg-slate-900 dark:text-white dark:border-gray-800;
 
   &.scrolled-down {
     @apply bg-white backdrop-filter backdrop-blur-sm bg-opacity-60;
-    @apply dark:bg-black dark:bg-opacity-20;
+    @apply dark:bg-black dark:bg-opacity-30;
   }
 
   .logo {

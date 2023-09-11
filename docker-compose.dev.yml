@@ -1,5 +1,7 @@
+version: '3.7'
+name: ricardobalk-website
 services:
-  nuxt3-tailwindcss:
+  node:
     build:
       context: .
       dockerfile: Dockerfile

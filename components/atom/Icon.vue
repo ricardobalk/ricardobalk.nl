@@ -8,7 +8,11 @@
   import { FontAwesomeIcon }                                             from  "@fortawesome/vue-fontawesome";
   import { library, IconDefinition }                                     from  "@fortawesome/fontawesome-svg-core";
   import { faGithub, faLinkedin }                                        from  "@fortawesome/free-brands-svg-icons";
-  import { faChevronLeft, faCode, faCoffee, faHeart, faPaste, faPhone }  from  "@fortawesome/free-solid-svg-icons";
+  import {
+    faChevronLeft, faCode,  faCoffee,
+    faHeart,       faPaste, faPhone,
+    faSun,         faMoon
+  }  from  "@fortawesome/free-solid-svg-icons";
   
   const iconNames : { [ name: string ] : IconDefinition } = {
     'chevron-left': faChevronLeft,
@@ -19,6 +23,8 @@
     'linkedin':     faLinkedin,
     'pasteboard':   faPaste,
     'phone':        faPhone,
+    'sun':          faSun,
+    'moon':         faMoon,
   }
 
   interface Props {

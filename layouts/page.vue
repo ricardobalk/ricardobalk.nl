@@ -6,13 +6,12 @@
 
       <article>
         <header class="page-header w-full max-w-2xl flex flex-col gap-4">
-          <MoleculeAuthor :author="author" />
-
-          <NuxtLink to="/blog" title="Back to blog articles" tabindex="0">
-            <span class="flex gap-1 items-center text-sm">
+          <NuxtLink to="/" title="Back to blog articles" tabindex="0">
+            <span class="flex gap-1 items-center text-sm mb-8">
               <AtomIcon iconName="chevron-left" />
-              Back to blog articles
+              Back home
             </span>
+            <hr />
           </NuxtLink>
         </header>
 
@@ -32,21 +31,6 @@
     </slot>
   </NuxtLayout>
 </template>
-
-<script setup lang="ts">
-  import { TAuthorID } from '@/data/articles/authors';
-
-  const author = computed(() => {
-    const { page } = useContent();
-
-    if (page.value.author) {
-      return <TAuthorID>page.value.author;
-    }
-
-    return 1;
-  });
-
-</script>
 
 <style lang="postcss" scoped>
 article {

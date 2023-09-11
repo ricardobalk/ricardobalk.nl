@@ -1,3 +1,7 @@
+---
+title: "Home"
+---
+
 :MoleculeHomeHero{name="Ricardo Balk" occupation="Web Developer" tagline="User-Centered Design • Clean Code • Modern Stacks"}
 
 ::MoleculeHomeAbout
@@ -16,7 +20,7 @@ picture:
 
   In my spare time, I like to give back to the community by contributing to open-source projects. I believe that open-source software is a powerful tool for driving innovation and progress, and I want to be a part of that.
 
-  When I'm not glued to my screen, I love reading a good book or going for a hike. 
+  When I'm not glued to my screen, I enjoy staying fit by kayaking, stand-up paddle boarding and hiking. I also love to travel and explore new places, especially when they are off the beaten path.
 ::
 
 ::MoleculeHomeProcess

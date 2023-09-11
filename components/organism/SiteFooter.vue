@@ -35,6 +35,9 @@
   @apply w-full p-4 text-sm justify-start items-center;
   @apply border-t border-t-gray-200;
 
+  @apply sm:sticky sm:bottom-0 sm:bg-white sm:bg-opacity-70 sm:z-20;
+  @apply dark:bg-black dark:border-gray-800 dark:bg-opacity-80;
+
   p {
     @apply inline;
   }

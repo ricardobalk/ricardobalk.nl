@@ -1,37 +1,40 @@
 <template>
   <div class="author">
-    <img :src="props.picture"
-         :alt="`Profile picture of ${props.name}.`"
+    <img :src="author.picture"
+         :alt="`Profile picture of ${author.name}.`"
+         v-if="author.picture"
          class="author-avatar">
 
     <div class="author-info">
-      <span class="author-name">
-       {{ props.name }}
+      <span class="author-name" v-if="author.name">
+       {{ author.name }}
       </span>
-      <span class="author-occupation">
-        {{ props.occupation }}
+      <span class="author-occupation" v-if="author.occupation">
+        {{ author.occupation }}
       </span>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+  import { TAuthorID, GetAuthorById } from '@/data/articles/authors';
+
   interface Props {
-    picture:    string,
-    name:       string,
-    occupation: string,
+    author: TAuthorID;
   }
 
   const props = withDefaults(defineProps<Props>(), {
-    name: 'John Doe',
-    picture: "https://placehold.it/500x500",
-    occupation: 'Chef Placeholder',
+    author: 1,
+  });
+
+  const author = computed(() => {
+    return GetAuthorById(props.author);
   });
 </script>
 
-<style lang="postcss">
+<style lang="postcss" scoped>
   .author {
-    @apply flex gap-4 border-b border-b-gray-200 pb-4;
+    @apply flex gap-4 w-full border-b border-b-gray-200 pb-4;
 
     &-avatar {
       @apply w-24 h-24 rounded-full border;

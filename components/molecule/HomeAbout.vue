@@ -57,11 +57,7 @@
 
     .text-container {
       @apply flex-auto flex flex-col gap-3;
-      @apply pt-8 px-8;
-
-      @media screen and (min-width: 640px) {
-        margin-top: 6em;
-      }
+      @apply pt-8 px-8 sm:mt-24 dark:sm:mt-0;
 
       h1 {
         @apply text-3xl font-bold uppercase m-0;
