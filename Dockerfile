@@ -1,5 +1,5 @@
 FROM node:18.15.0-alpine3.16 as node-base
-# docker build --no-cache --progress plain -t ricardobalk/nuxt3-tailwindcss:latest --target <target> -f Dockerfile .
+# docker build --no-cache --progress plain -t ricardobalk/website:latest --target <target> -f Dockerfile .
 
 RUN apk add --no-cache git
 
@@ -25,7 +25,7 @@ FROM dependencies as development
 USER node
 EXPOSE 3000
 CMD ["dev"]
-# && docker run -it -p 3000:3000 -v "$(pwd):/home/node/app:cached" ricardobalk/nuxt3-tailwindcss:latest
+# && docker run -it -p 3000:3000 -v "$(pwd):/home/node/app:cached" ricardobalk/website:latest
 
 FROM dependencies as build
 USER node
@@ -35,4 +35,4 @@ FROM nginx:1.21.1-alpine as production
 COPY --from=build /home/node/app/.output/public /usr/share/nginx/html
 EXPOSE 80 443
 CMD ["nginx", "-g", "daemon off;"]
-# && docker run -it -p 80:80 -p 443:443 -v "$(pwd)/nginx.conf:/etc/nginx/conf.d/default.conf:cached" ricardobalk/nuxt3-tailwindcss:latest
+# && docker run -it -p 80:80 -p 443:443 -v "$(pwd)/nginx.conf:/etc/nginx/conf.d/default.conf:cached" ricardobalk/website:latest

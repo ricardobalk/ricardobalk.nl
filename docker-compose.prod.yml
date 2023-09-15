@@ -1,9 +1,9 @@
 version: '3.8'
 services:
-  nuxt3-tailwindcss:
+  ricardobalk-website:
     extends:
         file: docker-compose.dev.yml
-        service: nuxt3-tailwindcss
+        service: ricardobalk-website
     build:
       target: production
     ports:
