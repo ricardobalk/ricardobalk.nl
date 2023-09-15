@@ -1,30 +1,26 @@
-# Nuxt 3 Starter Kit
+# Ricardo's Personal Website
 
-This is a Nuxt 3 Starter Kit with Vite, Vue 3, TypeScript, PostCSS and TailwindCSS!
+[![Sponsor via GitHub Sponsors](https://img.shields.io/badge/support%20me%20via%20GitHub%20Sponsors%20%E2%9D%A4-%2300bb00?logo=github)](https://github.com/sponsors/ricardobalk)
 
-## Features
+> :sparkles: **Recently upgraded to Nuxt 3** :sparkles:
 
-This starter kit includes the following features:
+**What is this?**
 
-- Nuxt 3, a Vue 3 framework for creating modern web applications.
-- Vite, a fast and lightweight bundler so you can start developing right away.
-- TypeScript, a typed superset of JavaScript that improves the developer experience and reduces the number of bugs in your application.
-- TailwindCSS for styling your application and PostCSS for processing your CSS.
+**TL;DR:** This is the source code of [my personal website][], a JAMstack website made with Nuxt 3, TypeScript, TailwindCSS and a lot of coffee. :coffee:
 
-With the included TailwindCSS set-up, both Tailwind classes and 'semantic' classes can be used, so you can rapidly prototype your application, and refactor it later to using more 'semantic' class names.
+- **Nuxt 3** is a framework for creating modern web applications. It's built on top of Vue 3 and Vite, one of the fastest and most lightweight bundlers out there.
+- **TypeScript** is used for its logic. It improves the developer experience and prevents the number of bugs in the application during development.
+- **TailwindCSS** is used for styling the website. It's a utility-first CSS framework for rapidly prototyping your application.
+- **Nuxt Content** is used for managing the content of the website, such as the blog posts.
+- **Vercel** is used for hosting the website. It's a cloud platform for static sites and serverless functions.
 
-For example, you can use `<span class="text-red-500">`,
-or `<span class="some-red-span">` in your `<template>` with `.some-red-span { @apply text-red-500; }` in your `<style>`.
-
-You can also use other TailwindCSS directives and extend your theme them in the `tailwind.config.js` file.
-
-See the [TailwindCSS documentation][] for more details.
+---
 
 ## Getting started
 
 For starting the dev server, you have multiple options:
 
-**1. Using an online development environment**
+**1. Using an online development environment (most easy option)**
 
 You can use an online development environment to start developing right away. The benefits of using an online development environment is that you don't need to install anything locally on your machine. Just start hacking right away. Some of the online development environments I recommend are:
 
@@ -32,7 +28,7 @@ You can use an online development environment to start developing right away. Th
   - [GitHub Codespaces][online-dev-env-github-codespaces]
   - [VSCode on the web][online-dev-env-vscode-web] 
 
-**2. Using a local, containerized development environment**
+**2. Using a local, containerized development environment (my preferred option)**
 
 If you're a more serious developer, you can use a local, containerized development environment. 
 
@@ -40,21 +36,36 @@ The benefits of using a local, containerized development environment is that you
 
 There are various ways to use a local, containerized development environment with this starter kit:
 
-- You can use [VSCode][vscode] with the [Remote Containers / Dev Containers][vscode-remote-containers] extension to start developing right away.
-  - With the right extensions installed, just open the project in VSCode and it will ask you if you want to open it in a container.
-- You can use [Docker Compose][docker-compose] to start developing right away:
-  - `docker-compose -f docker-compose.dev.yml up`
-- You can use [Docker][docker] to start developing right away:
-  - Using the included Dockerfile:
-    1. Build image: `docker build --no-cache -t ricardobalk/nuxt3-tailwindcss:latest --target development -f Dockerfile .`
-    2. Run image in container: `docker run --rm -it -p 3000:3000 -v "$(pwd):/home/node/app:cached" ricardobalk/nuxt3-tailwindcss:latest`
-  - Without using the included Dockerfile:
-    - `docker run -it --rm -v "$(pwd):/app" -p 3000:3000 -w /app node:18.15.0-alpine3.16 yarn dev`
+**a) Using VSCode Remote Containers / Dev Containers**
+
+You can use [VSCode][vscode] with the [Remote Containers / Dev Containers][vscode-remote-containers] extension to start developing right away. With the right extensions installed, just open the project in VSCode and it will ask you if you want to open it in a container.
+
+**b) Using Docker Compose**
+
+You can use [Docker Compose][docker-compose] to start developing right away:
+
+```sh
+docker-compose -f docker-compose.dev.yml up
+```
+
+**c) Using Docker (Method 1, building the image)**
+You can use [Docker][docker] to start developing right away:
+
+  1. Build image: `docker build --no-cache -t ricardobalk/website:latest --target development -f Dockerfile .`
+  2. Run image in container: `docker run --rm -it -p 3000:3000 -v "$(pwd):/home/node/app:cached" ricardobalk/website:latest`
+  
+**d) Using Docker (Method 2, without building the image)**
+
+You can even use Docker without building the image from the Dockerfile. Just run the following command:
+
+```sh
+docker run -it --rm -v "$(pwd):/app" -p 3000:3000 -w /app node:18.15.0-alpine3.16 yarn && yarn dev
+```
 
 
-> Note: For the other geeks out there, take a look at the `Dockerfile` and `docker-compose.*.yml` to see how the containers are set up. The dockerfile has a multi-stage build, to keep the final image as small as possible.
+> Tip: Take a look at the `Dockerfile` and `docker-compose.*.yml` to see how the containers are set up. The dockerfile has a multi-stage build, to keep the final image as small as possible.
 
-**3. Using a local Node.js installation**
+**3. Using a local Node.js installation (when your machine has Node.js)**
 
 You can also use a local Node.js installation. 
 
@@ -74,9 +85,9 @@ See the [official Nuxt 3 deployment documentation][] for more details.
 [docker-compose]: https://docs.docker.com/compose/
 [docker]: https://www.docker.com/
 [official Nuxt 3 deployment documentation]: https://nuxt.com/docs/getting-started/deployment
-[online-dev-env-github-codespaces]: http://github.dev/ricardobalk/nuxt3-tailwindcss
-[online-dev-env-stackblitz]: https://stackblitz.com/github/ricardobalk/nuxt3-tailwindcss
-[online-dev-env-vscode-web]: https://vscode.dev/github/ricardobalk/nuxt3-tailwindcss
+[online-dev-env-github-codespaces]: http://github.dev/ricardobalk/ricardobalk.nl
+[online-dev-env-stackblitz]: https://stackblitz.com/github/ricardobalk/ricardobalk.nl
+[online-dev-env-vscode-web]: https://vscode.dev/github/ricardobalk/ricardobalk.nl
 [TailwindCSS documentation]: https://tailwindcss.com/docs
 [vscode-remote-containers]: https://code.visualstudio.com/docs/remote/containers
 [vscode]: https://code.visualstudio.com/
