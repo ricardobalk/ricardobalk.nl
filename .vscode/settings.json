@@ -1,60 +1,6 @@
 {
-  "editor.defaultFormatter": "octref.vetur",
-  "vetur.format.defaultFormatter.html": "prettier",
-  "vetur.format.defaultFormatter.css": "prettier",
-  "vetur.format.defaultFormatter.postcss": "prettier",
-  "vetur.format.defaultFormatter.scss": "prettier",
-  "vetur.format.defaultFormatter.less": "prettier",
-  "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
-  "vetur.format.defaultFormatter.js": "prettier",
-  "vetur.format.defaultFormatter.ts": "prettier",
-  "vetur.format.defaultFormatterOptions": {
-    "js-beautify-html": {
-      "wrap_attributes": "force-expand-multiline"
-    },
-    "prettyhtml": {
-      "printWidth": 100,
-      "singleQuote": false,
-      "wrapAttributes": false,
-      "sortAttributes": false
-    }
-  },
-  "vetur.format.styleInitialIndent": true,
-  "stylusSupremacy.insertColons": false,
-  "stylusSupremacy.insertSemicolons": false,
-  "stylusSupremacy.insertBraces": false,
-  "stylusSupremacy.insertNewLineAroundImports": true,
-  "stylusSupremacy.insertNewLineAroundBlocks": true,
-  "stylusSupremacy.insertNewLineAroundProperties": false,
-  "stylusSupremacy.insertNewLineAroundOthers": false,
-  "stylusSupremacy.preserveNewLinesBetweenPropertyValues": false,
-  "stylusSupremacy.insertSpaceBeforeComment": true,
-  "stylusSupremacy.insertSpaceAfterComment": true,
-  "stylusSupremacy.insertSpaceAfterComma": true,
-  "stylusSupremacy.insertSpaceInsideParenthesis": false,
-  "stylusSupremacy.insertParenthesisAfterNegation": false,
-  "stylusSupremacy.insertParenthesisAroundIfCondition": true,
-  "stylusSupremacy.insertNewLineBeforeElse": false,
-  "stylusSupremacy.insertLeadingZeroBeforeFraction": false,
-  "stylusSupremacy.selectorSeparator": ", ",
-  "stylusSupremacy.tabStopChar": "  ",
-  "stylusSupremacy.newLineChar": "\n",
-  "stylusSupremacy.quoteChar": "'",
-  "stylusSupremacy.sortProperties": "grouped",
-  "stylusSupremacy.alwaysUseImport": false,
-  "stylusSupremacy.alwaysUseNot": false,
-  "stylusSupremacy.alwaysUseAtBlock": false,
-  "stylusSupremacy.alwaysUseExtends": false,
-  "stylusSupremacy.alwaysUseNoneOverZero": false,
-  "stylusSupremacy.alwaysUseZeroWithoutUnit": true,
-  "stylusSupremacy.reduceMarginAndPaddingValues": true,
-  "stylusSupremacy.ignoreFiles": [],
-  "vetur.format.scriptInitialIndent": true,
-  "githubIssues.issueBranchTitle": "feature/issues/#${issueNumber}-${sanitizedIssueTitle}",
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[stylus]": {
-    "editor.defaultFormatter": "thisismanta.stylus-supremacy"
+  "css.customData": [".vscode/tailwindcss.json"],
+  "editor.quickSuggestions": {
+    "strings": true
   }
 }

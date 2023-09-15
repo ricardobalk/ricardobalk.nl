@@ -1,7 +1,8 @@
-.idea/
-dist/
-node_modules/
-src/.vuepress/.cache/
-src/.vuepress/.temp/
-yarn-error.log
+node_modules
+*.log
+.nuxt
+nuxt.d.ts
+.output
+dist
 .DS_Store
+content/blog/drafts

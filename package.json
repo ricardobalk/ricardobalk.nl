@@ -1,58 +1,33 @@
 {
   "name": "ricardobalk-website",
-  "version": "3.4.0",
-  "description": "Ricardo's Personal Website",
+  "version": "3.5.0",
+  "description": "Ricardo Balk's Personal Website",
   "main": "index.js",
   "repository": "https://github.com/ricardobalk/website",
   "author": "Ricardo Balk",
   "license": "ISC",
+  "private": true,
   "scripts": {
-    "start": "yarn dev",
-    "test": "yarn reset && yarn build && yarn clean",
-    "dev": "vuepress dev src",
-    "build": "vuepress build src",
-    "serve": "serve dist/",
-    "stage": "rsync -ru dist/. ricardobalk.nl:/var/www/staging.ricardobalk.nl --delete",
-    "deploy": "rsync -ru dist/. ricardobalk.nl:/var/www/ricardobalk.nl --delete",
-    "build:stage": "yarn build && yarn stage",
-    "build:serve": "yarn build && yarn serve",
-    "build:deploy": "yarn build && yarn deploy",
-    "clean": "rm -rf node_modules/ dist/",
-    "reset": "yarn clean && yarn",
-    "prepare": "husky install"
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "node .output/server/index.mjs",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@types/luxon": "^1.26.2",
-    "@vue/component-compiler-utils": "^3.2.0",
-    "@vuepress/cli": "^2.0.0-alpha.8",
-    "@vuepress/plugin-prismjs": "^2.0.0-beta.4",
-    "@vuepress/plugin-pwa": "^1.8.2",
-    "@vuepress/plugin-pwa-popup": "^2.0.0-alpha.8",
-    "@vuepress/utils": "^2.0.0-alpha.1",
-    "husky": "^6.0.0",
-    "lint-staged": "^10.5.4",
-    "luxon": "^1.28.1",
-    "prettier": "^2.2.1",
-    "sass": "^1.32.8",
-    "sass-loader": "^11.0.1",
-    "stylus": "^0.54.8",
-    "stylus-loader": "^5.0.0",
-    "stylus-supremacy": "^2.15.0",
-    "vuepress": "^2.0.0-beta.6",
-    "webpack": "5.28.0"
+    "@nuxt/content": "^2.5.2",
+    "autoprefixer": "^10.4.14",
+    "nuxt": "^v3.3.1",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7",
+    "vite-svg-loader": "^4.0.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.36",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/vue-fontawesome": "3.0.2"
-  },
-  "lint-staged": {
-    "*.{ts,js,css,scss,json,vue}": [
-      "prettier --write"
-    ],
-    "*.styl": [
-      "stylus-supremacy format -p './.vscode/settings.json' --replace"
-    ]
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
+    "@popperjs/core": "^2.11.7"
   }
 }
