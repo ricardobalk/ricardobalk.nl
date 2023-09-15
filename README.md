@@ -1,36 +1,82 @@
-# Ricardo's Personal Website
+# Nuxt 3 Starter Kit
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/57a0cccc1cdf4086817954a123034043)](https://www.codacy.com/manual/ricardobalk/www?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ricardobalk/www&amp;utm_campaign=Badge_Grade) [![StyleCI](https://github.styleci.io/repos/200295886/shield?branch=develop&style=flat)](https://github.styleci.io/repos/200295886) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fricardobalk%2Fwww.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fricardobalk%2Fwww?ref=badge_shield)
+This is a Nuxt 3 Starter Kit with Vite, Vue 3, TypeScript, PostCSS and TailwindCSS!
 
-[![Sponsor via GitHub Sponsors](https://img.shields.io/badge/support%20me%20via%20GitHub%20Sponsors%20%E2%9D%A4-%2300bb00?logo=github)](https://github.com/sponsors/ricardobalk) [![Sponsor me via bunq.me](./.github/badges/bunqme.svg)](https://bunq.me/ricardodev/2.50/Support%20for%20your%20work%20on%20GitHub) [![Sponsor me via ko-fi.com](./.github/badges/ko-fi.svg)](https://ko-fi.com/H2H71EMIK)
+## Features
+
+This starter kit includes the following features:
+
+- Nuxt 3, a Vue 3 framework for creating modern web applications.
+- Vite, a fast and lightweight bundler so you can start developing right away.
+- TypeScript, a typed superset of JavaScript that improves the developer experience and reduces the number of bugs in your application.
+- TailwindCSS for styling your application and PostCSS for processing your CSS.
+
+With the included TailwindCSS set-up, both Tailwind classes and 'semantic' classes can be used, so you can rapidly prototype your application, and refactor it later to using more 'semantic' class names.
+
+For example, you can use `<span class="text-red-500">`,
+or `<span class="some-red-span">` in your `<template>` with `.some-red-span { @apply text-red-500; }` in your `<style>`.
+
+You can also use other TailwindCSS directives and extend your theme them in the `tailwind.config.js` file.
+
+See the [TailwindCSS documentation][] for more details.
+
+## Getting started
+
+For starting the dev server, you have multiple options:
+
+**1. Using an online development environment**
+
+You can use an online development environment to start developing right away. The benefits of using an online development environment is that you don't need to install anything locally on your machine. Just start hacking right away. Some of the online development environments I recommend are:
+
+  - [Stackblitz][online-dev-env-stackblitz]
+  - [GitHub Codespaces][online-dev-env-github-codespaces]
+  - [VSCode on the web][online-dev-env-vscode-web] 
+
+**2. Using a local, containerized development environment**
+
+If you're a more serious developer, you can use a local, containerized development environment. 
+
+The benefits of using a local, containerized development environment is that you don't need to install the right versions of Node.js, Yarn, Git, etc as it's all included, configured and ready to use in the container.
+
+There are various ways to use a local, containerized development environment with this starter kit:
+
+- You can use [VSCode][vscode] with the [Remote Containers / Dev Containers][vscode-remote-containers] extension to start developing right away.
+  - With the right extensions installed, just open the project in VSCode and it will ask you if you want to open it in a container.
+- You can use [Docker Compose][docker-compose] to start developing right away:
+  - `docker-compose -f docker-compose.dev.yml up`
+- You can use [Docker][docker] to start developing right away:
+  - Using the included Dockerfile:
+    1. Build image: `docker build --no-cache -t ricardobalk/nuxt3-tailwindcss:latest --target development -f Dockerfile .`
+    2. Run image in container: `docker run --rm -it -p 3000:3000 -v "$(pwd):/home/node/app:cached" ricardobalk/nuxt3-tailwindcss:latest`
+  - Without using the included Dockerfile:
+    - `docker run -it --rm -v "$(pwd):/app" -p 3000:3000 -w /app node:18.15.0-alpine3.16 yarn dev`
 
 
+> Note: For the other geeks out there, take a look at the `Dockerfile` and `docker-compose.*.yml` to see how the containers are set up. The dockerfile has a multi-stage build, to keep the final image as small as possible.
 
-**What is this?**
+**3. Using a local Node.js installation**
 
-This repository contains [my personal website][]. It's made with VuePress 2 (based on Vue 3), some code, a lot of coffee and loads of love.
+You can also use a local Node.js installation. 
 
-- VuePress provides a way to run a blog with Markdown files.
-- A modern Flexbox-approach is used for creating a 12 column grid layout.
-- Docker packs up everything and ensures that everything works as expected, on any computer.
+  - `yarn install` to install the dependencies
+  - `yarn dev` to start the development server on http://localhost:3000
+  - `yarn build` to build the application for production
+  - `yarn start` to start the production server
+  - or `yarn generate` to generate the application for static hosting
 
-**Driven by JAMstack, and proud of it!**
+See the [official Nuxt 3 deployment documentation][] for more details.
 
-My website is basically a JAMstack website. JAMstack (JavaScript, APIs and Markup) is not something you would install, but an approach for having a simpler developer experience, higher performance, lower cost and greater scalability.
+## License
 
-**The entire website is open source!**
+[ISC License](LICENSE)
 
-My entire website is open source. This means that anyone could download the source code, inspect it, play around with it, help me in improving the website or run their own version of it. Don't forget to star this repository on GitHub if you like it. :+1:
-
-**Building and/or developing...**
-
-Please refer to [this document][Building and Developing] for instructions on running this website on your computer.
-
-**Licensed under the ISC license.**
-
-This website and all of its content are licenced under the [ISC license](./LICENSE).
-
-
-
-[my personal website]: https://ricardobalk.nl "Ricardo's Personal Website."
-[Building and Developing]: ./docs/building-or-developing/README.md	"Instructions on building and/or developing this website."
+<!-- Links used in the document -->
+[docker-compose]: https://docs.docker.com/compose/
+[docker]: https://www.docker.com/
+[official Nuxt 3 deployment documentation]: https://nuxt.com/docs/getting-started/deployment
+[online-dev-env-github-codespaces]: http://github.dev/ricardobalk/nuxt3-tailwindcss
+[online-dev-env-stackblitz]: https://stackblitz.com/github/ricardobalk/nuxt3-tailwindcss
+[online-dev-env-vscode-web]: https://vscode.dev/github/ricardobalk/nuxt3-tailwindcss
+[TailwindCSS documentation]: https://tailwindcss.com/docs
+[vscode-remote-containers]: https://code.visualstudio.com/docs/remote/containers
+[vscode]: https://code.visualstudio.com/

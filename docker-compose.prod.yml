@@ -1,11 +1,18 @@
-version: "3"
+version: '3.8'
 services:
-  ricardobalk-website:
+  nuxt3-tailwindcss:
+    extends:
+        file: docker-compose.dev.yml
+        service: nuxt3-tailwindcss
     build:
-      context: .
-      target: release
+      target: production
     ports:
-      - 8080:8080
+      - "80:80"
+      - "443:443"
     environment:
-      NODE_ENV: production
-    command: ["nginx", "-g", "daemon off;"]
+      - NODE_ENV=production
+    volumes:
+      - ./:/home/node/app/
+      - node_modules:/home/node/app/node_modules/
+volumes:
+  node_modules: {}

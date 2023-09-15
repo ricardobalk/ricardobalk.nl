@@ -1,17 +1,24 @@
 {
-  "name": "Ricardo's Personal Website",
+  "name": "Node 18.15.0 on Alpine 3.16",
   "build": {
-    "dockerfile": "./Dockerfile"
+    "dockerfile": "../Dockerfile",
+    "target": "node-base"
   },
-  "forwardPorts": [8080],
+  "forwardPorts": [ 3000 ],
   "workspaceFolder": "/home/node/app",
   "containerUser": "node",
   "mounts": [
-    "source=${localWorkspaceFolder}/package.json,target=/home/node/app/package.json,type=bind,consistency=cached,readonly",
-    "source=${localWorkspaceFolder}/yarn.lock,target=/home/node/app/yarn.lock,type=bind,consistency=cached,readonly",
-    "source=${localWorkspaceFolder}/tsconfig.json,target=/home/node/app/tsconfig.json,type=bind,consistency=cached,readonly",
-    "source=${localWorkspaceFolder}/src,target=/home/node/app/src,type=bind,consistency=cached",
-    "source=${localWorkspaceFolder}/dist,target=/home/node/app/dist,type=bind,consistency=cached"
+    "source=${localWorkspaceFolder}/,target=/home/node/app/,type=bind,consistency=cached"
   ],
-  "extensions": ["sysoev.language-stylus", "octref.vetur"]
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vue.volar",
+        "bradlc.vscode-tailwindcss",
+        "cpylua.language-postcss"
+      ]
+    }
+  },
+  "postCreateCommand": "yarn",
+  "postStartCommand": "yarn dev"
 }

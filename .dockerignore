@@ -1,4 +1,5 @@
-node_modules
-npm-debug.log
-src/.vuepress/.cache/
-src/.vuepress/.temp/
+.cache/
+.devcontainer/
+.nuxt/
+.vscode/
+node_modules/
