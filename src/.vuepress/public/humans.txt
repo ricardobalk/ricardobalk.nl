@@ -1,1 +1,0 @@
-Ricardo Balk's personal website, built on top of VuePress 2 which is based on Vue 3. The entire website, its content and source code, is released under the ISC License and can be found on GitHub: https://github.com/ricardobalk/website.
