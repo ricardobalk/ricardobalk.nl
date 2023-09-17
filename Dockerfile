@@ -1,4 +1,4 @@
-FROM node:18.15.0-alpine3.16 as node-base
+FROM node:18.17.1-alpine3.17 as node-base
 # docker build --no-cache --progress plain -t ricardobalk/website:latest --target <target> -f Dockerfile .
 
 RUN apk add --no-cache git
