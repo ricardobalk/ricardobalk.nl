@@ -31,7 +31,7 @@ FROM dependencies as build
 USER node
 RUN ["yarn", "run", "generate"]
 
-FROM nginx:1.21.1-alpine as production
+FROM nginx:1.25.2-alpine as production
 COPY --from=build /home/node/app/.output/public /usr/share/nginx/html
 EXPOSE 80 443
 CMD ["nginx", "-g", "daemon off;"]
