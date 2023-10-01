@@ -63,7 +63,7 @@ html {
       { @apply text-base; }
 
     ul, ol
-      { @apply list-disc list-inside; }
+      { @apply list-disc list-inside my-4; }
 
     blockquote, p, pre
       { @apply mb-4; }
@@ -84,7 +84,7 @@ html {
     }
 
     pre {
-      @apply p-4 bg-gray-100 dark:bg-transparent dark:border dark:border-gray-200 overflow-scroll;
+      @apply p-4 bg-gray-100 border border-dotted rounded-md border-gray-900 dark:bg-transparent dark:border-gray-200 overflow-scroll;
 
       code
         { @apply text-sm; }
