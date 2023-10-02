@@ -85,7 +85,7 @@ html {
 
      span, strong, em, p, ol li, ul li, blockquote {
       & > code {
-      @apply px-1 bg-gray-100 text-sm font-semibold text-slate-700 border border-dotted rounded-md border-gray-900 break-inside-avoid
+      @apply px-1 bg-gray-100 text-sm text-slate-700 border border-dotted rounded-md border-gray-900 break-inside-avoid
              dark:bg-transparent dark:border-gray-200 dark:text-slate-300;
       }
      }
