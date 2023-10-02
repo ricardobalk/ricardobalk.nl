@@ -1,13 +1,11 @@
 <template>
-  <div class="icon">
-    <FontAwesomeIcon :icon="faIcon" />
-  </div>
+  <FontAwesomeIcon :icon="faIcon" :size="props.size" class="icon" />
 </template>
 
 <script setup lang="ts">
-  import { FontAwesomeIcon }                                             from  "@fortawesome/vue-fontawesome";
-  import { library, IconDefinition }                                     from  "@fortawesome/fontawesome-svg-core";
-  import { faGithub, faLinkedin }                                        from  "@fortawesome/free-brands-svg-icons";
+  import { FontAwesomeIcon, FontAwesomeIconProps }  from  "@fortawesome/vue-fontawesome";
+  import { library, IconDefinition }                from  "@fortawesome/fontawesome-svg-core";
+  import { faGithub, faLinkedin }                   from  "@fortawesome/free-brands-svg-icons";
   import {
     faChevronLeft, faCode,  faCoffee,
     faHeart,       faPaste, faPhone,
@@ -25,13 +23,16 @@
     'phone':        faPhone,
     'sun':          faSun,
     'moon':         faMoon,
-  }
+  } as const;
 
   interface Props {
-    iconName: string,
+    iconName: keyof typeof iconNames,
+    size:     FontAwesomeIconProps['size'],
   }
-
-  const props = defineProps<Props>();
+  const props = withDefaults(defineProps<Props>(), {
+    iconName: 'code',
+    size:     '1x',
+  });  
 
   library.add(iconNames[props.iconName]);
 

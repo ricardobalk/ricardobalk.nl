@@ -34,7 +34,7 @@
 @tailwind utilities;
 
 html {
-  @apply scroll-smooth overscroll-none scroll-pt-16; /* scroll-pt helps with anchor links, so the header doesn't cover the content when clicking on an anchor */
+  @apply scroll-smooth overscroll-none scroll-pt-20; /* scroll-pt helps with anchor links, so the header doesn't cover the content when clicking on an anchor */
 }
 
 @layer base {
@@ -63,7 +63,7 @@ html {
       { @apply text-base; }
 
     ul, ol
-      { @apply list-disc list-inside; }
+      { @apply list-disc list-inside my-4; }
 
     blockquote, p, pre
       { @apply mb-4; }
@@ -83,10 +83,18 @@ html {
         { @apply p-2; }
     }
 
-    pre {
-      @apply p-4 bg-gray-100 dark:bg-transparent dark:border dark:border-gray-200 overflow-scroll;
+     span, strong, em, p, ol li, ul li, blockquote {
+      & > code {
+      @apply px-1 bg-gray-100 text-sm text-slate-700 border border-dotted rounded-md border-gray-900 break-inside-avoid
+             dark:bg-transparent dark:border-gray-200 dark:text-slate-300;
+      }
+     }
 
-      code
+    pre {
+      @apply p-4 bg-gray-100 border border-dotted rounded-md border-gray-900 overflow-scroll
+             dark:bg-transparent dark:border-gray-200;
+
+      & > code
         { @apply text-sm; }
     }
 
