@@ -83,10 +83,16 @@ html {
         { @apply p-2; }
     }
 
-    pre {
-      @apply p-4 bg-gray-100 border border-dotted rounded-md border-gray-900 dark:bg-transparent dark:border-gray-200 overflow-scroll;
+     p > code {
+      @apply px-1 bg-gray-100 text-sm font-semibold text-slate-700 border border-dotted rounded-md border-gray-900 break-inside-avoid
+             dark:bg-transparent dark:border-gray-200 dark:text-slate-300;
+    }
 
-      code
+    pre {
+      @apply p-4 bg-gray-100 border border-dotted rounded-md border-gray-900 overflow-scroll
+             dark:bg-transparent dark:border-gray-200;
+
+      & > code
         { @apply text-sm; }
     }
 

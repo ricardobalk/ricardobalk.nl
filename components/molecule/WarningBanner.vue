@@ -6,7 +6,7 @@
 
 <style lang="postcss">
 .warning-banner {
-  @apply bg-gray-50 text-black px-4 py-2 w-full text-xs text-justify border rounded-md
+  @apply bg-gray-50 text-black p-3 md:px-4 md:py-2 w-full text-xs text-justify border rounded-md
          dark:bg-slate-900 dark:text-slate-400 dark:border-slate-400 my-4;
   
   a {
@@ -28,12 +28,12 @@
   }
 
   &.warning {
-    @apply bg-yellow-50 text-yellow-900 dark:bg-yellow-900
-           dark:text-yellow-50 dark:border-yellow-50;
+    @apply bg-yellow-50 text-yellow-900 dark:bg-yellow-900 dark:bg-opacity-30
+           dark:text-yellow-600 dark:border-yellow-200;
     
     a {
       @apply text-yellow-900 hover:text-yellow-700
-             dark:text-yellow-50 dark:hover:text-yellow-300;
+             dark:text-yellow-400 dark:hover:text-yellow-300;
     }
   }
 
