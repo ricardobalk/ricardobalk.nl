@@ -1,7 +1,11 @@
 <template>
-  <slot name="site-header" />
+  <slot name="site-header">
+    <OrganismSiteHeader />
+  </slot>
   <slot />
-  <slot name="site-footer" />
+  <slot name="site-footer">
+    <OrganismSiteFooter />
+  </slot>
 </template>
 
 <style lang="postcss" scoped>

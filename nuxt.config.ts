@@ -2,7 +2,9 @@ import { defineNuxtConfig } from 'nuxt/config'
 import svgLoader from 'vite-svg-loader'
 
 export default defineNuxtConfig({
-  modules: [ '@nuxt/content' ],
+  modules: [ '@nuxt/content', ['@nuxtjs/i18n', { i18n: {
+    vueI18n: './i18n.config.ts' // if you are using custom path, default 
+  } }] ],
   components: {
     // Makes all components in the components directory global,
     // for MDC (::component) to work.
@@ -35,5 +37,8 @@ export default defineNuxtConfig({
         }
       }),
     ],
+  },
+  i18n: {
+    vueI18n: './i18n.config.ts' // if you are using custom path, default 
   },
 })

@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.8.2",
+    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge",
     "autoprefixer": "^10.4.15",
     "nuxt": "^v3.7.3",
     "postcss": "^8.4.29",

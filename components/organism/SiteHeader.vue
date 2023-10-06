@@ -7,6 +7,7 @@
 
     <span class="flex gap-6">
       <MoleculeNavigationBar :items="NavigationItems" class="navbar" />
+      <MoleculeLanguageSelector />
       <MoleculeDarkmodeToggle />
     </span>
   </header>

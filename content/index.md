@@ -1,5 +1,6 @@
 ---
 title: "Home"
+lang:  "en"
 ---
 
 :MoleculeHomeHero{name="Ricardo Balk" occupation="Web Developer" tagline="User-Centered Design • Clean Code • Modern Stacks"}

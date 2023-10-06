@@ -24,3 +24,12 @@
     </template>
   </NuxtLayout>
 </template>
+
+<script setup>
+defineI18nRoute({
+  paths: {
+    en: '/blog',
+    nl: '/blog',
+  }
+})
+</script>
