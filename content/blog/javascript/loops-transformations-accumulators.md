@@ -249,8 +249,6 @@ export default HierarchicalList;
 
 **Angular:**
 
-Angular works a bit differently, due to ...
-
 Assuming you already have an Angular application, you can follow these steps to create the "HierarchicalList" component and render the hierarchical list:
 
 **Generate the "HierarchicalList" Component:**
