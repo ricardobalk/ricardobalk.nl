@@ -61,29 +61,84 @@
   const chosenCategories     = ref<string[]>([]);
 
   const fetchArticles = async () => {
-  /* @ts-ignore, because the type definition for `queryContent` is not correct, and date throws an error, see  */
+    /**
+     * Fetches all articles from the Nuxt Content API, and returns them as an array of IArticle objects.
+     * The articles are sorted by date, where the most recently updated article precedes the next most recently updated article,
+     * followed by the most recently created article. Within each group, the featured articles precede the non-featured articles.
+     */
+
+    /**
+     * The default query, which is used when no categories are chosen:
+     * Fetch all items of type "article", where the date is not in the future, and the draft property is not true (i.e. the article is not a draft).
+     */
     const contentQueryDefaults : QueryBuilderWhere = { type: "article", date: { $lte: new Date() }, draft: { $ne: true }, };
     
+    /**
+     * Makes sure that the query is either the default query, or the default query combined with a query that filters on the chosen categories.
+     */
     const contentQueryWhere : QueryBuilderWhere = chosenCategories.value.length === 0
                                                   ? contentQueryDefaults
-                                                  : { ...contentQueryDefaults, category: { $in: chosenCategories.value } };
+                                                  : {
+                                                      ...contentQueryDefaults,
+                                                      category: {
+                                                        $in: chosenCategories.value
+                                                      },
+                                                    };
 
+    /**
+     * Fetches all articles that match the query.
+     */
     const contentQueryResult =  await queryContent('/blog')
                                       .where(contentQueryWhere)
-                                      .find();
+                                      .find()
+                                      .catch((error: Error) => {
+                                        console.error(`Error while fetching articles: ${error.message}`);
+                                        return [];
+                                      });
 
-    return contentQueryResult.map((_) => ({
-      locale:      _.locale,
-      type:        _.type,
-      author:      _.author,
-      category:    _.category,
-      date:        _.date,
-      updated:     _.updated,
-      description: _.description,
-      excerpt:     _.excerpt,
-      path:        _._path,
-      title:       _.title,
-    })) as IArticle[];
+    /**
+     * Sort the articles by date, where the most recently updated article precedes the next most recently updated article,
+     * followed by the most recently created article. Within each group, the featured articles precede the non-featured articles.
+     */
+    const sortedArticles = contentQueryResult.reduce((accumulator, contentQueryResult) => {
+      const article = {
+        locale:      contentQueryResult.locale,
+        type:        contentQueryResult.type,
+        author:      contentQueryResult.author,
+        category:    contentQueryResult.category,
+        date:        contentQueryResult.date,
+        updated:     contentQueryResult.updated,
+        description: contentQueryResult.description,
+        excerpt:     contentQueryResult.excerpt,
+        path:        contentQueryResult._path,
+        title:       contentQueryResult.title,
+        featured:    contentQueryResult.featured,
+      };
+
+      /**
+       * Inserts the article in the correct position in the accumulator array, based on the date(s) and featured properties.
+       */
+      const articleDate = article.updated ?? article.date;
+      const index = accumulator.findIndex((a) => {
+        if (a.featured && !article.featured) {
+          return false;
+        } else if (!a.featured && article.featured) {
+          return true;
+        } else {
+          return new Date(a.updated ?? a.date).getTime() < new Date(articleDate).getTime();
+        }
+      });
+
+      if (index === -1) {
+        accumulator.push(article);
+      } else {
+        accumulator.splice(index, 0, article);
+      }
+
+      return accumulator;
+    }, []) as IArticle[];
+
+    return sortedArticles;
   }
 
   const getAvailableCategories = () : TCategories => {

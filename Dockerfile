@@ -24,7 +24,7 @@ ENTRYPOINT ["yarn", "run"]
 FROM dependencies as development
 USER node
 EXPOSE 3000
-CMD ["dev"]
+CMD ["dev", "--host"]
 # && docker run -it -p 3000:3000 -v "$(pwd):/home/node/app:cached" ricardobalk/website:latest
 
 FROM dependencies as build
