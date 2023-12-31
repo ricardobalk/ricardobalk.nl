@@ -7,13 +7,14 @@ export const Categories : TCategories = {
 
 export type TCategories = { [slug: string]: string };
 
-export const GetCategoryBySlug = (slug: string): string => {
+export const GetCategoryNameFromSlug = (slug: string): string => {
   if (Categories.hasOwnProperty(slug)) {
     return Categories[slug];
   }
+
   return slug;
 };
 
-export const GetCategorySlugByName = (name: string): string | undefined => {
+export const GetCategorySlugFromName = (name: string): string | undefined => {
   return Object.keys(Categories).find((slug) => Categories[slug] === name);
 };

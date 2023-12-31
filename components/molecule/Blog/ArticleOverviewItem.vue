@@ -88,7 +88,7 @@
 
 <script setup lang="ts">
   import { GetAuthorById, TAuthorID } from '@/data/articles/authors';
-  import { GetCategoryBySlug } from '@/data/articles/categories';
+  import { GetCategoryNameFromSlug } from '@/data/articles/categories';
 
   interface IImageProperties {
     src: string;
@@ -122,7 +122,7 @@
   });
 
   const articleCategory : ComputedRef<string> = computed(() => {
-    return GetCategoryBySlug(props.article.category || '') || '';
+    return GetCategoryNameFromSlug(props.article.category || '') || '';
   });
 
   const hasCategory : ComputedRef<boolean> = computed(() => {

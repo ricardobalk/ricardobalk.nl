@@ -53,7 +53,7 @@
 
 <script setup lang="ts">
   import { IArticle }                       from '@/components/molecule/Blog/ArticleOverviewItem.vue';
-  import { GetCategoryBySlug, TCategories } from '@/data/articles/categories';
+  import { GetCategoryNameFromSlug, TCategories } from '@/data/articles/categories';
   import { QueryBuilderWhere }              from '@nuxt/content/dist/runtime/types';
 
   const articles             = ref<IArticle[]>([]);
@@ -146,7 +146,7 @@
      * Use a Set to build a list of unique categories, based on the articles in const `articles`.
      * Then, convert the Set to an array, and sort the array alphabetically.
      * Use an accumulator to build an object with the category slug as key, and the category name as value.
-     * the name of the category gets looked up by GetCategoryBySlug, which is imported from '@/data/articles/categories'.
+     * the name of the category gets looked up by GetCategoryNameFromSlug, which is imported from '@/data/articles/categories'.
      */
 
     const categories = articles.value.reduce((accumulator, article) => {
@@ -156,7 +156,7 @@
     }, new Set<string>()); // e.g. Set(2) { 'web-development', 'software-engineering' }
 
     return Array.from(categories).sort().reduce((accumulator, category) => {
-      accumulator[category] = GetCategoryBySlug(category);
+      accumulator[category] = GetCategoryNameFromSlug(category);
       return accumulator;
     }, {} as TCategories); // e.g. { 'web-development': 'Web Development', 'software-engineering': 'Software Engineering' }
   };
