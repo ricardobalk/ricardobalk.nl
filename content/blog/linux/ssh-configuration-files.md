@@ -15,7 +15,7 @@ SSH, or Secure Shell, is a crucial tool for remote server management and secure 
 
 Your `~/.ssh` directory can quickly become cluttered with various configuration files and keys. To keep everything organized, you can structure it like this:
 
-```plaintext
+```
 .ssh
 ├── config
 ├── config.d
@@ -42,7 +42,7 @@ The main SSH configuration file, `config`, plays a central role in managing your
 
 The `config` file is where you declare the `Include` directives, which specify the directories and files containing additional SSH configurations. For example:
 
-```plaintext
+```
 IdentityFile ~/.ssh/id_ed25519
 IdentityFile ~/.ssh/id_rsa
 Include config.d/*
@@ -55,7 +55,7 @@ In this snippet, you include all configuration files found in `config.d` and its
 
 Each server you connect to can have its own configuration file. For instance, the `config.d/servers/amsterdam` file may look like this:
 
-```plaintext
+```
 Host amsterdam
     HostName amsterdam-01.example.com ams-01.example.com ams-01
     User john
@@ -69,7 +69,7 @@ With such individualized configuration files, you can tailor your SSH settings f
 
 If you regularly connect to Git hosting services like GitHub and GitLab, you can streamline your SSH connections. Here's an example of a `config.d/github` configuration file:
 
-```plaintext
+```
 Host github.com github gh
   User git
   HostName github.com
@@ -89,7 +89,7 @@ However, it's worth mentioning that using `ssh github` or similar commands can s
 
 For GitLab, which may involve multiple instances, you can create distinct configuration files. For instance, `config.d/gitlab/gitlab.com` could look like this:
 
-```plaintext
+```
 Host gitlab.com gl gl-primary
   User git
   HostName gitlab.com
@@ -98,7 +98,7 @@ Host gitlab.com gl gl-primary
 
 While `config.d/gitlab/gitlab.example.com` might look like this:
 
-```plaintext
+```
 Host gitlab.example.com gl-secondary
   User git
   HostName gitlab.example.com
@@ -113,7 +113,7 @@ Wildcards in your SSH configuration can significantly simplify managing server c
 
 Assuming you have multiple servers like "cluster-ams-01.example.com," "cluster-ams-02.example.com," and "cluster-ams-03.example.com," you can use a wildcard configuration like this in your `config` file:
 
-```plaintext
+```
 Host cluster-ams-*.example.com
     User john
     IdentityFile ~/.ssh/id_ed25519
@@ -128,7 +128,7 @@ This wildcard usage can be particularly beneficial when you have numerous server
 
 Sometimes, you may need to use different SSH keys for various servers, enhancing security and access control. You can achieve this by changing the `IdentityFile`. For example, to connect to the "amsterdam" server using a different key, you can configure it like this:
 
-```plaintext
+```
 Host amsterdam
     HostName secure-amsterdam-01.example.com secure-ams-01.example.com secure-ams-01
     User john
