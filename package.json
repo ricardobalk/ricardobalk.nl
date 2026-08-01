@@ -17,15 +17,18 @@
     "start": "node .output/server/index.mjs",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "typecheck": "nuxt typecheck"
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
+    "typecheck:native": "nuxt prepare && tsc --noEmit"
   },
   "devDependencies": {
     "@nuxt/content": "3.15.2",
     "@nuxtjs/mdc": "0.22.2",
     "@tailwindcss/vite": "4.3.3",
+    "@typescript/native": "npm:typescript@7.0.2",
     "nuxt": "4.5.1",
     "tailwindcss": "^4.3.3",
-    "typescript": "5.9.3",
+    "typescript": "npm:@typescript/typescript6@6.0.2",
     "vite-svg-loader": "^5.1.1",
     "vue-tsc": "3.3.9"
   },

@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-  import type { NavigationItems } from '@/components/molecule/Navigation.vue'
+  import type { NavigationItems } from '@/types/navigation'
 
   export interface Props {
     items: NavigationItems;

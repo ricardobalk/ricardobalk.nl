@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
   import type { IconName } from '@fortawesome/fontawesome-common-types';
-  import type { ILink } from '@/components/atom/Link.vue';
+  import type { ILink } from '@/types/link';
 
   interface Props {
     icon:  IconName

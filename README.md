@@ -73,6 +73,8 @@ You can also use a local Node.js installation.
   - `pnpm dev` to start the development server on http://localhost:3000
   - `pnpm build` to build the application for production
   - `pnpm start` to start the production server
+  - `pnpm typecheck` to type-check Vue single-file components
+  - `pnpm typecheck:native` to type-check TypeScript modules with TypeScript 7
   - or `pnpm generate` to generate the application for static hosting
 
 See the [official Nuxt deployment documentation][] for more details.
