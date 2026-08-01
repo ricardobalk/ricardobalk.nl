@@ -59,7 +59,7 @@ You can use [Docker][docker] to start developing right away:
 You can even use Docker without building the image from the Dockerfile. Just run the following command:
 
 ```sh
-docker run -it --rm -v "$(pwd):/app" -p 3000:3000 -w /app node:18.15.0-alpine3.16 yarn && yarn dev
+docker run -it --rm -v "$(pwd):/app" -p 3000:3000 -w /app node:24.22.3-alpine sh -c "npm install -g corepack@0.36.0 && corepack enable && yarn && yarn dev"
 ```
 
 

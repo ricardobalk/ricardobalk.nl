@@ -1,5 +1,5 @@
 {
-  "name": "Node 18.15.0 on Alpine 3.16",
+  "name": "Node 24.22.3 LTS on Alpine",
   "build": {
     "dockerfile": "../Dockerfile",
     "target": "node-base"
