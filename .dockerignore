@@ -3,3 +3,8 @@
 .nuxt/
 .vscode/
 node_modules/
+.pnpm-store/
+.git/
+.data/
+.output/
+dist/

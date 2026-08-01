@@ -19,6 +19,6 @@
       ]
     }
   },
-  "postCreateCommand": "yarn",
-  "postStartCommand": "yarn dev"
+  "postCreateCommand": "pnpm install --frozen-lockfile",
+  "postStartCommand": "pnpm dev"
 }
