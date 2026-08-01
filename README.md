@@ -32,7 +32,7 @@ You can use an online development environment to start developing right away. Th
 
 If you're a more serious developer, you can use a local, containerized development environment. 
 
-The benefits of using a local, containerized development environment is that you don't need to install the right versions of Node.js, Yarn, Git, etc as it's all included, configured and ready to use in the container.
+The benefits of using a local, containerized development environment is that you don't need to install the right versions of Node.js, pnpm, Git, etc as it's all included, configured and ready to use in the container.
 
 There are various ways to use a local, containerized development environment with this starter kit:
 
@@ -59,7 +59,7 @@ You can use [Docker][docker] to start developing right away:
 You can even use Docker without building the image from the Dockerfile. Just run the following command:
 
 ```sh
-docker run -it --rm -v "$(pwd):/app" -p 3000:3000 -w /app node:24.22.3-alpine sh -c "npm install -g corepack@0.36.0 && corepack enable && yarn && yarn dev"
+docker run -it --rm -v "$(pwd):/app" -p 3000:3000 -w /app node:24.22.3-alpine sh -c "npm install -g corepack@0.36.0 && corepack enable && pnpm install && pnpm dev"
 ```
 
 
@@ -69,11 +69,11 @@ docker run -it --rm -v "$(pwd):/app" -p 3000:3000 -w /app node:24.22.3-alpine sh
 
 You can also use a local Node.js installation. 
 
-  - `yarn install` to install the dependencies
-  - `yarn dev` to start the development server on http://localhost:3000
-  - `yarn build` to build the application for production
-  - `yarn start` to start the production server
-  - or `yarn generate` to generate the application for static hosting
+  - `pnpm install` to install the dependencies
+  - `pnpm dev` to start the development server on http://localhost:3000
+  - `pnpm build` to build the application for production
+  - `pnpm start` to start the production server
+  - or `pnpm generate` to generate the application for static hosting
 
 See the [official Nuxt deployment documentation][] for more details.
 

@@ -7,7 +7,7 @@ RUN apk add --no-cache git
 
 RUN npm install --global corepack@0.36.0 \
     && corepack enable \
-    && corepack prepare yarn@1.22.22 --activate
+    && corepack prepare pnpm@11.18.0 --activate
 
 USER node
 ENV NPM_CONFIG_PREFIX=/home/node/.npm
@@ -17,15 +17,15 @@ ENV PATH=$PATH:/home/node/.npm/bin
 RUN mkdir -p  "${HOME}/app" \
               "${NPM_CONFIG_PREFIX}/bin"
 
-RUN printf  "Node version %s, npm version %s, yarn version %s\n\n" \
-            "$(node -v)" "$(npm -v)" "$(yarn -v)"
+RUN printf  "Node version %s, npm version %s, pnpm version %s\n\n" \
+            "$(node -v)" "$(npm -v)" "$(pnpm -v)"
 
 FROM node-base AS dependencies
 USER node
 WORKDIR /home/node/app
 COPY --chown=node:node . .
-RUN yarn
-ENTRYPOINT ["yarn", "run"]
+RUN pnpm install --frozen-lockfile
+ENTRYPOINT ["pnpm", "run"]
 
 FROM dependencies AS development
 USER node
@@ -35,7 +35,7 @@ CMD ["dev", "--host"]
 
 FROM dependencies AS build
 USER node
-RUN ["yarn", "run", "generate"]
+RUN ["pnpm", "run", "generate"]
 
 FROM nginx:1.30.7-alpine3.24-slim AS production
 COPY --from=build /home/node/app/.output/public /usr/share/nginx/html
