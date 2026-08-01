@@ -3,7 +3,7 @@ type: "article"
 author: 1
 category: "web-development"
 date: "2023-06-09"
-excerpt: "TypeScript's type system can be extended to create a fixed range of numbers, adding an extra layer of safety and predictability to our code."
+description: "TypeScript's type system can be extended to create a fixed range of numbers, adding an extra layer of safety and predictability to our code."
 ---
 
 # TypeScript: Fixed Array Size
