@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-  import type { ILink } from '@/components/atom/Link.vue';
+  import type { ILink } from '@/types/link';
 
   interface Props {
     asLink: boolean,

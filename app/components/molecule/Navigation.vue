@@ -6,15 +6,7 @@
 </template>
 
 <script setup lang="ts">
-  import type { ILink } from '@/components/atom/Link.vue';
-
-  export interface NavigationItem {
-    label: string;
-    link?: ILink;
-    children?: NavigationItem[];
-  }
-
-  export type NavigationItems = NavigationItem[];
+  import type { NavigationItems } from '@/types/navigation';
 
   export interface Props {
     items: NavigationItems;

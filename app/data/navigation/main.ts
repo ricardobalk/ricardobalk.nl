@@ -1,4 +1,4 @@
-import type { NavigationItems as NavigationItemsType } from '@/components/molecule/Navigation.vue';
+import type { NavigationItems as NavigationItemsType } from '@/types/navigation';
 
 const NavigationItems: NavigationItemsType = [
   {
