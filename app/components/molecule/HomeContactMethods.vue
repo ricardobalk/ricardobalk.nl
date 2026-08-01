@@ -4,7 +4,8 @@
   </div>
 </template>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
 .contact-methods {
   @apply max-w-xs mx-auto;
   @apply flex justify-center gap-12;

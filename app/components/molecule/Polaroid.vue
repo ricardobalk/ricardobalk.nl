@@ -27,10 +27,11 @@
   });
 </script>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
   .polaroid-container {
     @apply flex flex-col items-center my-2 border border-gray-200 bg-white shadow-xl;
-    @apply dark:bg-slate-900 dark:bg-opacity-50 dark:border-slate-800;
+    @apply dark:bg-slate-900/50 dark:border-slate-800;
 
     .photo-container {
       @apply relative p-[8%];

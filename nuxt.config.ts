@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt/config'
+import tailwindcss from '@tailwindcss/vite'
 import svgLoader from 'vite-svg-loader'
 
 export default defineNuxtConfig({
@@ -13,6 +14,7 @@ export default defineNuxtConfig({
     },
   },
   modules: [ '@nuxt/content' ],
+  css: [ '~/assets/css/main.css' ],
   components: {
     // Makes all components in the components directory global,
     // for MDC (::component) to work.
@@ -34,16 +36,9 @@ export default defineNuxtConfig({
       },
     },
   },
-  postcss: {
-    plugins: {
-      'postcss-import': {},
-      'tailwindcss/nesting': {},
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
   vite: {
     plugins: [
+      tailwindcss(),
       svgLoader({
         svgoConfig: {
           // https://github.com/jpkleemans/vite-svg-loader

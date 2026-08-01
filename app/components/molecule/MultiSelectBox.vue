@@ -31,7 +31,8 @@
   </span>
 </template>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
   .filter {
     display: flex;
     flex-wrap: wrap;

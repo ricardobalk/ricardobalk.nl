@@ -46,7 +46,8 @@
   });
 </script>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
   .breadcrumbs {
     @apply flex flex-wrap gap-2 text-sm;
     .breadcrumb {

@@ -30,13 +30,14 @@
   const repositoryUrl = `https://github.com/ricardobalk/website`;
 </script>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
 .site-footer {
   @apply w-full p-4 text-sm justify-start items-center;
   @apply border-t border-t-gray-200;
 
-  @apply sm:sticky sm:bottom-0 sm:bg-white sm:bg-opacity-70 sm:z-20;
-  @apply dark:bg-black dark:border-gray-800 dark:bg-opacity-80;
+  @apply sm:sticky sm:bottom-0 sm:bg-white/70 sm:z-20;
+  @apply dark:bg-black/80 dark:border-gray-800;
 
   p {
     @apply inline;

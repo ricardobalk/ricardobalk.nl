@@ -22,7 +22,8 @@
   });
 </script>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
   .button {
     @apply inline-flex items-center justify-center px-4 py-2 text-center rounded-full
            text-white bg-teal-500 no-underline

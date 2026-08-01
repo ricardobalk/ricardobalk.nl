@@ -4,7 +4,8 @@
   </section>
 </template>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
   .article-overview {
     @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-screen-xl p-4 sm:p-8;
     

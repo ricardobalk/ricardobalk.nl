@@ -119,7 +119,8 @@
   }
 </script>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
 .copy-box {
   .input-container {
     @apply flex gap-2 border border-gray-300 rounded-md px-2 py-1;
@@ -141,7 +142,7 @@
     }
 
     input[type="text"] {
-      @apply w-full text-gray-500 outline-none;
+      @apply w-full text-gray-500 outline-hidden;
     }
 
     .icon {

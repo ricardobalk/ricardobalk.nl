@@ -44,9 +44,10 @@
   });
 </script>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
   .about {
-    @apply flex relative max-w-5xl mx-auto -mt-32 mb-24 outline-none gap-2;
+    @apply flex relative max-w-5xl mx-auto -mt-32 mb-24 outline-hidden gap-2;
     @apply flex-wrap md:flex-nowrap justify-center md:justify-start;
     @apply px-4;
 

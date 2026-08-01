@@ -3,7 +3,8 @@
   <MoleculeNavigation :items="props.items" class="navbar" />
 </template>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
 .navbar {
   @apply flex;
 

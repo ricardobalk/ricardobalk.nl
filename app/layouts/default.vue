@@ -8,7 +8,8 @@
   <slot name="site-footer" />
 </template>
 
-<style lang="postcss" scoped>
+<style scoped>
+@reference "~/assets/css/main.css";
 main {
   @apply flex flex-col items-center;
 }

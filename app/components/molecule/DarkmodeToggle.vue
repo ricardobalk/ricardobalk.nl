@@ -12,7 +12,8 @@
   </span>
 </template>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
   .darkmode-toggle {
     @apply flex items-center gap-3;
     .icon {
@@ -35,7 +36,7 @@
 
   // switchValue uses a computed property to invert the value stored in isDarkMode.
   const switchValue = computed<boolean>({
-    get: () => !isDarkMode,
+    get: () => !isDarkMode.value,
     set: (value) => {
       isDarkMode.value = !value;
     },

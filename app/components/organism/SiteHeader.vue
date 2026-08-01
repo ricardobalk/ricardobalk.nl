@@ -12,7 +12,8 @@
   </header>
 </template>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
 .site-header {
   @apply sticky top-0 z-10;
   @apply flex w-full justify-between px-2 py-1 items-center;
@@ -21,8 +22,8 @@
   @apply dark:bg-slate-900 dark:text-white dark:border-gray-800;
 
   &.scrolled-down {
-    @apply bg-white backdrop-filter backdrop-blur-sm bg-opacity-60;
-    @apply dark:bg-black dark:bg-opacity-30;
+    @apply bg-white/60 backdrop-filter backdrop-blur-xs;
+    @apply dark:bg-black/30;
   }
 
   .logo {

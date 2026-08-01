@@ -18,26 +18,26 @@
   </article>
 </template>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
 .success-story {
   @apply flex flex-col gap-3 items-center;
+}
 
-  &__picture {
-    @apply w-32 h-32 object-cover rounded-full border border-gray-200;
-  }
+.success-story__picture {
+  @apply w-32 h-32 object-cover rounded-full border border-gray-200;
+}
 
-  &__name {
-    @apply font-raleway text-xl font-bold my-0;
-  }
+.success-story__name {
+  @apply font-raleway text-xl font-bold my-0;
+}
 
-  &__occupation {
-    @apply font-raleway text-gray-500 mb-0;
-  }
+.success-story__occupation {
+  @apply font-raleway text-gray-500 mb-0;
+}
 
-  &__content {
-    @apply text-justify max-w-md mb-0;
-  }
-
+.success-story__content {
+  @apply text-justify max-w-md mb-0;
 }
 </style>
 
