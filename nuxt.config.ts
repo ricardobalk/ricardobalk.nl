@@ -2,6 +2,16 @@ import { defineNuxtConfig } from 'nuxt/config'
 import svgLoader from 'vite-svg-loader'
 
 export default defineNuxtConfig({
+  compatibilityDate: '2026-08-01',
+  srcDir: 'app/',
+  app: {
+    head: {
+      link: [
+        { rel: 'stylesheet', href: '/fonts/Lato/lato.css' },
+        { rel: 'stylesheet', href: '/fonts/Raleway/raleway.css' },
+      ],
+    },
+  },
   modules: [ '@nuxt/content' ],
   components: {
     // Makes all components in the components directory global,
@@ -10,13 +20,18 @@ export default defineNuxtConfig({
     dirs: ['~/components'],
   },
   content: {
-    // https://content.nuxtjs.org/api/configuration
-    documentDriven: true,
-    highlight: {
-      theme: {
-        default: 'github-light',
-        dark: 'github-dark-dimmed',
-      }
+    experimental: {
+      sqliteConnector: 'native',
+    },
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            default: 'github-light',
+            dark: 'github-dark-dimmed',
+          },
+        },
+      },
     },
   },
   postcss: {

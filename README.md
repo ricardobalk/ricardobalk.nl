@@ -2,13 +2,13 @@
 
 [![Sponsor via GitHub Sponsors](https://img.shields.io/badge/support%20me%20via%20GitHub%20Sponsors%20%E2%9D%A4-%2300bb00?logo=github)](https://github.com/sponsors/ricardobalk)
 
-> :sparkles: **Recently upgraded to Nuxt 3** :sparkles:
+> :sparkles: **Powered by Nuxt 4** :sparkles:
 
 **What is this?**
 
-**TL;DR:** This is the source code of [my personal website][], a JAMstack website made with Nuxt 3, TypeScript, TailwindCSS and a lot of coffee. :coffee:
+**TL;DR:** This is the source code of [my personal website][], a JAMstack website made with Nuxt 4, TypeScript, TailwindCSS and a lot of coffee. :coffee:
 
-- **Nuxt 3** is a framework for creating modern web applications. It's built on top of Vue 3 and Vite, one of the fastest and most lightweight bundlers out there.
+- **Nuxt 4** is a framework for creating modern web applications. It's built on top of Vue 3 and Vite, one of the fastest and most lightweight bundlers out there.
 - **TypeScript** is used for its logic. It improves the developer experience and prevents the number of bugs in the application during development.
 - **TailwindCSS** is used for styling the website. It's a utility-first CSS framework for rapidly prototyping your application.
 - **Nuxt Content** is used for managing the content of the website, such as the blog posts.
@@ -75,7 +75,7 @@ You can also use a local Node.js installation.
   - `yarn start` to start the production server
   - or `yarn generate` to generate the application for static hosting
 
-See the [official Nuxt 3 deployment documentation][] for more details.
+See the [official Nuxt deployment documentation][] for more details.
 
 ## License
 
@@ -84,7 +84,7 @@ See the [official Nuxt 3 deployment documentation][] for more details.
 <!-- Links used in the document -->
 [docker-compose]: https://docs.docker.com/compose/
 [docker]: https://www.docker.com/
-[official Nuxt 3 deployment documentation]: https://nuxt.com/docs/getting-started/deployment
+[official Nuxt deployment documentation]: https://nuxt.com/docs/4.x/getting-started/deployment
 [online-dev-env-github-codespaces]: http://github.dev/ricardobalk/ricardobalk.nl
 [online-dev-env-stackblitz]: https://stackblitz.com/github/ricardobalk/ricardobalk.nl
 [online-dev-env-vscode-web]: https://vscode.dev/github/ricardobalk/ricardobalk.nl

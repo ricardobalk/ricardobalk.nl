@@ -2,7 +2,7 @@
 type: "article"
 author: 1
 date: 2018-10-02 08:00:00 +00:00
-excerpt: "In this article, I will guide through the generation of Enterprise-grade PGP keys."
+description: "In this article, I will guide through the generation of Enterprise-grade PGP keys."
 category: "Linux"
 ---
 

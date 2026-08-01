@@ -2,7 +2,7 @@
 type: "article"
 date: 2020-11-07 09:00:00 +00:00
 author: 1
-excerpt: "Ever wondered how to run Keybase on Tails? I got you covered."
+description: "Ever wondered how to run Keybase on Tails? I got you covered."
 category: "Linux"
 tags: ["linux", "tails", "keybase"]
 ---

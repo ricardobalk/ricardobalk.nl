@@ -3,7 +3,7 @@ type: "article"
 author: 1
 category: "web-development"
 date: "2023-06-09"
-excerpt: "Explaining how to use TypeScript's fixed string templates and template literal types to create a fixed range of strings."
+description: "Explaining how to use TypeScript's fixed string templates and template literal types to create a fixed range of strings."
 ---
 
 # TypeScript: Fixed String Templates and Template Literal Types

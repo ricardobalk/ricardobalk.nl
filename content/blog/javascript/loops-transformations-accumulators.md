@@ -3,7 +3,7 @@ type: "article"
 author: 1
 category: "web-development"
 date: "2023-10-16"
-excerpt: "Manipulating and organizing data in JavaScript is a common task, especially when dealing with complex hierarchical relationships."
+description: "Manipulating and organizing data in JavaScript is a common task, especially when dealing with complex hierarchical relationships."
 ---
 
 # JavaScript Wizardry: Exploring Data and Accumulation Techniques

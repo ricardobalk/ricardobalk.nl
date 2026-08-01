@@ -2,7 +2,7 @@
 type: "article"
 date: 2023-10-20 20:00:00 +00:00
 author: 1
-excerpt: "Effectively managing SSH configuration files on Linux, by using the `Include` directive."
+description: "Effectively managing SSH configuration files on Linux, by using the `Include` directive."
 category: "Linux"
 tags: ["linux", "ssh", "configuration", "servers", "devops"]
 ---
