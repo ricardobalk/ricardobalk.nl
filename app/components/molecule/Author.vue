@@ -33,24 +33,25 @@
   });
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
+@reference "~/assets/css/main.css";
   .author {
     @apply flex gap-4 w-full border-b border-b-gray-200 pb-4;
+  }
 
-    &-avatar {
-      @apply w-24 h-24 rounded-full border;
-    }
+  .author-avatar {
+    @apply w-24 h-24 shrink-0 object-cover rounded-full border;
+  }
 
-    &-info {
-      @apply flex flex-col justify-center;
-    }
+  .author-info {
+    @apply flex flex-col justify-center;
+  }
 
-    &-name {
-      @apply text-lg font-bold mb-0;
-    }
+  .author-name {
+    @apply text-lg font-bold mb-0;
+  }
 
-    &-occupation {
-      @apply text-base mb-0;
-    }
+  .author-occupation {
+    @apply text-base mb-0;
   }
 </style>

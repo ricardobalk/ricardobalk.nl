@@ -26,15 +26,16 @@
   const props = defineProps<Props>();
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
+@reference "~/assets/css/main.css";
   .home-hero {
-    @apply w-full h-[40vh] md:h-[60vh] md:min-h-[420px] outline-none text-white mb-12 bg-[#6bffdc] bg-[contain,cover] [background-blend-mode:normal,_normal] dark:[background-blend-mode:soft-light,_normal] dark:bg-slate-900 dark:bg-opacity-80 dark:text-inherit;
+    @apply w-full h-[40vh] md:h-[60vh] md:min-h-[420px] outline-hidden text-white mb-12 bg-[#6bffdc] bg-[contain,cover] [background-blend-mode:normal,_normal];
     text-shadow: 1px 1px 5px rgba(26, 26, 26, 0.33);
     background-image: url("/winder.svg"), linear-gradient(to right, #00000022, #00000085);
     background-position: right bottom -5px, left top;
     background-repeat: no-repeat;
 
-    @apply dark:bg-gradient-to-b dark:from-slate-900 dark:to-black dark:bg-blend-multiply dark:bg-opacity-50;
+    @apply dark:bg-linear-to-b dark:from-slate-900 dark:to-black dark:bg-blend-multiply dark:bg-slate-900/50 dark:text-inherit;
 
     .text-container {
       @apply flex flex-col gap-4 px-4 py-8 text-center h-full justify-center;

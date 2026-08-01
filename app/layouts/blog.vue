@@ -41,7 +41,8 @@
   </div>
 </template>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
   .blog {
     @apply dark:bg-black;
     .filters {

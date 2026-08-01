@@ -8,7 +8,8 @@
   </section>
 </template>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
   .success-stories {
     @apply flex flex-col items-center py-12 dark:py-8;
 

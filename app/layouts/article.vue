@@ -43,12 +43,13 @@
   const author = computed<TAuthorID>(() => props.author ? props.author as TAuthorID : 1);
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
+@reference "~/assets/css/main.css";
 article {
   @apply w-full max-w-2xl px-4 py-12 mx-auto flex flex-col gap-4;
 
   .article-content {
-    @apply border-b border-gray-300 pb-2;
+    @apply border-b border-gray-300 pb-2 wrap-anywhere;
   }
 }
 </style>

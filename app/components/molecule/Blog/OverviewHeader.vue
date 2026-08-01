@@ -6,7 +6,8 @@
   </header>
 </template>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
   .blog-overview-header {
     @apply py-8 w-full text-center border-b mb-4;
     @apply dark:border-gray-600 dark:border-dashed dark:bg-black;

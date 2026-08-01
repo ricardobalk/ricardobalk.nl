@@ -28,13 +28,16 @@ const props = withDefaults(defineProps<Props>(), {
 });
 </script>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
 .process {
-  @apply w-full text-white bg-no-repeat bg-[#6bffdc] bg-[contain,cover] [background-blend-mode:normal,_normal] dark:mb-12 dark:py-8 dark:bg-slate-900 dark:text-inherit dark:bg-gradient-to-b dark:from-slate-900 dark:to-black dark:bg-blend-multiply dark:bg-opacity-50 dark:border-t dark:border-slate-800 dark:border-dashed;
+  @apply w-full text-white bg-no-repeat bg-[#6bffdc] bg-[contain,cover];
 
-  background-image: url("winder-bl.svg"), linear-gradient(to right, #00000022, #00000085);
+  background-image: url("/winder-bl.svg"), linear-gradient(to right, #00000022, #00000085);
   background-position: left bottom -5px, left top;
   background-blend-mode: normal, multiply;
+
+  @apply dark:mb-12 dark:py-8 dark:bg-slate-900/50 dark:text-inherit dark:bg-linear-to-b dark:from-slate-900 dark:to-black dark:bg-blend-multiply dark:border-t dark:border-slate-800 dark:border-dashed;
 
   .container {
     @apply flex flex-col md:flex-row gap-2;

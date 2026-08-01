@@ -5,8 +5,7 @@
     <input
       type="checkbox"
       :id="props.id"
-      :value="modelValue"
-      :checked="checkedVal"
+      :checked="props.modelValue"
       @change="onChangeHandler"
     />
     <label class="indicator-container" aria-hidden="true" :for="props.id">
@@ -28,14 +27,6 @@
     },
   });
 
-  const checkedVal = computed(() => {
-    // This is a workaround for the following issue:
-    // The checkbox is checked by default, however, the modelValue could undefined,
-    // due to reactivity issues. This means that the checkbox will be unchecked
-    // by default, even though the modelValue passed by the parent is true.
-    return props.modelValue || true;
-  });
-
   const emit = defineEmits(['update:modelValue']);
 
   const onChangeHandler = (event: Event): void => {
@@ -46,7 +37,7 @@
   };
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
   .switch {
     display: inline-block;
     position: relative;

@@ -8,7 +8,8 @@
   </div>
 </template>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
   .share-article {
     @apply flex gap-2 items-center content-center;
   }

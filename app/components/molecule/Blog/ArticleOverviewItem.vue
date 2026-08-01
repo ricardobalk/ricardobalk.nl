@@ -40,7 +40,8 @@
   </article>
 </template>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
   .article-card {
     @apply flex flex-col gap-4;
 

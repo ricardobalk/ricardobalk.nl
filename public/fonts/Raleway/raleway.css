@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Raleway';
   src: url('Raleway-VariableFont_wght.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 100 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Raleway';
   src: url('Raleway-Italic-VariableFont_wght.ttf') format('truetype');
-  font-weight: normal;
+  font-weight: 100 900;
   font-style: italic;
 }

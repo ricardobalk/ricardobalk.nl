@@ -15,7 +15,8 @@
   </NuxtLink>
 </template>
 
-<style lang="postcss">
+<style>
+@reference "~/assets/css/main.css";
 .atom-link {
   @apply text-green-500 hover:text-green-700;
   @apply transition-colors duration-100 ease-in-out;
