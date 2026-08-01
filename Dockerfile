@@ -1,7 +1,13 @@
-FROM node:18.17.1-alpine3.17 as node-base
+FROM node:24.22.3-alpine AS node-base
 # docker build --no-cache --progress plain -t ricardobalk/website:latest --target <target> -f Dockerfile .
 
+ENV NODE_USE_ENV_PROXY=1
+
 RUN apk add --no-cache git
+
+RUN npm install --global corepack@0.36.0 \
+    && corepack enable \
+    && corepack prepare yarn@1.22.22 --activate
 
 USER node
 ENV NPM_CONFIG_PREFIX=/home/node/.npm
@@ -14,24 +20,24 @@ RUN mkdir -p  "${HOME}/app" \
 RUN printf  "Node version %s, npm version %s, yarn version %s\n\n" \
             "$(node -v)" "$(npm -v)" "$(yarn -v)"
 
-FROM node-base as dependencies
+FROM node-base AS dependencies
 USER node
 WORKDIR /home/node/app
 COPY --chown=node:node . .
 RUN yarn
 ENTRYPOINT ["yarn", "run"]
 
-FROM dependencies as development
+FROM dependencies AS development
 USER node
 EXPOSE 3000
 CMD ["dev", "--host"]
 # && docker run -it -p 3000:3000 -v "$(pwd):/home/node/app:cached" ricardobalk/website:latest
 
-FROM dependencies as build
+FROM dependencies AS build
 USER node
 RUN ["yarn", "run", "generate"]
 
-FROM nginx:1.25.2-alpine3.18-slim as production
+FROM nginx:1.30.7-alpine3.24-slim AS production
 COPY --from=build /home/node/app/.output/public /usr/share/nginx/html
 EXPOSE 80 443
 CMD ["nginx", "-g", "daemon off;"]
