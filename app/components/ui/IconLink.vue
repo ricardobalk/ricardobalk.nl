@@ -1,7 +1,7 @@
 <template>
-  <AtomLink :to="props.link" :title="props.title" target="_blank">
-    <AtomIcon :iconName="icon" />
-  </AtomLink>
+  <UiLink :to="props.link" :title="props.title" target="_blank">
+    <UiIcon :iconName="icon" />
+  </UiLink>
 </template>
 
 <script setup lang="ts">

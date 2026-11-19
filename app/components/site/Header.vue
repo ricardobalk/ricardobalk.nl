@@ -1,13 +1,13 @@
 <!-- Contains the site's header. -->
 <template>
   <header :class="computedClassnames" class="site-header">
-    <AtomLink to="/" title="Go back home" tabindex="0">
+    <UiLink to="/" title="Go back home" tabindex="0">
       <SiteLogo width="32" height="32" alt="Site Logo" class="logo" />
-    </AtomLink>
+    </UiLink>
 
     <span class="flex gap-6">
-      <MoleculeNavigationBar :items="NavigationItems" class="navbar" />
-      <MoleculeDarkmodeToggle />
+      <SiteNavigation :items="NavigationItems" class="navbar" />
+      <SiteDarkmodeToggle />
     </span>
   </header>
 </template>
@@ -38,7 +38,7 @@
 
 <script setup lang="ts">
 import SiteLogo from '@/assets/svg/site-logo.svg?component';
-import NavigationItems from '@/data/navigation/main';
+import NavigationItems from '@/data/navigation';
 
 const scrolledDown = ref(false);
 const ticking = ref(false); // Used to throttle the scroll event.

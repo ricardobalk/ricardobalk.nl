@@ -17,8 +17,8 @@
 </template>
 
 <script setup lang="ts">
-  import { GetAuthorById } from '@/data/articles/authors';
-  import type { TAuthorID } from '@/data/articles/authors';
+  import { getAuthorById } from '@/utils/authors';
+  import type { TAuthorID } from '@/data/authors';
 
   interface Props {
     author: TAuthorID;
@@ -29,7 +29,7 @@
   });
 
   const author = computed(() => {
-    return GetAuthorById(props.author);
+    return getAuthorById(props.author);
   });
 </script>
 

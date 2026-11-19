@@ -1,6 +1,8 @@
 <!-- Renders a styled navigation menu, using CSS classes. -->
 <template>
-  <MoleculeNavigation :items="props.items" class="navbar" />
+  <nav class="navbar">
+    <SiteNavigationList :items="props.items" />
+  </nav>
 </template>
 
 <style>

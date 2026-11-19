@@ -1,16 +1,16 @@
 <template>
   <NuxtLayout name="default">
     <slot name="site-header">
-      <OrganismSiteHeader />
+      <SiteHeader />
     </slot>
 
       <article>
         <header class="page-header w-full max-w-2xl flex flex-col gap-4">
-          <MoleculeAuthor :author="author" />
+          <BlogAuthor :author="author" />
 
           <NuxtLink to="/blog" title="Back to blog articles" tabindex="0">
             <span class="flex gap-1 items-center text-sm">
-              <AtomIcon iconName="chevron-left" />
+              <UiIcon iconName="chevron-left" />
               Back to blog articles
             </span>
           </NuxtLink>
@@ -22,19 +22,19 @@
 
         <footer class="article-footer">
           <ClientOnly>
-            <MoleculeShareArticle />
+            <UiShareLink />
           </ClientOnly>
         </footer>
       </article>
 
     <slot name="site-footer">
-      <OrganismSiteFooter />
+      <SiteFooter />
     </slot>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-  import type { TAuthorID } from '@/data/articles/authors';
+  import type { TAuthorID } from '@/data/authors';
 
   const props = defineProps<{
     author?: number;

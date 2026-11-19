@@ -1,14 +1,14 @@
 <template>
   <NuxtLayout name="default">
     <slot name="site-header">
-      <OrganismSiteHeader />
+      <SiteHeader />
     </slot>
 
       <article>
         <header class="page-header w-full max-w-2xl flex flex-col gap-4">
           <NuxtLink to="/" title="Back to blog articles" tabindex="0">
             <span class="flex gap-1 items-center text-sm mb-8">
-              <AtomIcon iconName="chevron-left" />
+              <UiIcon iconName="chevron-left" />
               Back home
             </span>
             <hr />
@@ -21,13 +21,13 @@
 
         <footer class="article-footer">
           <ClientOnly>
-            <MoleculeShareArticle />
+            <UiShareLink />
           </ClientOnly>
         </footer>
       </article>
 
     <slot name="site-footer">
-      <OrganismSiteFooter />
+      <SiteFooter />
     </slot>
   </NuxtLayout>
 </template>

@@ -6,7 +6,7 @@
     <div class="input-container">
       <input type="text" :value="props.value" readonly />
       <button @click="handleClick" @mouseenter="showTooltip(true)" @mouseleave="showTooltip(false)">
-        <AtomIcon iconName="pasteboard" />
+        <UiIcon iconName="pasteboard" />
       </button>
     </div>
 
