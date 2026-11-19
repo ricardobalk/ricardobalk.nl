@@ -11,6 +11,8 @@ services:
       - "443:443"
     environment:
       - NODE_ENV=production
+      - NUXT_TELEMETRY_DISABLED=1
+      - DO_NOT_TRACK=1
     volumes:
       - ./:/home/node/app/
       - node_modules:/home/node/app/node_modules/

@@ -2,6 +2,8 @@ FROM node:26.13.1-alpine AS node-base
 # docker build --no-cache --progress plain -t ricardobalk/website:latest --target <target> -f Dockerfile .
 
 ENV NODE_USE_ENV_PROXY=1
+ENV NUXT_TELEMETRY_DISABLED=1 \
+    DO_NOT_TRACK=1
 
 RUN apk add --no-cache git
 
@@ -15,7 +17,8 @@ ENV PATH=$PATH:/home/node/.npm/bin
 
 
 RUN mkdir -p  "${HOME}/app" \
-              "${NPM_CONFIG_PREFIX}/bin"
+              "${NPM_CONFIG_PREFIX}/bin" \
+    && printf 'telemetry.enabled=false\ntelemetry.consent=0\n' > "${HOME}/.nuxtrc"
 
 RUN printf  "Node version %s, npm version %s, pnpm version %s\n\n" \
             "$(node -v)" "$(npm -v)" "$(pnpm -v)"
