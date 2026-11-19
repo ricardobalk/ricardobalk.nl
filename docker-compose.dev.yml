@@ -6,6 +6,10 @@ services:
       context: .
       dockerfile: Dockerfile
       target: development
+      args:
+        http_proxy: ${http_proxy:-${HTTP_PROXY:-}}
+        https_proxy: ${https_proxy:-${HTTPS_PROXY:-}}
+        no_proxy: ${no_proxy:-${NO_PROXY:-}}
     ports:
       - "3000:3000"
     environment:
@@ -13,5 +17,9 @@ services:
     volumes:
       - ./:/home/node/app/
       - node_modules:/home/node/app/node_modules/
+      - nuxt:/home/node/app/.nuxt/
+      - data:/home/node/app/.data/
 volumes:
   node_modules: {}
+  nuxt: {}
+  data: {}
