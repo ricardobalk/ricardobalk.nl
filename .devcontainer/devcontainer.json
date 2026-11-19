@@ -1,19 +1,19 @@
 {
-  "name": "Node 24.22.3 LTS on Alpine",
-  "build": {
-    "dockerfile": "../Dockerfile",
-    "target": "node-base"
-  },
-  "forwardPorts": [ 3000 ],
+  "name": "Website development",
+  "dockerComposeFile": [
+    "../docker-compose.dev.yml",
+    "docker-compose.yml"
+  ],
+  "service": "devcontainer",
+  "runServices": ["devcontainer", "node"],
+  "shutdownAction": "stopCompose",
+  "forwardPorts": ["node:3000"],
   "workspaceFolder": "/home/node/app",
-  "containerUser": "node",
+  "remoteUser": "vscode",
   "containerEnv": {
     "NUXT_TELEMETRY_DISABLED": "1",
     "DO_NOT_TRACK": "1"
   },
-  "mounts": [
-    "source=${localWorkspaceFolder}/,target=/home/node/app/,type=bind,consistency=cached"
-  ],
   "customizations": {
     "vscode": {
       "extensions": [
@@ -22,7 +22,5 @@
         "cpylua.language-postcss"
       ]
     }
-  },
-  "postCreateCommand": "pnpm install --frozen-lockfile",
-  "postStartCommand": "pnpm dev"
+  }
 }

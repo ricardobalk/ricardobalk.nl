@@ -40,6 +40,23 @@ There are various ways to use a local, containerized development environment wit
 
 You can use [VSCode][vscode] with the [Remote Containers / Dev Containers][vscode-remote-containers] extension to start developing right away. With the right extensions installed, just open the project in VSCode and it will ask you if you want to open it in a container.
 
+VSCode connects to a dedicated Debian container built from `.devcontainer/Dockerfile.devcontainer`.
+Node.js, pnpm, and Nuxt run in the separate `node` service, built from
+`.devcontainer/Dockerfile.nuxt`. Both containers share the source code, installed dependencies,
+and generated Nuxt types. Compose installs dependencies and starts the dev server
+automatically at http://localhost:3000.
+
+Run Node.js commands in the `node` service. From a terminal on the host:
+
+```sh
+docker compose -f docker-compose.dev.yml exec node pnpm typecheck
+docker compose -f docker-compose.dev.yml logs -f node
+```
+
+To run commands through VSCode, use **Dev Containers: Attach to Running Container**
+in a second window and select the `node` container. After changing the container
+configuration, use **Dev Containers: Rebuild Container**.
+
 **b) Using Docker Compose**
 
 You can use [Docker Compose][docker-compose] to start developing right away:
@@ -51,7 +68,7 @@ docker-compose -f docker-compose.dev.yml up
 **c) Using Docker (Method 1, building the image)**
 You can use [Docker][docker] to start developing right away:
 
-  1. Build image: `docker build --no-cache -t ricardobalk/website:latest --target development -f Dockerfile .`
+  1. Build image: `docker build --no-cache -t ricardobalk/website:latest --target development -f .devcontainer/Dockerfile.nuxt .`
   2. Run image in container: `docker run --rm -it -p 3000:3000 -v "$(pwd):/home/node/app:cached" ricardobalk/website:latest`
   
 **d) Using Docker (Method 2, without building the image)**
@@ -63,7 +80,7 @@ docker run -it --rm -e NUXT_TELEMETRY_DISABLED=1 -e DO_NOT_TRACK=1 -v "$(pwd):/a
 ```
 
 
-> Tip: Take a look at the `Dockerfile` and `docker-compose.*.yml` to see how the containers are set up. The dockerfile has a multi-stage build, to keep the final image as small as possible.
+> Tip: `.devcontainer/Dockerfile.devcontainer` defines the editor environment, and `.devcontainer/Dockerfile.nuxt` contains only the stages needed to run Nuxt in development. The root `Dockerfile` retains the complete multi-stage build, including static generation and the production Nginx image.
 
 **3. Using a local Node.js installation (when your machine has Node.js)**
 
@@ -113,7 +130,7 @@ The TypeScript aliases are intentional: native TypeScript 7 checks TypeScript
 modules, while TypeScript 6 provides the compiler API used by `vue-tsc`.
 
 GitHub Actions runs both typechecks, the production build, static generation,
-and the production Docker build.
+and all three Docker builds (production, Nuxt development, and the editor environment).
 
 Dependabot checks npm/pnpm, Docker, and GitHub Actions weekly. Minor and patch
 updates are grouped per ecosystem; major updates remain separate. See the

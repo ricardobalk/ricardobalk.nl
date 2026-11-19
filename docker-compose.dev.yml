@@ -4,7 +4,7 @@ services:
   node:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: .devcontainer/Dockerfile.nuxt
       target: development
       args:
         http_proxy: ${http_proxy:-${HTTP_PROXY:-}}
