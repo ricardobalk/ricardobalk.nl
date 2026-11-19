@@ -37,7 +37,7 @@ FROM dependencies AS build
 USER node
 RUN ["pnpm", "run", "generate"]
 
-FROM nginx:1.30.7-alpine3.24-slim AS production
+FROM nginx:1.31.8-alpine3.24-slim AS production
 COPY --from=build /home/node/app/.output/public /usr/share/nginx/html
 EXPOSE 80 443
 CMD ["nginx", "-g", "daemon off;"]
