@@ -1,0 +1,21 @@
+services:
+  devcontainer:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile.devcontainer
+      args:
+        http_proxy: ${http_proxy:-${HTTP_PROXY:-}}
+        https_proxy: ${https_proxy:-${HTTPS_PROXY:-}}
+        no_proxy: ${no_proxy:-${NO_PROXY:-}}
+    init: true
+    depends_on:
+      - node
+    volumes:
+      - ./:/home/node/app/
+      - node_modules:/home/node/app/node_modules/:ro
+      - nuxt:/home/node/app/.nuxt/:ro
+
+  node:
+    # Refresh the shared dependencies before starting Nuxt, including on rebuilds.
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["pnpm install --frozen-lockfile && exec pnpm dev --host 0.0.0.0"]

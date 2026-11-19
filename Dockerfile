@@ -23,6 +23,13 @@ RUN mkdir -p  "${HOME}/app" \
 RUN printf  "Node version %s, npm version %s, pnpm version %s\n\n" \
             "$(node -v)" "$(npm -v)" "$(pnpm -v)"
 
+LABEL org.opencontainers.image.title="ricardobalk.nl Node.js" \
+      org.opencontainers.image.description="Node.js environment for Ricardo Balk's personal website" \
+      org.opencontainers.image.source="https://github.com/ricardobalk/ricardobalk.nl" \
+      org.opencontainers.image.url="https://ricardobalk.nl" \
+      org.opencontainers.image.authors="Ricardo Balk" \
+      org.opencontainers.image.licenses="ISC"
+
 FROM node-base AS dependencies
 USER node
 WORKDIR /home/node/app
@@ -42,6 +49,12 @@ RUN ["pnpm", "run", "generate"]
 
 FROM nginx:1.31.8-alpine3.24-slim AS production
 COPY --from=build /home/node/app/.output/public /usr/share/nginx/html
+LABEL org.opencontainers.image.title="ricardobalk.nl" \
+      org.opencontainers.image.description="Ricardo Balk's personal website served by Nginx" \
+      org.opencontainers.image.source="https://github.com/ricardobalk/ricardobalk.nl" \
+      org.opencontainers.image.url="https://ricardobalk.nl" \
+      org.opencontainers.image.authors="Ricardo Balk" \
+      org.opencontainers.image.licenses="ISC"
 EXPOSE 80 443
 CMD ["nginx", "-g", "daemon off;"]
 # && docker run -it -p 80:80 -p 443:443 -v "$(pwd)/nginx.conf:/etc/nginx/conf.d/default.conf:cached" ricardobalk/website:latest

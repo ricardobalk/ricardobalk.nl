@@ -1,0 +1,14 @@
+FROM mcr.microsoft.com/devcontainers/base:bookworm
+
+LABEL org.opencontainers.image.title="ricardobalk.nl DevContainer" \
+      org.opencontainers.image.description="VSCode editor environment for Ricardo Balk's personal website" \
+      org.opencontainers.image.source="https://github.com/ricardobalk/ricardobalk.nl" \
+      org.opencontainers.image.url="https://ricardobalk.nl" \
+      org.opencontainers.image.authors="Ricardo Balk" \
+      org.opencontainers.image.licenses="ISC" \
+      internal="1"
+
+USER vscode
+WORKDIR /home/node/app
+
+CMD ["sleep", "infinity"]
