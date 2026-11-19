@@ -59,7 +59,7 @@ You can use [Docker][docker] to start developing right away:
 You can even use Docker without building the image from the Dockerfile. Just run the following command:
 
 ```sh
-docker run -it --rm -v "$(pwd):/app" -p 3000:3000 -w /app node:24.22.3-alpine sh -c "npm install -g corepack@0.36.0 && corepack enable && pnpm install && pnpm dev"
+docker run -it --rm -v "$(pwd):/app" -p 3000:3000 -w /app node:26.13.1-alpine sh -c "npm install -g corepack@0.36.0 && corepack enable && pnpm install && pnpm dev"
 ```
 
 
@@ -107,7 +107,7 @@ for their types.
 
 ## Dependency maintenance
 
-Use Node.js 24.22.3 LTS, Corepack 0.36.0, and the pnpm version pinned in
+Use Node.js 26.13.1, Corepack 0.36.0, and the pnpm version pinned in
 `package.json`. Enable Corepack before running `pnpm install --frozen-lockfile`.
 The TypeScript aliases are intentional: native TypeScript 7 checks TypeScript
 modules, while TypeScript 6 provides the compiler API used by `vue-tsc`.
