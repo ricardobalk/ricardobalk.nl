@@ -7,7 +7,7 @@ RUN apk add --no-cache git
 
 RUN npm install --global corepack@0.36.0 \
     && corepack enable \
-    && corepack prepare pnpm@11.18.0 --activate
+    && corepack prepare pnpm@12.21.0 --activate
 
 USER node
 ENV NPM_CONFIG_PREFIX=/home/node/.npm
