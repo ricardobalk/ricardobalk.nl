@@ -1,4 +1,4 @@
-FROM node:24.22.3-alpine AS node-base
+FROM node:26.13.1-alpine AS node-base
 # docker build --no-cache --progress plain -t ricardobalk/website:latest --target <target> -f Dockerfile .
 
 ENV NODE_USE_ENV_PROXY=1
