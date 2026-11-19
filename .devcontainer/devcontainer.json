@@ -7,6 +7,10 @@
   "forwardPorts": [ 3000 ],
   "workspaceFolder": "/home/node/app",
   "containerUser": "node",
+  "containerEnv": {
+    "NUXT_TELEMETRY_DISABLED": "1",
+    "DO_NOT_TRACK": "1"
+  },
   "mounts": [
     "source=${localWorkspaceFolder}/,target=/home/node/app/,type=bind,consistency=cached"
   ],

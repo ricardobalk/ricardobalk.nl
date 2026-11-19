@@ -59,7 +59,7 @@ You can use [Docker][docker] to start developing right away:
 You can even use Docker without building the image from the Dockerfile. Just run the following command:
 
 ```sh
-docker run -it --rm -v "$(pwd):/app" -p 3000:3000 -w /app node:26.13.1-alpine sh -c "npm install -g corepack@0.36.0 && corepack enable && pnpm install && pnpm dev"
+docker run -it --rm -e NUXT_TELEMETRY_DISABLED=1 -e DO_NOT_TRACK=1 -v "$(pwd):/app" -p 3000:3000 -w /app node:26.13.1-alpine sh -c "npm install -g corepack@0.36.0 && corepack enable && pnpm install && pnpm dev"
 ```
 
 

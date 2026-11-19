@@ -3,6 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 import svgLoader from 'vite-svg-loader'
 
 export default defineNuxtConfig({
+  telemetry: false,
   compatibilityDate: '2026-08-01',
   srcDir: 'app/',
   app: {
