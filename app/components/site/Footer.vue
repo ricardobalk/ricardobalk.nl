@@ -4,15 +4,15 @@
     <p>
       This website was made with
       <span title="love" aria-label="love">
-        <AtomIcon iconName="heart" />
+        <UiIcon iconName="heart" />
       </span>,
       a lot of
       <span title="coffee" aria-label="coffee">
-        <AtomIcon iconName="coffee" />
+        <UiIcon iconName="coffee" />
       </span>
       and some
       <span title="code" aria-label="code">
-        <AtomIcon iconName="code" />
+        <UiIcon iconName="code" />
       </span>
       by <strong>Ricardo Balk</strong>.
     </p>
@@ -20,7 +20,7 @@
     <p>
       Source code available on
         <strong>
-          <AtomLink :to="repositoryUrl" target="_blank">GitHub</AtomLink>
+          <UiLink :to="repositoryUrl" target="_blank">GitHub</UiLink>
         </strong>.
     </p>
   </footer>

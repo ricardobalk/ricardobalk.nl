@@ -1,25 +1,18 @@
 <template>
-  <button v-if="!props.asLink" @click="$emit('click')" class="button">
+  <UiLink :to="props.link" :title="props.title" target="_self" class="button">
     <slot />
-  </button>
-
-  <AtomLink v-else :to="to" class="button">
-    <slot />
-  </AtomLink>
+  </UiLink>
 </template>
 
 <script lang="ts" setup>
   import type { ILink } from '@/types/link';
 
   interface Props {
-    asLink: boolean,
-    to:     ILink["to"],
+    link:   ILink["to"],
     title?: ILink["title"],
   }
 
-  const props = withDefaults(defineProps<Props>(), {
-    asLink: false,
-  });
+  const props = defineProps<Props>();
 </script>
 
 <style>

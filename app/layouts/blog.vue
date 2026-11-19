@@ -2,20 +2,20 @@
   <div class="blog">
     <NuxtLayout name="default">
       <template #site-header>
-        <OrganismSiteHeader />
+        <SiteHeader />
       </template>
 
-      <MoleculeBlogOverviewHeader>
+      <BlogOverviewHeader>
         <slot />
-      </MoleculeBlogOverviewHeader>
+      </BlogOverviewHeader>
 
-      <MoleculeWarningBanner type="info" v-if="false">
+      <UiWarningBanner type="info" v-if="false">
         <p>
           This blog will be transferred to a separate domain,
           so that it can be used as a standalone blog where other people
           can also write articles.
         </p>
-      </MoleculeWarningBanner>
+      </UiWarningBanner>
 
       <section class="filters">
         <div class="filter">
@@ -23,7 +23,7 @@
             Filter by category:
           </span>
 
-          <MoleculeMultiSelectBox
+          <UiMultiSelectBox
             v-model="chosenCategories"
             :options="availableCategories"
             :title="'Filter by category:'"
@@ -32,10 +32,10 @@
         </div>
       </section>
 
-      <MoleculeBlogArticleOverview :articles="articles" />
+      <BlogArticleOverview :articles="articles" />
 
       <template #site-footer>
-        <OrganismSiteFooter />
+        <SiteFooter />
       </template>
     </NuxtLayout>
   </div>
@@ -53,10 +53,10 @@
 </style>
 
 <script setup lang="ts">
-  import type { IArticle }                  from '@/components/molecule/Blog/ArticleOverviewItem.vue';
-  import { GetCategoryBySlug }              from '@/data/articles/categories';
-  import type { TAuthorID }                 from '@/data/articles/authors';
-  import type { TCategories }               from '@/data/articles/categories';
+  import type { IArticle }                  from '@/types/article';
+  import { getCategoryBySlug }              from '@/utils/categories';
+  import type { TAuthorID }                 from '@/data/authors';
+  import type { TCategories }               from '@/data/categories';
 
   const chosenCategories = ref<string[]>([]);
 
@@ -148,7 +148,7 @@
      * Use a Set to build a list of unique categories, based on the articles in const `articles`.
      * Then, convert the Set to an array, and sort the array alphabetically.
      * Use an accumulator to build an object with the category slug as key, and the category name as value.
-     * the name of the category gets looked up by GetCategoryBySlug, which is imported from '@/data/articles/categories'.
+     * the name of the category gets looked up by getCategoryBySlug, which is imported from '@/utils/categories'.
      */
 
     const categories = allArticles.value.reduce((accumulator, article) => {
@@ -158,7 +158,7 @@
     }, new Set<string>()); // e.g. Set(2) { 'web-development', 'software-engineering' }
 
     return Array.from(categories).sort().reduce((accumulator, category) => {
-      accumulator[category] = GetCategoryBySlug(category);
+      accumulator[category] = getCategoryBySlug(category);
       return accumulator;
     }, {} as TCategories); // e.g. { 'web-development': 'Web Development', 'software-engineering': 'Software Engineering' }
   });

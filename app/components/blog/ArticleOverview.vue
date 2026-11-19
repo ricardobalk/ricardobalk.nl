@@ -1,6 +1,6 @@
 <template>
   <section class="article-overview">
-    <MoleculeBlogArticleOverviewItem v-for="(article, index) in props.articles" :key="index" :article="article" />
+    <BlogArticleCard v-for="(article, index) in props.articles" :key="index" :article="article" />
   </section>
 </template>
 
@@ -39,7 +39,7 @@
 </style>
 
 <script setup lang="ts">
-  import type { IArticle } from '@/components/molecule/Blog/ArticleOverviewItem.vue';
+  import type { IArticle } from '@/types/article';
 
   const props = defineProps<{
     articles: IArticle[];

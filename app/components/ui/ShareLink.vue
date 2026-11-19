@@ -4,7 +4,7 @@
       Share this article:
     </span>
     
-      <MoleculeCopyBox :value="currentUrl" class="flex-1" />
+      <UiCopyBox :value="currentUrl" class="flex-1" />
   </div>
 </template>
 

@@ -88,28 +88,10 @@
 </style>
 
 <script setup lang="ts">
-  import { GetAuthorById } from '@/data/articles/authors';
-  import type { TAuthorID } from '@/data/articles/authors';
-  import { GetCategoryBySlug } from '@/data/articles/categories';
+  import { getAuthorById } from '@/utils/authors';
+  import { getCategoryBySlug } from '@/utils/categories';
 
-  interface IImageProperties {
-    src: string;
-    alt?: string;
-    width?: number;
-    height?: number;
-  }
-
-  export interface IArticle extends Record<string, unknown> {
-    author:      TAuthorID;
-    category?:   string;
-    date:        string;
-    updated?:    string;
-    description: string;
-    featured?:   boolean;
-    path:        string;
-    title:       string;
-    image?:      string | IImageProperties; // TODO: add image type, check Nuxt Content docs if we could inherit from there
-  };
+  import type { IArticle, IImageProperties } from '@/types/article';
 
   const props = defineProps<{
     article: IArticle;
@@ -124,7 +106,7 @@
   });
 
   const articleCategory : ComputedRef<string> = computed(() => {
-    return GetCategoryBySlug(props.article.category || '') || '';
+    return getCategoryBySlug(props.article.category || '') || '';
   });
 
   const hasCategory : ComputedRef<boolean> = computed(() => {
@@ -185,7 +167,7 @@
       return '';
     }
     
-    const author = GetAuthorById(props.article.author);
+    const author = getAuthorById(props.article.author);
 
     return author.name;
   });

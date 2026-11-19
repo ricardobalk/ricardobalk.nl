@@ -1,13 +1,13 @@
 <template>
   <span class="darkmode-toggle">
     <span class="icon">
-      <AtomIcon iconName="moon" />
+      <UiIcon iconName="moon" />
     </span>
 
-    <MoleculeSwitch v-model="switchValue" id="darkmode-switch" />
+    <UiSwitch v-model="switchValue" id="darkmode-switch" />
 
     <span class="icon">
-      <AtomIcon iconName="sun" />
+      <UiIcon iconName="sun" />
     </span>
   </span>
 </template>

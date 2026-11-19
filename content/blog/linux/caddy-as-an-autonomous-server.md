@@ -13,7 +13,7 @@ In my quest for the perfect web server to meet my hosting needs, I've explored s
 
 ## Background: Apache, Nginx and Docker
 
-::MoleculeWarningBanner{type="info"}
+::UiWarningBanner{type="info"}
 [Click here](#setting-up-caddy-a-step-by-step-guide) to skip the background and jump straight to the step-by-step guide.
 ::
 
@@ -41,7 +41,7 @@ Caddy is conveniently available as a [Docker image][Caddy Docker image], making 
 
 ## Setting Up Caddy: A Step-By-Step Guide
 
-::MoleculeWarningBanner{type="warning"}
+::UiWarningBanner{type="warning"}
 ### Prerequisites for Caddy
 
 Before diving into Caddy's setup, let's ensure you have the necessary prerequisites:
@@ -50,7 +50,7 @@ Before diving into Caddy's setup, let's ensure you have the necessary prerequisi
 - **Docker CE** and not the Docker version that comes with your Linux distribution's package manager, as these can be outdated. Remove the old Docker version if necessary (you can find instructions for Debian [here](https://docs.docker.com/engine/install/debian/)).
 ::
 
-::MoleculeWarningBanner{type="green"}
+::UiWarningBanner{type="green"}
 ### Extra Recommendations
 In addition to the prerequisites above, I recommend the following:
 - A separate user on your server for Docker. I typically name it `docker`.

@@ -2,9 +2,9 @@
 title: "Home"
 ---
 
-:MoleculeHomeHero{name="Ricardo Balk" occupation="Web Developer" tagline="User-Centered Design • Clean Code • Modern Stacks"}
+:HomeHero{name="Ricardo Balk" occupation="Web Developer" tagline="User-Centered Design • Clean Code • Modern Stacks"}
 
-::MoleculeHomeAbout
+::HomeAbout
 ---
 picture:
   path:    "/home/about-me/ricardo.webp"
@@ -22,12 +22,12 @@ picture:
 
   When I'm not glued to my screen, I enjoy staying fit by kayaking, stand-up paddle boarding and hiking. I also love to travel and explore new places, especially when they are off the beaten path.
 
-  ::MoleculeLinkButton{ link="/blog" title="Check out my blog to learn more about me and my work." }
+  ::UiLinkButton{ link="/blog" title="Check out my blog to learn more about me and my work." }
     To my blog
   ::
 ::
 
-::MoleculeHomeProcess
+::HomeProcess
 ---
 picture:
   path:    "/home/process/computer.webp"
@@ -40,16 +40,16 @@ picture:
 
   I am a firm believer in the power of user-centered design and I always strive to create a pleasant user experience. In order to achieve this, I spend a lot of time researching and understanding my users and their needs. I believe that by focusing on the user and their needs, we can create products that are both functional and visually appealing, that will ultimately lead to a better user experience.
 
-  When it comes to development, I follow the principles of Atomic Design. This methodology helps me to create consistent, modular and reusable components that can be easily assembled into larger, more complex interfaces. Additionally, I am a strong advocate of the mobile-first approach. I believe that mobile devices are now the primary way that people access the web and that a good mobile experience is the foundation of a good web experience.
+  When it comes to development, I keep components straightforward, reusable and organized around the pages they serve. Additionally, I am a strong advocate of the mobile-first approach. I believe that mobile devices are now the primary way that people access the web and that a good mobile experience is the foundation of a good web experience.
 ::
 
-::MoleculeHomeSuccessStories
+::HomeSuccessStories
   # Success Stories
 
   What others say about my work
 
 #stories
-    ::MoleculeHomeSuccessStory
+    ::HomeSuccessStory
     ---
     name:        "Dirk Goossens"
     occupation:  "CEO at Sollicity"
@@ -58,7 +58,7 @@ picture:
       Ricardo takes pride in his profession. He knows a lot of it and has a great ambition to always learn more. He is upbeat and sociale and I very much appreciated his time with Sollicity.
     ::
 
-    ::MoleculeHomeSuccessStory
+    ::HomeSuccessStory
     ---
     name:        "Niels de Bont"
     occupation:  "Friend and UX/UI assistant"
@@ -68,15 +68,15 @@ picture:
     ::
 ::
 
-::MoleculeHomeCallToAction
+::HomeCallToAction
   # Contact
 
   Let's have a chat about your project!
 
-  ::MoleculeHomeContactMethods
-    :MoleculeIconLink{ link="tel:+31653773206"                    icon="phone"     title="Ricardo's telephone number" }
-    :MoleculeIconLink{ link="https://github.com/ricardobalk"      icon="github"    title="Ricardo's profile on GitHub, a platform for hosting and collaborating on computer programming code" }
-    :MoleculeIconLink{ link="https://linkedin.com/in/ricardobalk" icon="linkedin"  title="Ricardo's profile on LinkedIn, a social network for professionals" }
+  ::HomeContactMethods
+    :UiIconLink{ link="tel:+31653773206"                    icon="phone"     title="Ricardo's telephone number" }
+    :UiIconLink{ link="https://github.com/ricardobalk"      icon="github"    title="Ricardo's profile on GitHub, a platform for hosting and collaborating on computer programming code" }
+    :UiIconLink{ link="https://linkedin.com/in/ricardobalk" icon="linkedin"  title="Ricardo's profile on LinkedIn, a social network for professionals" }
 
     <!-- TODO: To be replaced with a contact form in the future.. -->
   ::

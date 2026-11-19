@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout name="home">
     <template #site-header>
-      <OrganismSiteHeader />
+      <SiteHeader />
     </template>
 
     <template #default>
@@ -9,7 +9,7 @@
     </template>
 
     <template #site-footer>
-      <OrganismSiteFooter />
+      <SiteFooter />
     </template>
   </NuxtLayout>
 </template>

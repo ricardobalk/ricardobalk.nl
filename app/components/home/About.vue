@@ -1,9 +1,9 @@
 <template>
   <section class="about" tabindex="0">
     <div class="picture">
-      <MoleculePolaroid :picture="props.picture.path" :alt="props.picture.alt">
+      <UiPolaroid :picture="props.picture.path" :alt="props.picture.alt">
         {{ props.picture.caption }}
-      </MoleculePolaroid>
+      </UiPolaroid>
     </div>
 
     <div class="text-container">

@@ -1,7 +1,7 @@
 <template>
   <section class="process">
     <div class="container">
-      <AtomImage :alt="props.picture.alt" :src="props.picture.path" :caption="props.picture.caption" />
+      <UiImage :alt="props.picture.alt" :src="props.picture.path" :caption="props.picture.caption" />
       <article class="text-container">
         <slot />
       </article>

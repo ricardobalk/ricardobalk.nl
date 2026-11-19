@@ -3,9 +3,9 @@
   <ul>
     <li v-for="(item, index) in props.items" :key="index" tabindex="0">
       <template v-if="item.link">
-        <AtomLink :to="item.link.to">
+        <UiLink :to="item.link.to">
           {{ item.label }}
-        </AtomLink>
+        </UiLink>
       </template>
 
       <template v-else>
