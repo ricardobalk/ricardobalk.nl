@@ -1,11 +1,14 @@
 version: '3.8'
 services:
   ricardobalk-website:
-    extends:
-        file: docker-compose.dev.yml
-        service: ricardobalk-website
     build:
+      context: .
+      dockerfile: Dockerfile
       target: production
+      args:
+        http_proxy: ${http_proxy:-${HTTP_PROXY:-}}
+        https_proxy: ${https_proxy:-${HTTPS_PROXY:-}}
+        no_proxy: ${no_proxy:-${NO_PROXY:-}}
     ports:
       - "80:80"
       - "443:443"
