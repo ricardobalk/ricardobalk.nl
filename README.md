@@ -79,6 +79,21 @@ You can also use a local Node.js installation.
 
 See the [official Nuxt deployment documentation][] for more details.
 
+## Dependency maintenance
+
+Use Node.js 24.22.3 LTS, Corepack 0.36.0, and the pnpm version pinned in
+`package.json`. Enable Corepack before running `pnpm install --frozen-lockfile`.
+The TypeScript aliases are intentional: native TypeScript 7 checks TypeScript
+modules, while TypeScript 6 provides the compiler API used by `vue-tsc`.
+
+GitHub Actions runs both typechecks, the production build, static generation,
+and the production Docker build.
+
+Dependabot checks npm/pnpm, Docker, and GitHub Actions weekly. Minor and patch
+updates are grouped per ecosystem; major updates remain separate. See the
+[November 2026 dependency review](docs/dependency-review-2026-11.md) for the
+older PR inventory and outstanding upstream security advisories.
+
 ## License
 
 [ISC License](LICENSE)
