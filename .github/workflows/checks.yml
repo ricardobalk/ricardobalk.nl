@@ -1,0 +1,26 @@
+name: Website checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: 24.22.3
+      - run: npm install --global corepack@0.36.0 && corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck:native
+      - run: pnpm typecheck
+      - run: pnpm build
+      - run: pnpm generate
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - run: docker build --target production --tag website:ci .
