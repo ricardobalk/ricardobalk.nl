@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt/config'
+import { useRuntimeConfig } from 'nuxt/kit'
 import tailwindcss from '@tailwindcss/vite'
 import svgLoader from 'vite-svg-loader'
 
@@ -19,6 +20,14 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: '/fonts/Lato/lato.css' },
         { rel: 'stylesheet', href: '/fonts/Raleway/raleway.css' },
       ],
+    },
+  },
+  hooks: {
+    'nitro:init'(nitro) {
+      const { features } = useRuntimeConfig().public
+      if (![true, 1].includes(features.blog)) {
+        nitro.options.prerender.ignore.push(/^\/blog(?:\/|$)/)
+      }
     },
   },
   modules: [ '@nuxt/content' ],
