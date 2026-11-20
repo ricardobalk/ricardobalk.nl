@@ -12,6 +12,7 @@ services:
     ports:
       - "3000:3000"
     environment:
+      - NUXT_PUBLIC_FEATURES_BLOG=${NUXT_PUBLIC_FEATURES_BLOG:-true}
       - NODE_ENV=development
       - NUXT_TELEMETRY_DISABLED=1
       - DO_NOT_TRACK=1

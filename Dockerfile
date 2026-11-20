@@ -44,6 +44,7 @@ CMD ["dev", "--host"]
 # && docker run -it -p 3000:3000 -v "$(pwd):/home/node/app:cached" ricardobalk/website:latest
 
 FROM dependencies AS build
+ARG NUXT_PUBLIC_FEATURES_BLOG=true
 USER node
 RUN ["pnpm", "run", "generate"]
 
