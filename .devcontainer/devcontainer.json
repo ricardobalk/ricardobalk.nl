@@ -1,9 +1,6 @@
 {
   "name": "Website development",
-  "dockerComposeFile": [
-    "../docker-compose.dev.yml",
-    "docker-compose.yml"
-  ],
+  "dockerComposeFile": "docker-compose.yml",
   "service": "devcontainer",
   "runServices": ["devcontainer", "node"],
   "shutdownAction": "stopCompose",

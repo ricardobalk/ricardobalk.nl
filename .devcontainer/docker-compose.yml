@@ -1,7 +1,13 @@
+name: ricardobalk-website
 services:
+  node:
+    extends:
+      file: ../docker-compose.dev.yml
+      service: node
+
   devcontainer:
     build:
-      context: .
+      context: ..
       dockerfile: .devcontainer/Dockerfile.devcontainer
       args:
         http_proxy: ${http_proxy:-${HTTP_PROXY:-}}
@@ -11,10 +17,14 @@ services:
     depends_on:
       - node
     volumes:
-      - ./:/home/node/app/
+      - ../:/home/node/app/
       - node_modules:/home/node/app/node_modules/:ro
       - nuxt:/home/node/app/.nuxt/:ro
       - vscode_extensions:/home/vscode/.vscode-server/extensions
 
 volumes:
+  node_modules: {}
+  nuxt: {}
+  data: {}
+  nuxt_cache: {}
   vscode_extensions: {}
