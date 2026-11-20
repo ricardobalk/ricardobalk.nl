@@ -17,7 +17,7 @@
           <div class="hero-description">
             <slot />
           </div>
-          <NuxtLink class="home-button" to="/blog">
+          <NuxtLink v-if="isFeatureEnabled('blog')" class="home-button" to="/blog">
             Read my blog
             <UiIcon iconName="arrow-right" aria-hidden="true" />
           </NuxtLink>
@@ -65,6 +65,7 @@
 </template>
 
 <script setup lang="ts">
+  const { isFeatureEnabled } = useFeatureFlags();
   const props = defineProps<{
     name: string;
     occupation: string;

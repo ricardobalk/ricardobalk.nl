@@ -6,6 +6,13 @@ export default defineNuxtConfig({
   telemetry: false,
   compatibilityDate: '2026-08-01',
   srcDir: 'app/',
+  runtimeConfig: {
+    public: {
+      features: {
+        blog: true,
+      },
+    },
+  },
   app: {
     head: {
       link: [

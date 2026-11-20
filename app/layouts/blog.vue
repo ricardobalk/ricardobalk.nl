@@ -17,7 +17,7 @@
         </p>
       </UiWarningBanner>
 
-      <section class="filters">
+      <section v-if="isFeatureEnabled('blog')" class="filters">
         <div class="filter">
           <span>
             Filter by category:
@@ -32,7 +32,7 @@
         </div>
       </section>
 
-      <BlogArticleOverview :articles="articles" />
+      <BlogArticleOverview v-if="isFeatureEnabled('blog')" :articles="articles" />
 
       <template #site-footer>
         <SiteFooter />
@@ -63,9 +63,12 @@
   import type { TAuthorID }                 from '@/data/authors';
   import type { TCategories }               from '@/data/categories';
 
+  const { isFeatureEnabled } = useFeatureFlags();
   const chosenCategories = ref<string[]>([]);
 
   const fetchArticles = async () => {
+    if (!isFeatureEnabled('blog')) return [];
+
     /**
      * Fetches all articles from the Nuxt Content API, and returns them as an array of IArticle objects.
      * The articles are sorted by date, where the most recently updated article precedes the next most recently updated article,
