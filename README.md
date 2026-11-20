@@ -122,21 +122,6 @@ also work in Markdown components, such as `:HomeHero` and `::UiWarningBanner`.
 Keep shared TypeScript types in `app/types` rather than importing Vue components
 for their types.
 
-## Dependency maintenance
-
-Use Node.js 26.13.1, Corepack 0.36.0, and the pnpm version pinned in
-`package.json`. Enable Corepack before running `pnpm install --frozen-lockfile`.
-The TypeScript aliases are intentional: native TypeScript 7 checks TypeScript
-modules, while TypeScript 6 provides the compiler API used by `vue-tsc`.
-
-GitHub Actions runs both typechecks, the production build, static generation,
-and all three Docker builds (production, Nuxt development, and the editor environment).
-
-Dependabot checks npm/pnpm, Docker, and GitHub Actions weekly. Minor and patch
-updates are grouped per ecosystem; major updates remain separate. See the
-[November 2026 dependency review](docs/dependency-review-2026-11.md) for the
-older PR inventory and outstanding upstream security advisories.
-
 ## License
 
 [ISC License](LICENSE)
