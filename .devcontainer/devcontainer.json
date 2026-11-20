@@ -16,6 +16,9 @@
   },
   "customizations": {
     "vscode": {
+      "settings": {
+        "telemetry.telemetryLevel": "off"
+      },
       "extensions": [
         "vue.volar",
         "bradlc.vscode-tailwindcss",
