@@ -11,7 +11,7 @@
     
     .article-card {
       @apply px-6 py-4 border border-gray-200 shadow-md rounded-md max-w-none;
-      @apply dark:border-dotted dark:border-gray-600 dark:transition-colors dark:hover:bg-gray-900 dark:hover:border-gray-500 dark:hover:border-dashed;
+      @apply dark:border-dotted dark:border-gray-500 dark:transition-colors dark:hover:bg-gray-900 dark:hover:border-gray-400 dark:hover:border-dashed;
 
       /* first child: full width (3 grid columns) */
       &:first-child {
