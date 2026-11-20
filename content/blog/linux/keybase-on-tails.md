@@ -224,4 +224,4 @@ Assuming all goes well, this will take a few seconds to start things up, and the
 
 [Tails]: https://tails.boum.org "Website of Tails, The Amnesic Incognito Live System"
 [John Simpson]: https://keybase.io/jms1 "Keybase profile of John Simpson"
-[Ricardo Balk]: https://ricardobalk.nl "Website of Ricardo Balk"
+[Ricardo Balk]: https://r4.do "Website of Ricardo Balk"

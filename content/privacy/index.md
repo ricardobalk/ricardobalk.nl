@@ -18,4 +18,4 @@ All of your personal and/or sensitive information is safe, as I do not collect i
 ## Static Site Generator
 > I use a static site generator, which makes the website load quickly and does not require a server to generate the content each time. This also means that there is no need for a database, which improves security.
 ## Open Source Code
-> By publishing the code of my website, I allow everyone to inspect, verify, and improve the code. The code is [available on GitHub](https://github.com/ricardobalk/website).
+> By publishing the code of my website, I allow everyone to inspect, verify, and improve the code. The code is [available on GitHub](https://github.com/ricardobalk/personal-website).

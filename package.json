@@ -3,7 +3,7 @@
   "version": "3.5.0",
   "description": "Ricardo Balk's Personal Website",
   "main": "index.js",
-  "repository": "https://github.com/ricardobalk/website",
+  "repository": "https://github.com/ricardobalk/personal-website",
   "author": "Ricardo Balk",
   "license": "ISC",
   "private": true,

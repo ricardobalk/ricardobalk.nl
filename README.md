@@ -2,7 +2,7 @@
 
 :sparkles: **Powered by Nuxt 4** :sparkles:
 
-This is the source code of [my personal website](https://ricardobalk.nl), a JAMstack website made with Nuxt 4, TypeScript, TailwindCSS and a lot of coffee. :coffee:
+This is the source code of [my personal website](https://r4.do), a JAMstack website made with Nuxt 4, TypeScript, TailwindCSS and a lot of coffee. :coffee:
 
 ## Documentation
 

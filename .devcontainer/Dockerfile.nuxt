@@ -1,9 +1,9 @@
 FROM node:26.13.1-alpine AS node-base
 
-LABEL org.opencontainers.image.title="ricardobalk.nl Nuxt development" \
+LABEL org.opencontainers.image.title="r4.do Nuxt development" \
       org.opencontainers.image.description="Nuxt development server for Ricardo Balk's personal website" \
-      org.opencontainers.image.source="https://github.com/ricardobalk/ricardobalk.nl" \
-      org.opencontainers.image.url="https://ricardobalk.nl" \
+      org.opencontainers.image.source="https://github.com/ricardobalk/personal-website" \
+      org.opencontainers.image.url="https://r4.do" \
       org.opencontainers.image.authors="Ricardo Balk" \
       org.opencontainers.image.licenses="ISC"
 

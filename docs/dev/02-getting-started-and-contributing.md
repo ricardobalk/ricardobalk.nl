@@ -78,8 +78,8 @@ Create a branch from `main`. For code changes, run `pnpm typecheck` and `pnpm ty
 [docker-compose]: https://docs.docker.com/compose/
 [docker]: https://www.docker.com/
 [official Nuxt deployment documentation]: https://nuxt.com/docs/4.x/getting-started/deployment
-[online-dev-env-github-codespaces]: https://codespaces.new/ricardobalk/ricardobalk.nl
-[online-dev-env-stackblitz]: https://stackblitz.com/github/ricardobalk/ricardobalk.nl
-[online-dev-env-vscode-web]: https://vscode.dev/github/ricardobalk/ricardobalk.nl
+[online-dev-env-github-codespaces]: https://codespaces.new/ricardobalk/personal-website
+[online-dev-env-stackblitz]: https://stackblitz.com/github/ricardobalk/personal-website
+[online-dev-env-vscode-web]: https://vscode.dev/github/ricardobalk/personal-website
 [vscode-remote-containers]: https://code.visualstudio.com/docs/remote/containers
 [vscode]: https://code.visualstudio.com/
