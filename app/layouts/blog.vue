@@ -45,9 +45,14 @@
 @reference "~/assets/css/main.css";
   .blog {
     @apply dark:bg-black;
+
+    > main {
+      @apply dark:text-gray-200;
+    }
+
     .filters {
       @apply px-8 py-4;
-      .filter { @apply flex gap-4 flex-wrap; }
+      .filter { @apply flex items-center gap-4 flex-wrap; }
     }
   }
 </style>

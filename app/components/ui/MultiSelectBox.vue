@@ -42,6 +42,7 @@
     font-weight: 600;
     font-size: 0.9em;
     line-height: 0.9em;
+    @apply dark:text-gray-300;
 
     span {
       cursor: default;
@@ -73,7 +74,7 @@
           &[type="checkbox"] {
             & ~ .indicator-container .indicator {
               border-radius: 0.125rem;
-              @apply dark:border dark:border-gray-700;
+              @apply dark:border dark:border-gray-400;
             }
 
             ~ .indicator-container .indicator::after {

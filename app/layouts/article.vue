@@ -47,9 +47,14 @@
 @reference "~/assets/css/main.css";
 article {
   @apply w-full max-w-2xl px-4 py-12 mx-auto flex flex-col gap-4;
+  @apply dark:text-gray-200;
 
   .article-content {
     @apply border-b border-gray-300 pb-2 wrap-anywhere;
   }
+}
+
+.article-content :deep(:is(h1, h2, h3, h4, h5, h6)) {
+  @apply dark:text-gray-100;
 }
 </style>

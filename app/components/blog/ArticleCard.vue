@@ -62,7 +62,7 @@
       @apply flex flex-col w-full flex-1;
 
       .meta {
-        @apply text-gray-500 text-sm;
+        @apply text-gray-500 text-sm dark:text-gray-400;
 
         /* bullets between the elements inside the meta, except for the last element */
         >* {
@@ -76,7 +76,7 @@
       }
 
       .title {
-        @apply text-xl font-black;
+        @apply text-xl font-black dark:text-gray-100;
       }
 
       .read-more {
