@@ -4,3 +4,4 @@ These guides explain how to find your way around the codebase, run the site loca
 
 - [Project structure](01-project-structure.md)
 - [Getting started and contributing](02-getting-started-and-contributing.md)
+- [Cleanup guide](03-cleanup.md)

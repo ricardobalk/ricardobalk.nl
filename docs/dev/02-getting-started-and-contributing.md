@@ -41,6 +41,8 @@ docker compose -f docker-compose.dev.yml logs -f node
 
 To run commands through VSCode, use **Dev Containers: Attach to Running Container** in a second window and select the `node` container. After changing the container configuration, use **Dev Containers: Rebuild Container**.
 
+To remove the devcontainer, its volumes and build cache, follow the [cleanup guide](03-cleanup.md#remove-the-devcontainer-and-its-data).
+
 **b) Using Docker Compose**
 
 You can use [Docker Compose][docker-compose] to start developing right away:
