@@ -27,9 +27,9 @@
   --home-background: #fff;
   --home-surface: #f5f5f3;
   --home-text: #20221f;
-  --home-muted: #656861;
+  --home-muted: #4d4d4d;
   --home-border: #e4e6e0;
-  --home-accent: #387d00;
+  --home-accent: var(--color-link);
   --home-button: #3f8000;
   --home-button-hover: #326600;
   --home-font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -37,17 +37,19 @@
 
   min-height: 100vh;
   background: var(--home-background);
-  color: var(--home-text);
-  font-family: var(--home-font-body);
 }
 
 .dark .homepage {
   --home-background: #080908;
   --home-surface: #191b18;
   --home-text: #f6f7f4;
-  --home-muted: #a0a39c;
+  --home-muted: #b3b3b3;
   --home-border: #282c25;
-  --home-accent: #9bd653;
+}
+
+.homepage :deep(main) {
+  color: var(--home-text);
+  font-family: var(--home-font-body);
 }
 
 .homepage :deep(.home-container) {
@@ -84,7 +86,7 @@
   border-radius: 5px;
   background: var(--home-button);
   box-shadow: 0 8px 28px #3f800024;
-  color: #fff;
+  color: var(--color-button-text);
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
@@ -94,10 +96,10 @@
 .homepage :deep(.home-button:hover) {
   background: var(--home-button-hover);
   box-shadow: 0 8px 32px #3f800038;
-  color: #fff;
+  color: var(--color-button-text);
 }
 
-.homepage :deep(a:focus-visible) {
+.homepage :deep(main a:focus-visible) {
   outline: 2px solid var(--home-accent);
   outline-offset: 6px;
 }

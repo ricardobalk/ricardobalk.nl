@@ -5,6 +5,9 @@
 @theme {
   --font-sans: "Lato", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-raleway: "Raleway", "Lato", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-link: #2f6b00;
+  --color-link-hover: #245200;
+  --color-button-text: #fff;
   --color-gray-25: #fafafa;
   --color-gray-50: #f2f2f2;
   --color-gray-100: #e6e6e6;
@@ -44,12 +47,17 @@
 }
 
 @layer base {
+  .dark {
+    --color-link: #9bd653;
+    --color-link-hover: #bce58e;
+  }
+
   body {
     @apply font-sans;
 
     @apply dark:bg-black dark:text-blue-50/60;
 
-    #app { @apply min-h-screen; }
+    #app { @apply flex min-h-dvh flex-col; }
 
     h1 { @apply text-3xl;  }
     h2 { @apply text-2xl;  }
@@ -105,10 +113,10 @@
     }
 
     a {
-      @apply text-green-600 underline hover:text-green-900 dark:hover:text-green-300 transition-colors ease-in-out;
+      @apply text-link underline hover:text-link-hover transition-colors ease-in-out;
 
       &[href^="#"]
-        { @apply text-gray-600 dark:text-gray-500 decoration-dotted; }
+        { @apply decoration-dotted; }
     }
 
     blockquote {

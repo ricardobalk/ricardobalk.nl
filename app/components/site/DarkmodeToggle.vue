@@ -17,14 +17,14 @@
   .darkmode-toggle {
     @apply flex items-center gap-3;
     .icon {
-      @apply text-xs dark:text-slate-500 cursor-pointer;
+      @apply text-xs dark:text-gray-500 cursor-pointer;
     }
 
     .switch {
       .indicator {
-        @apply dark:bg-slate-700;
+        @apply dark:bg-gray-700;
         &::after {
-          @apply dark:bg-slate-400;
+          @apply dark:bg-gray-400;
         }
       }
     }

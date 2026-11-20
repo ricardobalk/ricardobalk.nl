@@ -80,9 +80,16 @@
       }
 
       .read-more {
-        @apply text-gray-500 text-sm;
+        @apply text-link text-sm;
       }
 
+    }
+
+    > a:hover,
+    > a:focus-visible {
+      .read-more {
+        color: var(--color-link-hover);
+      }
     }
   }
 </style>

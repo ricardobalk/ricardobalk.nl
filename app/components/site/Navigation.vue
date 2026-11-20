@@ -34,19 +34,18 @@
       &:hover,
       &:focus,
       &:active {
-        @apply bg-green-200 text-gray-700 
-               dark:bg-slate-700 dark:text-gray-25;
+        @apply bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-50;
       }
     }
 
     ul ul {
       a {
-        @apply py-2 pl-4 pr-8 no-underline text-gray-700 bg-white dark:bg-black dark:text-gray-200;
+        @apply py-2 pl-4 pr-8 no-underline text-gray-700 bg-white dark:bg-gray-900 dark:text-gray-200;
 
         &:hover,
         &:focus,
         &:active {
-          @apply bg-green-200 dark:bg-green-800;
+          @apply bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-50;
         }
       }
     }

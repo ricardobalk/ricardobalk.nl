@@ -18,7 +18,7 @@
 <style>
 @reference "~/assets/css/main.css";
 .ui-link {
-  @apply text-green-500 hover:text-green-700;
+  @apply text-link hover:text-link-hover;
   @apply transition-colors duration-100 ease-in-out;
 }
 </style>

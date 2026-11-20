@@ -11,6 +11,6 @@
 <style scoped>
 @reference "~/assets/css/main.css";
 main {
-  @apply flex flex-col items-center;
+  @apply flex flex-1 flex-col items-center;
 }
 </style>
