@@ -50,6 +50,7 @@
 .homepage :deep(main) {
   color: var(--home-text);
   font-family: var(--home-font-body);
+  overflow-wrap: anywhere;
 }
 
 .homepage :deep(.home-container) {
@@ -60,7 +61,7 @@
 .homepage :deep(.home-eyebrow) {
   margin: 0 0 20px;
   color: var(--home-muted);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.6;
 }
@@ -69,7 +70,7 @@
   margin: 0 0 24px;
   color: var(--home-text);
   font-family: var(--home-font-display);
-  font-size: clamp(30px, 4vw, 40px);
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.035em;
@@ -87,7 +88,7 @@
   background: var(--home-button);
   box-shadow: 0 8px 28px #3f800024;
   color: var(--color-button-text);
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 600;
   text-decoration: none;
   transition: background 150ms, box-shadow 150ms;

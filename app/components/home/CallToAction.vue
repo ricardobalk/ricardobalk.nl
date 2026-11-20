@@ -1,13 +1,12 @@
 <template>
   <section id="contact" class="home-contact" aria-labelledby="contact-title">
     <div class="home-container">
-      <p class="home-eyebrow">Get in touch</p>
       <h2 id="contact-title" class="home-heading">Have something in mind?</h2>
       <div class="contact-content">
         <slot />
       </div>
       <a class="home-button" href="https://linkedin.com/in/ricardobalk">
-        Let's start a conversation
+        Send me a message.
         <UiIcon iconName="arrow-right" aria-hidden="true" />
       </a>
       <HomeContactMethods />
@@ -33,7 +32,7 @@
 
 .contact-content :deep(p) {
   margin: 0;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.75;
 }
 
@@ -46,7 +45,7 @@
     width: 100%;
     gap: 16px;
     padding-inline: 20px;
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 </style>

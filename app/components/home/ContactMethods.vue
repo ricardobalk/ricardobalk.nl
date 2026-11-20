@@ -27,7 +27,7 @@ a {
   align-items: center;
   justify-content: center;
   color: var(--home-muted);
-  font-size: 21px;
+  font-size: 1.3125rem;
   text-decoration: none;
 }
 
