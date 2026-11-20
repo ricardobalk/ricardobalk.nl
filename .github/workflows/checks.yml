@@ -28,4 +28,13 @@ jobs:
       - uses: actions/checkout@v7.0.1
       - run: docker build --target production --tag website:ci .
       - run: docker build --file .devcontainer/Dockerfile.nuxt --target development --tag website:nuxt-dev-ci .
-      - run: docker build --file .devcontainer/Dockerfile.devcontainer --tag website:devcontainer-ci .
+      - name: Reach Nuxt from the editor with empty volumes and no registry access
+        run: |
+          docker compose -f docker-compose.dev.yml -f .devcontainer/docker-compose.yml -f - up -d --build <<'YAML'
+          networks:
+            default:
+              internal: true
+          YAML
+          docker compose -f docker-compose.dev.yml -f .devcontainer/docker-compose.yml exec -T devcontainer \
+            curl --noproxy '*' --fail --silent --show-error --output /dev/null \
+              --retry 30 --retry-all-errors --retry-delay 2 --max-time 10 http://node:3000/
