@@ -14,6 +14,13 @@ services:
         https_proxy: ${https_proxy:-${HTTPS_PROXY:-}}
         no_proxy: ${no_proxy:-${NO_PROXY:-}}
     init: true
+    group_add:
+      - "${DOCKER_SOCKET_GID:-0}"
+    # Explicit exec users can lose supplementary groups. The relay keeps the
+    # socket group and exposes a private socket owned by the editor user.
+    command: ["socat", "UNIX-LISTEN:/tmp/editor-docker.sock,mode=0600,fork,unlink-early", "UNIX-CONNECT:/var/run/docker.sock"]
+    environment:
+      DOCKER_HOST: unix:///tmp/editor-docker.sock
     depends_on:
       - node
     volumes:
@@ -21,6 +28,11 @@ services:
       - node_modules:/home/node/app/node_modules/:ro
       - nuxt:/home/node/app/.nuxt/:ro
       - vscode_extensions:/home/vscode/.vscode-server/extensions
+      - type: bind
+        source: ${DOCKER_SOCKET_PATH:-/var/run/docker.sock}
+        target: /var/run/docker.sock
+        bind:
+          create_host_path: false
 
 volumes:
   node_modules: {}
