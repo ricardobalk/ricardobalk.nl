@@ -109,7 +109,7 @@ app/
     home/             Home sections, including About and contact details
     blog/             Article cards, overview, and author details
     site/             Header, footer, navigation, and theme toggle
-    ui/               Shared links, buttons, images, and other controls
+    ui/               Shared links, icons, and form controls
   data/               Author, category, and navigation data
   utils/              Author and category lookup helpers
   types/              Shared article, link, and navigation types

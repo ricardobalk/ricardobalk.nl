@@ -95,5 +95,5 @@ Completed locally in Node.js 24.22.3 containers:
 Both typechecks, the production build, and static generation passed again after
 the history cleanup. CI repeats these checks and the production Docker build.
 
-The homepage background image uses `/winder-bl.svg` from public assets,
-avoiding requests for `/_nuxt/winder-bl.svg`.
+The homepage redesign removed the legacy background images and the approach
+and testimonial sections, including their unused components and assets.
