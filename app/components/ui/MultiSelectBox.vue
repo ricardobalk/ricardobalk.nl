@@ -89,7 +89,7 @@
 
               @media screen and (prefers-color-scheme: dark) {
                 background-color: #c20000;
-                border: 1px solid #ff1f1f;
+                border: 0.0625rem solid #ff1f1f;
                 box-sizing: content-box;
               }
 

@@ -54,12 +54,12 @@
 }
 
 .homepage :deep(.home-container) {
-  width: min(1060px, calc(100% - 64px));
+  width: min(66.25rem, calc(100% - 4rem));
   margin-inline: auto;
 }
 
 .homepage :deep(.home-eyebrow) {
-  margin: 0 0 20px;
+  margin: 0 0 1.25rem;
   color: var(--home-muted);
   font-size: 0.875rem;
   font-weight: 500;
@@ -67,7 +67,7 @@
 }
 
 .homepage :deep(.home-heading) {
-  margin: 0 0 24px;
+  margin: 0 0 1.5rem;
   color: var(--home-text);
   font-family: var(--home-font-display);
   font-size: clamp(1.875rem, 4vw, 2.5rem);
@@ -78,15 +78,15 @@
 
 .homepage :deep(.home-button) {
   display: inline-flex;
-  min-height: 56px;
+  min-height: 3.5rem;
   align-items: center;
   justify-content: center;
-  gap: 28px;
-  padding: 16px 32px;
-  border: 1px solid #4d900e;
-  border-radius: 5px;
+  gap: 1.75rem;
+  padding: 1rem 2rem;
+  border: 0.0625rem solid #4d900e;
+  border-radius: 0.3125rem;
   background: var(--home-button);
-  box-shadow: 0 8px 28px #3f800024;
+  box-shadow: 0 0.5rem 1.75rem #3f800024;
   color: var(--color-button-text);
   font-size: 0.9375rem;
   font-weight: 600;
@@ -96,22 +96,22 @@
 
 .homepage :deep(.home-button:hover) {
   background: var(--home-button-hover);
-  box-shadow: 0 8px 32px #3f800038;
+  box-shadow: 0 0.5rem 2rem #3f800038;
   color: var(--color-button-text);
 }
 
 .homepage :deep(main a:focus-visible) {
-  outline: 2px solid var(--home-accent);
-  outline-offset: 6px;
+  outline: 0.125rem solid var(--home-accent);
+  outline-offset: 0.375rem;
 }
 
 .homepage :deep(section[id]) {
-  scroll-margin-top: 32px;
+  scroll-margin-top: 2rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   .homepage :deep(.home-container) {
-    width: calc(100% - 40px);
+    width: calc(100% - 2.5rem);
   }
 }
 </style>

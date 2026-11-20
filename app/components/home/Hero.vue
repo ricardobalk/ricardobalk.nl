@@ -75,32 +75,32 @@
 
 <style scoped>
 .home-hero {
-  padding-block: 88px 64px;
+  padding-block: 5.5rem 4rem;
 }
 
 .hero-intro {
   display: grid;
   grid-template-columns: 1.25fr 1fr;
   align-items: center;
-  gap: 80px;
-  min-height: 380px;
+  gap: 5rem;
+  min-height: 23.75rem;
 }
 
 .hero-copy .home-eyebrow {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   color: var(--home-accent);
 }
 
 .hero-details {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 20px;
+  gap: 0.5rem 1.25rem;
 }
 
 .hero-detail {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   color: var(--home-text);
   font-size: inherit;
 }
@@ -110,7 +110,7 @@
 }
 
 h1 {
-  margin: 0 0 24px;
+  margin: 0 0 1.5rem;
   font-family: var(--home-font-display);
   font-size: clamp(2.75rem, 5vw, 3.875rem);
   font-weight: 700;
@@ -119,8 +119,8 @@ h1 {
 }
 
 .hero-description {
-  max-width: 490px;
-  margin-bottom: 32px;
+  max-width: 30.625rem;
+  margin-bottom: 2rem;
   color: var(--home-muted);
 }
 
@@ -131,12 +131,12 @@ h1 {
 }
 
 .hero-copy .home-button {
-  min-width: 260px;
+  min-width: 16.25rem;
 }
 
 .hero-portrait {
   justify-self: end;
-  width: min(100%, 360px);
+  width: min(100%, 22.5rem);
   aspect-ratio: 1;
   border-radius: 50%;
   object-fit: cover;
@@ -144,17 +144,17 @@ h1 {
 }
 
 .technologies {
-  margin-top: 72px;
+  margin-top: 4.5rem;
 }
 
 .technologies .home-eyebrow {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .technologies ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr));
-  gap: 24px;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -162,12 +162,12 @@ h1 {
 
 .technologies li {
   display: flex;
-  min-height: 68px;
+  min-height: 4.25rem;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  border: 1px solid var(--home-border);
-  border-radius: 5px;
+  gap: 0.5rem;
+  border: 0.0625rem solid var(--home-border);
+  border-radius: 0.3125rem;
   color: var(--home-muted);
 }
 
@@ -185,14 +185,14 @@ h1 {
   font-size: 3rem;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 53.125rem) {
   .hero-intro {
-    gap: 40px;
-    min-height: 300px;
+    gap: 2.5rem;
+    min-height: 18.75rem;
   }
 
   .technologies ul {
-    gap: 12px;
+    gap: 0.75rem;
   }
 
   .technologies li > span {
@@ -200,20 +200,20 @@ h1 {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   .home-hero {
-    padding-block: 48px;
+    padding-block: 3rem;
   }
 
   .hero-intro {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 2.5rem;
   }
 
   .hero-portrait {
     grid-row: 1;
     justify-self: center;
-    width: 220px;
+    width: 13.75rem;
   }
 
   .hero-copy {
@@ -230,7 +230,7 @@ h1 {
   }
 
   .technologies {
-    margin-top: 56px;
+    margin-top: 3.5rem;
   }
 
   .technologies ul {
@@ -239,9 +239,9 @@ h1 {
   }
 
   .technologies li {
-    flex: 1 0 calc((100% - 24px) / 3);
-    min-height: 62px;
-    padding: 8px;
+    flex: 1 0 calc((100% - 1.5rem) / 3);
+    min-height: 3.875rem;
+    padding: 0.5rem;
   }
 }
 </style>

@@ -58,15 +58,15 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 1px;
-      height: 1px;
+      width: 0.0625rem;
+      height: 0.0625rem;
       opacity: 0;
       clip-path: inset(50%);
     }
 
     input:focus-visible + .indicator-container {
-      outline: 2px solid currentColor;
-      outline-offset: 4px;
+      outline: 0.125rem solid currentColor;
+      outline-offset: 0.25rem;
       border-radius: 1rem;
     }
   }
