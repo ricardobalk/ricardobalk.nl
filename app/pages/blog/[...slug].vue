@@ -5,6 +5,8 @@
 </template>
 
 <script setup lang="ts">
+  definePageMeta({ middleware: 'blog' });
+
   const route = useRoute();
   const { data: page } = await useAsyncData(`content:${route.path}`, () => {
     return queryCollection('content').path(route.path).first();

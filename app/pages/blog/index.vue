@@ -26,6 +26,8 @@
 </template>
 
 <script setup lang="ts">
+  definePageMeta({ middleware: 'blog' });
+
   const { data: page } = await useAsyncData('blog-index', () => {
     return queryCollection('content').path('/blog').first();
   });
