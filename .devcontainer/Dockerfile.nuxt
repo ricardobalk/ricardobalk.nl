@@ -12,8 +12,7 @@ ENV NODE_USE_ENV_PROXY=1
 RUN apk add --no-cache git
 
 RUN npm install --global corepack@0.36.0 \
-    && corepack enable \
-    && corepack prepare pnpm@12.21.0 --activate
+    && corepack enable
 
 USER node
 ENV NPM_CONFIG_PREFIX=/home/node/.npm
@@ -23,8 +22,20 @@ ENV PATH=$PATH:/home/node/.npm/bin
 RUN mkdir -p  "${HOME}/app" \
               "${NPM_CONFIG_PREFIX}/bin"
 
-RUN printf  "Node version %s, npm version %s, pnpm version %s\n\n" \
-            "$(node -v)" "$(npm -v)" "$(pnpm -v)"
+RUN corepack prepare pnpm@12.21.0 --activate && pnpm --version
+
+# Seed the runtime store before Compose mounts the checkout and node_modules.
+FROM node-base AS workspace
+WORKDIR /home/node/app
+COPY --chown=node:node package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+RUN --mount=type=cache,id=r4do-pnpm,target=/var/cache/pnpm-store,uid=1000,gid=1000,sharing=locked \
+    pnpm install --store-dir=/var/cache/pnpm-store --frozen-lockfile --ignore-scripts --prefer-offline \
+    && mkdir -p /home/node/.local/share/pnpm \
+    && cp -a /var/cache/pnpm-store /home/node/.local/share/pnpm/store \
+    && rm -rf node_modules \
+    && mkdir -p node_modules .nuxt .data /home/node/.cache/nuxt
+EXPOSE 3000
+CMD ["sh", "-c", "pnpm install --frozen-lockfile --prefer-offline && exec pnpm dev --host 0.0.0.0"]
 
 FROM node-base AS dependencies
 USER node
