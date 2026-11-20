@@ -6,11 +6,12 @@
   import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
   import type { FontAwesomeIconProps } from "@fortawesome/vue-fontawesome";
   import { library } from "@fortawesome/fontawesome-svg-core";
-  import { faGithub, faLinkedin, faVuejs, faGolang, faGitAlt } from "@fortawesome/free-brands-svg-icons";
+  import { faGithub, faLinkedin, faPython, faKubernetes, faGolang, faRust } from "@fortawesome/free-brands-svg-icons";
   import {
     faChevronLeft, faCode,  faCoffee,
     faHeart,       faPaste, faPhone,
-    faSun,         faMoon, faArrowRight
+    faSun,         faMoon, faArrowRight,
+    faSuitcase,    faGlobe
   }  from  "@fortawesome/free-solid-svg-icons";
   
   const iconNames = {
@@ -21,11 +22,14 @@
     'github':       faGithub,
     'heart':        faHeart,
     'linkedin':     faLinkedin,
-    'vuejs':        faVuejs,
+    'python':       faPython,
+    'kubernetes':   faKubernetes,
     'golang':       faGolang,
-    'git':          faGitAlt,
+    'rust':         faRust,
     'pasteboard':   faPaste,
     'phone':        faPhone,
+    'suitcase':     faSuitcase,
+    'globe':        faGlobe,
     'sun':          faSun,
     'moon':         faMoon,
   } as const;

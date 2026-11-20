@@ -3,17 +3,24 @@
     <div class="home-container">
       <div class="hero-intro">
         <div class="hero-copy">
-          <p class="home-eyebrow">
-            {{ props.occupation }}<template v-if="props.location"> · {{ props.location }}</template>
+          <p class="home-eyebrow hero-details">
+            <span class="hero-detail">
+              <UiIcon iconName="suitcase" aria-hidden="true" />
+              {{ props.occupation }}
+            </span>
+            <span v-if="props.location" class="hero-detail">
+              <UiIcon iconName="globe" aria-hidden="true" />
+              {{ props.location }}
+            </span>
           </p>
           <h1 id="intro-title">{{ props.name }}</h1>
           <div class="hero-description">
             <slot />
           </div>
-          <a class="home-button" href="#contact">
-            Let's talk
+          <NuxtLink class="home-button" to="/blog">
+            Read my blog
             <UiIcon iconName="arrow-right" aria-hidden="true" />
-          </a>
+          </NuxtLink>
         </div>
 
         <img
@@ -30,8 +37,12 @@
         <p class="home-eyebrow">Some of the tools I work with</p>
         <ul aria-label="Technologies">
           <li>
-            <UiIcon iconName="vuejs" aria-hidden="true" />
-            <span>Vue.js</span>
+            <UiIcon iconName="python" aria-hidden="true" />
+            <span>Python</span>
+          </li>
+          <li>
+            <UiIcon iconName="kubernetes" aria-hidden="true" />
+            <span>Kubernetes</span>
           </li>
           <li>
             <svg width="32" height="24" viewBox="0 0 40 28" fill="none" aria-hidden="true">
@@ -40,16 +51,12 @@
             <span>Nuxt</span>
           </li>
           <li>
-            <span class="typescript-mark" aria-hidden="true">TS</span>
-            <span>TypeScript</span>
-          </li>
-          <li>
             <UiIcon iconName="golang" class="go-mark" aria-hidden="true" />
             <span class="sr-only">Go</span>
           </li>
           <li>
-            <UiIcon iconName="git" aria-hidden="true" />
-            <span>Git</span>
+            <UiIcon iconName="rust" aria-hidden="true" />
+            <span>Rust</span>
           </li>
         </ul>
       </div>
@@ -84,10 +91,28 @@
   color: var(--home-accent);
 }
 
+.hero-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+.hero-detail {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--home-text);
+  font-size: inherit;
+}
+
+.hero-detail .icon {
+  color: var(--home-accent);
+}
+
 h1 {
   margin: 0 0 24px;
   font-family: var(--home-font-display);
-  font-size: clamp(44px, 5vw, 62px);
+  font-size: clamp(2.75rem, 5vw, 3.875rem);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.04em;
@@ -101,7 +126,7 @@ h1 {
 
 .hero-description :deep(p) {
   margin: 0;
-  font-size: 17px;
+  font-size: 1.0625rem;
   line-height: 1.75;
 }
 
@@ -128,7 +153,7 @@ h1 {
 
 .technologies ul {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr));
   gap: 24px;
   margin: 0;
   padding: 0;
@@ -147,24 +172,17 @@ h1 {
 }
 
 .technologies li > span {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   letter-spacing: -0.025em;
 }
 
 .technologies .icon {
-  font-size: 27px;
-}
-
-.technologies .typescript-mark {
-  padding: 2px;
-  border: 1.5px solid currentColor;
-  font-size: 13px;
-  line-height: 1;
+  font-size: 1.6875rem;
 }
 
 .technologies .go-mark {
-  font-size: 48px;
+  font-size: 3rem;
 }
 
 @media (max-width: 850px) {
@@ -178,7 +196,7 @@ h1 {
   }
 
   .technologies li > span {
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 }
 
@@ -200,6 +218,10 @@ h1 {
 
   .hero-copy {
     text-align: center;
+  }
+
+  .hero-details {
+    justify-content: center;
   }
 
   .hero-copy .home-button {
