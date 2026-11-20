@@ -1,83 +1,18 @@
 ---
 title: "Home"
+description: "Ricardo Balk is a Dutch software engineer focused on secure, reliable, and maintainable software, with experience in cybersecurity and cloud-native environments."
 ---
 
-:HomeHero{name="Ricardo Balk" occupation="Web Developer" tagline="User-Centered Design • Clean Code • Modern Stacks"}
+::HomeHero{name="Ricardo Balk" occupation="Software Engineer" location="Utrecht, The Netherlands" picture="/images/portrait-ricardo-balk.webp"}
+  I'm Ricardo, a Dutch software engineer focused on building secure, reliable, and maintainable software. I enjoy turning complex technical challenges into practical solutions with clean code and thoughtful design.
+::
 
 ::HomeAbout
----
-picture:
-  path:    "/home/about-me/ricardo.webp"
-  alt:     "Photo of Ricardo"
-  caption: "Photo of me taken during the Four Days Marches of 2022 in the Netherlands"
----
+  Lately, my work has been mostly in the cybersecurity domain, helping strengthen digital resilience. I have experience with modern application frameworks, developer tooling, cloud-native environments, and secure software development.
 
-  # About me&hellip;
-
-  I'm Ricardo - a web developer who is passionate about technology, creating beautiful user interfaces and writing clean and reusable code. I love working on challenging projects that push the boundaries of what is possible and require me to think creatively and outside the box.
-
-  I am currently working as a full stack developer with a strong focus on design and user experience. My preferred stack is a combination of Vue and Go, powerful frameworks that allows me to create fast, elegant and responsive web applications.
-
-  In my spare time, I like to give back to the community by contributing to open-source projects. I believe that open-source software is a powerful tool for driving innovation and progress, and I want to be a part of that.
-
-  When I'm not glued to my screen, I enjoy staying fit by kayaking, stand-up paddle boarding and hiking. I also love to travel and explore new places, especially when they are off the beaten path.
-
-  ::UiLinkButton{ link="/blog" title="Check out my blog to learn more about me and my work." }
-    To my blog
-  ::
-::
-
-::HomeProcess
----
-picture:
-  path:    "/home/process/computer.webp"
-  alt:     "Laptop computer showing an example of a dashboard interface."
----
-
-  # User-centered Approach.
-
-  Research • Analysis • Design • Build • Test • Improve
-
-  I am a firm believer in the power of user-centered design and I always strive to create a pleasant user experience. In order to achieve this, I spend a lot of time researching and understanding my users and their needs. I believe that by focusing on the user and their needs, we can create products that are both functional and visually appealing, that will ultimately lead to a better user experience.
-
-  When it comes to development, I keep components straightforward, reusable and organized around the pages they serve. Additionally, I am a strong advocate of the mobile-first approach. I believe that mobile devices are now the primary way that people access the web and that a good mobile experience is the foundation of a good web experience.
-::
-
-::HomeSuccessStories
-  # Success Stories
-
-  What others say about my work
-
-#stories
-    ::HomeSuccessStory
-    ---
-    name:        "Dirk Goossens"
-    occupation:  "CEO at Sollicity"
-    picture:     "/home/success-stories/dirk-goossens.webp"
-    ---
-      Ricardo takes pride in his profession. He knows a lot of it and has a great ambition to always learn more. He is upbeat and sociale and I very much appreciated his time with Sollicity.
-    ::
-
-    ::HomeSuccessStory
-    ---
-    name:        "Niels de Bont"
-    occupation:  "Friend and UX/UI assistant"
-    picture:     "/home/success-stories/niels-de-bont.webp"
-    ---
-      Ricardo is a very talented developer. He is very passionate about his work and loves helping others solving their technical challenges. He has a great ability to understand complex problems and come up with innovative solutions. His attention to detail and dedication to his craft make him an exceptional developer.
-    ::
+  Outside of work, I contribute to open-source projects, explore new technologies, and learn from other developers. When I'm not coding, I enjoy city photography or having a drink with friends.
 ::
 
 ::HomeCallToAction
-  # Contact
-
-  Let's have a chat about your project!
-
-  ::HomeContactMethods
-    :UiIconLink{ link="tel:+31653773206"                    icon="phone"     title="Ricardo's telephone number" }
-    :UiIconLink{ link="https://github.com/ricardobalk"      icon="github"    title="Ricardo's profile on GitHub, a platform for hosting and collaborating on computer programming code" }
-    :UiIconLink{ link="https://linkedin.com/in/ricardobalk" icon="linkedin"  title="Ricardo's profile on LinkedIn, a social network for professionals" }
-
-    <!-- TODO: To be replaced with a contact form in the future.. -->
-  ::
+  A project, a technical challenge, or just a good conversation. I'd love to hear from you.
 ::

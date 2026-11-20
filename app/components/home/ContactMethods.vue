@@ -1,14 +1,37 @@
 <template>
   <div class="contact-methods">
-    <slot />
+    <a href="tel:+31653773206" aria-label="Call Ricardo">
+      <UiIcon iconName="phone" aria-hidden="true" />
+    </a>
+    <a href="https://github.com/ricardobalk" aria-label="Ricardo on GitHub">
+      <UiIcon iconName="github" aria-hidden="true" />
+    </a>
+    <a href="https://linkedin.com/in/ricardobalk" aria-label="Ricardo on LinkedIn">
+      <UiIcon iconName="linkedin" aria-hidden="true" />
+    </a>
   </div>
 </template>
 
-<style>
-@reference "~/assets/css/main.css";
+<style scoped>
 .contact-methods {
-  @apply max-w-xs mx-auto;
-  @apply flex justify-center gap-12;
-  @apply text-4xl my-8;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+a {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  color: var(--home-muted);
+  font-size: 21px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--home-accent);
 }
 </style>

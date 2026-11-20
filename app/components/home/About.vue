@@ -1,68 +1,72 @@
 <template>
-  <section class="about" tabindex="0">
-    <div class="picture">
-      <UiPolaroid :picture="props.picture.path" :alt="props.picture.alt">
-        {{ props.picture.caption }}
-      </UiPolaroid>
-    </div>
-
-    <div class="text-container">
-      <slot>
-        <h1>Uh oh!</h1>
-        <p>You didn't fill in this slot, so I'm showing some example paragraphs instead.</p>
-        <p>
-          Sed nibh libero, scelerisque quis viverra in, egestas id magna. Etiam vel dolor vel mauris fringilla
-          molestie sodales vitae metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-          cubilia Curae; Mauris et efficitur elit.
-        </p>
-        <p>
-          Phasellus malesuada metus porttitor rutrum convallis. Donec convallis tellus felis, nec commodo erat
-          lacinia vitae.
-        </p>
-      </slot>
+  <section id="about" class="home-about" aria-labelledby="about-title">
+    <div class="home-container about-layout">
+      <div>
+        <p class="home-eyebrow">A little about me</p>
+        <h2 id="about-title" class="home-heading">Curious by nature.<br />Developer by trade.</h2>
+        <NuxtLink class="blog-link" to="/blog">
+          Notes from my desk
+          <UiIcon iconName="arrow-right" aria-hidden="true" />
+        </NuxtLink>
+      </div>
+      <div class="about-copy">
+        <slot />
+      </div>
     </div>
   </section>
 </template>
 
-<script lang="ts" setup>
-  interface Picture {
-    path:    string,
-    caption: string,
-    alt:     string,
+<style scoped>
+.home-about {
+  padding-block: 80px;
+  border-block: 1px solid var(--home-border);
+  background: var(--home-surface);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 80px;
+}
+
+.blog-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 16px;
+  color: var(--home-accent);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.blog-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.about-copy {
+  color: var(--home-muted);
+}
+
+.about-copy :deep(p) {
+  margin: 0 0 20px;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.about-copy :deep(p:last-child) {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .home-about {
+    padding-block: 56px;
   }
 
-  interface Props {
-    picture: Picture
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
-
-  const props = withDefaults(defineProps<Props>(), {
-      picture: () => ({
-        path:       "https://placehold.it/500x500",
-        caption:    "Placeholder image",
-        alt:        "Placeholder",
-      }),
-  });
-</script>
-
-<style>
-@reference "~/assets/css/main.css";
-  .about {
-    @apply flex relative max-w-5xl mx-auto -mt-32 mb-24 outline-hidden gap-2;
-    @apply flex-wrap md:flex-nowrap justify-center md:justify-start;
-    @apply px-4;
-
-    .picture {
-      @apply flex-none w-full px-8;
-      @apply md:w-1/3 md:px-0;
-    }
-
-    .text-container {
-      @apply flex-auto flex flex-col gap-3;
-      @apply pt-8 px-8 sm:mt-24 dark:sm:mt-0;
-
-      h1 {
-        @apply text-3xl font-bold uppercase m-0;
-      }
-    }
-  }
+}
 </style>
