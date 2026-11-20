@@ -21,8 +21,8 @@
 
 <style scoped>
 .home-about {
-  padding-block: 80px;
-  border-block: 1px solid var(--home-border);
+  padding-block: 5rem;
+  border-block: 0.0625rem solid var(--home-border);
   background: var(--home-surface);
 }
 
@@ -33,14 +33,14 @@
 .about-layout {
   display: grid;
   grid-template-columns: 1fr 1.25fr;
-  gap: 80px;
+  gap: 5rem;
 }
 
 .blog-link {
   display: inline-flex;
-  min-height: 44px;
+  min-height: 2.75rem;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
   color: var(--color-link);
   font-size: 0.9375rem;
   font-weight: 500;
@@ -55,31 +55,31 @@
 }
 
 .about-intro {
-  margin: 0 0 16px;
+  margin: 0 0 1rem;
 }
 
 .blog-link:hover {
   color: var(--color-link-hover);
   text-decoration: underline;
-  text-underline-offset: 5px;
+  text-underline-offset: 0.3125rem;
 }
 
 .about-copy :deep(p) {
-  margin: 0 0 20px;
+  margin: 0 0 1.25rem;
 }
 
 .about-copy :deep(p:last-child) {
   margin-bottom: 0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 43.75rem) {
   .home-about {
-    padding-block: 56px;
+    padding-block: 3.5rem;
   }
 
   .about-layout {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 2rem;
   }
 }
 </style>

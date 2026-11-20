@@ -12,17 +12,17 @@
 
 <style scoped>
 .home-contact {
-  padding-block: 80px 64px;
+  padding-block: 5rem 4rem;
   text-align: center;
 }
 
 .home-contact .home-heading {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .contact-content {
-  max-width: 460px;
-  margin: 0 auto 32px;
+  max-width: 28.75rem;
+  margin: 0 auto 2rem;
   color: var(--home-muted);
 }
 
@@ -32,9 +32,9 @@
   line-height: 1.75;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   .home-contact {
-    padding-block: 56px 40px;
+    padding-block: 3.5rem 2.5rem;
   }
 }
 </style>

@@ -41,15 +41,15 @@ function updateHint(event: Event) {
 .contact-methods {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 24px;
+  gap: 0.625rem;
+  margin-top: 1.5rem;
 }
 
 a {
   anchor-name: var(--contact-anchor);
   display: inline-flex;
-  width: 44px;
-  height: 44px;
+  width: 2.75rem;
+  height: 2.75rem;
   align-items: center;
   justify-content: center;
   color: var(--home-muted);
@@ -62,11 +62,11 @@ a {
   position-area: top;
   position-try-fallbacks: flip-block;
   inset: auto;
-  margin: 6px 0;
+  margin: 0.375rem 0;
   justify-self: anchor-center;
-  padding: 4px 10px;
-  border: 1px solid var(--home-border);
-  border-radius: 5px;
+  padding: 0.25rem 0.625rem;
+  border: 0.0625rem solid var(--home-border);
+  border-radius: 0.3125rem;
   background: var(--home-text);
   color: var(--home-background);
   font-size: 0.875rem;
