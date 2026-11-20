@@ -5,10 +5,6 @@
       <div class="contact-content">
         <slot />
       </div>
-      <a class="home-button" href="https://linkedin.com/in/ricardobalk">
-        Send me a message.
-        <UiIcon iconName="arrow-right" aria-hidden="true" />
-      </a>
       <HomeContactMethods />
     </div>
   </section>
@@ -39,13 +35,6 @@
 @media (max-width: 600px) {
   .home-contact {
     padding-block: 56px 40px;
-  }
-
-  .home-contact .home-button {
-    width: 100%;
-    gap: 16px;
-    padding-inline: 20px;
-    font-size: 0.9375rem;
   }
 }
 </style>
