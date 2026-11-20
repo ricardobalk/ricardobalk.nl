@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: .devcontainer/Dockerfile.nuxt
-      target: development
+      target: workspace
       args:
         http_proxy: ${http_proxy:-${HTTP_PROXY:-}}
         https_proxy: ${https_proxy:-${HTTPS_PROXY:-}}
@@ -21,7 +21,9 @@ services:
       - node_modules:/home/node/app/node_modules/
       - nuxt:/home/node/app/.nuxt/
       - data:/home/node/app/.data/
+      - nuxt_cache:/home/node/.cache/nuxt/
 volumes:
   node_modules: {}
   nuxt: {}
   data: {}
+  nuxt_cache: {}

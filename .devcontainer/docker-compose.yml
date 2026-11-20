@@ -14,8 +14,3 @@ services:
       - ./:/home/node/app/
       - node_modules:/home/node/app/node_modules/:ro
       - nuxt:/home/node/app/.nuxt/:ro
-
-  node:
-    # Refresh the shared dependencies before starting Nuxt, including on rebuilds.
-    entrypoint: ["/bin/sh", "-c"]
-    command: ["pnpm install --frozen-lockfile && exec pnpm dev --host 0.0.0.0"]
