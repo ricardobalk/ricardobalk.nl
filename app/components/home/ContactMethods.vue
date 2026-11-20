@@ -31,7 +31,4 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: var(--home-accent);
-}
 </style>

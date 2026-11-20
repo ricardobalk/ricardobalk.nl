@@ -19,7 +19,7 @@
   @apply flex w-full justify-between px-2 py-1 items-center;
   @apply bg-white transition-colors duration-300 ease-in-out;
   @apply border-b border-gray-200;
-  @apply dark:bg-slate-900 dark:text-white dark:border-gray-800;
+  @apply dark:bg-gray-900 dark:text-white dark:border-gray-800;
 
   &.scrolled-down {
     @apply bg-white/60 backdrop-filter backdrop-blur-xs;

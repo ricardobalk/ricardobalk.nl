@@ -3,32 +3,26 @@
   <footer class="site-footer">
     <p>
       This website was made with
-      <span title="love" aria-label="love">
-        <UiIcon iconName="heart" />
+      <span role="img" title="love" aria-label="love">
+        <UiIcon iconName="heart" aria-hidden="true" />
       </span>,
       a lot of
-      <span title="coffee" aria-label="coffee">
-        <UiIcon iconName="coffee" />
+      <span role="img" title="coffee" aria-label="coffee">
+        <UiIcon iconName="coffee" aria-hidden="true" />
       </span>
       and some
-      <span title="code" aria-label="code">
-        <UiIcon iconName="code" />
+      <span role="img" title="code" aria-label="code">
+        <UiIcon iconName="code" aria-hidden="true" />
       </span>
       by <strong>Ricardo Balk</strong>.
     </p>
     
     <p>
-      Source code available on
-        <strong>
-          <UiLink :to="repositoryUrl" target="_blank">GitHub</UiLink>
-        </strong>.
+      Don't forget to
+      <strong><UiLink to="https://github.com/ricardobalk?tab=repositories" target="_blank">check out my projects on GitHub</UiLink></strong>.
     </p>
   </footer>
 </template>
-
-<script setup lang="ts">
-  const repositoryUrl = `https://github.com/ricardobalk/website`;
-</script>
 
 <style>
 @reference "~/assets/css/main.css";
@@ -36,7 +30,7 @@
   @apply w-full p-4 text-sm justify-start items-center;
   @apply border-t border-t-gray-200;
 
-  @apply sm:sticky sm:bottom-0 sm:bg-white/70 sm:z-20;
+  @apply sm:bg-white/70;
   @apply dark:bg-black/80 dark:border-gray-800;
 
   p {
@@ -50,6 +44,7 @@
   .icon {
     @apply text-xs;
   }
+
   
 }
 </style>
