@@ -28,6 +28,8 @@ The image build downloads the locked packages through the build proxy when confi
 
 VS Code keeps installed extensions in the `vscode_extensions` volume across editor container rebuilds.
 
+Open the **Containers** view from the Microsoft Docker Extension Pack to see the host's containers, or run `docker ps` in the editor terminal. On first open, the devcontainer reads the host’s `DOCKER_HOST` (default `unix:///var/run/docker.sock`) and saves the socket path and its container-side group in `.devcontainer/.env`. If you switch engines, update `DOCKER_SOCKET_PATH` and `DOCKER_SOCKET_GID` in that file or remove it to detect them again.
+
 From the editor container, Nuxt is available at `http://node:3000/`. If your shell uses an HTTP proxy, use `curl --noproxy node http://node:3000/` to reach the Compose service directly.
 
 Run Node.js commands in the `node` service. From a terminal on the host:

@@ -30,6 +30,7 @@ jobs:
       - run: docker build --file .devcontainer/Dockerfile.nuxt --target development --tag website:nuxt-dev-ci .
       - name: Reach Nuxt from the editor with empty volumes and no registry access
         run: |
+          sh .devcontainer/initialize.sh
           docker compose -f .devcontainer/docker-compose.yml -f - up -d --build <<'YAML'
           networks:
             default:
@@ -38,3 +39,9 @@ jobs:
           docker compose -f .devcontainer/docker-compose.yml exec -T devcontainer \
             curl --noproxy '*' --fail --silent --show-error --output /dev/null \
               --retry 30 --retry-all-errors --retry-delay 2 --max-time 10 http://node:3000/
+      - name: List the host's Nuxt container from the editor
+        run: |
+          compose() { docker compose -f .devcontainer/docker-compose.yml "$@"; }
+          node_id=$(compose ps -q node)
+          test -n "$node_id"
+          test "$(compose exec -T -u vscode devcontainer docker ps -q --no-trunc --filter "id=$node_id")" = "$node_id"

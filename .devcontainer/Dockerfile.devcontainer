@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/base:bookworm
+FROM debian:bookworm-slim
 
 LABEL org.opencontainers.image.title="r4.do DevContainer" \
       org.opencontainers.image.description="VSCode editor environment for Ricardo Balk's personal website" \
@@ -7,6 +7,16 @@ LABEL org.opencontainers.image.title="r4.do DevContainer" \
       org.opencontainers.image.authors="Ricardo Balk" \
       org.opencontainers.image.licenses="ISC" \
       internal="1"
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        ca-certificates curl git gnupg openssh-client procps socat \
+    && rm -rf /var/lib/apt/lists/* \
+    && useradd --create-home --user-group --uid 1000 --shell /bin/bash vscode
+
+COPY --from=docker:29-cli /usr/local/bin/docker /usr/local/bin/docker
+
+ENV LANG=C.UTF-8
 
 USER vscode
 RUN mkdir -p /home/vscode/.vscode-server/extensions
