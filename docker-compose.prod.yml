@@ -5,6 +5,7 @@ services:
       dockerfile: Dockerfile
       target: production
       args:
+        NUXT_PUBLIC_FEATURES_BLOG: "${NUXT_PUBLIC_FEATURES_BLOG:-true}"
         http_proxy: ${http_proxy:-${HTTP_PROXY:-}}
         https_proxy: ${https_proxy:-${HTTPS_PROXY:-}}
         no_proxy: ${no_proxy:-${NO_PROXY:-}}
