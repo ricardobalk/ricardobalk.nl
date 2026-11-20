@@ -15,7 +15,10 @@ export default defineNuxtConfig({
     },
   },
   modules: [ '@nuxt/content' ],
-  css: [ '~/assets/css/main.css' ],
+  css: [
+    '@fortawesome/fontawesome-svg-core/styles.css',
+    '~/assets/css/main.css',
+  ],
   components: {
     // Makes all components in the components directory global,
     // for MDC (::component) to work.

@@ -1,60 +1,225 @@
 <template>
-  <header class="home-hero" tabindex="0">
-      <div class="text-container">
-        <h1 class="name">
-          {{ props.name }}
-        </h1>
+  <section id="home" class="home-hero" aria-labelledby="intro-title">
+    <div class="home-container">
+      <div class="hero-intro">
+        <div class="hero-copy">
+          <p class="home-eyebrow">
+            {{ props.occupation }}<template v-if="props.location"> · {{ props.location }}</template>
+          </p>
+          <h1 id="intro-title">{{ props.name }}</h1>
+          <div class="hero-description">
+            <slot />
+          </div>
+          <a class="home-button" href="#contact">
+            Let's talk
+            <UiIcon iconName="arrow-right" aria-hidden="true" />
+          </a>
+        </div>
 
-        <span v-if="props.occupation" class="occupation">
-          {{ props.occupation }}
-        </span>
-
-        <span v-if="props.tagline" class="tagline">
-          {{ props.tagline }}
-        </span>
+        <img
+          class="hero-portrait"
+          :src="props.picture"
+          :alt="'Portrait of ' + props.name"
+          width="720"
+          height="936"
+          fetchpriority="high"
+        />
       </div>
-  </header>
+
+      <div class="technologies">
+        <p class="home-eyebrow">Some of the tools I work with</p>
+        <ul aria-label="Technologies">
+          <li>
+            <UiIcon iconName="vuejs" aria-hidden="true" />
+            <span>Vue.js</span>
+          </li>
+          <li>
+            <svg width="32" height="24" viewBox="0 0 40 28" fill="none" aria-hidden="true">
+              <path d="M3 25 16 3l13 22H3Z M21 25l8-14 8 14H21Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round" />
+            </svg>
+            <span>Nuxt</span>
+          </li>
+          <li>
+            <span class="typescript-mark" aria-hidden="true">TS</span>
+            <span>TypeScript</span>
+          </li>
+          <li>
+            <UiIcon iconName="golang" class="go-mark" aria-hidden="true" />
+            <span class="sr-only">Go</span>
+          </li>
+          <li>
+            <UiIcon iconName="git" aria-hidden="true" />
+            <span>Git</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </template>
 
-<script lang="ts" setup>
-  interface Props {
+<script setup lang="ts">
+  const props = defineProps<{
     name: string;
-    occupation?: string;
-    tagline?: string;
-  }
-
-  const props = defineProps<Props>();
+    occupation: string;
+    location?: string;
+    picture: string;
+  }>();
 </script>
 
 <style scoped>
-@reference "~/assets/css/main.css";
-  .home-hero {
-    @apply w-full h-[40vh] md:h-[60vh] md:min-h-[420px] outline-hidden text-white mb-12 bg-[#6bffdc] bg-[contain,cover] [background-blend-mode:normal,_normal];
-    text-shadow: 1px 1px 5px rgba(26, 26, 26, 0.33);
-    background-image: url("/winder.svg"), linear-gradient(to right, #00000022, #00000085);
-    background-position: right bottom -5px, left top;
-    background-repeat: no-repeat;
+.home-hero {
+  padding-block: 88px 64px;
+}
 
-    @apply dark:bg-linear-to-b dark:from-slate-900 dark:to-black dark:bg-blend-multiply dark:bg-slate-900/50 dark:text-inherit;
+.hero-intro {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  align-items: center;
+  gap: 80px;
+  min-height: 380px;
+}
 
-    .text-container {
-      @apply flex flex-col gap-4 px-4 py-8 text-center h-full justify-center;
+.hero-copy .home-eyebrow {
+  margin-bottom: 16px;
+  color: var(--home-accent);
+}
 
-      .name, .occupation, .tagline {
-        @apply m-0 text-inherit uppercase font-bold;
-      }
+h1 {
+  margin: 0 0 24px;
+  font-family: var(--home-font-display);
+  font-size: clamp(44px, 5vw, 62px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
 
-     .name {
-        @apply text-4xl md:text-6xl;
-      }
+.hero-description {
+  max-width: 490px;
+  margin-bottom: 32px;
+  color: var(--home-muted);
+}
 
-      .occupation {
-        @apply font-raleway text-2xl md:text-4xl;
-      }
+.hero-description :deep(p) {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.75;
+}
 
-      .tagline {
-        @apply text-xs md:text-sm;
-      }
-    }
+.hero-copy .home-button {
+  min-width: 260px;
+}
+
+.hero-portrait {
+  justify-self: end;
+  width: min(100%, 360px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 28%;
+}
+
+.technologies {
+  margin-top: 72px;
+}
+
+.technologies .home-eyebrow {
+  margin-bottom: 20px;
+}
+
+.technologies ul {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.technologies li {
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--home-border);
+  border-radius: 5px;
+  color: var(--home-muted);
+}
+
+.technologies li > span {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.technologies .icon {
+  font-size: 27px;
+}
+
+.technologies .typescript-mark {
+  padding: 2px;
+  border: 1.5px solid currentColor;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.technologies .go-mark {
+  font-size: 48px;
+}
+
+@media (max-width: 850px) {
+  .hero-intro {
+    gap: 40px;
+    min-height: 300px;
   }
+
+  .technologies ul {
+    gap: 12px;
+  }
+
+  .technologies li > span {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-hero {
+    padding-block: 48px;
+  }
+
+  .hero-intro {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-portrait {
+    grid-row: 1;
+    justify-self: center;
+    width: 220px;
+  }
+
+  .hero-copy {
+    text-align: center;
+  }
+
+  .hero-copy .home-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .technologies {
+    margin-top: 56px;
+  }
+
+  .technologies ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .technologies li {
+    flex: 1 0 calc((100% - 24px) / 3);
+    min-height: 62px;
+    padding: 8px;
+  }
+}
 </style>

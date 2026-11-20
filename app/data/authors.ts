@@ -47,8 +47,8 @@ export type TAuthors = Record<TAuthorID, IAuthor>;
 export const Authors = {
   1: {
     name:       "Ricardo",
-    occupation: "Full Stack Software Engineer",
-    picture:    "/images/avatar-ricardo-balk.webp",
+    occupation: "Software Engineer",
+    picture:    "/images/portrait-ricardo-balk.webp",
   },
   2: {
     name:       "Mike",
