@@ -9,6 +9,7 @@ LABEL org.opencontainers.image.title="r4.do DevContainer" \
       internal="1"
 
 USER vscode
+RUN mkdir -p /home/vscode/.vscode-server/extensions
 WORKDIR /home/node/app
 
 CMD ["sleep", "infinity"]

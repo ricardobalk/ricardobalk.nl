@@ -26,6 +26,8 @@ VSCode connects to a dedicated Debian container built from `.devcontainer/Docker
 
 The image build downloads the locked packages through the build proxy when configured. Docker caches the pnpm store across builds and includes it with the registry metadata in the development image. Source edits reuse the dependency layer. On startup, pnpm checks the mounted lockfile and installs from the image cache. Named volumes keep `node_modules` and Nuxt's compilation cache across restarts.
 
+VS Code keeps installed extensions in the `vscode_extensions` volume across editor container rebuilds.
+
 Run Node.js commands in the `node` service. From a terminal on the host:
 
 ```sh
