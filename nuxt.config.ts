@@ -41,6 +41,9 @@ export default defineNuxtConfig({
     },
   },
   vite: {
+    server: {
+      allowedHosts: ['node'],
+    },
     optimizeDeps: {
       include: [
         '@fortawesome/fontawesome-svg-core',

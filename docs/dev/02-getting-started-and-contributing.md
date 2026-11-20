@@ -24,9 +24,11 @@ You can use [VSCode][vscode] with the [Remote Containers / Dev Containers][vscod
 
 VSCode connects to a dedicated Debian container built from `.devcontainer/Dockerfile.devcontainer`. Node.js, pnpm, and Nuxt run in the separate `node` service, built from `.devcontainer/Dockerfile.nuxt`. Both containers share the source code, installed dependencies, and generated Nuxt types. Compose installs dependencies and starts the dev server automatically at http://localhost:3000.
 
-The image build downloads the locked packages through the build proxy when configured. Docker caches the pnpm store across builds and includes it with the registry metadata in the development image. Source edits reuse the dependency layer. On startup, pnpm checks the mounted lockfile and installs from the image cache. Named volumes keep `node_modules` and Nuxt's compilation cache across restarts.
+The image build downloads the locked packages through the build proxy when configured. Docker caches the pnpm store across builds and includes it with the registry metadata in the development image. Source edits reuse the dependency layer. On startup, pnpm checks the mounted lockfile and installs from the image cache. If the runtime cannot reach the registry, rebuild after changing dependencies. Named volumes keep `node_modules` and Nuxt's compilation cache across restarts.
 
 VS Code keeps installed extensions in the `vscode_extensions` volume across editor container rebuilds.
+
+From the editor container, Nuxt is available at `http://node:3000/`. If your shell uses an HTTP proxy, use `curl --noproxy node http://node:3000/` to reach the Compose service directly.
 
 Run Node.js commands in the `node` service. From a terminal on the host:
 
