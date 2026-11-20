@@ -8,7 +8,7 @@
 
     <article>
       <header class="page-header w-full max-w-2xl flex flex-col gap-4">
-        <NuxtLink to="/" title="Back to blog articles" tabindex="0">
+        <NuxtLink to="/" title="Back home" tabindex="0">
           <span class="flex gap-1 items-center text-sm mb-8">
             <UiIcon iconName="chevron-left" />
             Back home

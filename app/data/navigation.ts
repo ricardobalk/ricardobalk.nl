@@ -9,6 +9,7 @@ const NavigationItems: NavigationItemsType = [
   },
   {
     label: 'Blog',
+    feature: 'blog',
     link: {
       to: '/blog',
     },

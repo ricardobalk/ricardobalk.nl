@@ -7,7 +7,7 @@
           I build frontends, backends, and a worrying collection of empty crisp packets.
           The code gets reviewed. The snacks rarely survive long enough to open an issue.
         </p>
-        <NuxtLink class="blog-link" to="/blog">
+        <NuxtLink v-if="isFeatureEnabled('blog')" class="blog-link" to="/blog">
           Read my blog
           <UiIcon iconName="arrow-right" aria-hidden="true" />
         </NuxtLink>
@@ -18,6 +18,10 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+  const { isFeatureEnabled } = useFeatureFlags();
+</script>
 
 <style scoped>
 .home-about {

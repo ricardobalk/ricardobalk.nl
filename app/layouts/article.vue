@@ -8,7 +8,7 @@
         <header class="page-header w-full max-w-2xl flex flex-col gap-4">
           <BlogAuthor :author="author" />
 
-          <NuxtLink to="/blog" title="Back to blog articles" tabindex="0">
+          <NuxtLink v-if="isFeatureEnabled('blog')" to="/blog" title="Back to blog articles" tabindex="0">
             <span class="flex gap-1 items-center text-sm">
               <UiIcon iconName="chevron-left" />
               Back to blog articles
@@ -20,7 +20,7 @@
           <slot />
         </div>
 
-        <footer class="article-footer">
+        <footer v-if="isFeatureEnabled('blog')" class="article-footer">
           <ClientOnly>
             <UiShareLink />
           </ClientOnly>
@@ -36,6 +36,7 @@
 <script setup lang="ts">
   import type { TAuthorID } from '@/data/authors';
 
+  const { isFeatureEnabled } = useFeatureFlags();
   const props = defineProps<{
     author?: number;
   }>();
