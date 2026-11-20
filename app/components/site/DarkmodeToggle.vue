@@ -1,12 +1,12 @@
 <template>
   <span class="darkmode-toggle">
-    <span class="icon">
+    <span class="icon" aria-hidden="true">
       <UiIcon iconName="moon" />
     </span>
 
-    <UiSwitch v-model="switchValue" id="darkmode-switch" />
+    <UiSwitch v-model="switchValue" id="darkmode-switch" label="Light mode" />
 
-    <span class="icon">
+    <span class="icon" aria-hidden="true">
       <UiIcon iconName="sun" />
     </span>
   </span>

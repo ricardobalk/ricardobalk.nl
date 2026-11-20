@@ -4,7 +4,10 @@
   <span class="switch">
     <input
       type="checkbox"
+      role="switch"
       :id="props.id"
+      :aria-label="props.label"
+      :aria-checked="props.modelValue"
       :checked="props.modelValue"
       @change="onChangeHandler"
     />
@@ -24,6 +27,10 @@
     modelValue: {
       type: Boolean,
       required: true
+    },
+    label: {
+      type: String,
+      required: true,
     },
   });
 
@@ -51,10 +58,16 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 0;
-      height: 0;
+      width: 1px;
+      height: 1px;
       opacity: 0;
-      visibility: hidden;
+      clip-path: inset(50%);
+    }
+
+    input:focus-visible + .indicator-container {
+      outline: 2px solid currentColor;
+      outline-offset: 4px;
+      border-radius: 1rem;
     }
   }
 
