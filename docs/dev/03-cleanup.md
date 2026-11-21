@@ -17,7 +17,9 @@ Older setups may also have project volumes such as `pnpm_store` and `node_cache`
 docker volume ls --filter label=com.docker.compose.project=ricardobalk-website
 ```
 
-Delete `.devcontainer/.env` if you want fresh Docker socket detection on the next open. The separate `vscode` volume holds server files shared across Dev Containers. Use `docker volume rm vscode` only to clear that shared installation once all containers using it have been removed.
+Older checkouts may have `DOCKER_SOCKET_PATH` and `DOCKER_SOCKET_GID` in `.devcontainer/.env`. You can remove those two settings.
+
+The separate `vscode` volume holds server files shared across Dev Containers. Use `docker volume rm vscode` only to clear that shared installation once all containers using it have been removed.
 
 **Optional build cache cleanup.** The pnpm build cache lives in the builder. Choose the command for your engine. It also affects other projects using the same builder or Podman store.
 

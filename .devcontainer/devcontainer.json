@@ -7,7 +7,6 @@
   "forwardPorts": ["node:3000"],
   "workspaceFolder": "/home/node/app",
   "remoteUser": "vscode",
-  "initializeCommand": ["sh", ".devcontainer/initialize.sh"],
   "containerEnv": {
     "NUXT_TELEMETRY_DISABLED": "1",
     "DO_NOT_TRACK": "1"
