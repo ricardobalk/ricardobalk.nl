@@ -59,5 +59,9 @@ jobs:
             --resolve website.test:80:127.0.0.1 http://website.test/humans.txt | cmp public/humans.txt -
           curl --noproxy '*' --fail --silent --show-error --insecure \
             --resolve website.test:443:127.0.0.1 https://website.test/humans.txt | cmp public/humans.txt -
+          curl --noproxy '*' --fail --silent --show-error --output /dev/null \
+            --resolve website.test:80:127.0.0.1 http://website.test/contact/
+          test "$(curl --noproxy '*' --silent --output /dev/null --write-out '%{http_code}' \
+            --resolve website.test:80:127.0.0.1 http://website.test/missing-page/)" = 404
           test "$(curl --noproxy '*' --silent --output /dev/null --write-out '%{http_code}' \
             --header 'Host: unknown.test' http://127.0.0.1/)" = 404

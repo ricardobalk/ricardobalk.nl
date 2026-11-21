@@ -67,7 +67,7 @@ You can even use Docker without building the image from the Dockerfile. Just run
 docker run -it --rm -e NUXT_TELEMETRY_DISABLED=1 -e DO_NOT_TRACK=1 -v "$(pwd):/app" -p 3000:3000 -w /app node:26.13.1-alpine sh -c "npm install -g corepack@0.36.0 && corepack enable && pnpm install && pnpm dev"
 ```
 
-> Tip: `.devcontainer/Dockerfile.devcontainer` defines the editor environment, and `.devcontainer/Dockerfile.nuxt` contains only the stages needed to run Nuxt in development. The root `Dockerfile` retains the complete multi-stage build, including static generation and the production Nginx image.
+> Tip: `.devcontainer/Dockerfile.devcontainer` defines the editor environment, and `.devcontainer/Dockerfile.nuxt` contains only the stages needed to run Nuxt in development. The root `Dockerfile` retains the complete multi-stage build, including static generation and the production Caddy image.
 
 **3. Using a local Node.js installation (when your machine has Node.js)**
 
@@ -85,7 +85,7 @@ See the [official Nuxt deployment documentation][] for more details.
 
 ## Production routing
 
-`docker compose -f docker-compose.prod.yml up -d --build` starts Traefik and the static Nginx frontend together. Traefik owns ports 80 and 443. The frontend's Docker labels route `r4.do` to its internal port 80. Set `WEBSITE_HOST` to serve a different hostname. For a local preview, use `WEBSITE_HOST=localhost` and open http://localhost.
+`docker compose -f docker-compose.prod.yml up -d --build` starts Traefik and Caddy together. Traefik owns ports 80 and 443 and terminates TLS. The frontend's Docker labels route `r4.do` to Caddy on internal port 80, where its default configuration serves the generated site from `/usr/share/caddy`. Set `WEBSITE_HOST` to serve a different hostname. For a local preview, use `WEBSITE_HOST=localhost` and open http://localhost.
 
 To run the router and frontend as separate Compose projects on the same Docker host, start the router first. It creates the shared `r4do-web` network.
 
