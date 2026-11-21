@@ -39,9 +39,29 @@ jobs:
           docker compose -f .devcontainer/docker-compose.yml exec -T devcontainer \
             curl --noproxy '*' --fail --silent --show-error --output /dev/null \
               --retry 30 --retry-all-errors --retry-delay 2 --max-time 10 http://node:3000/
+          docker compose -f .devcontainer/docker-compose.yml exec -T devcontainer \
+            curl --noproxy '*' --fail --silent --show-error \
+              --retry 15 --retry-all-errors --retry-delay 1 http://traefik:3000/humans.txt \
+            | cmp public/humans.txt -
       - name: List the host's Nuxt container from the editor
         run: |
           compose() { docker compose -f .devcontainer/docker-compose.yml "$@"; }
           node_id=$(compose ps -q node)
           test -n "$node_id"
           test "$(compose exec -T -u vscode devcontainer docker ps -q --no-trunc --filter "id=$node_id")" = "$node_id"
+      - name: Route to an independently started production frontend
+        env:
+          WEBSITE_HOST: website.test
+        run: |
+          docker compose -f docker-compose.prod.yml up -d traefik
+          docker compose -f docker-compose.frontend.yml up -d --build
+          curl --noproxy '*' --fail --silent --show-error --retry 15 --retry-all-errors --retry-delay 1 \
+            --resolve website.test:80:127.0.0.1 http://website.test/humans.txt | cmp public/humans.txt -
+          curl --noproxy '*' --fail --silent --show-error --insecure \
+            --resolve website.test:443:127.0.0.1 https://website.test/humans.txt | cmp public/humans.txt -
+          curl --noproxy '*' --fail --silent --show-error --output /dev/null \
+            --resolve website.test:80:127.0.0.1 http://website.test/contact/
+          test "$(curl --noproxy '*' --silent --output /dev/null --write-out '%{http_code}' \
+            --resolve website.test:80:127.0.0.1 http://website.test/missing-page/)" = 404
+          test "$(curl --noproxy '*' --silent --output /dev/null --write-out '%{http_code}' \
+            --header 'Host: unknown.test' http://127.0.0.1/)" = 404

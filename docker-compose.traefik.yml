@@ -1,0 +1,30 @@
+services:
+  traefik:
+    image: traefik:v3.7.19
+    environment:
+      TRAEFIK_PROVIDERS_DOCKER_ENDPOINT: tcp://docker-api:2375
+      TRAEFIK_PROVIDERS_DOCKER_EXPOSEDBYDEFAULT: "false"
+    depends_on:
+      - docker-api
+    networks:
+      - default
+      - discovery
+
+  docker-api:
+    image: tecnativa/docker-socket-proxy:3.4@sha256:027f9fa5ee70be5836eeaa10ce889d7a83f34a8db16a7f412818b92997e0beab
+    environment:
+      CONTAINERS: "1"
+      POST: "0"
+    volumes:
+      - type: bind
+        source: ${DOCKER_SOCKET_PATH:-/var/run/docker.sock}
+        target: /var/run/docker.sock
+        read_only: true
+        bind:
+          create_host_path: false
+    networks:
+      - discovery
+
+networks:
+  discovery:
+    internal: true

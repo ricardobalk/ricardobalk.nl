@@ -1,5 +1,21 @@
 name: ricardobalk-website
 services:
+  traefik:
+    extends:
+      file: docker-compose.traefik.yml
+      service: traefik
+    environment:
+      TRAEFIK_ENTRYPOINTS_WEB_ADDRESS: ":3000"
+      TRAEFIK_PROVIDERS_DOCKER_NETWORK: ${COMPOSE_PROJECT_NAME}_default
+      TRAEFIK_PROVIDERS_DOCKER_CONSTRAINTS: "Label(`do.r4.router`, `${COMPOSE_PROJECT_NAME}`)"
+    ports:
+      - "3000:3000"
+
+  docker-api:
+    extends:
+      file: docker-compose.traefik.yml
+      service: docker-api
+
   node:
     build:
       context: .
@@ -9,8 +25,12 @@ services:
         http_proxy: ${http_proxy:-${HTTP_PROXY:-}}
         https_proxy: ${https_proxy:-${HTTPS_PROXY:-}}
         no_proxy: ${no_proxy:-${NO_PROXY:-}}
-    ports:
-      - "3000:3000"
+    labels:
+      do.r4.router: ${COMPOSE_PROJECT_NAME}
+      traefik.enable: "true"
+      traefik.http.routers.website.rule: "PathPrefix(`/`)"
+      traefik.http.routers.website.entrypoints: web
+      traefik.http.services.website.loadbalancer.server.port: "3000"
     environment:
       - NUXT_PUBLIC_FEATURES_BLOG=${NUXT_PUBLIC_FEATURES_BLOG:-true}
       - NODE_ENV=development
@@ -22,6 +42,9 @@ services:
       - nuxt:/home/node/app/.nuxt/
       - data:/home/node/app/.data/
       - nuxt_cache:/home/node/.cache/nuxt/
+networks:
+  discovery:
+    internal: true
 volumes:
   node_modules: {}
   nuxt: {}

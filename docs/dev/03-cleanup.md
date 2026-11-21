@@ -9,7 +9,7 @@ docker compose -f .devcontainer/docker-compose.yml images
 docker compose -f .devcontainer/docker-compose.yml down --volumes --rmi local
 ```
 
-The first command lists the images while the containers still exist. The second removes the editor and Nuxt containers, their unused network, the local Compose images and all five declared volumes (`node_modules`, `nuxt`, `data`, `nuxt_cache` and `vscode_extensions`). If VS Code built a separate `vsc-…` editor image, remove its exact tag from the first command with `docker image rm REPOSITORY:TAG`. [Compose teardown options](https://docs.docker.com/reference/cli/docker/compose/down/)
+The first command lists the images while the containers still exist. The second removes the development containers, their networks, the local Compose images and all five declared volumes (`node_modules`, `nuxt`, `data`, `nuxt_cache` and `vscode_extensions`). If VS Code built a separate `vsc-…` editor image, remove its exact tag from the first command with `docker image rm REPOSITORY:TAG`. [Compose teardown options](https://docs.docker.com/reference/cli/docker/compose/down/)
 
 Older setups may also have project volumes such as `pnpm_store` and `node_cache`. List the leftovers below, then remove any you recognize with `docker volume rm VOLUME_NAME`.
 
