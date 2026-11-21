@@ -10,11 +10,9 @@ LABEL org.opencontainers.image.title="r4.do DevContainer" \
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        ca-certificates curl git gnupg openssh-client procps socat \
+        ca-certificates curl git gnupg openssh-client procps \
     && rm -rf /var/lib/apt/lists/* \
     && useradd --create-home --user-group --uid 1000 --shell /bin/bash vscode
-
-COPY --from=docker:29-cli /usr/local/bin/docker /usr/local/bin/docker
 
 ENV LANG=C.UTF-8
 

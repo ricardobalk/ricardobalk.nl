@@ -17,8 +17,6 @@
         "telemetry.telemetryLevel": "off"
       },
       "extensions": [
-        "ms-azuretools.vscode-containers",
-        "ms-azuretools.vscode-docker",
         "vue.volar",
         "bradlc.vscode-tailwindcss",
         "cpylua.language-postcss"
