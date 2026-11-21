@@ -1,10 +1,7 @@
 name: ricardobalk-website
+include:
+  - ../docker-compose.dev.yml
 services:
-  node:
-    extends:
-      file: ../docker-compose.dev.yml
-      service: node
-
   devcontainer:
     build:
       context: ..
@@ -35,8 +32,4 @@ services:
           create_host_path: false
 
 volumes:
-  node_modules: {}
-  nuxt: {}
-  data: {}
-  nuxt_cache: {}
   vscode_extensions: {}

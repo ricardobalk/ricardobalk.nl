@@ -1,23 +1,30 @@
 services:
-  ricardobalk-website:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: production
-      args:
-        NUXT_PUBLIC_FEATURES_BLOG: "${NUXT_PUBLIC_FEATURES_BLOG:-true}"
-        http_proxy: ${http_proxy:-${HTTP_PROXY:-}}
-        https_proxy: ${https_proxy:-${HTTPS_PROXY:-}}
-        no_proxy: ${no_proxy:-${NO_PROXY:-}}
+  traefik:
+    extends:
+      file: docker-compose.traefik.yml
+      service: traefik
+    environment:
+      TRAEFIK_ENTRYPOINTS_WEB_ADDRESS: ":80"
+      TRAEFIK_ENTRYPOINTS_WEBSECURE_ADDRESS: ":443"
+      TRAEFIK_ENTRYPOINTS_WEBSECURE_HTTP_TLS: "true"
+      TRAEFIK_PROVIDERS_DOCKER_NETWORK: r4do-web
+      TRAEFIK_PROVIDERS_DOCKER_CONSTRAINTS: "Label(`do.r4.router`, `r4do-web`)"
     ports:
       - "80:80"
       - "443:443"
-    environment:
-      - NODE_ENV=production
-      - NUXT_TELEMETRY_DISABLED=1
-      - DO_NOT_TRACK=1
-    volumes:
-      - ./:/home/node/app/
-      - node_modules:/home/node/app/node_modules/
-volumes:
-  node_modules: {}
+
+  docker-api:
+    extends:
+      file: docker-compose.traefik.yml
+      service: docker-api
+
+  ricardobalk-website:
+    extends:
+      file: docker-compose.frontend.yml
+      service: ricardobalk-website
+
+networks:
+  default:
+    name: r4do-web
+  discovery:
+    internal: true

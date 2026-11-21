@@ -1,0 +1,23 @@
+name: r4do-frontend
+services:
+  ricardobalk-website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+      args:
+        NUXT_PUBLIC_FEATURES_BLOG: "${NUXT_PUBLIC_FEATURES_BLOG:-true}"
+        http_proxy: ${http_proxy:-${HTTP_PROXY:-}}
+        https_proxy: ${https_proxy:-${HTTPS_PROXY:-}}
+        no_proxy: ${no_proxy:-${NO_PROXY:-}}
+    labels:
+      do.r4.router: r4do-web
+      traefik.enable: "true"
+      traefik.http.routers.website.rule: "Host(`${WEBSITE_HOST:-r4.do}`)"
+      traefik.http.routers.website.entrypoints: web,websecure
+      traefik.http.services.website.loadbalancer.server.port: "80"
+
+networks:
+  default:
+    name: r4do-web
+    external: true

@@ -58,7 +58,7 @@ export default defineNuxtConfig({
   },
   vite: {
     server: {
-      allowedHosts: ['node'],
+      allowedHosts: ['node', 'traefik'],
     },
     optimizeDeps: {
       include: [

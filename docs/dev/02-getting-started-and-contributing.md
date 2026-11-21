@@ -22,7 +22,7 @@ There are various ways to use a local, containerized development environment wit
 
 You can use [VSCode][vscode] with the [Remote Containers / Dev Containers][vscode-remote-containers] extension to start developing right away. With the right extensions installed, just open the project in VSCode and it will ask you if you want to open it in a container.
 
-VSCode connects to a dedicated Debian container built from `.devcontainer/Dockerfile.devcontainer`. Node.js, pnpm, and Nuxt run in the separate `node` service, built from `.devcontainer/Dockerfile.nuxt`. Both containers share the source code, installed dependencies, and generated Nuxt types. Compose installs dependencies and starts the dev server automatically at http://localhost:3000.
+VSCode connects to a dedicated Debian container built from `.devcontainer/Dockerfile.devcontainer`. Node.js, pnpm, and Nuxt run in the separate `node` service, built from `.devcontainer/Dockerfile.nuxt`. Both containers share the source code, installed dependencies, and generated Nuxt types. Open http://localhost:3000 to reach Nuxt through Traefik.
 
 The image build downloads the locked packages through the build proxy when configured. Docker caches the pnpm store across builds and includes it with the registry metadata in the development image. Source edits reuse the dependency layer. On startup, pnpm checks the mounted lockfile and installs from the image cache. If the runtime cannot reach the registry, rebuild after changing dependencies. Named volumes keep `node_modules` and Nuxt's compilation cache across restarts.
 
@@ -30,7 +30,7 @@ VS Code keeps installed extensions in the `vscode_extensions` volume across edit
 
 Open the **Containers** view from the Microsoft Docker Extension Pack to see the host's containers, or run `docker ps` in the editor terminal. On first open, the devcontainer reads the host’s `DOCKER_HOST` (default `unix:///var/run/docker.sock`) and saves the socket path and its container-side group in `.devcontainer/.env`. If you switch engines, update `DOCKER_SOCKET_PATH` and `DOCKER_SOCKET_GID` in that file or remove it to detect them again.
 
-From the editor container, Nuxt is available at `http://node:3000/`. If your shell uses an HTTP proxy, use `curl --noproxy node http://node:3000/` to reach the Compose service directly.
+From the editor container, use `curl --noproxy traefik http://traefik:3000/` to check the route. To check Nuxt directly, use `curl --noproxy node http://node:3000/`.
 
 Run Node.js commands in the `node` service. From a terminal on the host:
 
@@ -48,8 +48,10 @@ To remove the devcontainer, its volumes and build cache, follow the [cleanup gui
 You can use [Docker Compose][docker-compose] to start developing right away:
 
 ```sh
-docker-compose -f docker-compose.dev.yml up
+docker compose up
 ```
+
+Open http://localhost:3000. On a rootless engine, set `DOCKER_SOCKET_PATH` to the engine's Unix socket before starting Compose.
 
 **c) Using Docker (Method 1, building the image)**
 You can use [Docker][docker] to start developing right away:
@@ -80,6 +82,21 @@ You can also use a local Node.js installation.
   - or `pnpm generate` to generate the application for static hosting
 
 See the [official Nuxt deployment documentation][] for more details.
+
+## Production routing
+
+`docker compose -f docker-compose.prod.yml up -d --build` starts Traefik and the static Nginx frontend together. Traefik owns ports 80 and 443. The frontend's Docker labels route `r4.do` to its internal port 80. Set `WEBSITE_HOST` to serve a different hostname. For a local preview, use `WEBSITE_HOST=localhost` and open http://localhost.
+
+To run the router and frontend as separate Compose projects on the same Docker host, start the router first. It creates the shared `r4do-web` network.
+
+```sh
+docker compose -f docker-compose.prod.yml up -d traefik
+docker compose -f docker-compose.frontend.yml up -d --build
+```
+
+Run the second command again to deploy frontend changes. Traefik discovers the new container through a read-only Docker API proxy on a private network. If you already run the combined stack, stop its frontend with `docker compose -f docker-compose.prod.yml stop ricardobalk-website` before starting the separate frontend.
+
+HTTPS uses Traefik's generated certificate until you configure a certificate for your domain. [Traefik TLS certificates](https://doc.traefik.io/traefik/reference/routing-configuration/http/tls/tls-certificates/)
 
 ## Contributing
 
